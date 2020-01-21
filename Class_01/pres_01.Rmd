@@ -1,0 +1,43 @@
+---
+title: "Introduction to Statistics"
+author: "Chad Worley"
+date: "January 21, 2020"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Statistics
+
+* Statistics is the mathematics of doing research.
+* We will discuss collecting, summarizing, presenting, and analyzing measurements (data).
+* There are a wide range of questions you can address using statistics.
+    - How long does it take me to commute?
+    - How large are iguanas?
+    - How many calories do I eat each day?
+    - What proportion of people like ice cream?
+* Almost all data are generated from **chaotic processes**.
+    - Your commute time has variation day to day.
+    - Each iguana has a different mass and length.
+    - The amount of calories eaten each day is also variable.
+    - Some people like ice cream, others do not.
+    
+## Chaotic processes
+
+* When we do not know what will happen (or did happen), there is uncertainty.
+* We often describe uncertainty using **probability**.
+    - Tomorrow has a 30% chance of rain.
+    $$Pr(\text{rain tomorrow}) = 0.3 $$
+    - The chance of winning the Powerball Lottery is about 1 in 100,000,000.
+    $$Pr(\text{win powerball}) = \frac{1}{10^8} $$
+    - The probability of rolling snake-eyes is $\frac{1}{36}$.
+    $$Pr(\text{snake eyes}) = 0.02\overline{77} $$
+    - The chance a random person likes ice cream is 90%.
+    $$Pr(\text{yes to ice cream}) = 0.9$$
+    
+## 
+
+
+
