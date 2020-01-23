@@ -37,7 +37,19 @@ knitr::opts_chunk$set(echo = FALSE)
     - The chance a random person likes ice cream is 90%.
     $$Pr(\text{yes to ice cream}) = 0.9$$
     
-## 
+## Generating a sample (getting data)
+
+* In the real world, samples are usually randomly selected from a large population. (Like measuring heights of 30 random BHCC students.)
+* In this class, we will often generate samples with:
+    - Dice
+    - Coins
+    - **Spinners**
+    - Digital random number generators
+* Almost every problem will involve a list of numbers, where each number in that list is generated with the same process. Different problems will use different processes.
+
+
+
+
 
 
 
