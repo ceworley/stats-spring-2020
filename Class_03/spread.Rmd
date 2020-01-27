@@ -1,0 +1,62 @@
+---
+title: "Measures of Spread"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+
+## Range
+
+* Range is the difference between maximum and minimum.
+$$\text{Range} = \max-\min $$
+* Example:
+$$\text{sample} = \text{8,5,20,6,5,4,19} $$
+$$\text{range} = 20-4 = 16 $$
+
+
+## Roulette wheel
+
+A (European) roulette wheel has 37 equally likely possible outcomes.
+
+```{r roulette,fig.height=3,fig.width=3,fig.align='center'}
+nums = "0-32-15-19-4-21-2-25-17-34-6-27-13-36-11-30-8-23-10-5-24-16-33-1-20-14-31-9-22-18-29-7-28-12-35-3-26"
+nums = strsplit(nums,"-")[[1]]
+ints = as.integer(nums)
+par(mar=c(0,0,0,0))
+plot(0,0,type='n',ann=F,axes=F)
+thetas = seq(0,2*pi,length.out=370)
+lines(cos(thetas),sin(thetas))
+for(i in 1:37){
+  lines(c(0,sin((i-0.5)/37*2*pi)),c(0,cos((i-0.5)/37*2*pi)))
+  text(c(0,sin((i-1)/37*2*pi))*0.9,c(0,cos(((i-1)/37*2*pi)))*0.9,ints[i],cex=0.9,srt=-(i-1)/37*360)
+}
+```
+
+## The problem with range...
+
+* A sample's range will usually underestimate the population's range. 
+* A sample's range will usually underestimate a spinner's range.
+* When we use a sample statistic (like sample's range) to estimate a population parameter (like population's range), we call that sample statistic an "estimator".
+* We say range is a biased estimator.
+
+## Example
+
+* Take a 20-sided die. It should be equally likely to land on any integer between 1 and 20. (Discrete Uniform Distribution)
+* We say the population has a range of 19, because 20-1=19.
+* I rolled 30 20-sided dice:
+```{r icosahedron,fig.height=3,fig.align='center',fig.width=6}
+set.seed(123)
+n = 30
+x = sample(1:20,n,T)
+rs = cummax(x)-cummin(x)
+stripchart(x,method="stack",xlim=c(0,21),at=0.2,pch=20,cex=2,offset=0.5,axes=F)
+axis(side=1,at=1:20,labels=1:20)
+```
+* The sample range is `r max(x)-min(x)`.
+
+
+
