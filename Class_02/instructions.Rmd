@@ -32,3 +32,6 @@ knitr::opts_chunk$set(echo = TRUE)
     - Why is it easier to roll a 1 than to get a mean of 1?
     - If you rolled the die 1000 times and made a dot plot, what shape would you expect? (bell, uniform, bimodal, left-skewed, or right-skewed?)
     - What shape did the histogram of the class's means have?
+    - What do you think would change if instead of 10 rolls for each mean, there were 100 rolls for each mean?
+    
+    
