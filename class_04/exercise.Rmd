@@ -1,0 +1,18 @@
+---
+title: "Running Average"
+output: pdf_document
+---
+
+```{r setup}
+spinner = c(11,15,17,19,21,23,25,29)
+mu = mean(spinner)
+sig = sd(spinner)*sqrt((length(spinner)-1)/length(spinner))
+x = sample(spinner,100,T)
+plot(cumsum(x)/1:length(x),type='l',ylim=c(min(spinner),max(spinner)))
+
+for(i in 1:499){
+  x = sample(spinner,100,T)
+  points(1:length(x),cumsum(x)/1:length(x),col=rgb(0,0,0,0.01),pch=20)
+}
+```
+

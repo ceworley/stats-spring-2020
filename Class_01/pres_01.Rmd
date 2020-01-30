@@ -50,6 +50,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 
-
+$$\frac{[2x]}{2}$$
 
 
