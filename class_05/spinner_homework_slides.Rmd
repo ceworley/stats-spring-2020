@@ -16,6 +16,7 @@ set.seed(12345)
 * Plot a running average with at least 10 spins
     - Also, make a table showing the spins and calculations
     - Also, **describe** what you think the running average would do if you continued with more spins.
+    - Also, calculate the sample standard deviation
 * Sample from $X+X+X$ at least 10 times; determine sample mean and sample standard deviation.
     - Also, make a table showing the measurements and calculations
 * Sample from $3X$ at least 10 times; determine the sample mean and sample standard deviation.
@@ -124,7 +125,7 @@ The smooth curves represent $\mu \pm 2\frac{\sigma}{\sqrt{i}}$ and $\mu \pm \fra
 ```{r overlay,fig.width=6,fig.height=4.5}
 library(latex2exp)
 plot(cumsum(x)/(1:n),type='l',ylim=c(min(X),max(X)),ylab="running mean",xlab=TeX("$i$ (spin count)"),col=rgb(0.2,0.2,0.2,0.7),lwd=2)
-for(i in 1:9){
+for(i in 1:19){
   x = sample(X,n,T)
   lines(1:n,cumsum(x)/(1:n),col=rgb(0.2,0.2,0.2,0.7),lwd=2)
 }
@@ -136,7 +137,7 @@ for(z in -2:2){
 }
 ```
 
-This is a **lot** of work by hand. Feel free to overlay multiple running averages if you use a computer. You can just show work for one.
+This is a **lot** of work by hand, so this is not required. Feel free to overlay multiple running averages if you use a computer. You can just show work for one.
 
 ## Sample from $X+X+X$
 
