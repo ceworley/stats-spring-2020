@@ -1,0 +1,119 @@
+---
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2cm"
+output: 
+  pdf_document:
+        includes:
+          in_header: preamble.tex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+\thispagestyle{fancy}
+
+## Instructions
+
+This test is to be taken as an individual without outside assistance or notes. If you are suspected of cheating, you will fail this exam and your transgression will be reported.
+
+You can either use a scientific calculator or (with a smartphone) GeoGebra Scientific Calculator.
+
+To use GeoGebra, you must first put your smartphone on **Airplane Mode**. Then, in GeoGebra, turn on **Exam Mode**. You must leave exam mode on for the entire exam. You won't be able to use your smartphone for anything else. After you are done, you will show me how long exam mode has been running, and if that time is not how long you've been sitting, you will fail this exam.
+
+Read each question carefully and show your work.
+
+## Grade Table
+
+(do not write in this table)
+
+\Large 
+
+\begin{tabular}{|c|c|c|} \hline
+question & available points & earned points \\ \hline \hline
+1 & 20 & \\ \hline
+2 & 20 &  \\ \hline
+3 & 12 &  \\ \hline
+4 & 24 &  \\ \hline
+5 & 24 &  \\ \hline
+EC & 5 &  \\ \hline
+Total & 100 & \\ \hline
+\end{tabular}
+
+\normalsize
+
+
+
+\newpage
+
+\chead{}
+
+## Question 1 (20 pts)
+
+A pollster hopes to estimate the proportion of voters who will vote for candidate A. The pollster randomly samples 1000 voters. Of those sampled, 492 will vote for candidate A. Determine a 95% confidence interval of the proportion of voters that will vote for candidate A.
+
+\newpage
+
+## Question 2 (20 pts)
+
+A researcher is investigating commute times of BHCC students. In a random sample of 43 BHCC students, the average commute time was 38 minutes with a sample standard deviation of 19 minutes. Determine a 95% confidence interval of the average commute time for BHCC students.
+
+\newpage
+
+## Question 3  (12 pts)
+
+How many BHCC students must be randomly selected to estimate the mean amount of time students spend on social media per day? We want to be 99% confident that the sample mean is within 75 minutes of the population mean. The population standard deviation is known to be 200 minutes.
+
+\newpage
+
+## Question 4 (24 pts)
+
+An engineer hopes to detect whether a new process has a success rate over 40%. In a sample of 50 trials of the new process, she obtains 25 successes. Using a signficance level of 0.05, test whether the new process has a success rate over 40%.
+
+a. State the null hypothesis, alternate hypothesis, type of test, and level of significance.
+\vfill
+b. Check the necessary conditions for inference.
+\vfill
+c. Compute the sample test statistic ($z$ or $t$), draw a sketch, and find the $p$-value.
+\vfill
+\vfill
+\vfill
+d. State the conclusion about the null hypothesis (reject or not reject).
+\vfill
+e. Interpret the conclusion. (What do we conclude about the success rate?)
+\vfill
+
+\newpage
+
+## Question 5 (24 pts)
+
+According to a study, average smartphone life expectancy now reaches 4.8 years. A randomly selected sample of 46 individuals reported that their smartphone stopped working after an average of 4.3 years. Assume that we know the population standard deviation of smartphone life expectancy is 1.5 years. Use a 0.05 significance level to test the claim that the average smartphone life expectancy is not 4.8 years.
+
+a. State the null hypothesis, alternate hypothesis, type of test, and level of significance.
+\vfill
+b. Compute the sample test statistic ($z$ or $t$), draw a sketch, and find the $p$-value.
+\vfill
+\vfill
+\vfill
+c. State the conclusion about the null hypothesis.
+\vfill
+d. Interpret the conclusion. (What do we conclude about smartphone life expectancy?)
+\vfill
+
+
+\newpage
+
+## Extra Credit (5 pts)
+
+Prior research suggests that the average speed of cars on Longfellow Bridge is 33.0 mph. Julianne is skeptical, so she takes a sample of car speeds on Longfellow Bridge. 
+
+\begin{center}
+Speeds in miles per hour:\\
+\begin{tabular}{|c c c c c|} \hline
+46.6 & 23.9 & 43.2 & 38.2 & 48.9 \\
+32.5 & 44.5 & 32.0 & 34.5 & 45.9 \\ \hline
+\end{tabular}
+\end{center}
+
+Using a significance level of 0.05, test whether the average speed of cars on Longfellow Bridge is 33.0 mph.
+
+

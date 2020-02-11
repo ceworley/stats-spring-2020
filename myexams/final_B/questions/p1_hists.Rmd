@@ -1,0 +1,77 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+```{r data generation, echo = FALSE, results = "hide"}
+## DATA GENERATION
+d1 = rbeta(1000,6,6)
+d2 = rbeta(1000,0.4,0.4)
+d3 = c(rbeta(900,1.7,5),runif(100,0,1))
+d4 = c(rbeta(900,5,1.7),runif(100,0,1))
+d = data.frame(matrix(c(d1,d2,d3,d4),ncol=4))
+ora = sample(1:4)
+e1s = c("The distribution of heights of adult men",
+        "The distribution of heights of adult women",
+        "The distribution of weights of newborn babies",
+        "The distribution of lengths of newborn babies")
+e2s = c("The distribution of hours that students studied for an exam when about half of students studied a lot and a similar number of students studied very little.",
+        "The distribution of hours spent per week reading by adults. In this distribution, many people do not read much, and a similar number of people read a lot.")
+e3s = c("The distribution of annual income for school employees where a high percentage of employees are entry-level teachers and only a few are high-paid
+administrators.",
+        "The distribution of annual income for NBA basketball players where only a few are high-paid superstars.",
+        "The distribution of test scores on a very difficult exam, in which most students have poor to average scores, but a few did quite well.")
+e4s = c("The distribution of quiz scores on an easy quiz. Most students did very well, but a few did poorly.",
+        "The distribution of ages at a skilled nursing facility, where most of the patients are elderly but a few are quite young.")
+e1 = sample(e1s,1)
+e2 = sample(e2s,1)
+e3 = sample(e3s,1)
+e4 = sample(e4s,1)
+e = c(e1,e2,e3,e4)
+orb = sample(1:4)
+```
+
+Question
+========
+
+(10 Points)
+
+\setkeys{Gin}{width=\linewidth}
+
+```{r histsfigs, echo = FALSE, fig.height=4, fig.width=6}
+par(mar=c(1,1,2,1),mfrow=c(2,2))
+for(i in 1:4){
+  hist(d[,ora[i]],ann=F,axes=F,xlim=c(0,1),breaks=seq(0,1,0.1))
+  mtext(c("I","II","III","IV")[i],3,at=0,cex=2)
+  box('figure')
+}
+```
+\
+
+For each description below, choose which histogram best fits (I, II, III, or IV). Each histogram should be used once.
+
+Answerlist
+--------
+* `r e[orb[1]]` \vfill
+* `r e[orb[2]]` \vfill
+* `r e[orb[3]]` \vfill
+* `r e[orb[4]]` \vfill
+
+
+Solution
+========
+
+Answerlist
+--------
+* `r c("I","II","III","IV")[ora==orb[1]]`
+* `r c("I","II","III","IV")[ora==orb[2]]`
+* `r c("I","II","III","IV")[ora==orb[3]]`
+* `r c("I","II","III","IV")[ora==orb[4]]`
+
+
+Meta-information
+============
+extype: string
+exsolution: answer
+exname: marbles
+extol: 0.01

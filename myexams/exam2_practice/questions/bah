@@ -1,0 +1,11 @@
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} \hline
+ $x$ & $\text{Pr}(x)$ & $x\cdot\text{Pr}(x)$ & $x-\mu$ & $(x-\mu)^2$ & $(x-\mu)^2 \cdot \text{Pr}(x)$ \\ \hline
+ 13 & 0.07 & 0.91 & -4 & 16 & 1.12 \\ 
+ 16 & 0.32 & 5.12 & -1 & 1 & 0.32 \\ 
+ 17 & 0.41 & 6.97 & 0 & 0 & 0 \\ 
+ 20 & 0.2 & 4 & 3 & 9 & 1.8 \\ \hline
+ & & $\sum x \cdot \text{Pr}(x)= 17 $& & & $\sigma^2 = 3.24 $ \\ \hline
+ & & $\mu= 17 $& & & $\sigma = 1.8 $ \\ \hline
+\end{tabular}
+\end{center}

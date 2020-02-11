@@ -1,0 +1,54 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r data generation, echo = FALSE, results = "hide"}
+while(T){
+  z = sort(round(runif(2,-2.5,2.5),2))
+  n = round(runif(1,6,15))^2
+  mu = round(runif(1,100,300),1)
+  se = round(runif(1,2,10),1)
+  sig = round(se*sqrt(n),1)
+  se = round(sig/sqrt(n),3)
+  x = round(mu+z*se,1)
+  z = round((x-mu)/se,2)
+  perc = round(pnorm(z),4)
+  P = perc[2]-perc[1]
+  if(abs(z[1]-z[2])>0.3 & z[1]*100==(x[1]-mu)/se*100 &  z[2]*100==(x[2]-mu)/se*100){break}
+}
+```
+
+Question
+========
+
+(10 points)
+
+A species of duck is known to have a mean weight of `r mu` grams and a standard deviation of `r sig` grams. A researcher plans to measure the weights of `r n` of these ducks sampled randomly. What is the probability the **sample mean** will be between `r x[1]` and `r x[2]` grams?
+
+
+
+Solution
+========
+
+$$\begin{aligned}
+n &= `r n` \\
+\mu &= `r mu` \\
+\sigma &= `r sig` \\
+SE &= \frac{`r sig`}{\sqrt{`r n`}} = `r se` \\
+x_1 &= `r x[1]` \\
+x_2 &= `r x[2]`
+\end{aligned}$$
+
+$$z_1 ~=~ \frac{x_1-\mu}{SE} ~=~ \frac{`r x[1]`-`r mu`}{`r se`} ~=~ `r z[1]`$$
+$$z_2 ~=~ \frac{x_2-\mu}{SE} ~=~ \frac{`r x[2]`-`r mu`}{`r se`} ~=~ `r z[2]`$$
+$$P(x_1 < \overline{X} < x_2) ~=~ P(z_1 < Z < z_2) ~=~ `r perc[2]`-`r perc[1]` ~=~ `r P` $$
+
+
+Meta-information
+============
+extype: string
+exsolution: yo
+exname: UZ
+extol: 0.01

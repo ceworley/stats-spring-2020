@@ -1,0 +1,174 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{color,verbatim,Sweave,url,xargs,amsmath,hyperref,booktabs,longtable}
+\usepackage[left=1cm,right=1cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\pagestyle{fancy}
+\fancyhf{}
+
+%% new commands
+\makeatletter
+\newcommand{\ID}[1]{\def\@ID{#1}}
+\newcommand{\Date}[1]{\def\@Date{#1}}
+\newcommand{\Titl}[1]{\def\@Titl{#1}}
+\ID{00001}
+\Date{YYYY-MM-DD}
+\Titl{Title}
+
+%% \exinput{header}
+
+\newcommand{\myID}{\@ID}
+\newcommand{\myDate}{\@Date}
+\newcommand{\myTitl}{\@Titl}
+\makeatother
+
+\lhead{\textsc{BHCC Mat-181}}
+\rhead{\textsc{\myTitl}}
+
+\usepackage{caption}
+\captionsetup[figure]{labelformat=empty}
+
+\usepackage{float}
+\floatplacement{figure}{H}
+
+
+%%% new environments
+%\newenvironment{question}{\item \textbf{Problem}\newline}{\newpage}
+%\newenvironment{solution}{\textbf{Solution}\newline}{\newpage}
+%\newenvironment{answerlist}{\renewcommand{\labelenumi}{(\alph{enumi})}\begin{enumerate}}{\end{enumerate}}
+
+
+%% compatibility with pandoc
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%% fonts: Helvetica
+\renewcommand{\sfdefault}{phv}
+\IfFileExists{sfmath.sty}{
+  \RequirePackage[helvet]{sfmath}
+  \renewcommand{\rmdefault}{phv}
+}{}
+
+\newcommand{\extext}[1]{\textbf{\large #1}}
+\newcommandx{\exmchoice}[9][2=-,3=-,4=-,5=-,6=-,7=-,8=-,9=-]{%
+                \mbox{(a) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#1}} \hspace*{2mm}}%
+  \if #2- \else \mbox{(b) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#2}} \hspace*{2mm}} \fi%
+  \if #3- \else \mbox{(c) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#3}} \hspace*{2mm}} \fi%
+  \if #4- \else \mbox{(d) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#4}} \hspace*{2mm}} \fi%
+  \if #5- \else \mbox{(e) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#5}} \hspace*{2mm}} \fi%
+  \if #6- \else \mbox{(f) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#6}} \hspace*{2mm}} \fi%
+  \if #7- \else \mbox{(g) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#7}} \hspace*{2mm}} \fi%
+  \if #8- \else \mbox{(h) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#8}} \hspace*{2mm}} \fi%
+  \if #9- \else \mbox{(i) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#9}} \hspace*{2mm}} \fi%
+}
+\newcommandx{\exclozechoice}[9][2=-,3=-,4=-,5=-,6=-,7=-,8=-,9=-]{\setcounter{enumiii}{1}%
+                \mbox{\roman{enumiii}. \, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#1}} \hspace*{2mm}\stepcounter{enumiii}}%
+  \if #2- \else \mbox{\roman{enumiii}. \, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#2}} \hspace*{2mm}\stepcounter{enumiii}} \fi%
+  \if #3- \else \mbox{\roman{enumiii}. \, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#3}} \hspace*{2mm}\stepcounter{enumiii}} \fi%
+  \if #4- \else \mbox{\roman{enumiii}. \, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#4}} \hspace*{2mm}\stepcounter{enumiii}} \fi%
+  \if #5- \else \mbox{\roman{enumiii}. \, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#5}} \hspace*{2mm}\stepcounter{enumiii}} \fi%
+  \if #6- \else \mbox{\roman{enumiii}. \, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#6}} \hspace*{2mm}\stepcounter{enumiii}} \fi%
+  \if #7- \else \mbox{\roman{enumiii}. \, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#7}} \hspace*{2mm}\stepcounter{enumiii}} \fi%
+  \if #8- \else \mbox{\roman{enumiii}. \, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#8}} \hspace*{2mm}\stepcounter{enumiii}} \fi%
+  \if #9- \else \mbox{\roman{enumiii}. \, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#9}} \hspace*{2mm}} \fi%
+}
+\newcommand{\exnum}[9]{%
+  \mbox{\framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#1}}}%
+  \mbox{\framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#2}}}%
+  \mbox{\framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#3}}}%
+  \mbox{\framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#4}}}%
+  \mbox{\framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#5}}}%
+  \mbox{\framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#6}}}%
+  \mbox{ \makebox[3mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-2mm} .}}%
+  \mbox{\framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#7}}}%
+  \mbox{\framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#8}}}%
+  \mbox{\framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#9}}}%
+}
+\newcommand{\exstring}[1]{%
+  \mbox{\framebox[0.9\textwidth][l]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#1}} \hspace*{2mm}}%
+}
+
+%% new environments
+\newenvironment{question}{\item \textbf{Problem}\newline}{\newpage}
+\newenvironment{solution}{\comment}{\endcomment}
+\newenvironment{answerlist}{\renewcommand{\labelenumi}{(\alph{enumi})}\begin{enumerate}}{\end{enumerate}}
+
+%\setkeys{Gin}{width=0.3\textwidth}
+
+\begin{document}
+
+
+
+\begin{enumerate}
+
+%% \exinput{exercises}
+
+\end{enumerate}
+
+
+\renewenvironment{question}{\comment}{\endcomment}
+\renewenvironment{solution}{\begin{minipage}{\linewidth} \item }{ \end{minipage} }
+
+\newpage
+
+\chead{\textsc{Solutions}}
+
+\small
+%\begin{multicols}{2}
+\begin{enumerate}
+
+%% \exinput{exercises}
+
+\end{enumerate}
+%\end{multicols}
+\normalsize
+
+\newpage
+\chead{FORMULAS}
+
+\subsection*{Normal Distributions}
+$z = \frac{x-\mu}{\sigma}$ \newline
+$x = \mu + z\sigma$
+
+\subsection*{Central Limit Theorem}
+Let random variable $W$ have mean $\mu_{\tiny w}$ and standard deviation $\sigma_{\tiny w}$. \\
+Let random variable $X$ represent the sum of $n$ instances of $W$. \\
+Let random variable $Y$ represent the average of $n$ instances of $W$. \\
+Then:
+\begin{align*}
+\mu_{\tiny x} &= (n)(\mu_{\tiny w}) & \mu_{\tiny y} &= \mu_{\tiny w} \\
+\sigma_{\tiny x} &= (\sigma_{\tiny w})(\sqrt{n}) &
+\sigma_{\tiny y} &= \frac{\sigma_{\tiny w}}{\sqrt{n}} 
+\end{align*}
+and $X$ and $Y$ are both approximately normal.
+
+\subsection*{Bernoulli Random Variable}
+$\mu = p$ \newline
+$\sigma = \sqrt{pq}$
+
+\subsection*{Binomial Random Variable (sum of Bernoullis)}
+$\mu = np$ \newline
+$\sigma = \sqrt{npq}$
+
+\subsection*{Proportion Sampling Random Variable (average of Bernoullis)}
+$\mu = p$ \newline
+$\sigma = \sqrt{\frac{pq}{n}}$
+
+\subsection*{Continuity Correction}
+\begin{itemize}
+\item If:
+\begin{itemize}
+\item $X$ is a discrete variable with a support of consecutive integers
+\item we are approximating $X$ with a normal distribution
+\end{itemize}
+\item Then we can apply a continuity correction:
+\begin{align*}
+P(X \le x_0) &~=~ {P}{\left(Z < \frac{x_0+0.5-\mu_{\tiny x}}{\sigma_{\tiny x}}\right)} &
+P(X < x_0) &~=~ {P}{\left(Z < \frac{x_0-0.5-\mu_{\tiny x}}{\sigma_{\tiny x}}\right)} \\
+P(X \ge x_0) &~=~ {P}{\left(Z > \frac{x_0-0.5-\mu_{\tiny x}}{\sigma_{\tiny x}}\right)} &
+P(X > x_0) &~=~ P{\left(Z > \frac{x_0+0.5-\mu_{\tiny x}}{\sigma_{\tiny x}}\right)}
+\end{align*}
+\end{itemize}
+
+\end{document}

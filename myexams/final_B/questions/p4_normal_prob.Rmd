@@ -1,0 +1,50 @@
+---
+header-includes:
+   - \usepackage{multicol}
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r data generation, echo = FALSE, results = "hide"}
+while(T){
+  z = sort(round(runif(2,-2.5,2.5),2))
+  if(abs(z[1]-z[2])>0.3){break}
+}
+mu = round(runif(1,30,170),1)
+sig = round(runif(1,2,10),1)
+x = round(mu+z*sig,1)
+z = round((x-mu)/sig,2)
+perc = round(pnorm(z),4)
+P = perc[2]-perc[1]
+```
+
+Question
+========
+
+(10 points)
+
+A tree's leaves were found to be normally distributed with a mean of `r mu` millimeters and a standard deviation of `r sig` millimeters. If you pick a random leaf from that tree, what is the probability the length is between `r x[1]` and `r x[2]` millimeters? 
+
+
+Solution
+========
+
+$$\begin{aligned}
+\mu &= `r mu` \\
+\sigma &= `r sig` \\
+x_1 &= `r x[1]` \\
+x_2 &= `r x[2]`
+\end{aligned}$$
+
+$$z_1 ~=~ \frac{x_1-\mu}{\sigma} ~=~ \frac{`r x[1]`-`r mu`}{`r sig`} ~=~ `r z[1]`$$
+$$z_2 ~=~ \frac{x_2-\mu}{\sigma} ~=~ \frac{`r x[2]`-`r mu`}{`r sig`} ~=~ `r z[2]`$$
+$$P(x_1 < X < x_2) ~=~ P(z_1 < Z < z_2) ~=~ `r perc[2]`-`r perc[1]` ~=~ `r P` $$
+
+
+Meta-information
+============
+extype: string
+exsolution: yo
+exname: UZ
+extol: 0.01
