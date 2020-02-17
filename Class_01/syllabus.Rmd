@@ -1,4 +1,4 @@
----
+    ---
 title: "Syllabus (short version)"
 output: pdf_document
 ---

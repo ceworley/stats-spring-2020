@@ -1,0 +1,205 @@
+---
+title: "Probability"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Bernoulli Random Variable
+
+* A Bernoulli random variable is a binary variable with two possible outcomes: 0 and 1. 
+* e.g. A Bernoulli random variable with $p=\frac{3}{5}$
+```{r bern_three_fifths,fig.align='center',fig.height=1,fig.width=1}
+X = c(0,0,1,1,1)
+N = length(X)
+par(mar=c(0,0,0,0))
+plot(0,0,type='n',ann=F,axes=F,xlim=c(-1,1),ylim=c(-1,1))
+polygon(cos(1:1000/1000*2*pi),sin(1:1000/1000*2*pi))
+for(i in 1:N){
+  lines(c(0,cos(i/N*2*pi)),c(0,sin(i/N*2*pi)))
+  text(0.8*cos((i-0.5)/N*2*pi),0.8*sin((i-0.5)/N*2*pi),X[i])
+}
+arrows(-0.6,-0.1,0.6,0.1,length=0.1)
+```
+* e.g. A Bernoulli random variable with $p=\frac{2}{7}$
+```{r bern_two_sevenths,fig.align='center',fig.height=1,fig.width=1}
+X = c(0,0,0,0,0,1,1)
+N = length(X)
+par(mar=c(0,0,0,0))
+plot(0,0,type='n',ann=F,axes=F,xlim=c(-1,1),ylim=c(-1,1))
+polygon(cos(1:1000/1000*2*pi),sin(1:1000/1000*2*pi))
+for(i in 1:N){
+  lines(c(0,cos(i/N*2*pi)),c(0,sin(i/N*2*pi)))
+  text(0.8*cos((i-0.5)/N*2*pi),0.8*sin((i-0.5)/N*2*pi),X[i])
+}
+arrows(-0.6,-0.1,0.6,0.1,length=0.1)
+```
+
+
+## Population mean and standard deviation
+
+* e.g. A Bernoulli variable with $p=\frac{3}{5}$
+```{r bern_three_fifthsB,fig.align='center',fig.height=1,fig.width=1}
+X = c(0,0,1,1,1)
+N = length(X)
+par(mar=c(0,0,0,0))
+plot(0,0,type='n',ann=F,axes=F,xlim=c(-1,1),ylim=c(-1,1))
+polygon(cos(1:1000/1000*2*pi),sin(1:1000/1000*2*pi))
+for(i in 1:N){
+  lines(c(0,cos(i/N*2*pi)),c(0,sin(i/N*2*pi)))
+  text(0.8*cos((i-0.5)/N*2*pi),0.8*sin((i-0.5)/N*2*pi),X[i])
+}
+arrows(-0.6,-0.1,0.6,0.1,length=0.1)
+mu = mean(X)
+sig = sd(X)*sqrt((N-1)/N)
+```
+* Mean
+$$\mu = \frac{0+0+1+1+1}{5} = \frac{3}{5} = 0.6$$
+* Standard Deviation
+$$\sigma = \sqrt{\frac{\left(0-\frac{3}{5}\right)^2+\left(0-\frac{3}{5}\right)^2+\left(1-\frac{3}{5}\right)^2+\left(1-\frac{3}{5}\right)^2+\left(1-\frac{3}{5}\right)^2}{5}} $$
+
+## Simplification...
+
+$$\begin{aligned}
+\sigma &= \sqrt{\frac{\left(0-\frac{3}{5}\right)^2+\left(0-\frac{3}{5}\right)^2+\left(1-\frac{3}{5}\right)^2+\left(1-\frac{3}{5}\right)^2+\left(1-\frac{3}{5}\right)^2}{5}} \\\\
+&= \sqrt{\frac{\left(\frac{3}{5}\right)^2+\left(\frac{3}{5}\right)^2+\left(\frac{2}{5}\right)^2+\left(\frac{2}{5}\right)^2+\left(\frac{2}{5}\right)^2}{5}} \\\\
+&= \sqrt{\frac{2\left(\frac{3}{5}\right)^2+3\left(\frac{2}{5}\right)^2}{5}} \\\\
+&= \sqrt{\frac{2}{5}\left(\frac{3}{5}\right)^2+\frac{3}{5}\left(\frac{2}{5}\right)^2}
+\end{aligned}$$
+
+## Continuation of simplification...
+
+$$\begin{aligned}
+\sigma &= \sqrt{\frac{2}{5}\left(\frac{3}{5}\right)^2+\frac{3}{5}\left(\frac{2}{5}\right)^2} \\\\
+&= \sqrt{\frac{2}{5} \cdot \frac{3}{5} \cdot \left(\frac{3}{5}+\frac{2}{5} \right)} \\\\
+&= \sqrt{\frac{2}{5} \cdot \frac{3}{5} \cdot  1 } \\\\
+&= \sqrt{\frac{2}{5} \cdot \frac{3}{5}} = `r sqrt(2/5*3/5)`
+\end{aligned}$$
+
+## Generalization 
+
+* You can show that any Bernoulli variable has simple formulas for mean and standard deviation.
+$$\mu = p $$
+$$\sigma = \sqrt{p(1-p)} $$
+
+
+## Sample mean and standard deviation
+
+* If we spin this Bernoulli variable 25 times...
+```{r bern_three_fifthsC,fig.align='center',fig.height=1.5,fig.width=3}
+set.seed(1234)
+X = c(0,0,1,1,1)
+N = length(X)
+par(mar=c(0,0,0,0),mfrow=c(1,2))
+
+plot(0,0,type='n',ann=F,axes=F,xlim=c(-1,1),ylim=c(-1,1))
+polygon(cos(1:1000/1000*2*pi),sin(1:1000/1000*2*pi))
+for(i in 1:N){
+  lines(c(0,cos(i/N*2*pi)),c(0,sin(i/N*2*pi)))
+  text(0.8*cos((i-0.5)/N*2*pi),0.8*sin((i-0.5)/N*2*pi),X[i])
+}
+arrows(-0.6,-0.1,0.6,0.1,length=0.1)
+
+plot(0,0,type='n',ann=F,axes=F,xlim=c(0,15),ylim=c(0,15))
+x = sample(X,25,T)
+n = length(x)
+text(5,12,"sample:")
+for(i in 1:n){
+  text(4+2*(i-1)%%5, 10-2*(i-1)%/%5, x[i],cex=0.8)
+}
+xb = round(mean(x),3)
+s = round(sd(x),3)
+suc = sum(x)
+fai = n-suc
+```
+
+* We calculate the sample mean...
+$$\bar{x} = \frac{`r sum(x)`}{`r n`} =`r mean(x)` $$
+* We calculate the sample standard deviation...
+$$s = \sqrt{\frac{`r fai`\cdot(0-`r xb`)^2+`r suc`\cdot(1-`r xb`)^2}{`r n`-1}} = `r sd(x)` $$
+
+## Sample mean and standard deviation again
+
+* If we spin this Bernoulli variable 25 times...
+```{r,fig.align='center',fig.height=1.5,fig.width=3}
+X = c(0,0,1,1,1)
+N = length(X)
+par(mar=c(0,0,0,0),mfrow=c(1,2))
+
+plot(0,0,type='n',ann=F,axes=F,xlim=c(-1,1),ylim=c(-1,1))
+polygon(cos(1:1000/1000*2*pi),sin(1:1000/1000*2*pi))
+for(i in 1:N){
+  lines(c(0,cos(i/N*2*pi)),c(0,sin(i/N*2*pi)))
+  text(0.8*cos((i-0.5)/N*2*pi),0.8*sin((i-0.5)/N*2*pi),X[i])
+}
+arrows(-0.6,-0.1,0.6,0.1,length=0.1)
+
+plot(0,0,type='n',ann=F,axes=F,xlim=c(0,15),ylim=c(0,15))
+x = sample(X,25,T)
+n = length(x)
+text(5,12,"sample:")
+for(i in 1:n){
+  text(4+2*(i-1)%%5, 10-2*(i-1)%/%5, x[i],cex=0.8)
+}
+xb = round(mean(x),3)
+s = round(sd(x),3)
+suc = sum(x)
+fai = n-suc
+```
+
+* We calculate the sample mean...
+$$\bar{x} = \frac{`r sum(x)`}{`r n`} =`r mean(x)` $$
+* We calculate the sample standard deviation...
+$$s = \sqrt{\frac{`r fai`\cdot(0-`r xb`)^2+`r suc`\cdot(1-`r xb`)^2}{`r n`-1}} = `r sd(x)` $$
+
+
+
+## Repeat many times (10000 iterations of samples of size 25)
+
+```{r,cache=T}
+set.seed(1234)
+xbars = numeric()
+for(i in 1:10000){
+  xbars = c(xbars,mean(sample(X,25,T)))
+}
+hist(xbars,breaks=seq(min(x)-1/50,max(x)+1/50,by=1/25))
+```
+
+## Interval of typical sample means
+
+We will define the **interval of typical sample means** as:
+$$\text{interval of typical means} = \left(\mu-\frac{2\sigma}{\sqrt{n}},\,\mu+\frac{2\sigma}{\sqrt{n}}\right)$$
+
+* We expect about 95% of sample means to be in the interval of typical sample means.
+* This is more true when $n$ is larger or when the random variable is nearly normal.
+
+## Back to example.
+
+$$\mu=p=\frac{3}{5}=0.6$$
+
+$$\sigma = \sqrt{\frac{3}{5}\cdot \frac{2}{5}} = `r sqrt(2/5*3/5)` $$
+
+$$n=25$$
+
+$$\begin{aligned}
+\text{interval of typical means} &= \left(\mu-\frac{2\sigma}{\sqrt{n}},\,\mu+\frac{2\sigma}{\sqrt{n}}\right) \\
+&= \left(`r mu`-2\cdot\frac{`r sig`}{\sqrt{`r n`}},\,`r mu`+2\cdot\frac{`r sig`}{\sqrt{`r n`}}\right) \\
+&= \left(`r round(mu-2*sig/sqrt(n),3)`,\,`r round(mu+2*sig/sqrt(n),3)`\right)
+\end{aligned}$$
+
+## What percent of sample means were between 0.404 and 0.796?
+
+```{r, fig.height=5, fig.width=9}
+myh = hist(xbars,labels=T,breaks=seq(min(x)-1/50,max(x)+1/50,by=1/25),cex=0.4,ylim=c(0,1600),xlim=c(0.3,0.9))
+typicals = myh$counts[(myh$mids > 0.4) & (myh$mids < 0.8)]
+str1 = paste(typicals,collapse = "+")
+```
+
+\small
+$$\frac{`r str1`}{`r length(xbars)`} $$
+
+$$`r sum(typicals)/length(xbars)` =  `r sum(typicals)/length(xbars)*100` \% $$
+
+\normalsize
