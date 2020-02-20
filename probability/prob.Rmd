@@ -1,5 +1,5 @@
 ---
-title: "Probability"
+title: "Binary Random Variable"
 output: beamer_presentation
 ---
 
@@ -167,6 +167,20 @@ for(i in 1:10000){
 hist(xbars,breaks=seq(min(x)-1/50,max(x)+1/50,by=1/25))
 ```
 
+* Estimate **the standard error** (the standard deviation of repeated sample means)
+
+## Standard error
+
+* The standard error is the standard deviation of repeated sample means.
+* We will use $\text{SE}$ and $\sigma_{\bar{x}}$ to denote the standard error.
+* We learned that standard deviation of a bell is approximately $\text{range}/6$.
+$$\frac{0.9-0.3}{6} = `r (0.9-0.3)/6` $$
+* We will later show that we can calculate standard error if we know $\sigma$.
+$$\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} $$
+* Notice, in our example, we can calculate the standard error using this formula.
+$$\sigma_{\bar{x}} = \frac{`r sig`}{\sqrt{`r n`}} = `r sig/sqrt(n)` $$
+
+
 ## Interval of typical sample means
 
 We will define the **interval of typical sample means** as:
@@ -203,3 +217,12 @@ $$\frac{`r str1`}{`r length(xbars)`} $$
 $$`r sum(typicals)/length(xbars)` =  `r sum(typicals)/length(xbars)*100` \% $$
 
 \normalsize
+
+## Derivation of standard error
+
+$$SD\left(\frac{X_1+X_2+X_3+\cdots+X_{24}+X_{25}}{25} \right) $$
+$$\sqrt{\frac{SD(X_1)^2}{25^2}+\frac{SD(X_2)^2}{25^2}+\cdots+\frac{SD(X_{25})^2}{25^2}}$$
+
+$$\sqrt{\frac{25\cdot SD(X)^2}{25^2}}$$
+
+$$\frac{SD(X)}{5}$$
