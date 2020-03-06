@@ -1,0 +1,13 @@
+---
+title: "probability notation"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Probability
+
+* To determine the probability of an event, you first determine a set of equally likely outcomes. 
+$$\text{Pr(event)} = \frac{\text{\# outcomes satisfying event}}{\text{\# of possible outcomes}} $$

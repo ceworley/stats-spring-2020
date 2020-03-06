@@ -1,0 +1,699 @@
+---
+title: "Probability - definitions, conditional probability, tree diagrams, Bayes' theorem, contingency tables, probability distributions, and binomial distribution"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+makespin = function(X,xcen=0,ycen=0,r=1,cex=1){
+  N = length(X)
+  theta = seq(0,2*pi,length.out=1000)
+  polygon(xcen+r*cos(theta),ycen+r*sin(theta))
+  for(i in 1:N){
+    lines(c(xcen,xcen+r*cos(2*pi*i/N)),c(ycen,ycen+r*sin(2*pi*i/N)))
+    text(xcen+r*0.8*cos(2*pi*(i-0.5)/N),ycen+r*0.8*sin(2*pi*(i-0.5)/N),X[i],cex=cex)
+  }
+  arrows(xcen-r*0.6,ycen-r*0.1,xcen+r*0.6,ycen+r*0.1,lwd=2,length=0.1)
+}
+
+bernspin = function(p,xcen=0,ycen=0,r=1,cex=1){
+  theta = seq(0,2*pi,length.out=1000)
+  polygon(xcen+r*cos(theta),ycen+r*sin(theta))
+  lines(c(xcen,xcen+r),c(ycen,ycen))
+  lines(c(xcen,xcen+r*cos(2*pi*(1-p))),c(ycen,ycen+r*sin(2*pi*(1-p))))
+  text(xcen+0.8*r*cos(2*pi*(1-p)/2),ycen+0.8*r*sin(2*pi*(1-p)/2),"0")
+  text(xcen+0.8*r*cos(2*pi*(1-p+p/2)),ycen+0.8*r*sin(2*pi*(1-p+p/2)),"1")
+  arrows(xcen-r*0.6,ycen-r*0.1,xcen+r*0.6,ycen+r*0.1,lwd=2,length=0.1)
+}
+```
+
+## Independence
+
+$$\text{Events $A$, $B$ are independent}$$ 
+$$\updownarrow$$
+$$P(A \text{ and } B) = P(A)\cdot P(B) $$
+$$\updownarrow$$
+$$P(A \text{ given } B) = P(A) $$
+$$\updownarrow$$
+$$P(B \text{ given } A) = P(B) $$
+
+(If any of the 4 statements is true, all are true)
+
+## Mutual exclusivity (disjointness)
+
+$$\text{Events $A$, $B$ are mutually exclusive (disjoint)}$$ 
+$$\updownarrow$$
+$$P(A \text{ and } B) = 0 $$
+$$\updownarrow$$
+$$P(A \text{ or } B) = P(A)+P(B) $$
+
+## Exhaustivity
+
+$$\text{Events $A$, $B$ are exhaustive}$$
+$$\updownarrow$$
+$$P(A \text{ or } B) = 1 $$
+
+\vfill
+Sometimes it takes more than two events for exhaustion.
+$$\text{Events $A$, $B$, $C$ are exhaustive}$$
+$$\updownarrow$$
+$$P(A \text{ or } B \text{ or } C) = 1 $$
+
+## Complementarity
+
+$$\text{Events $A$, $B$ are complementary}$$
+$$\updownarrow$$
+$$\text{Events $A$, $B$ are disjoint and exhaustive} $$
+$$\updownarrow$$
+$$P(A \text{ and } B) = 0 ~~~~ \text{and} ~~~~ P(A \text{ or } B) = 1 $$
+$$\updownarrow$$
+$$\text{$A$ is "not $B$". $B$ is "not $A$".}$$
+
+## General addition rule
+
+$$P(A \text{ or } B) ~=~ P(A) + P(B)-P(A\text{ and }B)  $$
+```{r,fig.width=6,fig.height=4}
+xl = 6
+yl = 4
+par(mar=c(0,0,0,0),mfrow=c(2,2))
+
+plot(0,0,type="n",ann=F,axes=F,xlim=c(0,xl),ylim=c(0,yl))
+text(xl/2,yl*9/10,"A or B")
+polygon(c(0,0,xl,xl),c(0,yl,yl,0))
+theta = seq(0,2*pi,length.out = 500)
+polygon(xl/2-yl/6+yl/3*cos(theta),yl/2+yl/3*sin(theta),border=NA,col=rgb(0.7,0.7,0.7))
+polygon(xl/2+yl/6++yl/3*cos(theta),yl/2+yl/3*sin(theta),col=rgb(0.7,0.7,0.7))
+polygon(xl/2-yl/6++yl/3*cos(theta),yl/2+yl/3*sin(theta))
+
+plot(0,0,type="n",ann=F,axes=F,xlim=c(0,xl),ylim=c(0,yl))
+text(xl/2,yl*9/10,"A")
+polygon(c(0,0,xl,xl),c(0,yl,yl,0))
+theta = seq(0,2*pi,length.out = 500)
+polygon(xl/2-yl/6+yl/3*cos(theta),yl/2+yl/3*sin(theta),col=rgb(0.7,0.7,0.7))
+polygon(xl/2+yl/6++yl/3*cos(theta),yl/2+yl/3*sin(theta))
+
+plot(0,0,type="n",ann=F,axes=F,xlim=c(0,xl),ylim=c(0,yl))
+text(xl/2,yl*9/10,"B")
+polygon(c(0,0,xl,xl),c(0,yl,yl,0))
+theta = seq(0,2*pi,length.out = 500)
+polygon(xl/2+yl/6+yl/3*cos(theta),yl/2+yl/3*sin(theta),col=rgb(0.7,0.7,0.7))
+polygon(xl/2-yl/6+yl/3*cos(theta),yl/2+yl/3*sin(theta))
+
+plot(0,0,type="n",ann=F,axes=F,xlim=c(0,xl),ylim=c(0,yl))
+text(xl/2,yl*9/10,"A and B")
+polygon(c(0,0,xl,xl),c(0,yl,yl,0))
+theta2 = seq(-pi/3,pi/3,length.out=200)
+polygon(xl/2-yl/6+yl/3*cos(theta2),yl/2+yl/3*sin(theta2),border=rgb(0.7,0.7,0.7),col=rgb(0.7,0.7,0.7))
+theta3 = seq(2*pi/3,4*pi/3,length.out=200)
+polygon(xl/2+yl/6+yl/3*cos(theta3),yl/2+yl/3*sin(theta3),border=rgb(0.7,0.7,0.7),col=rgb(0.7,0.7,0.7))
+theta = seq(0,2*pi,length.out = 500)
+polygon(xl/2+yl/6+yl/3*cos(theta),yl/2+yl/3*sin(theta))
+polygon(xl/2-yl/6+yl/3*cos(theta),yl/2+yl/3*sin(theta))
+
+
+```
+
+
+## Definition of conditional probability and general product rule
+
+$$P(B\text{ given }A) = \frac{P(A\text{ and }B)}{P(A)} $$
+
+$$P(A \text{ and } B) = P(A) \cdot P(B \text{ given } A) $$
+
+## Tree diagrams
+
+A basic, general tree diagram is shown below.
+
+```{r,fig.width=5,fig.height=3}
+library(latex2exp)
+P = c('A','notA')
+Q = c('B','notB')
+par(mar=c(0,0,0,0))
+plot(0,0,type='n',axes=F,ann=F,xlim=c(0,5),ylim=c(0,3))
+minx = 0.2
+maxx = 3.2
+miny = 0.2
+maxy = 2.2
+a = 2
+b = 4
+as = maxy-(2*(1:a)-1)/(a*2)*(maxy-miny)
+bs = maxy-(2*(1:b)-1)/(b*2)*(maxy-miny)
+for(i in 1:2){
+  lines(c(minx,mean(c(minx,maxx))),c(mean(c(miny,maxy)),as[i]))
+  m = (as[i]-mean(c(miny,maxy)))/(mean(c(minx,maxx))-minx)
+  text(mean(c(minx,mean(c(minx,maxx)))),(mean(c(miny,maxy))+as[i])/2,paste0('P(',P[i],')'),cex=0.6,srt=atan(m)/pi*180,pos=3,offset=0.1)
+  for(j in 1:2){
+    lines(c(mean(c(minx,maxx)),maxx),c(as[i],bs[(i-1)*2+j]))
+    m = (bs[(i-1)*2+j]-as[i])/(maxx-mean(c(minx,maxx)))
+    text(minx+3*(maxx-minx)/4,(as[i]+bs[(i-1)*2+j])/2,paste0('P(',Q[j],' given ',P[i],')'),cex=0.6,srt=atan(m)/pi*180,pos=3,offset=0.1)
+  }
+}
+for(i in 1:2){
+  for(j in 1:2){
+    text(maxx+1,bs[(i-1)*2+j],paste0('P(',P[i],' and ',Q[j],') = P(',P[i],')*P(',Q[j],' given ',P[i],')'),cex=0.5)
+  }
+}
+```
+
+## Example tree
+
+Let's imagine a basketball player has the following probabilities (based on James Harden 2019-2020). When James shoots during play, 65% of attempts are field goals and 35% of attempts are three-pointers. Of the field goals, 44% are hits and 56% are misses. Of the three-pointers, 36% are hits and 64% are misses. 
+
+```{r,fig.width=5,fig.height=3}
+library(latex2exp)
+lab1 = c('field goal','three pointer')
+lab2 = c('hit','miss','hit','miss')
+P1 = c(0.65,0.35)
+P2 = c(0.44,0.56,0.36,0.64)
+par(mar=c(0,0,0,0))
+plot(0,0,type='n',axes=F,ann=F,xlim=c(0,5),ylim=c(0,3))
+minx = 0.2
+maxx = 3.2
+miny = 0.2
+maxy = 2.5
+a = 2
+b = 4
+as = maxy-(2*(1:a)-1)/(a*2)*(maxy-miny)
+bs = maxy-(2*(1:b)-1)/(b*2)*(maxy-miny)
+for(i in 1:2){
+  lines(c(minx,mean(c(minx,maxx))),c(mean(c(miny,maxy)),as[i]))
+  m = (as[i]-mean(c(miny,maxy)))/(mean(c(minx,maxx))-minx)
+  text(mean(c(minx,mean(c(minx,maxx)))),(mean(c(miny,maxy))+as[i])/2,lab1[i],cex=0.6,srt=atan(m)/pi*180,pos=3,offset=0.1)
+  text(mean(c(minx,mean(c(minx,maxx)))),(mean(c(miny,maxy))+as[i])/2,P1[i],cex=0.6,srt=atan(m)/pi*180,pos=1,offset=0.1)
+  for(j in 1:2){
+    lines(c(mean(c(minx,maxx)),maxx),c(as[i],bs[(i-1)*2+j]))
+    m = (bs[(i-1)*2+j]-as[i])/(maxx-mean(c(minx,maxx)))
+    text(minx+3*(maxx-minx)/4,(as[i]+bs[(i-1)*2+j])/2,lab2[(i-1)*2+j],cex=0.6,srt=atan(m)/pi*180,pos=3,offset=0.1)
+    text(minx+3*(maxx-minx)/4,(as[i]+bs[(i-1)*2+j])/2,P2[(i-1)*2+j],cex=0.6,srt=atan(m)/pi*180,pos=1,offset=0.1)
+  }
+}
+for(i in 1:2){
+  for(j in 1:2){
+    text(maxx+1,bs[(i-1)*2+j],paste('P(',lab1[i],' and ',lab2[(i-1)*2+j],') = ',P1[i]*P2[(i-1)*2+j]),cex=0.5)
+  }
+}
+```
+
+## Example problems
+
+```{r,fig.width=5,fig.height=3}
+library(latex2exp)
+lab1 = c('field goal','three pointer')
+lab2 = c('hit','miss','hit','miss')
+P1 = c(0.65,0.35)
+P2 = c(0.44,0.56,0.36,0.64)
+par(mar=c(0,0,0,0))
+plot(0,0,type='n',axes=F,ann=F,xlim=c(0,5),ylim=c(0,3))
+minx = 0.2
+maxx = 3.2
+miny = 0.2
+maxy = 2.5
+a = 2
+b = 4
+as = maxy-(2*(1:a)-1)/(a*2)*(maxy-miny)
+bs = maxy-(2*(1:b)-1)/(b*2)*(maxy-miny)
+for(i in 1:2){
+  lines(c(minx,mean(c(minx,maxx))),c(mean(c(miny,maxy)),as[i]))
+  m = (as[i]-mean(c(miny,maxy)))/(mean(c(minx,maxx))-minx)
+  text(mean(c(minx,mean(c(minx,maxx)))),(mean(c(miny,maxy))+as[i])/2,lab1[i],cex=0.6,srt=atan(m)/pi*180,pos=3,offset=0.1)
+  text(mean(c(minx,mean(c(minx,maxx)))),(mean(c(miny,maxy))+as[i])/2,P1[i],cex=0.6,srt=atan(m)/pi*180,pos=1,offset=0.1)
+  for(j in 1:2){
+    lines(c(mean(c(minx,maxx)),maxx),c(as[i],bs[(i-1)*2+j]))
+    m = (bs[(i-1)*2+j]-as[i])/(maxx-mean(c(minx,maxx)))
+    text(minx+3*(maxx-minx)/4,(as[i]+bs[(i-1)*2+j])/2,lab2[(i-1)*2+j],cex=0.6,srt=atan(m)/pi*180,pos=3,offset=0.1)
+    text(minx+3*(maxx-minx)/4,(as[i]+bs[(i-1)*2+j])/2,P2[(i-1)*2+j],cex=0.6,srt=atan(m)/pi*180,pos=1,offset=0.1)
+  }
+}
+for(i in 1:2){
+  for(j in 1:2){
+    text(maxx+1,bs[(i-1)*2+j],paste('P(',lab1[i],' and ',lab2[(i-1)*2+j],') = ',P1[i]*P2[(i-1)*2+j]),cex=0.5)
+  }
+}
+```
+
+* What is the probability that James hits a shot? $$P(\text{hit}) = \phantom{P(\text{hit})}$$
+
+## Example problems
+
+```{r,fig.width=5,fig.height=3}
+library(latex2exp)
+lab1 = c('field goal','three pointer')
+lab2 = c('hit','miss','hit','miss')
+P1 = c(0.65,0.35)
+P2 = c(0.44,0.56,0.36,0.64)
+par(mar=c(0,0,0,0))
+plot(0,0,type='n',axes=F,ann=F,xlim=c(0,5),ylim=c(0,3))
+minx = 0.2
+maxx = 3.2
+miny = 0.2
+maxy = 2.5
+a = 2
+b = 4
+as = maxy-(2*(1:a)-1)/(a*2)*(maxy-miny)
+bs = maxy-(2*(1:b)-1)/(b*2)*(maxy-miny)
+for(i in 1:2){
+  lines(c(minx,mean(c(minx,maxx))),c(mean(c(miny,maxy)),as[i]))
+  m = (as[i]-mean(c(miny,maxy)))/(mean(c(minx,maxx))-minx)
+  text(mean(c(minx,mean(c(minx,maxx)))),(mean(c(miny,maxy))+as[i])/2,lab1[i],cex=0.6,srt=atan(m)/pi*180,pos=3,offset=0.1)
+  text(mean(c(minx,mean(c(minx,maxx)))),(mean(c(miny,maxy))+as[i])/2,P1[i],cex=0.6,srt=atan(m)/pi*180,pos=1,offset=0.1)
+  for(j in 1:2){
+    lines(c(mean(c(minx,maxx)),maxx),c(as[i],bs[(i-1)*2+j]))
+    m = (bs[(i-1)*2+j]-as[i])/(maxx-mean(c(minx,maxx)))
+    text(minx+3*(maxx-minx)/4,(as[i]+bs[(i-1)*2+j])/2,lab2[(i-1)*2+j],cex=0.6,srt=atan(m)/pi*180,pos=3,offset=0.1)
+    text(minx+3*(maxx-minx)/4,(as[i]+bs[(i-1)*2+j])/2,P2[(i-1)*2+j],cex=0.6,srt=atan(m)/pi*180,pos=1,offset=0.1)
+  }
+}
+for(i in 1:2){
+  for(j in 1:2){
+    text(maxx+1,bs[(i-1)*2+j],paste('P(',lab1[i],' and ',lab2[(i-1)*2+j],') = ',P1[i]*P2[(i-1)*2+j]),cex=0.5)
+  }
+}
+```
+
+
+* What is the probability that James misses a three-pointer? $$P(\text{miss given threepointer}) = \phantom{P(\text{miss given threepointer})}$$
+
+## Example problems
+
+```{r,fig.width=5,fig.height=3}
+library(latex2exp)
+lab1 = c('field goal','three pointer')
+lab2 = c('hit','miss','hit','miss')
+P1 = c(0.65,0.35)
+P2 = c(0.44,0.56,0.36,0.64)
+par(mar=c(0,0,0,0))
+plot(0,0,type='n',axes=F,ann=F,xlim=c(0,5),ylim=c(0,3))
+minx = 0.2
+maxx = 3.2
+miny = 0.2
+maxy = 2.5
+a = 2
+b = 4
+as = maxy-(2*(1:a)-1)/(a*2)*(maxy-miny)
+bs = maxy-(2*(1:b)-1)/(b*2)*(maxy-miny)
+for(i in 1:2){
+  lines(c(minx,mean(c(minx,maxx))),c(mean(c(miny,maxy)),as[i]))
+  m = (as[i]-mean(c(miny,maxy)))/(mean(c(minx,maxx))-minx)
+  text(mean(c(minx,mean(c(minx,maxx)))),(mean(c(miny,maxy))+as[i])/2,lab1[i],cex=0.6,srt=atan(m)/pi*180,pos=3,offset=0.1)
+  text(mean(c(minx,mean(c(minx,maxx)))),(mean(c(miny,maxy))+as[i])/2,P1[i],cex=0.6,srt=atan(m)/pi*180,pos=1,offset=0.1)
+  for(j in 1:2){
+    lines(c(mean(c(minx,maxx)),maxx),c(as[i],bs[(i-1)*2+j]))
+    m = (bs[(i-1)*2+j]-as[i])/(maxx-mean(c(minx,maxx)))
+    text(minx+3*(maxx-minx)/4,(as[i]+bs[(i-1)*2+j])/2,lab2[(i-1)*2+j],cex=0.6,srt=atan(m)/pi*180,pos=3,offset=0.1)
+    text(minx+3*(maxx-minx)/4,(as[i]+bs[(i-1)*2+j])/2,P2[(i-1)*2+j],cex=0.6,srt=atan(m)/pi*180,pos=1,offset=0.1)
+  }
+}
+for(i in 1:2){
+  for(j in 1:2){
+    text(maxx+1,bs[(i-1)*2+j],paste('P(',lab1[i],' and ',lab2[(i-1)*2+j],') = ',P1[i]*P2[(i-1)*2+j]),cex=0.5)
+  }
+}
+```
+
+
+* What is the probability that James attempted a three-pointer given he missed the shot? $$P(\text{threepointer given miss}) = \phantom{P(\text{threepointer given miss})}$$
+
+
+
+## Two-way Contingency Table
+
+\begin{tabular}{c | c c | c}
+   & hit & miss & total \\ \hline
+FG & 0.286 & 0.364 & 0.65 \\
+3P & 0.126 & 0.224 & 0.35 \\ \hline
+total & 0.412 & 0.588 & 1
+\end{tabular}
+
+$$P(\text{hit}) = 0.412 $$
+
+$$P(\text{miss given 3P}) = \frac{0.224}{0.35} = 0.64 $$
+
+$$P(\text{3P given miss}) = \frac{0.224}{0.588} = 0.381 $$
+
+
+## Bayes' Theorem
+
+$$ P(A\text{ given }B) ~=~ \frac{P(B\text{ given }A) \cdot P(A)}{P(B)} $$
+
+## Probability distribution
+
+A probability distribution is a list of events that are pairwise disjoint and collectively exhaustive. A probability distribution unambiguously describes a random variable.
+
+* Example - 5 card poker hands
+
+| Event | Probability |
+|:---:|:---:|
+| Royal Flush | 0.00000154 |
+| Straight flush (excluding royal flush) | 0.000015 |
+| Four of a kind | 0.000240 |
+| Full house | 0.001441 |
+| Flush (not royal or straight) | 0.003925 |
+| Three of a kind | 0.021128 |
+| Two pair | 0.047539 |
+| One pair | 0.422569 |
+| No pair/High card | 0.501177 |
+
+## Discrete Probability Distribution
+
+The events are discrete numbers.
+
+* Example: straight up bet of a dollar on an single number in French Roulette
+
+| Event | Probability |
+|:---:|:---:|
+| -1  | 36/37 |
+| 35  | 1/37 |
+
+## Mean and Standard Deviation of Discrete Probability Distribution
+
+| $x$ | $P(x)$ |
+|:---:|:---:|
+| -1  | 36/37 |
+| 35  | 1/37 |
+
+
+$$\mu = \sum x\cdot P(x) $$
+The mean of a probability distribution ($\mu$) is also called the expected value, denoted with an upper-case E, with the variable denoted in parentheses.
+$$E(X) = \mu = \sum x\cdot P(x) $$
+The standard deviation is determined with the equation below.
+$$\sigma = \sqrt{\sum (x-\mu)^2\cdot P(x)} $$
+
+## Expected value and standard deviation of roulette
+
+$$\mu = \sum x\cdot P(x) $$
+$$\sigma = \sqrt{\sum (x-\mu)^2\cdot P(x)} $$
+
+| $x$ | $P(x)$ | $x\cdot P(x)$ | $x-\mu$ | $(x-\mu)^2$ | $(x-\mu)^2\cdot P(x)$ |
+|:---:|:------:|:-------------:|:-------:|:-----------:|:---------------------:|
+| -1  |  36/37 |  -36/37       | -36/37  |  0.946676  | 0.9211                 |
+| 35  |  1/37  |   35/37       | 1296/37 |  1226.89   | 33.16                  |
+|     |        |               |         |            |                       |
+|     |        | $\mu = -1/37$ |         |            | $\sigma^2 = 34.08$ |
+|     |        |               |         |            | $\sigma = \sqrt{34.08} = 5.8$ |
+
+
+## Consider summing (or averaging) 2 spins of a Bernoulli
+
+```{r,fig.width=5,fig.height=2.5}
+library(latex2exp)
+X = c(0,0,1)
+N = length(X)
+par(mar=c(0,0,0,0))
+plot(0,0,type='n',axes=F,ann=F,xlim=c(0,5),ylim=c(0.5,3))
+makespin(X,xcen=0.5,ycen=2.2,r=0.5)
+ns = c(N,N)
+minx = 1.5
+maxx = 3.5
+miny = 0.7
+maxy = 2.5
+a = N
+b = N^2
+as = maxy-(2*(1:a)-1)/(a*2)*(maxy-miny)
+bs = maxy-(2*(1:b)-1)/(b*2)*(maxy-miny)
+for(i in 1:N){
+  lines(c(minx,mean(c(minx,maxx))),c(mean(c(miny,maxy)),as[i]))
+  m = (as[i]-mean(c(miny,maxy)))/(mean(c(minx,maxx))-minx)
+  text(mean(c(minx,mean(c(minx,maxx)))),(mean(c(miny,maxy))+as[i])/2,X[i],cex=0.7)
+  #legend(0.25, (0.5+as[i])/2, X[i], box.col = "black", bg = "white", xjust = 0.5,yjust=0.5,adj=0.1,xpd = 0)
+  for(j in 1:ns[2]){
+    lines(c(mean(c(minx,maxx)),maxx),c(as[i],bs[(i-1)*ns[2]+j]))
+    m = (bs[(i-1)*ns[2]+j]-as[i])/(maxx-mean(c(minx,maxx)))
+    text(minx+3*(maxx-minx)/4,(as[i]+bs[(i-1)*ns[2]+j])/2,X[j],cex=0.7)
+  }
+}
+text(minx+(maxx-minx)/4,maxy+0.2,"1st spin")
+text(minx+3*(maxx-minx)/4,maxy+0.2,"2nd spin")
+text(maxx+0.3,maxy+0.2,"Total")
+text(maxx+1,maxy+0.2,"Average")
+for(i in 1:N){
+  for(j in 1:N){
+    x1 = X[i]
+    x2 = X[j]
+    tot = x1+x2
+    text(maxx+0.3,bs[(i-1)*ns[2]+j],tot)
+    text(maxx+1,bs[(i-1)*ns[2]+j],tot/2)
+  }
+}
+```
+
+$$P(\text{Total = 1}) ~=~ \frac{4}{9} $$
+
+$$\mu_{\text{total}} = \frac{0+0+1+0+0+1+1+1+2}{9} = \frac{6}{9} = \frac{2}{3}$$
+
+## Same thing, different representation
+
+```{r,fig.width=5,fig.height=3}
+library(latex2exp)
+X = c(0,1)
+P = c('2/3','1/3')
+p = c(2/3,1/3)
+num = c(2,1)
+den = c(3,3)
+N = length(X)
+par(mar=c(0,0,0,0))
+plot(0,0,type='n',axes=F,ann=F,xlim=c(0,5),ylim=c(0,3))
+bernspin(1/3,xcen=0.5,ycen=2.2,r=0.5)
+ns = c(N,N)
+minx = 1
+maxx = 3.2
+miny = 0.2
+maxy = 2.5
+a = 2
+b = 4
+as = maxy-(2*(1:a)-1)/(a*2)*(maxy-miny)
+bs = maxy-(2*(1:b)-1)/(b*2)*(maxy-miny)
+for(i in 1:N){
+  lines(c(minx,mean(c(minx,maxx))),c(mean(c(miny,maxy)),as[i]))
+  m = (as[i]-mean(c(miny,maxy)))/(mean(c(minx,maxx))-minx)
+  text(mean(c(minx,mean(c(minx,maxx)))),(mean(c(miny,maxy))+as[i])/2,TeX(paste0('P(X_1=',X[i],')=',P[i],collapse='')),cex=0.6,srt=atan(m)/pi*180,pos=3,offset=0.1)
+  #legend(0.25, (0.5+as[i])/2, X[i], box.col = "black", bg = "white", xjust = 0.5,yjust=0.5,adj=0.1,xpd = 0)
+  for(j in 1:ns[2]){
+    lines(c(mean(c(minx,maxx)),maxx),c(as[i],bs[(i-1)*ns[2]+j]))
+    m = (bs[(i-1)*ns[2]+j]-as[i])/(maxx-mean(c(minx,maxx)))
+    text(minx+3*(maxx-minx)/4,(as[i]+bs[(i-1)*ns[2]+j])/2,TeX(paste0('P(X_2=',X[j],')=',P[j],collapse='')),cex=0.6,srt=atan(m)/pi*180,pos=3,offset=0.1)
+  }
+}
+text(minx+(maxx-minx)/4,maxy+0.2,"1st spin")
+text(minx+3*(maxx-minx)/4,maxy+0.2,"2nd spin")
+for(i in 1:N){
+  for(j in 1:N){
+    x1 = X[i]
+    x2 = X[j]
+    tot = x1+x2
+    text(maxx+1,bs[(i-1)*ns[2]+j],TeX(paste0('P(X_1=',X[i],' AND X_2=',X[j],') = ',P[i],'*',P[j],' = ',num[i]*num[j],'/',den[i]*den[j],collapse='')),cex=0.7)
+  }
+}
+```
+$$P(\text{total}=1) ~=~ P(0,1)+P(1,0) ~=~ \frac{2}{9}+\frac{2}{9} ~=~ \frac{4}{9} $$
+
+$$\mu_{\text{total}} ~=~ \left(0\cdot\frac{4}{9}+1\cdot\frac{2}{9}+1\cdot\frac{2}{9}+2\cdot\frac{1}{9}\right) ~=~ \frac{6}{9} ~=~ \frac{2}{3}$$
+
+
+
+
+
+
+
+
+
+## Consider 3 spins of a Bernoulli spinner with $p = 0.6$
+
+```{r,fig.width=5,fig.height=3}
+par(mar=c(0,0,0,0))
+w = 5
+h = 3
+plot(0,0,type='n',ann=F,axes=F,xlim=c(0,w),ylim=c(0,h))
+x0 = 0.1*w
+x1 = 0.3*w
+x2 = 0.5*w
+x3 = 0.7*w
+y0 = 0.5*h
+p = c(0.4,0.6)
+for(i in 0:1){
+  y1 = y0-h*(i-0.5)/2
+  lines(c(x0,x1),c(y0,y1))
+  xa = x0; xb = x1; ya = y0; yb = y1
+  xt = (xa+xb)/2
+  yt = (ya+yb)/2
+  m = (yb-ya)/(xb-xa)
+  text(xt,yt,i,pos=3,offset=0.1,srt=atan(m)*180/pi)
+  text(xt,yt,p[i+1],pos=1,offset=0.1,srt=atan(m)*180/pi)
+  for(j in 0:1){
+    y2 = y1-h*(j-0.5)/4
+    lines(c(x1,x2),c(y1,y2))
+    xa = x1; xb = x2; ya = y1; yb = y2
+    xt = (xa+xb)/2
+    yt = (ya+yb)/2
+    m = (yb-ya)/(xb-xa)
+    text(xt,yt,j,pos=3,offset=0.1,srt=atan(m)*180/pi)
+    text(xt,yt,p[j+1],pos=1,offset=0.1,srt=atan(m)*180/pi)
+    for(k in 0:1){
+      y3 = y2-h*(k-0.5)/8
+      lines(c(x2,x3),c(y2,y3))
+      xa = x2; xb = x3; ya = y2; yb = y3
+      xt = xa/3+2*xb/3
+      yt = ya/3+2*yb/3
+      m = (yb-ya)/(xb-xa)
+      text(xt,yt,k,pos=3,offset=0.1,srt=atan(m)*180/pi,cex=0.5)
+      text(xt,yt,p[k+1],pos=1,offset=0.1,srt=atan(m)*180/pi,cex=0.5)
+      text(0.72*w,y3,paste("P(",paste(i,j,k,sep=","),") = ",paste(p[i+1],p[j+1],p[k+1],sep="*"),sep=""),pos=4,cex=0.7)
+    }
+  }
+}
+```
+
+## Consider 3 spins of a Bernoulli spinner with $p = 0.6$
+
+```{r,fig.width=5,fig.height=3}
+par(mar=c(0,0,0,0))
+w = 5
+h = 2.8
+plot(0,0,type='n',ann=F,axes=F,xlim=c(0,w),ylim=c(0,h))
+x0 = 0.1*w
+x1 = 0.3*w
+x2 = 0.5*w
+x3 = 0.7*w
+y0 = 0.5*h
+p = c(0.4,0.6)
+for(i in 0:1){
+  y1 = y0-h*(i-0.5)/2
+  lines(c(x0,x1),c(y0,y1))
+  xa = x0; xb = x1; ya = y0; yb = y1
+  xt = (xa+xb)/2
+  yt = (ya+yb)/2
+  m = (yb-ya)/(xb-xa)
+  text(xt,yt,i,pos=3,offset=0.1,srt=atan(m)*180/pi)
+  text(xt,yt,p[i+1],pos=1,offset=0.1,srt=atan(m)*180/pi)
+  for(j in 0:1){
+    y2 = y1-h*(j-0.5)/4
+    lines(c(x1,x2),c(y1,y2))
+    xa = x1; xb = x2; ya = y1; yb = y2
+    xt = (xa+xb)/2
+    yt = (ya+yb)/2
+    m = (yb-ya)/(xb-xa)
+    text(xt,yt,j,pos=3,offset=0.1,srt=atan(m)*180/pi)
+    text(xt,yt,p[j+1],pos=1,offset=0.1,srt=atan(m)*180/pi)
+    for(k in 0:1){
+      y3 = y2-h*(k-0.5)/8
+      lines(c(x2,x3),c(y2,y3))
+      xa = x2; xb = x3; ya = y2; yb = y3
+      xt = xa/3+2*xb/3
+      yt = ya/3+2*yb/3
+      m = (yb-ya)/(xb-xa)
+      text(xt,yt,k,pos=3,offset=0.1,srt=atan(m)*180/pi,cex=0.5)
+      text(xt,yt,p[k+1],pos=1,offset=0.1,srt=atan(m)*180/pi,cex=0.5)
+      text(0.75*w,y3,i+j+k,cex=0.7)
+      text(0.85*w,y3,round((i+j+k)/3,4),cex=0.7)
+      text(0.95*w,y3,round(p[i+1]*p[j+1]*p[k+1],4),cex=0.7)
+    }
+  }
+}
+text(0.75*w,2.89,"Total",cex=0.8,pos=1)
+text(0.85*w,2.89,"Average",cex=0.8,pos=1)
+text(0.95*w,2.89,"Prob",cex=0.8,pos=1)
+```
+
+$$P(\text{Total=2}) ~~=~~ 0.144+0.144+0.144 ~~=~~ 0.432  $$
+
+
+
+## Consider 4 spins of a Bernoulli spinner with $p = 0.6$
+
+```{r,fig.width=5,fig.height=3}
+par(mar=c(0,0,0,0))
+w = 5
+h = 2.7
+plot(0,0,type='n',ann=F,axes=F,xlim=c(0,w),ylim=c(0,h))
+x0 = 0.01*w
+x1 = 0.2*w
+x2 = 0.4*w
+x3 = 0.6*w
+x4 = 0.8*w
+y0 = 0.5*h
+p = c(0.4,0.6)
+for(i in 0:1){
+  y1 = y0-h*(i-0.5)/2
+  lines(c(x0,x1),c(y0,y1))
+  xa = x0; xb = x1; ya = y0; yb = y1
+  xt = (xa+xb)/2
+  yt = (ya+yb)/2
+  m = (yb-ya)/(xb-xa)
+  text(xt,yt,i,pos=3,offset=0.1,srt=atan(m)*180/pi)
+  text(xt,yt,p[i+1],pos=1,offset=0.1,srt=atan(m)*180/pi)
+  for(j in 0:1){
+    y2 = y1-h*(j-0.5)/4
+    lines(c(x1,x2),c(y1,y2))
+    xa = x1; xb = x2; ya = y1; yb = y2
+    xt = (xa+xb)/2
+    yt = (ya+yb)/2
+    m = (yb-ya)/(xb-xa)
+    text(xt,yt,j,pos=3,offset=0.1,srt=atan(m)*180/pi)
+    text(xt,yt,p[j+1],pos=1,offset=0.1,srt=atan(m)*180/pi)
+    for(k in 0:1){
+      y3 = y2-h*(k-0.5)/8
+      lines(c(x2,x3),c(y2,y3))
+      xa = x2; xb = x3; ya = y2; yb = y3
+      xt = xa/3+2*xb/3
+      yt = ya/3+2*yb/3
+      m = (yb-ya)/(xb-xa)
+      text(xt,yt,k,pos=3,offset=0.1,srt=atan(m)*180/pi,cex=0.5)
+      text(xt,yt,p[k+1],pos=1,offset=0.1,srt=atan(m)*180/pi,cex=0.5)
+      for(l in 0:1){
+        y4 = y3-h*(l-0.5)/16
+        lines(c(x3,x4),c(y3,y4))
+        xa = x3; xb = x4; ya = y3; yb = y4
+        xt = xa/3+2*xb/3
+        yt = ya/3+2*yb/3
+        m = (yb-ya)/(xb-xa)
+        text(xt,yt,l,pos=3,offset=0.1,srt=atan(m)*180/pi,cex=0.3)
+        text(xt,yt,p[l+1],pos=1,offset=0.1,srt=atan(m)*180/pi,cex=0.3)
+        text(0.85*w,y4,i+j+k+l,cex=0.7)
+      }
+      # 
+      # text(0.85*w,y3,round((i+j+k)/3,4),cex=0.7)
+      # text(0.95*w,y3,round(p[i+1]*p[j+1]*p[k+1],4),cex=0.7)
+    }
+  }
+}
+text(0.85*w,2.88,"Total",cex=0.8,pos=1)
+
+```
+
+$$P(\text{Total=2}) ~~=~~ (6)(0.6)^2(0.4)^2 ~~=~~ 0.3456  $$
+
+## Representing total of 4 spins with probability distribution
+
+| Event | Probability |
+|:-----:|:------:|
+|total=0|$(1)(0.6)^0(0.4)^4$|
+|total=1|$(4)(0.6)^1(0.4)^3$|
+|total=2|$(6)(0.6)^2(0.4)^2$|
+|total=3|$(4)(0.6)^3(0.4)^1$|
+|total=4|$(1)(0.6)^4(0.4)^0$|
+
+## Pascal's Triangle
+
+```{r,fig.width=4,fig.height=3,fig.align='center'}
+par(mar=c(0,0,0,0))
+plot(0,0,type='n',ann=F,axes=F,xlim=c(0,1),ylim=c(0,1))
+for(i in 0:10){
+  dx = 1/10
+  for(j in 0:i){
+    x = 0.5+(j-i/2)*dx
+    y = 0.9-0.08*i
+    text(x,y,choose(i,j))
+  }
+}
+```
+$${_7C_3} ~=~ \frac{7!}{3!4!} ~=~ \frac{7\cdot6\cdot5\cdot4\cdot3\cdot2\cdot1}{3\cdot2\cdot1\cdot4\cdot3\cdot2\cdot1} ~=~ 35 $$
+
+
+## Binomial Distribution
+
+* Let $W$ represent a Bernoulli distribution with $p$ as the chance of success.
+* Let $n$ represent the number of spins.
+* Let $X$ represent the total of $n$ spins of $W$.
+* We say $X$ follows a binomial distribution.
+
+$$P(X=x) ~~=~~ {_nC_x} p^x(1-p)^{n-x}  $$

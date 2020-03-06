@@ -1,0 +1,396 @@
+---
+title: "Mat-181 Exam 1 Spring 2020 Retake"
+output:
+  pdf_document:
+    includes:
+      in_header: doc-preamble.tex
+      before_body: doc-prefix.tex
+      after_body: doc-suffix.tex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+\thispagestyle{fancy}
+
+## Instructions
+
+On each problem you missed points on the original test, you can get back half the points by doing the corresponding problem here perfectly.
+
+Read each question carefully and show your work.
+
+## Grade Table
+
+(do not write in this table)
+
+\Large 
+
+\begin{tabular}{|c|c|c|c|} \hline
+question & available points & points original test & additional points earned \\ \hline \hline
+1 & 5 & & \\ \hline
+2 & 5 &  & \\ \hline
+3 & 10 &  & \\ \hline
+4 & 10 &  & \\ \hline
+5 & 10 &  & \\ \hline
+6 & 10 &  & \\ \hline
+Total & 50 & & \\ \hline
+\end{tabular}
+
+\normalsize
+
+
+
+\newpage
+
+\chead{}
+
+
+## Question 1 (5 points) 
+
+Determine whether the following measurements represent quantitative or categorical variables.
+
+a. The age of a caterpillar  \hspace{10pt} (quantitative/categorical) \vspace{20pt}
+b. Whether a caterpillar is fuzzy \hspace{10pt} (quantitative/categorical) \vspace{20pt}
+c. The weight of a caterpillar \hspace{10pt} (quantitative/categorical) \vspace{20pt}
+d. The color of a caterpillar  \hspace{10pt} (quantitative/categorical) \vspace{20pt}
+e. The length of a caterpillar \hspace{10pt} (quantitative/categorical) 
+
+\vspace{40pt}
+
+## Question 2 (5 points) 
+
+The means and standard deviations for adult human females and males living in the US are given (in centimeters).
+
+| sex | mean | standard deviation |
+|:---:|:---:|:---:|
+|female |  163 | 9 |
+|male   |  178 | 10 |
+
+We will define the interval of typical measurements as ($\mu-2\sigma$, $\mu+2\sigma$). For each sex, determine the interval of typical measurements. (You need to show two intervals, and each interval has two numbers.)
+
+\vfill
+
+\newpage
+
+## Question 3 (10 points) 
+
+```{r spinner,cache=T}
+set.seed(1235)
+while(T){
+  X = sort(sample(20:50,10,T))
+  N = length(X)
+  mu = mean(X)
+  sig = sd(X)*sqrt((N-1)/N)
+  n = 7
+  x = sample(X,n,T)
+  xbar = mean(x)
+  s = sd(x)
+  if(as.integer(mu)==mu && as.integer(xbar)==xbar && sig!=0 && s!=0 && mu != xbar){break}
+}
+```
+
+The following spinner was spun `r n` times, resulting in the following sample:
+
+```{r draw,fig.align='center',fig.width=4,fig.height=2}
+par(mar=c(0,0,0,0), mfrow=c(1,2))
+plot(0,0,type='n',axes=F,ann=F,xlim=c(-1,1),ylim=c(-1,1))
+theta = seq(0,2*pi,length.out=1000)
+polygon(cos(theta),sin(theta))
+for(i in 1:N){
+  lines(c(0,cos(2*pi*i/N)),c(0,sin(2*pi*i/N)))
+  text(0.8*cos(2*pi*(i-0.5)/N),0.8*sin(2*pi*(i-0.5)/N),X[i])
+}
+arrows(-0.6,-0.1,0.6,0.1,lwd=2,length=0.1)
+plot(0,0,type='n',axes=F,ann=F,xlim=c(-1,1),ylim=c(-1,1))
+text(-0.5,0.8,"Sample:")
+for(i in 1:n){
+  text(0,0.8-0.2*(i-1),x[i])
+}
+```
+
+Determine the spinner's mean ($\mu$), the spinner's standard deviation ($\sigma$), the sample mean ($\bar{x}$), and the sample standard deviation ($s$). You can do this by hand or with a calculator. For doing the calculations by hand, tables are provided on the next page. If you use a calculator, please write the commands you used (so I can give partial credit if you make a typo).
+
+Formulas:
+$$\begin{aligned}
+\mu &= \frac{\sum X}{N} &&&&& \sigma &= \sqrt{\frac{\sum(X-\mu)^2}{N}} &&&&&
+\bar{x} &= \frac{\sum x}{n} &&&&& s &= \sqrt{\frac{\sum(x-\bar{x})^2}{n-1}}
+\end{aligned}$$
+
+\newpage
+
+You can use these tables to help you answer question 3.
+
+\LARGE
+
+\begin{tabular}{|c|c|c|} \hline
+$X$ & $X-\mu$ & $(X-\mu)^2$ \\ \hline \hline
+$\phantom{\frac{xxxxxxxxxxxxxx}{xxxxxxxxxxxxxx}}$ & $\phantom{\frac{xxxxxxxxxxxxxx}{xxxxxxxxxxxxxx}}$ & $\phantom{\frac{xxxxxxxxxxxxxx}{xxxxxxxxxxxxxx}}$ \\ \hline
+$\phantom{\frac{x}{x}}$& & \\ \hline
+$\phantom{\frac{x}{x}}$& & \\ \hline
+$\phantom{\frac{x}{x}}$& & \\ \hline
+$\phantom{\frac{x}{x}}$& & \\ \hline
+$\phantom{\frac{x}{x}}$& & \\ \hline
+$\phantom{\frac{x}{x}}$& & \\ \hline
+$\phantom{\frac{x}{x}}$& & \\ \hline
+$\phantom{\frac{x}{x}}$& & \\ \hline
+$\phantom{\frac{x}{x}}$& & \\ \hline \hline
+$\sum X = \phantom{\frac{xxxxxxxxx}{xxxxxxxxx}}$ &  & $\sum{(X-\mu)^2} = \phantom{\frac{xxxxxxxxx}{xxxxxxxxx}}$ \\ \hline
+$\mu = \phantom{\frac{xxxxxxxxx}{xxxxxxxxx}}$ & & $\sigma = \phantom{\frac{xxxxxxxxxxxxxxxxxxxxxx}{xxxxxxxxx}}$\\ \hline
+\end{tabular}
+
+\vspace{50pt}
+\normalsize
+
+
+\LARGE
+
+\begin{tabular}{|c|c|c|} \hline
+$x$ & $x-\bar{x}$ & $(x-\bar{x})^2$ \\ \hline \hline
+$\phantom{\frac{xxxxxxxxxxxxxx}{xxxxxxxxxxxxxx}}$ & $\phantom{\frac{xxxxxxxxxxxxxx}{xxxxxxxxxxxxxx}}$ & $\phantom{\frac{xxxxxxxxxxxxxx}{xxxxxxxxxxxxxx}}$ \\ \hline
+$\phantom{\frac{x}{x}}$& & \\ \hline
+$\phantom{\frac{x}{x}}$& & \\ \hline
+$\phantom{\frac{x}{x}}$& & \\ \hline
+$\phantom{\frac{x}{x}}$& & \\ \hline
+$\phantom{\frac{x}{x}}$& & \\ \hline
+$\phantom{\frac{x}{x}}$& & \\ \hline \hline
+$\sum x = \phantom{\frac{xxxxxxxxx}{xxxxxxxxx}}$ &  & $\sum{(x-\bar{x})^2} = \phantom{\frac{xxxxxxxxx}{xxxxxxxxx}}$ \\ \hline
+$\bar{x} = \phantom{\frac{xxxxxxxxx}{xxxxxxxxx}}$ & & $s=\phantom{\frac{xxxxxxxxxxxxxxxxxxxxx}{xxxxxxxxx}}$\\ \hline
+\end{tabular}
+
+
+\normalsize
+
+
+\newpage
+
+## Question 4 (10 points) 
+
+```{r histread, echo = FALSE, results = "hide", fig.show="hide"}
+## DATA GENERATION
+set.seed(44)
+types = c("bimodal","symmetric mound","skew left","skew right","uniform")
+shapes1 = c(0.3, 20,   3,   1, 1)
+shapes2 = c(0.3, 20,   1,   3, 1)
+
+rrr = 4 #sample(1:5,1)
+type = types[rrr]
+shape1 = shapes1[rrr]
+shape2 = shapes2[rrr]
+
+n = 500 #sample(c(20,40,50,60,80,100),1)*5
+offset = 110 #runif(1,0,60)
+rng = 60 #sample(c(3,5,10,20,40,100),1)
+data = rbeta(n,shape1,shape2)*rng + offset
+
+## The frequency table
+value = min(data):max(data)
+frequency = tabulate(data)[value]
+df_freq = data.frame(value, frequency)
+myhist = hist(data,breaks=10)
+
+nb = length(myhist$breaks)
+nc = nb-1
+
+lt1 = sample(c(T,F),1)
+lt2 = sample(c(T,F),1)
+s1 = sample(3:(nb-3),1)
+b1 = myhist$breaks[s1]
+if(lt1){
+  t1 = "less"
+  p1 = sum(myhist$counts[1:(s1-1)])/n
+  s2 = sample(2:(s1-1),1)
+  b2 = myhist$breaks[s2]
+  if(lt2){
+    t2 = "less"
+    p2 = sum(myhist$counts[1:(s2-1)])/n
+    p3 = sum(myhist$counts[1:(s2-1)])/sum(myhist$counts[1:(s1-1)])
+  } else {
+    t2 = "greater"
+    p2 = sum(myhist$counts[s2:nc])/n
+    p3 = sum(myhist$counts[s2:(s1-1)])/sum(myhist$counts[1:(s1-1)])
+  }
+} else {
+  t1 = "greater"
+  p1 = sum(myhist$counts[s1:nc])/n
+  s2 = sample((s1+1):(nb-1),1)
+  b2 = myhist$breaks[s2]
+  if(lt2){
+    t2 = "less"
+    p2 = sum(myhist$counts[1:(s2-1)])/n
+    p3 = sum(myhist$counts[s1:(s2-1)])/(n*p1)
+  } else {
+    t2 = "greater"
+    p2 = sum(myhist$counts[s2:nc])/n
+    p3 = sum(myhist$counts[s2:nc])/(n*p1)
+  }
+}
+
+while(T){
+  s4 = sample(2:(nb-2),1)
+  if(s4 != s1 && s4 != s2){
+    break
+  }
+}
+
+b4 = myhist$breaks[s4]
+p4 = sum(myhist$counts[1:(s4-1)])/n
+```
+
+A continuous random variable was measured `r n` times. The resulting histogram is shown below.
+
+```{r showhist, echo = FALSE, results = "hide", fig.show="show"}
+hist(data,breaks=10,labels=TRUE,xlab="measurement value",xlim=c(min(myhist$breaks),max(myhist$breaks)),ylim=c(0,max(myhist$counts)*1.1),xaxt="n",main="")
+axis(1, at=myhist$breaks, labels=myhist$breaks)
+```
+
+a. Describe the overall shape of the distribution. (symmetric mound, skew left, skew right, uniform, or bimodal) \vfill
+b. Estimate the range of the distribution (range = max-min). \vfill
+c. What percent of the measurements are **`r t1`** than `r b1`? \vfill
+d. What percent of the measurements are **`r t2`** than `r b2`? \vfill
+e. Of the measurements `r t1` than `r b1`, what percent are `r t2` than `r b2`? \vfill
+f. Estimate the value of the `r signif(p4*100,4)`th percentile. In other words, determine a value ($x$) such that `r signif(p4*100,4)`% of values are less than $x$ and `r signif(100-p4*100,4)`% of values are greater than $x$. \vfill
+
+\newpage
+
+## Question 5 (10 points) 
+
+```{r data generation, echo = FALSE, results = "hide"}
+library(latex2exp)
+set.seed(123)
+mu = 333  #signif(10**runif(1,-1,3),2)
+sd = 111 #signif(mu/3*runif(1,0.1,1),1)
+
+choices = sample(-2:2,4)
+xc = mu+sd*choices
+pc = round(200*pnorm(choices))/200
+
+c2 = sample(1:2,1)
+x2s = c(mu-sd*c2,mu+sd*c2)
+p2 = round(200*pnorm(c2))/200-round(200*pnorm(-c2))/200
+```
+
+The figure below summarizes the *standard deviation rule* for normal distributions. In the figure, $\mu$ is the mean and $\sigma$ is the standard deviation. The percentages show the fraction of measurements that fall within various intervals.
+
+\
+```{r drawit, echo=FALSE, fig.height=4, fig.width=6,fig.align='center'}
+xs = (-330):330/100
+ys = dnorm(xs)
+plot(xs,ys,type="l",ann=F,axes = F,lwd=3,ylim=c(0,0.6),xlim=c(-3.4,3.4))
+lines(c(0,0),c(-0.02,dnorm(0)),lty=2)
+lines(c(1,1),c(-0.02,dnorm(1)),lty=2)
+lines(c(2,2),c(-0.02,dnorm(2)),lty=2)
+lines(c(-1,-1),c(-0.02,dnorm(-1)),lty=2)
+lines(c(-2,-2),c(-0.02,dnorm(-2)),lty=2)
+text(0.5,dnorm(0.5)/3,"34%")
+text(-0.5,dnorm(-0.5)/3,"34%")
+text(1.5,dnorm(1.5)/3,"13.5%")
+text(-1.5,dnorm(-1.5)/3,"13.5%")
+lines(c(-1,-1,1,1),c(0.42,0.45,0.45,0.42))
+text(0,0.48,"68%")
+lines(c(-2,-2,2,2),c(0.51,0.54,0.54,0.51))
+text(0,0.57,"95%")
+arrows(2,0.1,3.3,0.1)
+text(2.5,0.13,"2.5%")
+arrows(-2,0.1,-3.3,0.1)
+text(-2.5,0.13,"2.5%")
+abline(h=0)
+```
+\vspace{-15pt}
+$$\begin{aligned} 
+\mu-2\sigma &&&& \mu-\sigma &&&&&& \mu &&&&&& \mu+\sigma &&&& \mu+2\sigma
+\end{aligned}$$
+
+\vspace{30pt}
+
+A specific distribution is approximately normal with mean $\mu=`r mu`$ and standard deviation  $\sigma=`r sd`$.
+
+a. What percent of the measurements are greater than `r xc[1]`? \vfill
+b. What percent of the measurements are less than `r xc[2]`? \vfill
+c. What measurement is greater than `r pc[3]*100`% of the measurements (and less than `r (1-pc[3])*100`% of measurements)? \vfill
+d. What measurement is less than `r (1-pc[4])*100`% of the measurements (and greater than `r pc[4]*100`% of measurements)? \vfill
+e. What percent of the measurements are between `r x2s[1]` and `r x2s[2]`? \vfill
+
+
+\newpage 
+
+## Question 6 (10 points) 
+
+```{r data generation q6, echo = FALSE, results = "hide"}
+## DATA GENERATION
+set.seed(111)
+
+shapes = c("tight","uniform","bimodal")
+
+b = c(4,1,0.4)
+r = sort(sample(c(10,20,30,40),3,replace=T))
+m = sample(c(20,30,40,50,60),3)
+den = c(6,4,2)
+
+x1 = rbeta(1000,b[1],b[1])*r[1]+m[1]-r[1]/2
+x2 = rbeta(1000,b[2],b[2])*r[2]+m[2]-r[2]/2
+x3 = rbeta(1000,b[3],b[3])*r[3]+m[3]-r[3]/2
+
+xs = c(x1,x2,x3)
+
+ord = sample(0:2)
+let = c("F","G","H")
+
+xx1 = xs[(ord[1]*1000+1):(ord[1]*1000+1000)]
+xx2 = xs[(ord[2]*1000+1):(ord[2]*1000+1000)]
+xx3 = xs[(ord[3]*1000+1):(ord[3]*1000+1000)]
+```
+
+
+We can estimate the mean of **symmetric** distributions.
+$$\bar{x} \approx \frac{\max(x)+\min(x)}{2} $$
+
+We can **roughly** estimate the standard deviation of certain distributions.
+
+| Shape | SD estimate |
+|:-----:|:-----------:|
+| bell  | $\text{range}/6$ |
+| uniform | $\text{range}/4$ |
+| bimodal | $\text{range}/2$ |
+
+
+Three continuous random variables (W, X, and Y) were measured 1000 times each. The resulting histograms show the three distributions.
+
+\
+```{r, showitnow, echo=FALSE, fig.height = 4, fig.width=5, fig.align='center'}
+par(mar=c(3,0,2,0))
+layout(matrix(c(1,2,3), 3, 1, byrow = TRUE))
+hist(xx1,breaks=(0:80),ann=F,yaxt="n",xaxt="n")
+mtext("Random Variable W",side=3)
+axis(1,at=0:16*5)
+hist(xx2,breaks=(0:80),ann=F,yaxt="n",xaxt="n")
+mtext("Random Variable X",side=3)
+axis(1,at=0:16*5)
+hist(xx3,breaks=(0:80),ann=F,yaxt="n",xaxt="n")
+mtext("Random Variable Y",side=3)
+axis(1,at=0:16*5)
+```
+\
+
+
+a. Estimate the mean of W. \vfill
+b. Estimate the mean of X. \vfill
+c. Estimate the mean of Y. \vfill
+d. Estimate the standard deviation of W. \vfill
+e. Estimate the standard deviation of X. \vfill
+f. Estimate the standard deviation of Y. \vfill
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
