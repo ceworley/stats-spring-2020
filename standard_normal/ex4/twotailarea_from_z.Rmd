@@ -1,0 +1,113 @@
+```{r data generation, echo = FALSE, results = "hide"}
+ell = runif(1,0.65,0.98)
+z = round(qnorm(ell),2)
+ell = round(pnorm(z),4)
+la = round(pnorm(-z),4)
+sol = 2*la
+```
+
+Question
+========
+Evaluate $P\left(|Z| > `r z`\right)$.
+
+
+Solution
+========
+First, you need to identify that we are looking for a two-tail area (the sum of the left and right tails). This is because $z$-scores far from 0 satisfy $|Z|>`r z`$, while $z$-scores near 0 do not satisfy the inequality.
+
+Start with a sketch.
+
+```{r, echo=F, fig.height=4, fig.width=6}
+par(mar=c(7,0,0,0))
+zs = seq(-3,3,0.01)
+plot(zs,dnorm(zs),xlim=c(-3,3),type='l',ylab='density',xlab='Z',axes=F,ann=F)
+polygon(c(zs[zs<=-z],-z,-3),c(dnorm(zs[zs<=-z]),0,0),col=rgb(0.7,0.7,0.7,0.7))
+polygon(c(zs[zs>=z],3,z),c(dnorm(zs[zs>=z]),0,0),col=rgb(0.7,0.7,0.7,0.7))
+lines(c(-3,3),c(0,0))
+axis(1,at=c(-3,-z,z,3),line = 0)
+axis(1,at=seq(-3,3,1),line=2)
+mtext('Z',1,5)
+```
+\
+
+Remember, the entire area is always 1. Our z-table only provides left areas. 
+
+**Method 1:** First find the area of the left tail.
+$$P(Z<`r -z`) =  `r la`$$
+Recognize normal distributions are symmetric, so we also know the area of the right tail.
+$$P(Z>`r z`) = `r la` $$
+The two areas add to our desired two-tail area.
+$$\begin{aligned}
+P\left(|Z|>`r z`\right) &= P(Z<`r -z`)+P(Z>`r z`) \\
+&= `r la` + `r la` \\
+&= `r sol`
+\end{aligned}$$
+
+This technique can be summarized with the following formula:
+$$P\left(|Z|>z\right) = 2\cdot P(Z<-z)$$
+assuming $z>0$.
+
+So, in our case (when $z=`r z`$),
+$$\begin{aligned}
+P\left(|Z|<`r z`\right) &= 2\cdot P(Z<`r -z`) \\
+&= 2\cdot`r la` \\
+&= `r sol`
+\end{aligned}$$
+
+This method is shown graphically:
+
+```{r, echo=F, fig.height=4, fig.width=6}
+par(mar=c(7,0,0,0))
+zs = seq(-3,3,0.01)
+plot(zs,dnorm(zs),xlim=c(-3,3),type='l',ylab='density',xlab='Z',axes=F,ann=F)
+polygon(c(zs[zs<=-z],-z,-3),c(dnorm(zs[zs<=-z]),0,0),col=rgb(0.7,0.7,0.7,0.7))
+polygon(c(zs[zs>=z],3,z),c(dnorm(zs[zs>=z]),0,0),col=rgb(0.7,0.7,0.7,0.7))
+lines(c(-3,3),c(0,0))
+axis(1,at=c(-3,-z,z,3),line = 0)
+axis(1,at=seq(-3,3,1),line=2)
+mtext('Z',1,5)
+xl = (-3-z)/2
+xr = (3+z)/2
+text(xl,max(dnorm(xl)/2,0.01),la)
+text(xr,max(dnorm(xr)/2,0.01),la)
+```
+\
+
+Notice we need to add both tails.
+
+**Method 2:** You can achieve the same result by using the following formula:
+$$P\left(|Z|>z\right) = 2\cdot\left[1-P(Z<z) \right] $$
+So,
+$$\begin{aligned}
+P\left(|Z|>`r z`\right) &= 2\cdot\left[1-P(Z<`r z`) \right] \\
+&= 2\cdot\left[1-`r ell`\right] \\
+&= 2\cdot`r la`\\
+&= `r sol`
+\end{aligned}$$
+```{r, echo=F, fig.height=4, fig.width=6}
+par(mar=c(7,0,0,0))
+zs = seq(-3,3,0.01)
+plot(zs,dnorm(zs),xlim=c(-3,3),ylim=c(0,0.5),type='l',ylab='density',xlab='Z',axes=F,ann=F)
+polygon(c(zs[zs<=-z],-z,-3),c(dnorm(zs[zs<=-z]),0,0),col=rgb(0.7,0.7,0.7,0.7))
+polygon(c(zs[zs>=z],3,z),c(dnorm(zs[zs>=z]),0,0),col=rgb(0.7,0.7,0.7,0.7))
+lines(c(-3,3),c(0,0))
+axis(1,at=c(-3,-z,z,3),line = 0)
+axis(1,at=seq(-3,3,1),line=2)
+mtext('Z',1,5)
+lines(c(-3,z,z),c(0.42,0.42,0.4))
+text((-3+z)/2,0.45,ell)
+xl = (-3-z)/2
+xr = (3+z)/2
+text(xl,max(dnorm(xl)/2,0.01),la)
+text(xr,max(dnorm(xr)/2,0.01),la)
+```
+\
+
+
+
+Meta-information
+================
+extype: num
+exsolution: `r sol`
+exname: Get two-tail area from Z
+extol: 0.0002

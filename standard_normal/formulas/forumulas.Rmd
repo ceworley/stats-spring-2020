@@ -1,0 +1,106 @@
+---
+title: "Standard Normal Probability Formulas"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+# Formulas written in probability notation
+
+## Formulas in terms of left area
+
+### To find a right area
+$$P(Z>z) ~=~ 1-P(Z<z) $$
+
+### To find a central area (assuming $z>0$)
+$$P(|Z|<z)~=~ 2P(Z<z)-1$$
+
+### To find a two-tail area (assuming $z>0$)
+$$P(|Z|>z)~=~ 2-2P(Z<z)$$
+
+### To find an arbitrary area (assuming $z_2>z_1$)
+$$P(z_1<Z<z_2) ~=~ P(Z<z_2) -P(Z<z_1)$$
+
+## Formulas solved for left area
+
+### To find a left area from a right area
+
+$$P(Z<z) ~=~ 1-P(Z>z) $$
+
+### To find a left area from a central area (assuming $z>0$)
+
+$$P(Z<z) ~=~\frac{P(|Z|<z)+1}{2}$$
+
+### To find a left area from a two-tail area (assuming $z>0$)
+
+$$P(Z<z) = \frac{2-P(|Z|>z)}{2} $$
+
+# Formulas written in nonstandard notation
+
+Let's use a shorter notation.
+$$\begin{aligned}
+L &= \text{left area} &= P(Z<z) \\
+R &= \text{right area} &= P(Z>z) \\
+C &= \text{central area} &= P(|Z|<z) \\
+T &= \text{two-tail area} &= P(|Z|>z)
+\end{aligned}$$
+
+### To find a right area
+$$R ~=~ 1-L $$
+
+### To find a central area (assuming $z>0$)
+$$C~=~ 2L-1$$
+
+### To find a two-tail area (assuming $z>0$)
+$$T~=~ 2-2L$$
+
+
+## Formulas solved for left area
+
+### To find a left area from a right area
+
+$$L ~=~ 1-R $$
+
+### To find a left area from a central area (assuming $z>0$)
+
+$$L ~=~\frac{C+1}{2}$$
+
+### To find a left area from a two-tail area (assuming $z>0$)
+
+$$L = \frac{2-T}{2} $$
+
+## Graphic representation
+
+```{r,fig.height=3,fig.width=6}
+par(mar=c(1,0,0,0))
+z = 0.8
+Z = seq(-3,3,0.01)
+plot(Z,dnorm(Z),type="l",ann=F,axes=F)
+abline(h=0)
+lines(c(z,z),c(0,dnorm(z)))
+zl = (-2+z)/2
+text(zl,dnorm(zl)/3,"L")
+zr = (2+z)/2
+text(zr,dnorm(zr)/3,"R")
+mtext("z",1,at=z)
+```
+
+```{r,fig.height=3,fig.width=6}
+library(latex2exp)
+par(mar=c(1,0,0,0))
+z = 0.8
+Z = seq(-3,3,0.01)
+plot(Z,dnorm(Z),type="l",ann=F,axes=F)
+abline(h=0)
+lines(c(-z,-z),c(0,dnorm(-z)))
+lines(c(z,z),c(0,dnorm(z)))
+zc = 0
+text(zc,dnorm(zc)/3,"C")
+zt1 = -(2+z)/2
+zt2 = (2+z)/2
+text(c(zt1,zt2),c(dnorm(zt1),dnorm(zt2))/3,"T/2")
+mtext("-z",1,at=-z)
+mtext("z",1,at=z)
+```
+

@@ -1,0 +1,30 @@
+---
+title: "Some interesting probability stories"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Problem of Points
+
+* Two gamblers ($A$ and $B$) are flipping a fair coin.
+* Heads gives $A$ a point; tails gives $B$ a point.
+* The first gambler to get 3 points wins the $100 pot. 
+* The cops come before the end: $A$ has 2 points and $B$ has 1 point.
+* The gamblers escape with the pot, but lost the coin, so they are done playing.
+* How should the pot be fairly split?
+
+This problem has historical importance.
+
+* The earliest known statement of this problem is from Luca Pacioli in **1494**.
+* Luca gave the wrong answer.
+* Pascal and Fermat finally got the correct answer is **1662**. In doing so, they clearly defined many concepts of probability.
+
+## Luca's 1494 answer
+
+* Since $A$ won 2 points and $B$ won 1 point, $A$ deserves 2/3 of the pot and $B$ deserves 1/3 of the pot.
+
+
+

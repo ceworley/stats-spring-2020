@@ -1,9 +1,5 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
 ```{r data generation, echo = FALSE, results = "hide"}
+library(exams)
 ## DATA GENERATION
 images = c("bike","cat","dog","flower","gem","house","jigsaw","kite","lamp","mop",
            "needle","pig","quilt","rug","shovel","tree","wheel")
@@ -101,19 +97,31 @@ p7 = c(p7a,p7b)
 if(p7[1]>p7[2]){
     big = is[i7[1]]
     small = is[i7[2]]
+    sol7 = "10"
 } else {
     big = is[i7[2]]
     small = is[i7[1]]
+    sol7 = "01"
 }
 t7 = paste("Is a ",is[i7[1]]," or a ",is[i7[2]]," more likely to be ",cs[c7],"?",sep="")
+
+t7 = c(paste("A ", is[i7[1]], " is more likely than a ", is[i7[2]], " to be ", cs[c7], ".", sep=""),
+       paste("A ", is[i7[2]], " is more likely than a ", is[i7[1]], " to be ", cs[c7], ".", sep=""))
+
 s7 = paste("$P(\\text{",cs[c7]," given ",is[i7[1]],"}) = ",p7[1],"$ and $P(\\text{",cs[c7]," given  ",is[i7[2]],"}) = ",p7[2],"$, so a ",big," is more likely to be ",cs[c7]," than a ",small," is.",sep="")
 
-ts = c(t1,t2,t3,t4,t5,t6,t7)
+
+ts = list(t1,t2,t3,t4,t5,t6,t7)
 sss = c(s1,s2,s3,s4,s5,s6,s7)
+types = c(rep("num",6),"schoice")
+sols = c(p1,p2,p3,p4,p5,p6,sol7)
 ord = sample(1:7)
+
 
 tt = ts[ord]
 ss = sss[ord]
+type = types[ord]
+sol = sols[ord]
 
 nums <- cbind(nums, Total = rowSums(nums))
 nums <- rbind(nums, Total = colSums(nums))
@@ -140,41 +148,22 @@ In a deck of strange cards, there are `r tot` cards. Each card has an image and 
 `r s`
 
 
-<!-- ```{r echo=FALSE} -->
-<!-- library(knitr) -->
-<!-- kable(nums) -->
-<!-- ``` -->
-
-
-Answerlist
---------
-* `r tt[1]`
-* `r tt[2]`
-* `r tt[3]`
-* `r tt[4]`
-* `r tt[5]`
-* `r tt[6]`
-* `r tt[7]`
-
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(unlist(tt), markup = "markdown")
+```
 
 
 Solution
 ========
 
-Answerlist
---------
-* `r ss[1]`
-* `r ss[2]`
-* `r ss[3]`
-* `r ss[4]`
-* `r ss[5]`
-* `r ss[6]`
-* `r ss[7]`
-
+```{r solutionlist, echo = FALSE, results = "asis"}
+answerlist(paste(unlist(ss), sep = ""), markup = "markdown")
+```
 
 Meta-information
 ============
-extype: string
-exsolution: answer
-exname: marbles
+extype: cloze
+exsolution: `r paste(sol, collapse="|")`
+exclozetype: `r paste(type, collapse="|")`
+exname: Cards probabilities
 extol: 0.01

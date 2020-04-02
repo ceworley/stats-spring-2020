@@ -1,0 +1,1602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/p2_probdist/p2_probdist</text>
+</category>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R01 Q1 : p2_probdist </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A spinner has the probability distribution shown below.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(x)</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">8</td>
+<td align="center">0.19</td>
+</tr>
+<tr class="even">
+<td align="center">13</td>
+<td align="center">0.18</td>
+</tr>
+<tr class="odd">
+<td align="center">19</td>
+<td align="center">0.5</td>
+</tr>
+<tr class="even">
+<td align="center">28</td>
+<td align="center">0.13</td>
+</tr>
+</tbody>
+</table>
+<ol type = "a">
+<li> What is the probability of spinning 8? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>=</mo><mn>8</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X=8)</annotation></semantics></math>? {1:NUMERICAL:=0.19:0.01} </li>
+<li> What is the probability of spinning 19 or 28? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>=</mo><mn>19</mn><mspace width="0.222em"></mspace><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> or </mtext><mspace width="0.333em"></mspace></mrow><mspace width="0.222em"></mspace><mi>X</mi><mo>=</mo><mn>28</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X=19 ~\text{ or }~ X=28)</annotation></semantics></math>? {1:NUMERICAL:=0.63:0.01} </li>
+<li> If spinning twice, what is the probability of first spinning 19 and then spinning 28? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>=</mo><mn>19</mn><mspace width="0.222em"></mspace><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> and </mtext><mspace width="0.333em"></mspace></mrow><mspace width="0.222em"></mspace><msub><mi>X</mi><mn>2</mn></msub><mo>=</mo><mn>28</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X_1=19 ~\text{ and }~ X_2=28)</annotation></semantics></math>? {1:NUMERICAL:=0.065:0.01} </li>
+<li> What is the probability of spinning at least 13? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>≥</mo><mn>13</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X\ge 13)</annotation></semantics></math>? {1:NUMERICAL:=0.81:0.01} </li>
+<li> Determine the mean of the probability distribution by using <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mo>∑</mo><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mu = \sum x\cdot \text{Pr}(x)</annotation></semantics></math>. {1:NUMERICAL:=17:0.01} </li>
+<li> Determine the standard deviation of the probability distribution by using <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><msqrt><mrow><mo>∑</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></msqrt></mrow><annotation encoding="application/x-tex">\sigma = \sqrt{\sum (x-\mu)^2 \cdot \text{Pr}(x)}</annotation></semantics></math>. {1:NUMERICAL:=6:0.01} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Make a table (for parts mean and standard deviation).</p>
+<table style="width:100%;">
+<colgroup>
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(x)</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x\cdot\text{Pr}(x)</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><annotation encoding="application/x-tex">x-\mu</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(x-\mu)^2</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x-\mu)^2 \cdot \text{Pr}(x)</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">8</td>
+<td align="center">0.19</td>
+<td align="center">1.52</td>
+<td align="center">-9</td>
+<td align="center">81</td>
+<td align="center">15.39</td>
+</tr>
+<tr class="even">
+<td align="center">13</td>
+<td align="center">0.18</td>
+<td align="center">2.34</td>
+<td align="center">-4</td>
+<td align="center">16</td>
+<td align="center">2.88</td>
+</tr>
+<tr class="odd">
+<td align="center">19</td>
+<td align="center">0.5</td>
+<td align="center">9.5</td>
+<td align="center">2</td>
+<td align="center">4</td>
+<td align="center">2</td>
+</tr>
+<tr class="even">
+<td align="center">28</td>
+<td align="center">0.13</td>
+<td align="center">3.64</td>
+<td align="center">11</td>
+<td align="center">121</td>
+<td align="center">15.73</td>
+</tr>
+<tr class="odd">
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>17</mn></mrow><annotation encoding="application/x-tex">\sum x \cdot \text{Pr}(x) = 17</annotation></semantics></math></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>=</mo><mn>36</mn></mrow><annotation encoding="application/x-tex">\sigma^2 = 36</annotation></semantics></math></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>17</mn></mrow><annotation encoding="application/x-tex">\mu = 17</annotation></semantics></math></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">\sigma = 6</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<!-- \begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} \hline
+ $x$ & $\text{Pr}(x)$ & $x\cdot\text{Pr}(x)$ & $x-\mu$ & $(x-\mu)^2$ & $(x-\mu)^2 \cdot \text{Pr}(x)$ \\ \hline
+ 8 & 0.19 & 1.52 & -9 & 81 & 15.39 \\ 
+ 13 & 0.18 & 2.34 & -4 & 16 & 2.88 \\ 
+ 19 & 0.5 & 9.5 & 2 & 4 & 2 \\ 
+ 28 & 0.13 & 3.64 & 11 & 121 & 15.73 \\ \hline
+ & & $\sum x \cdot \text{Pr}(x)= 17 $& & & $\sigma^2 = 36 $ \\ \hline
+ & & $\mu= 17 $& & & $\sigma = 6 $ \\ \hline
+\end{tabular}
+\end{center} -->
+<ol type = "a">
+<li> 0.19 </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.5</mn><mo>+</mo><mn>0.13</mn></mrow><annotation encoding="application/x-tex">0.5 + 0.13</annotation></semantics></math> = <strong>0.63</strong> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.5</mn><mo>×</mo><mn>0.13</mn></mrow><annotation encoding="application/x-tex">0.5 \times 0.13</annotation></semantics></math> = <strong>0.065</strong> </li>
+<li> 0.81 </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>17</mn></mrow><annotation encoding="application/x-tex">\mu = 17</annotation></semantics></math> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">\sigma = 6</annotation></semantics></math> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>6</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R02 Q1 : p2_probdist </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A spinner has the probability distribution shown below.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(x)</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">0.19</td>
+</tr>
+<tr class="even">
+<td align="center">11</td>
+<td align="center">0.11</td>
+</tr>
+<tr class="odd">
+<td align="center">14</td>
+<td align="center">0.36</td>
+</tr>
+<tr class="even">
+<td align="center">27</td>
+<td align="center">0.34</td>
+</tr>
+</tbody>
+</table>
+<ol type = "a">
+<li> What is the probability of spinning 27? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>=</mo><mn>27</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X=27)</annotation></semantics></math>? {1:NUMERICAL:=0.34:0.01} </li>
+<li> What is the probability of spinning 3 or 14? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>=</mo><mn>3</mn><mspace width="0.222em"></mspace><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> or </mtext><mspace width="0.333em"></mspace></mrow><mspace width="0.222em"></mspace><mi>X</mi><mo>=</mo><mn>14</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X=3 ~\text{ or }~ X=14)</annotation></semantics></math>? {1:NUMERICAL:=0.55:0.01} </li>
+<li> If spinning twice, what is the probability of first spinning 3 and then spinning 14? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>=</mo><mn>3</mn><mspace width="0.222em"></mspace><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> and </mtext><mspace width="0.333em"></mspace></mrow><mspace width="0.222em"></mspace><msub><mi>X</mi><mn>2</mn></msub><mo>=</mo><mn>14</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X_1=3 ~\text{ and }~ X_2=14)</annotation></semantics></math>? {1:NUMERICAL:=0.0684:0.01} </li>
+<li> What is the probability of spinning at least 14? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>≥</mo><mn>14</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X\ge 14)</annotation></semantics></math>? {1:NUMERICAL:=0.7:0.01} </li>
+<li> Determine the mean of the probability distribution by using <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mo>∑</mo><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mu = \sum x\cdot \text{Pr}(x)</annotation></semantics></math>. {1:NUMERICAL:=16:0.01} </li>
+<li> Determine the standard deviation of the probability distribution by using <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><msqrt><mrow><mo>∑</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></msqrt></mrow><annotation encoding="application/x-tex">\sigma = \sqrt{\sum (x-\mu)^2 \cdot \text{Pr}(x)}</annotation></semantics></math>. {1:NUMERICAL:=8.8:0.01} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Make a table (for parts mean and standard deviation).</p>
+<table style="width:100%;">
+<colgroup>
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(x)</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x\cdot\text{Pr}(x)</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><annotation encoding="application/x-tex">x-\mu</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(x-\mu)^2</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x-\mu)^2 \cdot \text{Pr}(x)</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">0.19</td>
+<td align="center">0.57</td>
+<td align="center">-13</td>
+<td align="center">169</td>
+<td align="center">32.11</td>
+</tr>
+<tr class="even">
+<td align="center">11</td>
+<td align="center">0.11</td>
+<td align="center">1.21</td>
+<td align="center">-5</td>
+<td align="center">25</td>
+<td align="center">2.75</td>
+</tr>
+<tr class="odd">
+<td align="center">14</td>
+<td align="center">0.36</td>
+<td align="center">5.04</td>
+<td align="center">-2</td>
+<td align="center">4</td>
+<td align="center">1.44</td>
+</tr>
+<tr class="even">
+<td align="center">27</td>
+<td align="center">0.34</td>
+<td align="center">9.18</td>
+<td align="center">11</td>
+<td align="center">121</td>
+<td align="center">41.14</td>
+</tr>
+<tr class="odd">
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>16</mn></mrow><annotation encoding="application/x-tex">\sum x \cdot \text{Pr}(x) = 16</annotation></semantics></math></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>=</mo><mn>77.44</mn></mrow><annotation encoding="application/x-tex">\sigma^2 = 77.44</annotation></semantics></math></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>16</mn></mrow><annotation encoding="application/x-tex">\mu = 16</annotation></semantics></math></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>8.8</mn></mrow><annotation encoding="application/x-tex">\sigma = 8.8</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<!-- \begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} \hline
+ $x$ & $\text{Pr}(x)$ & $x\cdot\text{Pr}(x)$ & $x-\mu$ & $(x-\mu)^2$ & $(x-\mu)^2 \cdot \text{Pr}(x)$ \\ \hline
+ 3 & 0.19 & 0.57 & -13 & 169 & 32.11 \\ 
+ 11 & 0.11 & 1.21 & -5 & 25 & 2.75 \\ 
+ 14 & 0.36 & 5.04 & -2 & 4 & 1.44 \\ 
+ 27 & 0.34 & 9.18 & 11 & 121 & 41.14 \\ \hline
+ & & $\sum x \cdot \text{Pr}(x)= 16 $& & & $\sigma^2 = 77.44 $ \\ \hline
+ & & $\mu= 16 $& & & $\sigma = 8.8 $ \\ \hline
+\end{tabular}
+\end{center} -->
+<ol type = "a">
+<li> 0.34 </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.19</mn><mo>+</mo><mn>0.36</mn></mrow><annotation encoding="application/x-tex">0.19 + 0.36</annotation></semantics></math> = <strong>0.55</strong> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.19</mn><mo>×</mo><mn>0.36</mn></mrow><annotation encoding="application/x-tex">0.19 \times 0.36</annotation></semantics></math> = <strong>0.0684</strong> </li>
+<li> 0.7 </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>16</mn></mrow><annotation encoding="application/x-tex">\mu = 16</annotation></semantics></math> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>8.8</mn></mrow><annotation encoding="application/x-tex">\sigma = 8.8</annotation></semantics></math> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>6</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R03 Q1 : p2_probdist </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A spinner has the probability distribution shown below.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(x)</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">0.17</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">0.2</td>
+</tr>
+<tr class="odd">
+<td align="center">13</td>
+<td align="center">0.36</td>
+</tr>
+<tr class="even">
+<td align="center">23</td>
+<td align="center">0.27</td>
+</tr>
+</tbody>
+</table>
+<ol type = "a">
+<li> What is the probability of spinning 23? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>=</mo><mn>23</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X=23)</annotation></semantics></math>? {1:NUMERICAL:=0.27:0.01} </li>
+<li> What is the probability of spinning 8 or 23? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>=</mo><mn>8</mn><mspace width="0.222em"></mspace><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> or </mtext><mspace width="0.333em"></mspace></mrow><mspace width="0.222em"></mspace><mi>X</mi><mo>=</mo><mn>23</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X=8 ~\text{ or }~ X=23)</annotation></semantics></math>? {1:NUMERICAL:=0.47:0.01} </li>
+<li> If spinning twice, what is the probability of first spinning 8 and then spinning 23? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>=</mo><mn>8</mn><mspace width="0.222em"></mspace><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> and </mtext><mspace width="0.333em"></mspace></mrow><mspace width="0.222em"></mspace><msub><mi>X</mi><mn>2</mn></msub><mo>=</mo><mn>23</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X_1=8 ~\text{ and }~ X_2=23)</annotation></semantics></math>? {1:NUMERICAL:=0.054:0.01} </li>
+<li> What is the probability of spinning at most 13? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>≤</mo><mn>13</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X\le 13)</annotation></semantics></math>? {1:NUMERICAL:=0.73:0.01} </li>
+<li> Determine the mean of the probability distribution by using <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mo>∑</mo><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mu = \sum x\cdot \text{Pr}(x)</annotation></semantics></math>. {1:NUMERICAL:=13:0.01} </li>
+<li> Determine the standard deviation of the probability distribution by using <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><msqrt><mrow><mo>∑</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></msqrt></mrow><annotation encoding="application/x-tex">\sigma = \sqrt{\sum (x-\mu)^2 \cdot \text{Pr}(x)}</annotation></semantics></math>. {1:NUMERICAL:=7:0.01} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Make a table (for parts mean and standard deviation).</p>
+<table style="width:100%;">
+<colgroup>
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(x)</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x\cdot\text{Pr}(x)</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><annotation encoding="application/x-tex">x-\mu</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(x-\mu)^2</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x-\mu)^2 \cdot \text{Pr}(x)</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">0.17</td>
+<td align="center">0.51</td>
+<td align="center">-10</td>
+<td align="center">100</td>
+<td align="center">17</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">0.2</td>
+<td align="center">1.6</td>
+<td align="center">-5</td>
+<td align="center">25</td>
+<td align="center">5</td>
+</tr>
+<tr class="odd">
+<td align="center">13</td>
+<td align="center">0.36</td>
+<td align="center">4.68</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">23</td>
+<td align="center">0.27</td>
+<td align="center">6.21</td>
+<td align="center">10</td>
+<td align="center">100</td>
+<td align="center">27</td>
+</tr>
+<tr class="odd">
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>13</mn></mrow><annotation encoding="application/x-tex">\sum x \cdot \text{Pr}(x) = 13</annotation></semantics></math></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>=</mo><mn>49</mn></mrow><annotation encoding="application/x-tex">\sigma^2 = 49</annotation></semantics></math></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>13</mn></mrow><annotation encoding="application/x-tex">\mu = 13</annotation></semantics></math></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">\sigma = 7</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<!-- \begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} \hline
+ $x$ & $\text{Pr}(x)$ & $x\cdot\text{Pr}(x)$ & $x-\mu$ & $(x-\mu)^2$ & $(x-\mu)^2 \cdot \text{Pr}(x)$ \\ \hline
+ 3 & 0.17 & 0.51 & -10 & 100 & 17 \\ 
+ 8 & 0.2 & 1.6 & -5 & 25 & 5 \\ 
+ 13 & 0.36 & 4.68 & 0 & 0 & 0 \\ 
+ 23 & 0.27 & 6.21 & 10 & 100 & 27 \\ \hline
+ & & $\sum x \cdot \text{Pr}(x)= 13 $& & & $\sigma^2 = 49 $ \\ \hline
+ & & $\mu= 13 $& & & $\sigma = 7 $ \\ \hline
+\end{tabular}
+\end{center} -->
+<ol type = "a">
+<li> 0.27 </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.2</mn><mo>+</mo><mn>0.27</mn></mrow><annotation encoding="application/x-tex">0.2 + 0.27</annotation></semantics></math> = <strong>0.47</strong> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.2</mn><mo>×</mo><mn>0.27</mn></mrow><annotation encoding="application/x-tex">0.2 \times 0.27</annotation></semantics></math> = <strong>0.054</strong> </li>
+<li> 0.73 </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>13</mn></mrow><annotation encoding="application/x-tex">\mu = 13</annotation></semantics></math> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">\sigma = 7</annotation></semantics></math> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>6</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R04 Q1 : p2_probdist </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A spinner has the probability distribution shown below.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(x)</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">2</td>
+<td align="center">0.08</td>
+</tr>
+<tr class="even">
+<td align="center">3</td>
+<td align="center">0.25</td>
+</tr>
+<tr class="odd">
+<td align="center">8</td>
+<td align="center">0.13</td>
+</tr>
+<tr class="even">
+<td align="center">14</td>
+<td align="center">0.26</td>
+</tr>
+<tr class="odd">
+<td align="center">15</td>
+<td align="center">0.07</td>
+</tr>
+<tr class="even">
+<td align="center">16</td>
+<td align="center">0.21</td>
+</tr>
+</tbody>
+</table>
+<ol type = "a">
+<li> What is the probability of spinning 14? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>=</mo><mn>14</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X=14)</annotation></semantics></math>? {1:NUMERICAL:=0.26:0.01} </li>
+<li> What is the probability of spinning 14 or 15? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>=</mo><mn>14</mn><mspace width="0.222em"></mspace><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> or </mtext><mspace width="0.333em"></mspace></mrow><mspace width="0.222em"></mspace><mi>X</mi><mo>=</mo><mn>15</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X=14 ~\text{ or }~ X=15)</annotation></semantics></math>? {1:NUMERICAL:=0.33:0.01} </li>
+<li> If spinning twice, what is the probability of first spinning 14 and then spinning 15? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>=</mo><mn>14</mn><mspace width="0.222em"></mspace><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> and </mtext><mspace width="0.333em"></mspace></mrow><mspace width="0.222em"></mspace><msub><mi>X</mi><mn>2</mn></msub><mo>=</mo><mn>15</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X_1=14 ~\text{ and }~ X_2=15)</annotation></semantics></math>? {1:NUMERICAL:=0.0182:0.01} </li>
+<li> What is the probability of spinning at least 3? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>≥</mo><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X\ge 3)</annotation></semantics></math>? {1:NUMERICAL:=0.92:0.01} </li>
+<li> Determine the mean of the probability distribution by using <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mo>∑</mo><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mu = \sum x\cdot \text{Pr}(x)</annotation></semantics></math>. {1:NUMERICAL:=10:0.01} </li>
+<li> Determine the standard deviation of the probability distribution by using <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><msqrt><mrow><mo>∑</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></msqrt></mrow><annotation encoding="application/x-tex">\sigma = \sqrt{\sum (x-\mu)^2 \cdot \text{Pr}(x)}</annotation></semantics></math>. {1:NUMERICAL:=5.6:0.01} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Make a table (for parts mean and standard deviation).</p>
+<table style="width:100%;">
+<colgroup>
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(x)</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x\cdot\text{Pr}(x)</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><annotation encoding="application/x-tex">x-\mu</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(x-\mu)^2</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x-\mu)^2 \cdot \text{Pr}(x)</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">2</td>
+<td align="center">0.08</td>
+<td align="center">0.16</td>
+<td align="center">-8</td>
+<td align="center">64</td>
+<td align="center">5.12</td>
+</tr>
+<tr class="even">
+<td align="center">3</td>
+<td align="center">0.25</td>
+<td align="center">0.75</td>
+<td align="center">-7</td>
+<td align="center">49</td>
+<td align="center">12.25</td>
+</tr>
+<tr class="odd">
+<td align="center">8</td>
+<td align="center">0.13</td>
+<td align="center">1.04</td>
+<td align="center">-2</td>
+<td align="center">4</td>
+<td align="center">0.52</td>
+</tr>
+<tr class="even">
+<td align="center">14</td>
+<td align="center">0.26</td>
+<td align="center">3.64</td>
+<td align="center">4</td>
+<td align="center">16</td>
+<td align="center">4.16</td>
+</tr>
+<tr class="odd">
+<td align="center">15</td>
+<td align="center">0.07</td>
+<td align="center">1.05</td>
+<td align="center">5</td>
+<td align="center">25</td>
+<td align="center">1.75</td>
+</tr>
+<tr class="even">
+<td align="center">16</td>
+<td align="center">0.21</td>
+<td align="center">3.36</td>
+<td align="center">6</td>
+<td align="center">36</td>
+<td align="center">7.56</td>
+</tr>
+<tr class="odd">
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">\sum x \cdot \text{Pr}(x) = 10</annotation></semantics></math></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>=</mo><mn>31.36</mn></mrow><annotation encoding="application/x-tex">\sigma^2 = 31.36</annotation></semantics></math></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">\mu = 10</annotation></semantics></math></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>5.6</mn></mrow><annotation encoding="application/x-tex">\sigma = 5.6</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<!-- \begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} \hline
+ $x$ & $\text{Pr}(x)$ & $x\cdot\text{Pr}(x)$ & $x-\mu$ & $(x-\mu)^2$ & $(x-\mu)^2 \cdot \text{Pr}(x)$ \\ \hline
+ 2 & 0.08 & 0.16 & -8 & 64 & 5.12 \\ 
+ 3 & 0.25 & 0.75 & -7 & 49 & 12.25 \\ 
+ 8 & 0.13 & 1.04 & -2 & 4 & 0.52 \\ 
+ 14 & 0.26 & 3.64 & 4 & 16 & 4.16 \\ 
+ 15 & 0.07 & 1.05 & 5 & 25 & 1.75 \\ 
+ 16 & 0.21 & 3.36 & 6 & 36 & 7.56 \\ \hline
+ & & $\sum x \cdot \text{Pr}(x)= 10 $& & & $\sigma^2 = 31.36 $ \\ \hline
+ & & $\mu= 10 $& & & $\sigma = 5.6 $ \\ \hline
+\end{tabular}
+\end{center} -->
+<ol type = "a">
+<li> 0.26 </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.26</mn><mo>+</mo><mn>0.07</mn></mrow><annotation encoding="application/x-tex">0.26 + 0.07</annotation></semantics></math> = <strong>0.33</strong> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.26</mn><mo>×</mo><mn>0.07</mn></mrow><annotation encoding="application/x-tex">0.26 \times 0.07</annotation></semantics></math> = <strong>0.0182</strong> </li>
+<li> 0.92 </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">\mu = 10</annotation></semantics></math> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>5.6</mn></mrow><annotation encoding="application/x-tex">\sigma = 5.6</annotation></semantics></math> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>6</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R05 Q1 : p2_probdist </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A spinner has the probability distribution shown below.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(x)</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">2</td>
+<td align="center">0.11</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">0.11</td>
+</tr>
+<tr class="odd">
+<td align="center">10</td>
+<td align="center">0.17</td>
+</tr>
+<tr class="even">
+<td align="center">16</td>
+<td align="center">0.5</td>
+</tr>
+<tr class="odd">
+<td align="center">22</td>
+<td align="center">0.11</td>
+</tr>
+</tbody>
+</table>
+<ol type = "a">
+<li> What is the probability of spinning 6? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>=</mo><mn>6</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X=6)</annotation></semantics></math>? {1:NUMERICAL:=0.11:0.01} </li>
+<li> What is the probability of spinning 6 or 16? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>=</mo><mn>6</mn><mspace width="0.222em"></mspace><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> or </mtext><mspace width="0.333em"></mspace></mrow><mspace width="0.222em"></mspace><mi>X</mi><mo>=</mo><mn>16</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X=6 ~\text{ or }~ X=16)</annotation></semantics></math>? {1:NUMERICAL:=0.61:0.01} </li>
+<li> If spinning twice, what is the probability of first spinning 6 and then spinning 16? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>=</mo><mn>6</mn><mspace width="0.222em"></mspace><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> and </mtext><mspace width="0.333em"></mspace></mrow><mspace width="0.222em"></mspace><msub><mi>X</mi><mn>2</mn></msub><mo>=</mo><mn>16</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X_1=6 ~\text{ and }~ X_2=16)</annotation></semantics></math>? {1:NUMERICAL:=0.055:0.01} </li>
+<li> What is the probability of spinning at least 6? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>≥</mo><mn>6</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X\ge 6)</annotation></semantics></math>? {1:NUMERICAL:=0.89:0.01} </li>
+<li> Determine the mean of the probability distribution by using <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mo>∑</mo><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mu = \sum x\cdot \text{Pr}(x)</annotation></semantics></math>. {1:NUMERICAL:=13:0.01} </li>
+<li> Determine the standard deviation of the probability distribution by using <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><msqrt><mrow><mo>∑</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></msqrt></mrow><annotation encoding="application/x-tex">\sigma = \sqrt{\sum (x-\mu)^2 \cdot \text{Pr}(x)}</annotation></semantics></math>. {1:NUMERICAL:=5.8:0.01} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Make a table (for parts mean and standard deviation).</p>
+<table style="width:100%;">
+<colgroup>
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(x)</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x\cdot\text{Pr}(x)</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><annotation encoding="application/x-tex">x-\mu</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(x-\mu)^2</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x-\mu)^2 \cdot \text{Pr}(x)</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">2</td>
+<td align="center">0.11</td>
+<td align="center">0.22</td>
+<td align="center">-11</td>
+<td align="center">121</td>
+<td align="center">13.31</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">0.11</td>
+<td align="center">0.66</td>
+<td align="center">-7</td>
+<td align="center">49</td>
+<td align="center">5.39</td>
+</tr>
+<tr class="odd">
+<td align="center">10</td>
+<td align="center">0.17</td>
+<td align="center">1.7</td>
+<td align="center">-3</td>
+<td align="center">9</td>
+<td align="center">1.53</td>
+</tr>
+<tr class="even">
+<td align="center">16</td>
+<td align="center">0.5</td>
+<td align="center">8</td>
+<td align="center">3</td>
+<td align="center">9</td>
+<td align="center">4.5</td>
+</tr>
+<tr class="odd">
+<td align="center">22</td>
+<td align="center">0.11</td>
+<td align="center">2.42</td>
+<td align="center">9</td>
+<td align="center">81</td>
+<td align="center">8.91</td>
+</tr>
+<tr class="even">
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>13</mn></mrow><annotation encoding="application/x-tex">\sum x \cdot \text{Pr}(x) = 13</annotation></semantics></math></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>=</mo><mn>33.64</mn></mrow><annotation encoding="application/x-tex">\sigma^2 = 33.64</annotation></semantics></math></td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>13</mn></mrow><annotation encoding="application/x-tex">\mu = 13</annotation></semantics></math></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>5.8</mn></mrow><annotation encoding="application/x-tex">\sigma = 5.8</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<!-- \begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} \hline
+ $x$ & $\text{Pr}(x)$ & $x\cdot\text{Pr}(x)$ & $x-\mu$ & $(x-\mu)^2$ & $(x-\mu)^2 \cdot \text{Pr}(x)$ \\ \hline
+ 2 & 0.11 & 0.22 & -11 & 121 & 13.31 \\ 
+ 6 & 0.11 & 0.66 & -7 & 49 & 5.39 \\ 
+ 10 & 0.17 & 1.7 & -3 & 9 & 1.53 \\ 
+ 16 & 0.5 & 8 & 3 & 9 & 4.5 \\ 
+ 22 & 0.11 & 2.42 & 9 & 81 & 8.91 \\ \hline
+ & & $\sum x \cdot \text{Pr}(x)= 13 $& & & $\sigma^2 = 33.64 $ \\ \hline
+ & & $\mu= 13 $& & & $\sigma = 5.8 $ \\ \hline
+\end{tabular}
+\end{center} -->
+<ol type = "a">
+<li> 0.11 </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.11</mn><mo>+</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">0.11 + 0.5</annotation></semantics></math> = <strong>0.61</strong> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.11</mn><mo>×</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">0.11 \times 0.5</annotation></semantics></math> = <strong>0.055</strong> </li>
+<li> 0.89 </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>13</mn></mrow><annotation encoding="application/x-tex">\mu = 13</annotation></semantics></math> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>5.8</mn></mrow><annotation encoding="application/x-tex">\sigma = 5.8</annotation></semantics></math> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>6</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R06 Q1 : p2_probdist </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A spinner has the probability distribution shown below.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(x)</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">11</td>
+<td align="center">0.07</td>
+</tr>
+<tr class="even">
+<td align="center">15</td>
+<td align="center">0.07</td>
+</tr>
+<tr class="odd">
+<td align="center">19</td>
+<td align="center">0.15</td>
+</tr>
+<tr class="even">
+<td align="center">23</td>
+<td align="center">0.71</td>
+</tr>
+</tbody>
+</table>
+<ol type = "a">
+<li> What is the probability of spinning 19? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>=</mo><mn>19</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X=19)</annotation></semantics></math>? {1:NUMERICAL:=0.15:0.01} </li>
+<li> What is the probability of spinning 15 or 23? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>=</mo><mn>15</mn><mspace width="0.222em"></mspace><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> or </mtext><mspace width="0.333em"></mspace></mrow><mspace width="0.222em"></mspace><mi>X</mi><mo>=</mo><mn>23</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X=15 ~\text{ or }~ X=23)</annotation></semantics></math>? {1:NUMERICAL:=0.78:0.01} </li>
+<li> If spinning twice, what is the probability of first spinning 15 and then spinning 23? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>=</mo><mn>15</mn><mspace width="0.222em"></mspace><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> and </mtext><mspace width="0.333em"></mspace></mrow><mspace width="0.222em"></mspace><msub><mi>X</mi><mn>2</mn></msub><mo>=</mo><mn>23</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X_1=15 ~\text{ and }~ X_2=23)</annotation></semantics></math>? {1:NUMERICAL:=0.0497:0.01} </li>
+<li> What is the probability of spinning at most 19? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>≤</mo><mn>19</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X\le 19)</annotation></semantics></math>? {1:NUMERICAL:=0.29:0.01} </li>
+<li> Determine the mean of the probability distribution by using <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mo>∑</mo><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mu = \sum x\cdot \text{Pr}(x)</annotation></semantics></math>. {1:NUMERICAL:=21:0.01} </li>
+<li> Determine the standard deviation of the probability distribution by using <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><msqrt><mrow><mo>∑</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></msqrt></mrow><annotation encoding="application/x-tex">\sigma = \sqrt{\sum (x-\mu)^2 \cdot \text{Pr}(x)}</annotation></semantics></math>. {1:NUMERICAL:=3.6:0.01} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Make a table (for parts mean and standard deviation).</p>
+<table style="width:100%;">
+<colgroup>
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(x)</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x\cdot\text{Pr}(x)</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><annotation encoding="application/x-tex">x-\mu</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(x-\mu)^2</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x-\mu)^2 \cdot \text{Pr}(x)</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">11</td>
+<td align="center">0.07</td>
+<td align="center">0.77</td>
+<td align="center">-10</td>
+<td align="center">100</td>
+<td align="center">7</td>
+</tr>
+<tr class="even">
+<td align="center">15</td>
+<td align="center">0.07</td>
+<td align="center">1.05</td>
+<td align="center">-6</td>
+<td align="center">36</td>
+<td align="center">2.52</td>
+</tr>
+<tr class="odd">
+<td align="center">19</td>
+<td align="center">0.15</td>
+<td align="center">2.85</td>
+<td align="center">-2</td>
+<td align="center">4</td>
+<td align="center">0.6</td>
+</tr>
+<tr class="even">
+<td align="center">23</td>
+<td align="center">0.71</td>
+<td align="center">16.33</td>
+<td align="center">2</td>
+<td align="center">4</td>
+<td align="center">2.84</td>
+</tr>
+<tr class="odd">
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>21</mn></mrow><annotation encoding="application/x-tex">\sum x \cdot \text{Pr}(x) = 21</annotation></semantics></math></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>=</mo><mn>12.96</mn></mrow><annotation encoding="application/x-tex">\sigma^2 = 12.96</annotation></semantics></math></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>21</mn></mrow><annotation encoding="application/x-tex">\mu = 21</annotation></semantics></math></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>3.6</mn></mrow><annotation encoding="application/x-tex">\sigma = 3.6</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<!-- \begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} \hline
+ $x$ & $\text{Pr}(x)$ & $x\cdot\text{Pr}(x)$ & $x-\mu$ & $(x-\mu)^2$ & $(x-\mu)^2 \cdot \text{Pr}(x)$ \\ \hline
+ 11 & 0.07 & 0.77 & -10 & 100 & 7 \\ 
+ 15 & 0.07 & 1.05 & -6 & 36 & 2.52 \\ 
+ 19 & 0.15 & 2.85 & -2 & 4 & 0.6 \\ 
+ 23 & 0.71 & 16.33 & 2 & 4 & 2.84 \\ \hline
+ & & $\sum x \cdot \text{Pr}(x)= 21 $& & & $\sigma^2 = 12.96 $ \\ \hline
+ & & $\mu= 21 $& & & $\sigma = 3.6 $ \\ \hline
+\end{tabular}
+\end{center} -->
+<ol type = "a">
+<li> 0.15 </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.07</mn><mo>+</mo><mn>0.71</mn></mrow><annotation encoding="application/x-tex">0.07 + 0.71</annotation></semantics></math> = <strong>0.78</strong> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.07</mn><mo>×</mo><mn>0.71</mn></mrow><annotation encoding="application/x-tex">0.07 \times 0.71</annotation></semantics></math> = <strong>0.0497</strong> </li>
+<li> 0.29 </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>21</mn></mrow><annotation encoding="application/x-tex">\mu = 21</annotation></semantics></math> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>3.6</mn></mrow><annotation encoding="application/x-tex">\sigma = 3.6</annotation></semantics></math> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>6</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R07 Q1 : p2_probdist </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A spinner has the probability distribution shown below.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(x)</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">4</td>
+<td align="center">0.07</td>
+</tr>
+<tr class="even">
+<td align="center">5</td>
+<td align="center">0.5</td>
+</tr>
+<tr class="odd">
+<td align="center">8</td>
+<td align="center">0.22</td>
+</tr>
+<tr class="even">
+<td align="center">24</td>
+<td align="center">0.09</td>
+</tr>
+<tr class="odd">
+<td align="center">26</td>
+<td align="center">0.06</td>
+</tr>
+<tr class="even">
+<td align="center">29</td>
+<td align="center">0.06</td>
+</tr>
+</tbody>
+</table>
+<ol type = "a">
+<li> What is the probability of spinning 26? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>=</mo><mn>26</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X=26)</annotation></semantics></math>? {1:NUMERICAL:=0.06:0.01} </li>
+<li> What is the probability of spinning 4 or 29? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>=</mo><mn>4</mn><mspace width="0.222em"></mspace><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> or </mtext><mspace width="0.333em"></mspace></mrow><mspace width="0.222em"></mspace><mi>X</mi><mo>=</mo><mn>29</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X=4 ~\text{ or }~ X=29)</annotation></semantics></math>? {1:NUMERICAL:=0.13:0.01} </li>
+<li> If spinning twice, what is the probability of first spinning 4 and then spinning 29? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>=</mo><mn>4</mn><mspace width="0.222em"></mspace><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> and </mtext><mspace width="0.333em"></mspace></mrow><mspace width="0.222em"></mspace><msub><mi>X</mi><mn>2</mn></msub><mo>=</mo><mn>29</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X_1=4 ~\text{ and }~ X_2=29)</annotation></semantics></math>? {1:NUMERICAL:=0.0042:0.01} </li>
+<li> What is the probability of spinning at most 8? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>≤</mo><mn>8</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X\le 8)</annotation></semantics></math>? {1:NUMERICAL:=0.79:0.01} </li>
+<li> Determine the mean of the probability distribution by using <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mo>∑</mo><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mu = \sum x\cdot \text{Pr}(x)</annotation></semantics></math>. {1:NUMERICAL:=10:0.01} </li>
+<li> Determine the standard deviation of the probability distribution by using <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><msqrt><mrow><mo>∑</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></msqrt></mrow><annotation encoding="application/x-tex">\sigma = \sqrt{\sum (x-\mu)^2 \cdot \text{Pr}(x)}</annotation></semantics></math>. {1:NUMERICAL:=8.4:0.01} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Make a table (for parts mean and standard deviation).</p>
+<table style="width:100%;">
+<colgroup>
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(x)</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x\cdot\text{Pr}(x)</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><annotation encoding="application/x-tex">x-\mu</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(x-\mu)^2</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x-\mu)^2 \cdot \text{Pr}(x)</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">4</td>
+<td align="center">0.07</td>
+<td align="center">0.28</td>
+<td align="center">-6</td>
+<td align="center">36</td>
+<td align="center">2.52</td>
+</tr>
+<tr class="even">
+<td align="center">5</td>
+<td align="center">0.5</td>
+<td align="center">2.5</td>
+<td align="center">-5</td>
+<td align="center">25</td>
+<td align="center">12.5</td>
+</tr>
+<tr class="odd">
+<td align="center">8</td>
+<td align="center">0.22</td>
+<td align="center">1.76</td>
+<td align="center">-2</td>
+<td align="center">4</td>
+<td align="center">0.88</td>
+</tr>
+<tr class="even">
+<td align="center">24</td>
+<td align="center">0.09</td>
+<td align="center">2.16</td>
+<td align="center">14</td>
+<td align="center">196</td>
+<td align="center">17.64</td>
+</tr>
+<tr class="odd">
+<td align="center">26</td>
+<td align="center">0.06</td>
+<td align="center">1.56</td>
+<td align="center">16</td>
+<td align="center">256</td>
+<td align="center">15.36</td>
+</tr>
+<tr class="even">
+<td align="center">29</td>
+<td align="center">0.06</td>
+<td align="center">1.74</td>
+<td align="center">19</td>
+<td align="center">361</td>
+<td align="center">21.66</td>
+</tr>
+<tr class="odd">
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">\sum x \cdot \text{Pr}(x) = 10</annotation></semantics></math></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>=</mo><mn>70.56</mn></mrow><annotation encoding="application/x-tex">\sigma^2 = 70.56</annotation></semantics></math></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">\mu = 10</annotation></semantics></math></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>8.4</mn></mrow><annotation encoding="application/x-tex">\sigma = 8.4</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<!-- \begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} \hline
+ $x$ & $\text{Pr}(x)$ & $x\cdot\text{Pr}(x)$ & $x-\mu$ & $(x-\mu)^2$ & $(x-\mu)^2 \cdot \text{Pr}(x)$ \\ \hline
+ 4 & 0.07 & 0.28 & -6 & 36 & 2.52 \\ 
+ 5 & 0.5 & 2.5 & -5 & 25 & 12.5 \\ 
+ 8 & 0.22 & 1.76 & -2 & 4 & 0.88 \\ 
+ 24 & 0.09 & 2.16 & 14 & 196 & 17.64 \\ 
+ 26 & 0.06 & 1.56 & 16 & 256 & 15.36 \\ 
+ 29 & 0.06 & 1.74 & 19 & 361 & 21.66 \\ \hline
+ & & $\sum x \cdot \text{Pr}(x)= 10 $& & & $\sigma^2 = 70.56 $ \\ \hline
+ & & $\mu= 10 $& & & $\sigma = 8.4 $ \\ \hline
+\end{tabular}
+\end{center} -->
+<ol type = "a">
+<li> 0.06 </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.07</mn><mo>+</mo><mn>0.06</mn></mrow><annotation encoding="application/x-tex">0.07 + 0.06</annotation></semantics></math> = <strong>0.13</strong> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.07</mn><mo>×</mo><mn>0.06</mn></mrow><annotation encoding="application/x-tex">0.07 \times 0.06</annotation></semantics></math> = <strong>0.0042</strong> </li>
+<li> 0.79 </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">\mu = 10</annotation></semantics></math> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>8.4</mn></mrow><annotation encoding="application/x-tex">\sigma = 8.4</annotation></semantics></math> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>6</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R08 Q1 : p2_probdist </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A spinner has the probability distribution shown below.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(x)</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">0.12</td>
+</tr>
+<tr class="even">
+<td align="center">13</td>
+<td align="center">0.08</td>
+</tr>
+<tr class="odd">
+<td align="center">16</td>
+<td align="center">0.2</td>
+</tr>
+<tr class="even">
+<td align="center">20</td>
+<td align="center">0.06</td>
+</tr>
+<tr class="odd">
+<td align="center">22</td>
+<td align="center">0.46</td>
+</tr>
+<tr class="even">
+<td align="center">29</td>
+<td align="center">0.08</td>
+</tr>
+</tbody>
+</table>
+<ol type = "a">
+<li> What is the probability of spinning 20? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>=</mo><mn>20</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X=20)</annotation></semantics></math>? {1:NUMERICAL:=0.06:0.01} </li>
+<li> What is the probability of spinning 13 or 22? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>=</mo><mn>13</mn><mspace width="0.222em"></mspace><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> or </mtext><mspace width="0.333em"></mspace></mrow><mspace width="0.222em"></mspace><mi>X</mi><mo>=</mo><mn>22</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X=13 ~\text{ or }~ X=22)</annotation></semantics></math>? {1:NUMERICAL:=0.54:0.01} </li>
+<li> If spinning twice, what is the probability of first spinning 13 and then spinning 22? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>=</mo><mn>13</mn><mspace width="0.222em"></mspace><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> and </mtext><mspace width="0.333em"></mspace></mrow><mspace width="0.222em"></mspace><msub><mi>X</mi><mn>2</mn></msub><mo>=</mo><mn>22</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X_1=13 ~\text{ and }~ X_2=22)</annotation></semantics></math>? {1:NUMERICAL:=0.0368:0.01} </li>
+<li> What is the probability of spinning at least 16? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>≥</mo><mn>16</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X\ge 16)</annotation></semantics></math>? {1:NUMERICAL:=0.8:0.01} </li>
+<li> Determine the mean of the probability distribution by using <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mo>∑</mo><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mu = \sum x\cdot \text{Pr}(x)</annotation></semantics></math>. {1:NUMERICAL:=18:0.01} </li>
+<li> Determine the standard deviation of the probability distribution by using <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><msqrt><mrow><mo>∑</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></msqrt></mrow><annotation encoding="application/x-tex">\sigma = \sqrt{\sum (x-\mu)^2 \cdot \text{Pr}(x)}</annotation></semantics></math>. {1:NUMERICAL:=7.4:0.01} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Make a table (for parts mean and standard deviation).</p>
+<table style="width:100%;">
+<colgroup>
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(x)</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x\cdot\text{Pr}(x)</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><annotation encoding="application/x-tex">x-\mu</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(x-\mu)^2</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x-\mu)^2 \cdot \text{Pr}(x)</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">0.12</td>
+<td align="center">0.12</td>
+<td align="center">-17</td>
+<td align="center">289</td>
+<td align="center">34.68</td>
+</tr>
+<tr class="even">
+<td align="center">13</td>
+<td align="center">0.08</td>
+<td align="center">1.04</td>
+<td align="center">-5</td>
+<td align="center">25</td>
+<td align="center">2</td>
+</tr>
+<tr class="odd">
+<td align="center">16</td>
+<td align="center">0.2</td>
+<td align="center">3.2</td>
+<td align="center">-2</td>
+<td align="center">4</td>
+<td align="center">0.8</td>
+</tr>
+<tr class="even">
+<td align="center">20</td>
+<td align="center">0.06</td>
+<td align="center">1.2</td>
+<td align="center">2</td>
+<td align="center">4</td>
+<td align="center">0.24</td>
+</tr>
+<tr class="odd">
+<td align="center">22</td>
+<td align="center">0.46</td>
+<td align="center">10.12</td>
+<td align="center">4</td>
+<td align="center">16</td>
+<td align="center">7.36</td>
+</tr>
+<tr class="even">
+<td align="center">29</td>
+<td align="center">0.08</td>
+<td align="center">2.32</td>
+<td align="center">11</td>
+<td align="center">121</td>
+<td align="center">9.68</td>
+</tr>
+<tr class="odd">
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>18</mn></mrow><annotation encoding="application/x-tex">\sum x \cdot \text{Pr}(x) = 18</annotation></semantics></math></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>=</mo><mn>54.76</mn></mrow><annotation encoding="application/x-tex">\sigma^2 = 54.76</annotation></semantics></math></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>18</mn></mrow><annotation encoding="application/x-tex">\mu = 18</annotation></semantics></math></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>7.4</mn></mrow><annotation encoding="application/x-tex">\sigma = 7.4</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<!-- \begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} \hline
+ $x$ & $\text{Pr}(x)$ & $x\cdot\text{Pr}(x)$ & $x-\mu$ & $(x-\mu)^2$ & $(x-\mu)^2 \cdot \text{Pr}(x)$ \\ \hline
+ 1 & 0.12 & 0.12 & -17 & 289 & 34.68 \\ 
+ 13 & 0.08 & 1.04 & -5 & 25 & 2 \\ 
+ 16 & 0.2 & 3.2 & -2 & 4 & 0.8 \\ 
+ 20 & 0.06 & 1.2 & 2 & 4 & 0.24 \\ 
+ 22 & 0.46 & 10.12 & 4 & 16 & 7.36 \\ 
+ 29 & 0.08 & 2.32 & 11 & 121 & 9.68 \\ \hline
+ & & $\sum x \cdot \text{Pr}(x)= 18 $& & & $\sigma^2 = 54.76 $ \\ \hline
+ & & $\mu= 18 $& & & $\sigma = 7.4 $ \\ \hline
+\end{tabular}
+\end{center} -->
+<ol type = "a">
+<li> 0.06 </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.08</mn><mo>+</mo><mn>0.46</mn></mrow><annotation encoding="application/x-tex">0.08 + 0.46</annotation></semantics></math> = <strong>0.54</strong> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.08</mn><mo>×</mo><mn>0.46</mn></mrow><annotation encoding="application/x-tex">0.08 \times 0.46</annotation></semantics></math> = <strong>0.0368</strong> </li>
+<li> 0.8 </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>18</mn></mrow><annotation encoding="application/x-tex">\mu = 18</annotation></semantics></math> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>7.4</mn></mrow><annotation encoding="application/x-tex">\sigma = 7.4</annotation></semantics></math> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>6</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R09 Q1 : p2_probdist </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A spinner has the probability distribution shown below.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(x)</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">4</td>
+<td align="center">0.33</td>
+</tr>
+<tr class="even">
+<td align="center">14</td>
+<td align="center">0.3</td>
+</tr>
+<tr class="odd">
+<td align="center">19</td>
+<td align="center">0.08</td>
+</tr>
+<tr class="even">
+<td align="center">24</td>
+<td align="center">0.29</td>
+</tr>
+</tbody>
+</table>
+<ol type = "a">
+<li> What is the probability of spinning 4? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>=</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X=4)</annotation></semantics></math>? {1:NUMERICAL:=0.33:0.01} </li>
+<li> What is the probability of spinning 4 or 14? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>=</mo><mn>4</mn><mspace width="0.222em"></mspace><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> or </mtext><mspace width="0.333em"></mspace></mrow><mspace width="0.222em"></mspace><mi>X</mi><mo>=</mo><mn>14</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X=4 ~\text{ or }~ X=14)</annotation></semantics></math>? {1:NUMERICAL:=0.63:0.01} </li>
+<li> If spinning twice, what is the probability of first spinning 4 and then spinning 14? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>=</mo><mn>4</mn><mspace width="0.222em"></mspace><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> and </mtext><mspace width="0.333em"></mspace></mrow><mspace width="0.222em"></mspace><msub><mi>X</mi><mn>2</mn></msub><mo>=</mo><mn>14</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X_1=4 ~\text{ and }~ X_2=14)</annotation></semantics></math>? {1:NUMERICAL:=0.099:0.01} </li>
+<li> What is the probability of spinning at most 19? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>≤</mo><mn>19</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X\le 19)</annotation></semantics></math>? {1:NUMERICAL:=0.71:0.01} </li>
+<li> Determine the mean of the probability distribution by using <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mo>∑</mo><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mu = \sum x\cdot \text{Pr}(x)</annotation></semantics></math>. {1:NUMERICAL:=14:0.01} </li>
+<li> Determine the standard deviation of the probability distribution by using <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><msqrt><mrow><mo>∑</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></msqrt></mrow><annotation encoding="application/x-tex">\sigma = \sqrt{\sum (x-\mu)^2 \cdot \text{Pr}(x)}</annotation></semantics></math>. {1:NUMERICAL:=8:0.01} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Make a table (for parts mean and standard deviation).</p>
+<table style="width:100%;">
+<colgroup>
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(x)</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x\cdot\text{Pr}(x)</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><annotation encoding="application/x-tex">x-\mu</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(x-\mu)^2</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x-\mu)^2 \cdot \text{Pr}(x)</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">4</td>
+<td align="center">0.33</td>
+<td align="center">1.32</td>
+<td align="center">-10</td>
+<td align="center">100</td>
+<td align="center">33</td>
+</tr>
+<tr class="even">
+<td align="center">14</td>
+<td align="center">0.3</td>
+<td align="center">4.2</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">19</td>
+<td align="center">0.08</td>
+<td align="center">1.52</td>
+<td align="center">5</td>
+<td align="center">25</td>
+<td align="center">2</td>
+</tr>
+<tr class="even">
+<td align="center">24</td>
+<td align="center">0.29</td>
+<td align="center">6.96</td>
+<td align="center">10</td>
+<td align="center">100</td>
+<td align="center">29</td>
+</tr>
+<tr class="odd">
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>14</mn></mrow><annotation encoding="application/x-tex">\sum x \cdot \text{Pr}(x) = 14</annotation></semantics></math></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>=</mo><mn>64</mn></mrow><annotation encoding="application/x-tex">\sigma^2 = 64</annotation></semantics></math></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>14</mn></mrow><annotation encoding="application/x-tex">\mu = 14</annotation></semantics></math></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">\sigma = 8</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<!-- \begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} \hline
+ $x$ & $\text{Pr}(x)$ & $x\cdot\text{Pr}(x)$ & $x-\mu$ & $(x-\mu)^2$ & $(x-\mu)^2 \cdot \text{Pr}(x)$ \\ \hline
+ 4 & 0.33 & 1.32 & -10 & 100 & 33 \\ 
+ 14 & 0.3 & 4.2 & 0 & 0 & 0 \\ 
+ 19 & 0.08 & 1.52 & 5 & 25 & 2 \\ 
+ 24 & 0.29 & 6.96 & 10 & 100 & 29 \\ \hline
+ & & $\sum x \cdot \text{Pr}(x)= 14 $& & & $\sigma^2 = 64 $ \\ \hline
+ & & $\mu= 14 $& & & $\sigma = 8 $ \\ \hline
+\end{tabular}
+\end{center} -->
+<ol type = "a">
+<li> 0.33 </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.33</mn><mo>+</mo><mn>0.3</mn></mrow><annotation encoding="application/x-tex">0.33 + 0.3</annotation></semantics></math> = <strong>0.63</strong> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.33</mn><mo>×</mo><mn>0.3</mn></mrow><annotation encoding="application/x-tex">0.33 \times 0.3</annotation></semantics></math> = <strong>0.099</strong> </li>
+<li> 0.71 </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>14</mn></mrow><annotation encoding="application/x-tex">\mu = 14</annotation></semantics></math> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">\sigma = 8</annotation></semantics></math> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>6</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R10 Q1 : p2_probdist </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A spinner has the probability distribution shown below.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(x)</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">13</td>
+<td align="center">0.43</td>
+</tr>
+<tr class="even">
+<td align="center">17</td>
+<td align="center">0.07</td>
+</tr>
+<tr class="odd">
+<td align="center">25</td>
+<td align="center">0.26</td>
+</tr>
+<tr class="even">
+<td align="center">28</td>
+<td align="center">0.24</td>
+</tr>
+</tbody>
+</table>
+<ol type = "a">
+<li> What is the probability of spinning 25? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>=</mo><mn>25</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X=25)</annotation></semantics></math>? {1:NUMERICAL:=0.26:0.01} </li>
+<li> What is the probability of spinning 17 or 28? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>=</mo><mn>17</mn><mspace width="0.222em"></mspace><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> or </mtext><mspace width="0.333em"></mspace></mrow><mspace width="0.222em"></mspace><mi>X</mi><mo>=</mo><mn>28</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X=17 ~\text{ or }~ X=28)</annotation></semantics></math>? {1:NUMERICAL:=0.31:0.01} </li>
+<li> If spinning twice, what is the probability of first spinning 17 and then spinning 28? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><msub><mi>X</mi><mn>1</mn></msub><mo>=</mo><mn>17</mn><mspace width="0.222em"></mspace><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> and </mtext><mspace width="0.333em"></mspace></mrow><mspace width="0.222em"></mspace><msub><mi>X</mi><mn>2</mn></msub><mo>=</mo><mn>28</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X_1=17 ~\text{ and }~ X_2=28)</annotation></semantics></math>? {1:NUMERICAL:=0.0168:0.01} </li>
+<li> What is the probability of spinning at most 25? In other words, what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>X</mi><mo>≤</mo><mn>25</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(X\le 25)</annotation></semantics></math>? {1:NUMERICAL:=0.76:0.01} </li>
+<li> Determine the mean of the probability distribution by using <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mo>∑</mo><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mu = \sum x\cdot \text{Pr}(x)</annotation></semantics></math>. {1:NUMERICAL:=20:0.01} </li>
+<li> Determine the standard deviation of the probability distribution by using <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><msqrt><mrow><mo>∑</mo><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></msqrt></mrow><annotation encoding="application/x-tex">\sigma = \sqrt{\sum (x-\mu)^2 \cdot \text{Pr}(x)}</annotation></semantics></math>. {1:NUMERICAL:=6.6:0.01} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>Make a table (for parts mean and standard deviation).</p>
+<table style="width:100%;">
+<colgroup>
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{Pr}(x)</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x\cdot\text{Pr}(x)</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>−</mo><mi>μ</mi></mrow><annotation encoding="application/x-tex">x-\mu</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(x-\mu)^2</annotation></semantics></math></th>
+<th align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>μ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x-\mu)^2 \cdot \text{Pr}(x)</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">13</td>
+<td align="center">0.43</td>
+<td align="center">5.59</td>
+<td align="center">-7</td>
+<td align="center">49</td>
+<td align="center">21.07</td>
+</tr>
+<tr class="even">
+<td align="center">17</td>
+<td align="center">0.07</td>
+<td align="center">1.19</td>
+<td align="center">-3</td>
+<td align="center">9</td>
+<td align="center">0.63</td>
+</tr>
+<tr class="odd">
+<td align="center">25</td>
+<td align="center">0.26</td>
+<td align="center">6.5</td>
+<td align="center">5</td>
+<td align="center">25</td>
+<td align="center">6.5</td>
+</tr>
+<tr class="even">
+<td align="center">28</td>
+<td align="center">0.24</td>
+<td align="center">6.72</td>
+<td align="center">8</td>
+<td align="center">64</td>
+<td align="center">15.36</td>
+</tr>
+<tr class="odd">
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+<td align="center">=========</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mi>x</mi><mo>⋅</mo><mtext mathvariant="normal">Pr</mtext><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>20</mn></mrow><annotation encoding="application/x-tex">\sum x \cdot \text{Pr}(x) = 20</annotation></semantics></math></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>=</mo><mn>43.56</mn></mrow><annotation encoding="application/x-tex">\sigma^2 = 43.56</annotation></semantics></math></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>20</mn></mrow><annotation encoding="application/x-tex">\mu = 20</annotation></semantics></math></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>6.6</mn></mrow><annotation encoding="application/x-tex">\sigma = 6.6</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<!-- \begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} \hline
+ $x$ & $\text{Pr}(x)$ & $x\cdot\text{Pr}(x)$ & $x-\mu$ & $(x-\mu)^2$ & $(x-\mu)^2 \cdot \text{Pr}(x)$ \\ \hline
+ 13 & 0.43 & 5.59 & -7 & 49 & 21.07 \\ 
+ 17 & 0.07 & 1.19 & -3 & 9 & 0.63 \\ 
+ 25 & 0.26 & 6.5 & 5 & 25 & 6.5 \\ 
+ 28 & 0.24 & 6.72 & 8 & 64 & 15.36 \\ \hline
+ & & $\sum x \cdot \text{Pr}(x)= 20 $& & & $\sigma^2 = 43.56 $ \\ \hline
+ & & $\mu= 20 $& & & $\sigma = 6.6 $ \\ \hline
+\end{tabular}
+\end{center} -->
+<ol type = "a">
+<li> 0.26 </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.07</mn><mo>+</mo><mn>0.24</mn></mrow><annotation encoding="application/x-tex">0.07 + 0.24</annotation></semantics></math> = <strong>0.31</strong> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0.07</mn><mo>×</mo><mn>0.24</mn></mrow><annotation encoding="application/x-tex">0.07 \times 0.24</annotation></semantics></math> = <strong>0.0168</strong> </li>
+<li> 0.76 </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mn>20</mn></mrow><annotation encoding="application/x-tex">\mu = 20</annotation></semantics></math> </li>
+<li> <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>6.6</mn></mrow><annotation encoding="application/x-tex">\sigma = 6.6</annotation></semantics></math> </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>6</defaultgrade>
+</question>
+
+</quiz>

@@ -10,4 +10,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Probability
 
 * To determine the probability of an event, you first determine a set of equally likely outcomes. 
-$$\text{Pr(event)} = \frac{\text{\# outcomes satisfying event}}{\text{\# of possible outcomes}} $$
+$$\text{Pr(event)} = \frac{\text{number of outcomes satisfying event}}{\text{number of possible outcomes}} $$
+
+## A deck of cards
+

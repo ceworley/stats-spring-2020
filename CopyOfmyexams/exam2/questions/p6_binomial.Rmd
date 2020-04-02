@@ -1,0 +1,59 @@
+```{r data generation, echo = FALSE, results = "hide"}
+
+i = runif(90)
+
+n = sample(7:10,1)
+p = round(runif(1,0.3,0.7),2)
+
+while(T){
+  x1 = sample(3:(n-3),1)
+  x2 = sample(c(1,2,n-2,n-1),1)
+  p1 = 1-pbinom(x2,n,p)
+  p2 = 1-pbinom(x2-1,n,p)
+  p3 = pbinom(x2-1,n,p)
+  p4 = pbinom(x2,n,p)
+  ps = c(p1,p2,p3,p4)
+  if(x1 != x2 & max(ps) < 0.98 & min(ps) > 0.02) {
+    break
+  }
+}
+```
+
+Question
+========
+
+Each trial has `r p` probability of success. There will be `r n` trials. We are interested in the probabilities associated with the number of successes.
+
+Answerlist
+--------
+* Why is this a binomial distribution?
+* What is the probability of getting exactly `r x1` successes? In other words, determine $\text{Pr}(X = `r x1`)$.
+* What is the probability of getting exactly `r x2` successes? In other words, determine $\text{Pr}(X = `r x2`)$.
+* What is the probability of getting more than `r x2` successes? In other words, determine $\text{Pr}(X > `r x2`)$.
+* What is the probability of getting at least `r x2` successes? In other words, determine $\text{Pr}(X \ge `r x2`)$.
+* What is the probability of getting less than `r x2` successes? In other words, determine $\text{Pr}(X < `r x2`)$.
+* What is the probability of getting at most `r x2` successes? In other words, determine $\text{Pr}(X \le `r x2`)$.
+* Determine the mean number of successes.
+* Determine the standard deviation of successes.
+
+Solution
+========
+
+Answerlist
+--------
+* Each trial has TWO possible outcomes (which are mutually exclusive and exhaustive). Each trial has the same probability of success. We are interested in the total number of successes in a fixed number of trials. 
+* $\text{Pr}(X=`r x1`) ~=~ {_`r n`}C_{`r x1`}\cdot`r p`^{`r x1`} `r 1-p`^`r n-x1` ~=~ `r dbinom(x1,n,p)`$
+* $\text{Pr}(X=`r x2`) ~=~ {_`r n`}C_{`r x2`}\cdot`r p`^{`r x2`} `r 1-p`^`r n-x2` ~=~ `r dbinom(x2,n,p)`$
+* $\text{Pr}(X > `r x2`) ~=~ `r 1-pbinom(x2,n,p)`$
+* $\text{Pr}(X \ge `r x2`) ~=~ `r 1-pbinom(x2-1,n,p)`$
+* $\text{Pr}(X < `r x2`) ~=~ `r pbinom(x2-1,n,p)`$
+* $\text{Pr}(X \le `r x2`) ~=~ `r pbinom(x2,n,p)`$
+* Because this is a binomial distribution, $\mu = np$, so $\mu = `r n*p`$
+* Because this is a binomial distribution, $\sigma = \sqrt{npq}$, so $\sigma = `r sqrt(n*p*(1-p))`$
+
+Meta-information
+============
+extype: string
+exsolution: yup
+exname: reading hist
+extol: 0.01

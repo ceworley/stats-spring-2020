@@ -1,0 +1,61 @@
+---
+header-includes:
+   - \usepackage{multicol}
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r data generation, echo = FALSE, results = "hide"}
+options(scipen=999)
+muw = sample(7:60,1)
+sigw = sample(2:(muw%/%3),1)
+n = sample((6:15)^2,1)
+mux = muw*n
+sigx = sigw*sqrt(n)
+
+ps = runif(2,0.02,0.98)
+zs = round(qnorm(ps),2)
+xs = round(mux+sigx*zs,2)
+zs = round((xs-mux)/sigx,2)
+ps = round(pnorm(zs),4)
+
+P1 = round(pnorm(zs[1]),4)
+P2 = round(1-pnorm(zs[2]),4)
+
+pp = runif(2,0.53,0.97)
+zz = round(qnorm(pp),2)
+P3 = round(2*pnorm(zz[1])-1,4)
+P4 = round(2*pnorm(-zz[2]),4)
+```
+
+Question
+========
+
+Let random variable $W$ have mean $\mu_{\tiny w} = `r muw`$ and standard deviation  $\sigma_{\tiny w} = `r sigw`$. Let random variable $X$ represent the **sum** of $n = `r n`$ instances of $W$. 
+
+Answerlist
+--------
+* Determine the expected value of $X$. $\mu_{\tiny x} = \,?$
+* Determine the standard deviation of $X$. $\sigma_{\tiny x} = \,?$
+* Using normal approximation, determine $P(X<`r xs[1]`)$.
+* Using normal approximation, determine $P(X>`r xs[2]`)$.
+
+
+Solution
+========
+
+Answerlist
+--------
+* $\mu_{\tiny x} ~=~ n\mu_{\tiny w} ~=~ (`r n`)(`r muw`) ~=~ \fbox{`r mux`}$
+* $\sigma_{\tiny x} ~=~ \sigma_{\tiny w}\sqrt{n} ~=~ (`r sigw`)(\sqrt{`r n`}) ~=~ \fbox{`r sigx`}$
+* $P(X<`r xs[1]`) ~=~ P(Z<`r zs[1]`) ~=~ \fbox{`r P1`}$
+* $P(X>`r xs[2]`) ~=~ P(Z>`r zs[2]`) ~=~ 1-`r 1-P2` ~=~ \fbox{`r P2`}$
+
+
+Meta-information
+============
+extype: string
+exsolution: yo
+exname: UZ
+extol: 0.01

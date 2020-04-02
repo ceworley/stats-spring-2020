@@ -1,0 +1,62 @@
+```{r data generation, echo = FALSE, results = "hide"}
+ell = runif(1,0.01,0.99)
+z = round(qnorm(ell),2)
+ell = round(pnorm(z),4)
+sol = 1-ell
+```
+
+Question
+========
+Determine the probability that the standard normal variable is more than `r z`. In other words, evaluate $P(Z > `r z`)$.
+
+
+Solution
+========
+First, you need to identify that we are looking for a right area. This is because large values of $Z$ satisfy $Z>`r z`$.
+
+By using the z-table, we find the left area (even though we eventually want the right area). 
+
+$$P(Z<`r z`)=`r ell`$$
+
+We use the rule of compliments to determine the right area.
+
+$$\begin{aligned}
+P(Z > `r z`) &= 1-P(Z < `r z`) \\
+&= 1-`r ell` \\
+&= `r sol` 
+\end{aligned}$$
+
+Method 2: You might also recognize that the normal distribution is symmetric. Thus,
+
+$$\begin{aligned}
+P(Z > `r z`) &= P(Z < `r -z`) \\
+&= `r sol` 
+\end{aligned}$$
+
+Method 3: It often helps to draw a picture. 
+
+```{r, echo=F, fig.height=4, fig.width=6}
+par(mar=c(7,0,0,0))
+zs = seq(-3,3,0.01)
+plot(zs,dnorm(zs),xlim=c(-3,3),type='l',ylab='density',xlab='Z',axes=F,ann=F)
+polygon(c(zs[zs>=z],3,z),c(dnorm(zs[zs>=z]),0,0),col=rgb(0.7,0.7,0.7,0.7))
+lines(c(-3,3),c(0,0))
+midl = (-3+z)/2
+midr = (3+z)/2
+text(-2,0.3,paste("left area =",round(pnorm(z),4)))
+arrows(-2,0.28,midl,dnorm(midl)/2)
+text(2,0.3,paste("right area =",round(1-pnorm(z),4)))
+arrows(2,0.28,midr,dnorm(midr)/2)
+axis(1,at=c(-3,z,3),line = 0)
+axis(1,at=seq(-3,3,1),line=2)
+mtext('Z',1,5)
+```
+\
+
+
+Meta-information
+================
+extype: num
+exsolution: `r sol`
+exname: Get rightarea from Z
+extol: 0.0002

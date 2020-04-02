@@ -1,0 +1,22 @@
+```{r data generation, echo = FALSE, results = "hide"}
+ell = runif(1,0.01,0.99)
+z = round(qnorm(ell),2)
+ell = round(pnorm(z),4)
+```
+
+Question
+========
+Evaluate $P(Z < `r z`)$.
+
+
+Solution
+========
+By using the z-table, we find the appropriate probability.
+$$P(Z<`r z`)=`r ell`$$
+
+Meta-information
+================
+extype: num
+exsolution: `r ell`
+exname: Get leftarea from Z
+extol: 0.0002

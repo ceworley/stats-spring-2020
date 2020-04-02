@@ -1,0 +1,336 @@
+---
+output: 
+  pdf_document:
+    includes:
+      in_header: preamble2.tex
+fontsize: 12pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+\thispagestyle{fancy}
+
+## Instructions
+
+This test is to be taken as an individual without outside assistance or notes. If you are suspected of cheating, you will fail this exam and your transgression will be reported.
+
+You can either use a scientific calculator or (with a smartphone) GeoGebra Scientific Calculator.
+
+To use GeoGebra, you must first put your smartphone on **Airplane Mode**. Then, in GeoGebra, turn on **Exam Mode**. You must leave exam mode on for the entire exam. You won't be able to use your smartphone for anything else. After you are done, you will show me how long exam mode has been running, and if that time is not how long you've been sitting, you will fail this exam.
+
+Read each question carefully and show your work.
+
+## Grade Table
+
+(do not write in this table)
+
+\Large 
+
+\begin{tabular}{|c|c|c|} \hline
+question & available points & earned points \\ \hline \hline
+1 & 20 & \\ \hline
+2 & 20 &  \\ \hline
+3 & 5 &  \\ \hline
+4 & 5 &  \\ \hline
+5 & 10 &  \\ \hline
+6 & 10 &  \\ \hline
+7 & 20 & \\ \hline
+8 & 10 & \\ \hline
+EC1 & 10 &  \\ \hline
+Total & 100 & \\ \hline
+\end{tabular}
+
+\normalsize
+
+\newpage
+\chead{}
+\rhead{Formulas}
+
+## Formulas
+
+### Probability
+
+$$\text{Pr}(A \text{ or } B) ~~=~~ \text{Pr}(A)+\text{Pr}(B)-\text{Pr}(A\text{ and }B) $$
+$$\text{Pr}(A \text{ given } B) ~~=~~ \frac{\text{Pr}(A \text{ and } B)}{\text{Pr}(B)} $$
+
+### Discrete Probability Distributions
+$$\mu = \sum x \cdot \text{Pr}(x)$$
+$$\sigma = \sqrt{(x-\mu)^2\cdot \text{Pr}(x)} $$
+
+
+### Combinatorics
+$${_n}\text{P}_x = \frac{n!}{(n-x)!} $$
+
+$${_n}\text{C}_x = \frac{n!}{(n-x)! \cdot x!} $$
+
+### Binomial Distributions
+
+$$\begin{aligned}
+n &= \text{number of trials}  \\
+p &= \text{chance of success on each trial} \\
+q &= \text{chance of not succeeding on each trial} \\
+X &= \text{random variable representing the (unknown) number of successes} \\
+x &= \text{a specific number of successes}
+\end{aligned}$$
+
+$$q = 1-p $$
+
+$$\text{Pr}(x) =  {_n}\text{C}_x \cdot p^x \cdot q^{n-x}$$
+
+$$\mu = np$$
+$$\sigma = \sqrt{npq} $$
+
+
+
+\newpage
+
+
+## Question 1 (20 pts)
+
+\rhead{}
+
+A large vessel contains marbles. Each marble has a pattern and a color. The frequencies are shown in the two-way table below.
+
+```{r getnums}
+set.seed(666)
+while(T){
+  nums = sample(2:30,12)
+  mn = matrix(nums,nrow=3)
+  rtot = rowSums(mn)
+  ctot = colSums(mn)
+  tot = sum(mn)
+  if(sum(duplicated(c(rtot,ctot)))==0 & tot%%100==0 ){
+    break
+  }
+}
+
+```
+
+\begin{center}
+\begin{tabular}{|c|cccc|c|} \hline
+          & red & yellow & green & blue & total \\ \hline
+checkered & `r mn[1,1]`  &  `r mn[1,2]`      &  `r mn[1,3]`   &  `r mn[1,4]`      & `r rtot[1]`   \\
+dotted    & `r mn[2,1]`  &  `r mn[2,2]`      &  `r mn[2,3]`   &  `r mn[2,4]`      & `r rtot[2]` \\
+striped   & `r mn[3,1]`  &  `r mn[3,2]`      &  `r mn[3,3]`   &  `r mn[3,4]`      & `r rtot[3]`   \\ \hline
+total     & `r ctot[1]`  &  `r ctot[2]`    &  `r ctot[3]`  &  `r ctot[4]`    & `r tot` \\ \hline
+\end{tabular}
+\end{center}
+
+a. What is probability a randomly selected marble is dotted? 
+$$\text{Pr(dotted)} =  \phantom{\text{Pr(dotted)}}$$
+\vfill
+b. What is the probability a randomly selected marble is red?
+$$\text{Pr(red)} = \phantom{\text{Pr(red)}} $$
+\vfill
+c. If you know a randomly selected marble is red, then what is the probability it is dotted?
+$$\text{Pr(dotted GIVEN red)} = \phantom{\text{Pr(dotted GIVEN red)}} $$
+\vfill
+d. What is the probability a randomly selected marble is checkered and blue?
+$$\text{Pr(checkered AND blue)} = \phantom{\text{Pr(checkered AND blue)}} $$
+\vfill
+e. What is the probability a randomly selected marble is checkered or blue?
+$$\text{Pr(checkered OR blue)} = \phantom{\text{Pr(checkered OR blue)}} $$
+\vfill
+f. Is a checkered marble or a striped marble more likely to be yellow?
+$$\text{Pr(yellow GIVEN checkered)} = \phantom{\text{Pr(yellow GIVEN checkered)}} $$ 
+$$\text{Pr(yellow GIVEN striped)} = \phantom{\text{Pr(yellow GIVEN striped)}} $$
+$\begin{aligned}
+\text{Choose one:} & \\
+\Box & \text{ checkered} \\
+\Box & \text{ striped} 
+\end{aligned}$
+\vfill
+
+
+
+
+
+
+\newpage
+
+## Question 2 (20 pts)
+
+```{r q2dg, echo = FALSE, results = "hide"}
+set.seed(6666)
+while(T){
+    n = 3
+    x = sort(sample(1:30,n))
+    l = sort(round(runif(n-1,0,1),2))
+    breaks = c(0,l,1)
+    p = round(breaks[2:(n+1)]-breaks[1:n],2)
+    mu = sum(p*x)
+    sig = sqrt(sum(p*(x-mu)^2))
+    # the following requirements add considerable time...
+    if(sum(p)==1 & sum(p>0.05)==n & as.integer(mu)==mu & as.integer(sig)==sig){
+        break
+    }
+}
+
+s = ''
+for(i in 1:n){
+    s = paste(s,'|',x[i],'|',p[i],'|\n')
+}
+
+c3 = x*p
+c4 = x-mu
+c5 = (x-mu)^2
+c6 = p*(x-mu)^2
+
+s2 = ''
+for(i in 1:n){
+    s2 = paste(s2,'|',x[i],'|',p[i],'|',c3[i],'|',c4[i],'|',c5[i],'|',c6[i],'|')
+    if(i < n){
+        s2 = paste(s2,'\n')
+    }
+}
+
+exact = sample(1:n,1)
+xex = x[exact]
+two = sort(sample(1:n,2))
+ptwo = sum(p[two])
+if(n==3){
+  atlm = 2
+} else {
+  atlm = sample(2:(n-1),size=1)
+}
+xatlm = x[atlm]
+atl = sample(c(T,F),1)
+if(atl){
+  word = "least"
+  patlm = sum(p[atlm:n])
+  sym = "\\ge"
+} else {
+  word = "most"
+  patlm = sum(p[1:atlm])
+  sym = "\\le"
+}
+
+```
+
+A spinner has the probability distribution shown below.
+
+\newcommand{\SPC}{$\phantom{\frac{12345678910}{12345}}$}
+
+\Large
+\begin{center}
+{ \renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|c|c|c|c|c|c|} \hline
+$x$ & $\text{Pr}(x)$ & $x \cdot \text{Pr}(x)$ & $x-\mu$ & $(x-\mu)^2$ & $(x-\mu)^2 \cdot \text{Pr}(x)$ \\ \hline
+`r x[1]` & `r p[1]` & \SPC & \SPC & \SPC & \SPC \\
+`r x[2]` & `r p[2]` & \SPC & \SPC & \SPC & \SPC \\
+`r x[3]` & `r p[3]` & \SPC & \SPC & \SPC & \SPC \\ \hline
+ & & $\mu =$\SPC & & & $\sigma^2 = $\SPC \\ 
+ & &            & & & $\sigma =$ \SPC \\ \hline
+\end{tabular}
+}
+\end{center}
+\normalsize
+
+a. What is the probability of spinning `r xex`? 
+\vfill
+b. What is the probability of spinning `r x[two[1]]` or `r x[two[2]]`? 
+\vfill
+c. If spinning twice, what is the probability of first spinning `r x[two[1]]` and then spinning `r x[two[2]]`?
+\vfill
+d. What is the probability of spinning at `r word` `r xatlm`?
+\vfill
+e. Determine the mean of the discrete probability distribution.
+\vfill
+f. Determine the standard deviation of the discrete probability distribution.
+\vfill
+
+\newpage
+
+## Question 3 (5 pts)
+
+Joann will pick an appetizer and a main course. The possible appetizers and main courses are listed below.
+\begin{center}
+\begin{tabular}{| c | c |}\hline
+appetizers & main courses \\ \hline
+soup          & burger \\
+salad         & pasta \\
+hummus        & stirfry \\ \hline
+\end{tabular}
+\end{center}
+
+a. Draw a **tree diagram** showing the possibilities.
+\vfill
+\vfill
+\vfill
+b. How many possibilities are there?
+\vfill
+
+
+## Question 4 (5 pts)
+Joshua will pick an appetizer, a main course, and a dessert. The options are listed below.
+\begin{center}
+\begin{tabular}{| c | c | c |}\hline
+appetizers & main courses & desserts \\ \hline
+soup            & burger  & cake \\
+salad           & pasta   & cookies \\
+hummus          & stirfry & pie \\ 
+pickles         & tacos   & mousse \\
+                & sushi   & \\ \hline
+\end{tabular}
+\end{center}
+How many possibilities are there for Joshua? (Do not make a tree!)
+\vfill
+
+\newpage
+
+## Question 5 (10 pts)
+
+There are 14 different books on Samiyah's bookshelf. Samiyah will choose 5 of those books to give to her nephew. How many possibilities are there?
+
+\vfill
+
+## Question 6 (10 pts)
+
+There are 10 different books on Serif's bookshelf. Serif has 4 siblings, and he plans to give each sibling one of the books. How many possibilities are there?
+
+\vfill
+
+\newpage
+
+## Question 7 (20 pts)
+
+When Emmaline is shooting archery, each arrow has a 40% chance of hitting the bullseye. Emmaline will shoot 8 arrows. We are interested in how many bullseyes Emmaline will hit.
+
+a. Identify the parameters.
+$$\begin{aligned} n&=\phantom{n} &&&&&&&&&&& p&=\phantom{p} &&&&&&&&&&& q&=\phantom{q}\end{aligned} $$
+b. What is the probability that Emmaline hits the bullseye exactly twice?
+$$\text{Pr(2)} = \phantom{\text{Pr(2)}} $$
+\vfill
+c. What is the probability that Emmaline hits the bullseye at most 2 times?
+$$\text{Pr}(X\le 2) = \phantom{\text{Pr}(X\ge 2)} $$
+\vfill
+d. What is the probability that Emmaline hits the bullseye more than 2 times?
+$$\text{Pr}(X > 2) = \phantom{\text{Pr}(X > 2)} $$
+\vfill
+e. What is the expected value of this binomial distribution?
+$$\mu =\phantom{\mu} $$
+\vfill
+f. What is the standard deviation of this binomial distribution?
+$$\sigma = \phantom{\sigma}$$
+\vfill
+
+\newpage
+
+## Question 8 (10 pts)
+
+Brandon 
+
+\newpage
+
+## Extra Credit (10 pts)
+
+Candice has two upcoming tennis matches. She has a 60% chance of winning the first match and a 25% chance of winning the second match.
+
+a. What is the probability that Candice wins both matches?
+\vfill
+b. What is the probability that Candice loses both matches? (Assume ties are impossible such that Candice either wins or loses each match.)
+\vfill
+c. What is the probability that Candice wins once and loses once (in either order)?
+\vfill

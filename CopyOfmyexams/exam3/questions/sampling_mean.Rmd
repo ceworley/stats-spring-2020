@@ -1,0 +1,67 @@
+```{r data generation, echo = FALSE, results = "hide"}
+mux = sample(460:1200/10,1)
+n = sample((6:17)^2,1)
+sigx = signif(runif(1,mux/10/sqrt(n),mux/3.5/sqrt(n)),2)
+muw = mux
+sigw = sigx*sqrt(n)
+
+while(T){
+  p = sort(round(runif(2,0.02,0.98),3))
+  if(p[2]-p[1] > 0.2){break}
+}
+z = round(qnorm(p),2)
+x = signif(mux+z*sigx,3)
+z = round((x-mux)/sigx,2)
+p = round(pnorm(z),4)
+
+P1 = p[1]
+P2 = 1-p[2]
+P3 = p[2]-p[1]
+P = c(P1,P2,P3)
+```
+
+Question
+========
+
+A very large population has a mean of `r muw` and a standard deviation of `r sigw`. When a random sample of size `r n` is taken, what is the probability that the **sample mean** ($\bar{x}$) is between `r x[1]` and `r x[2]`?
+
+
+Answerlist
+--------
+
+* Determine the mean and standard deviation of the sampling distribution. \newline\vfill
+* Determine $P(`r x[1]` < \overline{X} < `r x[2]`)$. **Draw a sketch** \newline\vfill
+
+
+Solution
+========
+
+\setkeys{Gin}{width=.5\textwidth}
+
+Answerlist
+--------
+* Central limit of average formulas: $\mu_{\tiny \bar{x}} = `r mux`$ and $\sigma_{\tiny \bar{x}} = \frac{`r sigw`}{\sqrt{`r n`}} = `r sigx`$.
+* $P(`r x[1]` < \overline{X} < `r x[2]`) ~=~ P(`r z[1]` < Z < `r z[2]`) ~=~ `r P3`$
+\newline
+```{r no7,echo=F,fig.height=2,fig.width=7,fig.cap=""}
+library(latex2exp)
+par(mar=c(4,0,0,0))
+plot(0,0,type="n",xlim=c(-3.5,3.5),ylim=c(0,0.42),ann=F,axes=F)
+axis(1,-3:3)
+mtext("z=",1,1,adj = 0)
+Z = -350:350/100
+lines(Z,dnorm(Z))
+abline(h = 0)
+axis(1,-3:3,labels=(-3:3)*sigx+mux,line=2, tick = FALSE)
+mtext(TeX("$\\bar{x}=$"),1,3,adj = 0)
+polygon(c(Z[Z>=z[1] & Z<=z[2]],z[2],z[1]),c(dnorm(Z[Z>=z[1] & Z<=z[2]]),0,0),col=rgb(0.4,0.4,0.4,0.4))
+```
+\setkeys{Gin}{width=\textwidth}
+
+
+Meta-information
+============
+extype: string
+exsolution: yo
+exname: marbles
+extol: 0.01

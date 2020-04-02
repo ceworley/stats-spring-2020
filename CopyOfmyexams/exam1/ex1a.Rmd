@@ -1,0 +1,480 @@
+---
+output: 
+  pdf_document:
+    includes:
+      in_header: preamble.tex
+fontsize: 12pt
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+\thispagestyle{fancy}
+
+## Instructions
+
+This test is to be taken as an individual without outside assistance or notes. If you are suspected of cheating, you will fail this exam and your transgression will be reported.
+
+You can either use a scientific calculator or, with a smartphone, GeoGebra Scientific Calculator.
+
+To use GeoGebra, you must first put your smartphone on **Airplane Mode**. Then, in GeoGebra, you will use **Exam Mode**. You must leave exam mode on for the entire exam. You won't be able to use your smartphone for anything else. After you are done, you will show me how long exam mode has been running, and if that time is not how long you've been sitting, you will fail this exam.
+
+Read each question carefully and show your work.
+
+## Grade Table
+
+(do not write in this table)
+
+\Large 
+
+\begin{tabular}{|c|c|c|} \hline
+question & available points & earned points \\ \hline \hline
+1 & 10 & \\ \hline
+2 & 10 &  \\ \hline
+3 & 10 &  \\ \hline
+4 & 10 &  \\ \hline
+5 & 10 &  \\ \hline
+6 & 10 &  \\ \hline
+7 & 10 &  \\ \hline
+8 & 10 &  \\ \hline
+9 & 10 &  \\ \hline
+10 & 10 &  \\ \hline
+EC1 & 3 &  \\ \hline
+EC2 & 2 &  \\ \hline \hline
+Total & 100 & \\ \hline
+\end{tabular}
+
+\normalsize
+
+\newpage
+
+\chead{}
+
+## Question 1 (10 pts)
+
+Classify each of the following variables as **quantitative** or **categorical**.
+
+a. years of education  (quantitative/categorical) 
+\vfill
+b. a person's gender (quatitative/categorical)
+\vfill
+c. grams of fiber ingested in a day (quatitative/categorical)
+\vfill
+d. number of vending machines at BHCC (quantitative/categorical)
+\vfill
+e. whether a student is prepared for class (quantitative/categorical)
+\vfill
+
+## Question 2 (10 pts)
+
+A survey of 300 BHCC students was conducted, and they were asked to respond with the number of classes they were currently taking.
+
+a. Identify the **individuals** in the study.
+\vfill
+b. Identify the **variable** being collected.
+\vfill
+c. Is the variable **quantitative** or **categorical**?
+\vfill
+d. What is the **sample size**?
+\vfill
+e. What is the implied **population** of this study?
+\vfill
+
+\newpage
+
+## Question 3 (10 pts)
+
+The potassium content in milligrams was measured in various cereals. The cereals were grouped by their intended consumer: child or adult. Compare the two distributions by comparing **shape**, **center**, and **spread**.
+
+```{r masses, fig.height=4}
+set.seed(15)
+ns = c(31,43)
+A = c(round(rbeta(ns[1],0.9,3)*150+10,-1))
+B = c(round(rbeta(ns[2],0.9,3)*300+10,-1))
+masses = c(A,B)
+groups = c(rep("B",ns[1]),rep("A",ns[2]))
+# stripchart(masses ~ groups,method="stack",xlim=c(0,300),pch=1,xlab="mass (mg)",group.names=c("Adult","Child"),ylab="Type of cereal",main="Potassium content of various cereals")
+par(mfrow=c(2,1))
+par(mar=c(5,5,0,0))
+stripchart(A,method="stack",xlim=c(0,250),pch=1,xlab="",ylab="child cereal",ylim=c(1,2))
+axis(1,at=0:25*10,labels=rep("",26))
+par(mar=c(5,5,0,0))
+stripchart(B,method="stack",xlim=c(0,250),pch=1,xlab="mass (mg)",ylab="adult cereal",ylim=c(1,2))
+axis(1,at=0:25*10,labels=rep("",26))
+```
+
+The sample sizes are `r ns[1]` and `r ns[2]` for child cereals and adult cereals respectively. Please compare the shape, center, and spread by completing the table below. Also, provide a statement that summarizes the table.
+
+\Large
+
+\begin{center}
+\begin{tabular}{|c|c|c|}\hline
+Characteristic & Child's cereal distribution & Adult's cereal distribution \\ \hline \hline
+shape & $\phantom{\cfrac{W}{W}}$ & \\ \hline
+center & $\phantom{\cfrac{W}{W}}$ & \\ \hline
+overall spread  & $\phantom{\cfrac{W}{W}}$ & \\ \hline
+typical spread  & $\phantom{\cfrac{W}{W}}$ & \\ \hline
+\end{tabular}
+\end{center}
+
+\vfill
+
+**Statement**:
+\vfill
+\vfill
+
+\normalsize
+
+\newpage
+
+
+## Question 4 (10 pts)
+
+The heights of 20 cacti were measured in inches. The results are shown below. 
+
+\
+```{r showhist, echo = FALSE, results = "hide", fig.show="show",fig.height=3.5,fig.width=4.5,fig.align="center"}
+data = c(45,55,55,65,65,65,rep(75,4),rep(85,6),rep(95,4))
+hist(data,breaks=4:10*10,labels=TRUE,xlab="height (in)",main=NULL,ylim=c(0,8))
+```
+\
+
+
+a. How would you describe the **shape** of this distribution of cacti heights?
+\vfill
+b. Estimate the overall **range** of heights.
+\vfill
+c. What percentage of the cacti had heights over 70 inches?
+\vfill
+d. What percentage of the cacti had heights over 80 inches?
+\vfill
+e. What percentage of the cacti with heights over 70 inches had heights over 80 inches?
+\vfill
+f. What height is greater than 15% of the measured cacti's heights? In other words, determine the 15th percentile height.
+\vfill
+
+\newpage
+
+## Question 5 (10 pts)
+
+```{r data_generation_normm, echo = FALSE, results = "hide"}
+library(latex2exp)
+set.seed(472)
+mu = signif(10**runif(1,-1,3),2)
+sd = signif(mu/3*runif(1,0.1,1),1)
+
+choices = sample(-2:2,4)
+xc = mu+sd*choices
+pc = round(200*pnorm(choices))/200
+
+c2 = sample(1:2,1)
+x2s = c(mu-sd*c2,mu+sd*c2)
+p2 = round(200*pnorm(c2))/200-round(200*pnorm(-c2))/200
+```
+
+The figure below summarizes the *standard deviation rule* for normal distributions. In the figure, $\bar{x}$ is the mean and $s$ is the standard deviation. The percentages show the fraction of measurements that fall within various intervals.
+
+\
+```{r draw, echo=FALSE, fig.height=4, fig.width=6, fig.path=paste("draw",sample(1000:9999,1),sep=""), fig.align="center"}
+xs = (-330):330/100
+ys = dnorm(xs)
+plot(xs,ys,type="l",ann=F,axes = F,lwd=3,ylim=c(0,0.6),xlim=c(-3.4,3.4))
+axis(1, at=c(-3.4,3.4), labels=c("",""), lwd.ticks=0)
+axis(1,at=c(-2,-1,0,1,2),labels=c(TeX("$\\bar{x}-2s$"),TeX("$\\bar{x}-s$"),TeX("$\\bar{x}$"),TeX("$\\bar{x}+s$"),TeX("$\\bar{x}+2s$")))
+lines(c(-3.4,3.4),c(0,0))
+lines(c(0,0),c(0,dnorm(0)))
+lines(c(1,1),c(0,dnorm(1)))
+lines(c(2,2),c(0,dnorm(2)))
+lines(c(-1,-1),c(0,dnorm(-1)))
+lines(c(-2,-2),c(0,dnorm(-2)))
+text(0.5,dnorm(0.5)/3,"34%")
+text(-0.5,dnorm(-0.5)/3,"34%")
+text(1.5,dnorm(1.5)/3,"13.5%")
+text(-1.5,dnorm(-1.5)/3,"13.5%")
+lines(c(-1,-1,1,1),c(0.42,0.45,0.45,0.42))
+text(0,0.48,"68%")
+lines(c(-2,-2,2,2),c(0.51,0.54,0.54,0.51))
+text(0,0.57,"95%")
+arrows(2,0.2,3.3,0.2)
+text(2.5,0.23,"2.5%")
+arrows(-2,0.2,-3.3,0.2)
+text(-2.5,0.23,"2.5%")
+```
+\
+
+\vfill
+
+A specific distribution is approximately normal with mean $\bar{x}=`r mu`$ and standard deviation  $s=`r sd`$.
+
+a. What percent of the measurements are greater than `r xc[1]`?
+\vfill
+b. What percent of the measurements are less than `r xc[2]`?
+\vfill
+c. What measurement is greater than `r pc[3]*100`% of the measurements?
+\vfill
+d. What measurement is less than `r (1-pc[4])*100`% of the measurements?
+\vfill
+e. What percent of the measurements are between `r x2s[1]` and `r x2s[2]`?
+\vfill
+
+\newpage
+
+```{r data_generation_6, echo = FALSE, results = "hide", fig.show="hide"}
+## DATA GENERATION
+set.seed(35)
+while(T){
+  n = 7
+  mu = sample(40:200,1)
+  sigma = sample(5:12,1)
+  x = round(rnorm(n,mu,sigma))
+  s = sd(x)
+  if(as.integer(s*10)==s*10 & s!=0){
+    break    
+  }
+}
+xbar = mean(x)
+deviations = x-xbar
+squared_deviations = deviations^2
+sum_squared_deviations = sum(squared_deviations)
+variance = sum_squared_deviations/(n-1)
+ss = sqrt(variance)
+```
+
+## Question 6 (10 pts)
+
+From a very large population, a small sample of measurements was taken.
+
+`r knitr::kable(matrix(x,ncol=n))`
+
+Please calculate the (Bessel corrected) sample standard deviation using the following formula:
+
+$$s = \sqrt{\frac{\sum(x-\bar{x})^2}{n-1}}$$
+You must fill out the table and show your work.
+
+\LARGE
+
+\begin{tabular}{|c|c|c|} \hline
+$x$ & $x-\bar{x}$ & $(x-\bar{x})^2$ \\ \hline \hline
+$\phantom{\frac{xxxxxxxxxxxxxx}{xxxxxxxxxxxxxx}}$ & $\phantom{\frac{xxxxxxxxxxxxxx}{xxxxxxxxxxxxxx}}$ & $\phantom{\frac{xxxxxxxxxxxxxx}{xxxxxxxxxxxxxx}}$ \\ \hline
+$\phantom{\frac{x}{x}}$& & \\ \hline
+$\phantom{\frac{x}{x}}$& & \\ \hline
+$\phantom{\frac{x}{x}}$& & \\ \hline
+$\phantom{\frac{x}{x}}$& & \\ \hline
+$\phantom{\frac{x}{x}}$& & \\ \hline
+$\phantom{\frac{x}{x}}$& & \\ \hline \hline
+$\sum x = \phantom{\frac{xxxxxxxxx}{xxxxxxxxx}}$ &  & $\sum{(x-\bar{x})^2} = \phantom{\frac{xxxxxxxxx}{xxxxxxxxx}}$ \\ \hline
+$\bar{x} = \phantom{\frac{xxxxxxxxx}{xxxxxxxxx}}$ & & \\ \hline
+\end{tabular}
+
+$$s=$$
+\normalsize
+
+\newpage
+
+
+
+## Question 7 (10 pts)
+
+```{r data_generation_8, echo = FALSE, results = "hide"}
+## DATA GENERATION
+set.seed(33)
+while(T){
+  b1 = 10**runif(6,-0.5,0.75)
+  b2 = 10**runif(6,-0.5,0.75)
+  mag = sample(2:3,1)
+  scale = 10**mag
+  bottom = runif(6)*scale
+  r = bottom*runif(6,0.3,2)
+  
+  x = numeric()
+  for(i in 1:6){
+    x = c(x, sort(rbeta(25,b1[i],b2[i])*scale+bottom[i]))
+  }
+  
+  ms = c("weight","length","time","speed")
+  us = c("kg","m","s","m/s")
+  
+  rvs = c("P","Q","R","S","T","U")
+  grps = c(rep("P",25),rep("Q",25),rep("R",25),rep("S",25),rep("T",25),rep("U",25))
+  ans = c(grps[x==max(x)],grps[x==min(x)],grps[x==max(x[0:5*25+13])],grps[x==min(x[0:5*25+13])])
+  if(sum(duplicated(ans))==0){
+    break
+  }
+}
+P = x[1:25]
+Q = x[26:50]
+R = x[51:75]
+S = x[76:100]
+TT = x[101:125]
+U = x[126:150]
+
+Piqr = P[19]-P[7]
+Qiqr = Q[19]-Q[7]
+Riqr = R[19]-R[7]
+Siqr = S[19]-S[7]
+Tiqr = TT[19]-TT[7]
+Uiqr = U[19]-U[7]
+
+iqrs = c(Piqr,Qiqr,Riqr,Siqr,Tiqr,Uiqr)
+
+```
+
+The volumetric flow rate of 6 different rivers (labeled P through U) was measured on May 1st every year for 25 years. The results are shown below. Answer the questions about the distributions of flows. 
+
+\
+```{r boxiesA, echo=F, fig.width=8, fig.height=5, fig.path=paste("boxies",sample(1000:9999,1),sep="")}
+boxplot(x~grps, horizontal=T,xlab=TeX("Volumetric Flow on May 1st (ft$^3$/s)"))
+```
+
+
+a. Which river had the smallest measured flow?
+\vfill
+b. Which **two** rivers had the largest measured flows?
+\vfill
+c. Which **two** rivers had medians less than 600 ft$^3$/s?
+\vfill
+d. Which river had the highest percentage of its measurements above 700 ft$^3$/s?
+\vfill
+e. Which river had the largest IQR?
+\vfill
+
+\newpage
+
+
+## Question 8 (10 pts)
+
+Four different variables were each measured 400 times. The resulting histograms are shown below.
+
+```{r fourhists_7}
+set.seed(1253)
+D = rbeta(400,0.3,0.3)*10
+A = c(rbeta(300,8,8)*10,runif(100,0,10))
+B = c(rbeta(300,30,30)*10,runif(100,0,10))
+C = rbeta(400,1,1)*11-0.5
+par(mfrow=c(2,2))
+hist(A,xlim=c(-0.5,10.5),breaks=0:11-0.5,xlab=NULL)
+hist(B,xlim=c(-0.5,10.5),breaks=0:11-0.5,xlab=NULL)
+hist(C,xlim=c(-0.5,10.5),breaks=0:11-0.5,xlab=NULL)
+hist(D,xlim=c(-0.5,10.5),breaks=0:11-0.5,xlab=NULL)
+```
+
+a. Which variable's distribution has the largest standard deviation? (Multiple Choice)
+    * A, because its measurements tend to be nearest the center.
+    * B, because its measurements tend to be nearest the center.
+    * C, because the frequencies are all similar.
+    * D, because its measurements tend to be farthest from the center.
+    * All, because they all have the same range.
+    * Impossible to tell, because the exact measurements are unknown.
+
+\vfill
+    
+b. Which variable's distribution has the smallest standard deviation?  (Multiple Choice)
+    * A, because its measurements tend to be nearest the center.
+    * B, because its measurements tend to be nearest the center.
+    * C, because the frequencies are all similar.
+    * D, because its measurements tend to be farthest from the center.
+    * All, because they all have the same range.
+    * Impossible to tell, because the exact measurements are unknown.
+
+\vfill
+
+\newpage
+
+## Question 9 (10 pts)
+
+The means and standard deviations for adult human females and males are given.
+
+| sex | mean | standard deviation |
+|:---:|:---:|:---:|
+| female | 95.7 cm | 6.8 cm |
+| male  |  97.8 cm | 6.3 cm |
+
+For each sex, determine the interval of typical measurements.
+
+
+\newpage
+
+## Question 10 (10 pts)
+
+```{r data_generation_10, echo = FALSE, results = "hide", fig.show="hide"}
+## DATA GENERATION
+set.seed(44)
+shape1 = 2**runif(1,-1,1)
+shape2 = 2**runif(1,-1,1)
+
+n = 40
+offset = runif(1,3,12)
+scale = 10**runif(1,1,2)
+dd = sort(signif(rbeta(n,shape1,shape2)*scale + offset*scale,5))
+
+x = dd
+
+myh = hist(dd,plot=F)
+
+s = ''
+cnt = 0
+for(i in 1:floor(length(x)/10)){
+  s = paste(s,"|",sep="")
+  for(j in 1:10){
+    s = paste(s,x[(i-1)*10+j],"|",sep="")
+    cnt = cnt+1
+  }
+  s = paste(s,"\n")
+}
+if(cnt < length(x)){
+  s = paste(s,"|",sep="")
+  for(j in (cnt+1):n){
+    s = paste(s,x[j],"|",sep="")
+  }
+  s = paste(s,"\n")
+}
+
+s2 = ''
+s3 = ''
+for(i in 1:length(myh$counts)){
+  s2 = paste(s2,"|",myh$breaks[i]," - ",myh$breaks[i+1],"|   |   |\n",sep="")
+  s3 = paste(s3,"|",myh$breaks[i]," - ",myh$breaks[i+1],"|",myh$counts[i],"|",signif(myh$counts[i]/n,3),"|\n",sep="")
+}
+
+```
+
+Please make a *relative-frequency table* and a *relative-frequency histogram* from the following (sorted) continuous data by using the supplied classes.
+
+|   |   |   |   |   |   |   |   |   |   |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+`r s`
+
+\large
+
+|class|frequency|relative frequency|
+|:---:|:---:|:---:|
+`r s2`
+
+\normalsize
+
+\
+```{r makegrid,fig.height=4, fig.width=4, echo=F,fig.path=paste("mg",sample(1:9999,1),sep="")}
+par(mar=c(0,0,0,0))
+plot(c(0,100),c(0,100),type="n",ann=F,axes = F)
+abline(v=(seq(0,100,10)), col=rgb(0.2,0.2,0.2), lty="dotted")
+abline(h=(seq(0,100,10)), col=rgb(0.2,0.2,0.2), lty="dotted")
+```
+
+\newpage
+
+\lhead{EXTRA CREDIT}
+
+## EXTRA CREDIT 1 (3 pts)
+For the following distribution, should median or mean be used to describe the center? Why?
+```{r ec1, fig.height=3}
+x = round(rbeta(80,3,0.8)*15+14)
+stripchart(x,method="stack",pch=1,ylim=c(1,2))
+```
+
+\vfill
+
+## EXTRA CREDIT 2 (2 pts)
+The amounts of money different students spend on textbooks is approximately normal with a **mean** of \$235 and a **standard deviation** of \$20. According to the *standard deviation rule*, about 2.5\% of the students spend more than what amount of money on textbooks?
+
+\vfill

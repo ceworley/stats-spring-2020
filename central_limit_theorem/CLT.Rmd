@@ -1,0 +1,22 @@
+---
+title: "Central Limit Theorem"
+author: "Chad Worley"
+date: "4/1/2020"
+output: 
+  html_document:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Statement of Central Limit Theorem
+
+
+* Let $W$ represent any spinner (any random variable) with mean $\mu$ and standard deviation $\sigma$.
+* Let $X$ represent the sum of $n$ spins of $W$.
+
+Then
+
+$$\frac{X-\mu}{\sigma\sqrt{n}} ~\approx~Z $$

@@ -1,0 +1,117 @@
+```{r data generation, echo = FALSE, results = "hide"}
+while(T)
+{
+  ell = round(runif(1,0.60,0.98),2)
+  ra = 1-ell
+  ca = 1-2*ra
+  z = qnorm(ell)
+  zlow = floor(z*100)/100
+  zhigh = ceiling(z*100)/100
+  if(round(z,4) != round(z,2)) {break}
+}
+```
+
+Question
+========
+Determine $z$ such that $P(|Z|<z)=`r ca`$. In other words, how far from 0 should boundaries be set such that `r ca*100`% of standard normal values are between those boundaries? (Answers within 0.01 from the correct value will be marked correct.)
+
+
+Solution
+========
+Start with a sketch.
+
+```{r, echo=F, fig.height=4, fig.width=6}
+par(mar=c(7,0,0,0))
+zs = seq(-3,3,0.01)
+plot(zs,dnorm(zs),xlim=c(-3,3),type='l',ylab='density',xlab='Z',axes=F,ann=F)
+polygon(c(zs[zs>=-z & zs<=z],z,-z),
+        c(dnorm(zs[zs>=-z & zs<=z]),0,0),
+        col=rgb(0.7,0.7,0.7,0.7))
+text(0,dnorm(0)/3,ca)
+lines(c(-3,3),c(0,0))
+axis(1,at=c(-3,z,3),line = 0,labels=c("-3","z=?","3"))
+axis(1,at=seq(-3,3,1),line=2)
+mtext('Z',1,5)
+```
+\
+
+**Method 1:** Determine the area of each tail. Both tails have the same area, and all three areas add to 1. Thus,
+$$P(Z>z) = \frac{1-`r ca`}{2} = `r ra`$$
+```{r, echo=F, fig.height=4, fig.width=6}
+par(mar=c(7,0,0,0))
+zs = seq(-3,3,0.01)
+plot(zs,dnorm(zs),xlim=c(-3,3),ylim=c(0,0.5),type='l',ylab='density',xlab='Z',axes=F,ann=F)
+polygon(c(zs[zs>=-z & zs<=z],z,-z),
+        c(dnorm(zs[zs>=-z & zs<=z]),0,0),
+        col=rgb(0.7,0.7,0.7,0.7))
+text(0,dnorm(0)/3,ca)
+xl = (-3-z)/2
+xr = (3+z)/2
+text(xl,max(dnorm(xl)/3,0.02),ra)
+text(xr,max(dnorm(xr)/3,0.02),ra)
+lines(c(-3,3),c(0,0))
+axis(1,at=c(-3,z,3),line = 0,labels=c("-3","z=?","3"))
+axis(1,at=seq(-3,3,1),line=2)
+mtext('Z',1,5)
+lines(c(-3,z,z),c(0.42,0.42,0.4))
+text((-3+z)/2,0.45,ell)
+```
+\
+
+
+$$\begin{aligned}
+P(Z<z) &= `r ra`+`r ca` \\
+&= `r ell`
+\end{aligned}$$
+
+
+```{r, echo=F}
+z2 = seq(zlow-0.02,zhigh+0.02,0.01)
+```
+
+You should go to your $z$-table and find the $z$-score with the left area closest to `r ell`.
+
+| $z$ | $P(Z<z)$ |
+|:---:|:---:|
+| `r z2[1]` | `r format(round(pnorm(z2[1]),4),4)` |
+| `r z2[2]` | `r format(round(pnorm(z2[2]),4),4)` |
+| **`r z2[3]`** | **`r format(round(pnorm(z2[3]),4),4)`** |
+| **`r z2[4]`** | **`r format(round(pnorm(z2[4]),4),4)`** |
+| `r z2[5]` | `r format(round(pnorm(z2[5]),4),4)` |
+| `r z2[6]` | `r format(round(pnorm(z2[6]),4),4)` |
+
+It turns out the exact answer is `r z`, which could be found by using an inverse normal function. Like InvNorm(`r ell`) on a TI calculator, Norm.Inv(`r ell`) on a spreadsheet, or qnorm(`r ell`) in R.
+
+But, because we are using the $z$-table, I will accept either `r zlow` or `r zhigh`. (Or, really anything within 0.011 of `r z`.)
+
+**Method 2:** Another way to get `r ell` is by adding half of `r ca` to 0.5.
+$$P(Z<z) ~=~ \frac{`r ca`}{2}+0.5~=~ `r ca/2`+0.5 ~=~ `r ell`$$
+
+```{r, echo=F, fig.height=4, fig.width=6}
+par(mar=c(7,0,0,0))
+zs = seq(-3,3,0.01)
+plot(zs,dnorm(zs),xlim=c(-3,3),ylim=c(0,0.5),type='l',ylab='density',xlab='Z',axes=F,ann=F)
+polygon(c(zs[zs>=-z & zs<=z],z,-z),
+        c(dnorm(zs[zs>=-z & zs<=z]),0,0),
+        col=rgb(0.7,0.7,0.7,0.7))
+text(z/2,dnorm(z/2)/3,ca/2,cex=0.8)
+lines(c(-3,3),c(0,0))
+axis(1,at=c(-3,z,3),line = 0,labels=c("-3",round(z,3),"3"))
+axis(1,at=seq(-3,3,1),line=2)
+mtext('Z',1,5)
+lines(c(-3,z,z),c(0.46,0.46,0.45))
+lines(c(-3,0,0),c(0.42,0.42,0.41))
+lines(c(0,0),c(0,dnorm(0)))
+text((-3+z)/2,0.476,ell)
+text((-3+0)/2,0.436,0.5)
+```
+\
+
+Then, use the table.
+
+Meta-information
+================
+extype: num
+exsolution: `r z`
+exname: Get z from cental area
+extol: 0.011

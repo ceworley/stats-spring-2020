@@ -1,0 +1,229 @@
+---
+classoption: 12pt
+geometry: "left=2cm,right=2cm,top=2cm,bottom=2cm"
+output: 
+  pdf_document:
+        includes:
+          in_header: preamble.tex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+\thispagestyle{fancy}
+
+## Instructions
+
+This test is to be taken as an individual without outside assistance or notes. If you are suspected of cheating, you will fail this exam and your transgression will be reported.
+
+You can either use a scientific calculator or (with a smartphone) GeoGebra Scientific Calculator.
+
+To use GeoGebra, you must first put your smartphone on **Airplane Mode**. Then, in GeoGebra, turn on **Exam Mode**. You must leave exam mode on for the entire exam. You won't be able to use your smartphone for anything else. After you are done, you will show me how long exam mode has been running, and if that time is not how long you've been sitting, you will fail this exam.
+
+Read each question carefully and show your work.
+
+## Grade Table
+
+(do not write in this table)
+
+\Large 
+
+\begin{tabular}{|c|c|c|} \hline
+question & available points & earned points \\ \hline \hline
+1 & 20 & \\ \hline
+2 & 20 &  \\ \hline
+3 & 12 &  \\ \hline
+4 & 24 &  \\ \hline
+5 & 24 &  \\ \hline
+EC & 5 &  \\ \hline
+Total & 100 & \\ \hline
+\end{tabular}
+
+\normalsize
+
+
+
+\newpage
+
+\chead{}
+
+## Question 1 (20 pts)
+
+A pollster hopes to estimate the proportion of voters who will vote for candidate A. The pollster randomly samples 1000 voters. Of those sampled, 492 will vote for candidate A. Determine a 95% confidence interval of the proportion of voters that will vote for candidate A.
+
+\hrulefill
+
+$$n=1000$$
+$$\hat{p} = \frac{492}{1000} = 0.492 $$
+$$\ell = \frac{1+0.95}{2} = 0.975$$
+$$z^\star = 1.96 $$
+
+$$\begin{aligned}
+\text{LB} &= \hat{p}- z^\star \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \\
+&= 0.492 - 1.96 \sqrt{\frac{0.492(1-0.492)}{1000}} \\
+&= 0.461
+\end{aligned}$$
+
+$$\begin{aligned}
+\text{UB} &= \hat{p}+ z^\star \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} \\
+&= 0.492 + 1.96 \sqrt{\frac{0.492(1-0.492)}{1000}} \\
+&= 0.523
+\end{aligned}$$
+
+$$\fbox{$\text{CI} ~=~ (0.461,~0.523)$} $$
+
+
+
+\newpage
+
+## Question 2 (20 pts)
+
+A researcher is investigating commute times of BHCC students. In a random sample of 43 BHCC students, the average commute time was 38 minutes with a sample standard deviation of 19 minutes. Determine a 95% confidence interval of the average commute time for BHCC students.
+
+\hrulefill
+
+$$n = 43$$
+$$\bar{x} = 38 $$
+$$s = 19 $$
+$$\gamma = 0.95 $$
+$$df ~=~ n-1 ~=~ 43-1 ~=~ 42 $$
+$$t^\star = 2.02$$
+$$\begin{aligned}
+\text{LB} &= \bar{x}-t^\star \frac{s}{\sqrt{n}}\\
+&= 38-(2.02) \frac{19}{\sqrt{43}} \\
+&= 32.15
+\end{aligned}$$
+
+$$\begin{aligned}
+\text{UB} &= \bar{x}+t^\star \frac{s}{\sqrt{n}}\\
+&= 38+(2.02) \frac{19}{\sqrt{43}} \\
+&= 43.85
+\end{aligned}$$
+
+$$\fbox{$\text{CI} = (32.15,~43.85)$} $$
+
+
+\newpage
+
+## Question 3  (12 pts)
+
+How many BHCC students must be randomly selected to estimate the mean amount of time students spend on social media per day? We want to be 99% confident that the sample mean is within 75 minutes of the population mean. The population standard deviation is known to be 200 minutes.
+
+\hrulefill
+
+$$\gamma = 0.99 $$
+$$\text{ME} = 75 $$
+$$\sigma=200$$
+$$\ell = \frac{0.99+1}{2} = 0.995 $$
+$$z^\star = 2.58$$
+$$\begin{aligned}
+n &= \left(\frac{z^\star \sigma}{\text{ME}} \right)^2 \\
+&= \left(\frac{2.58\cdot 200}{75} \right)^2 \\
+&= 47.33 \\
+&\approx \fbox{$48$}
+\end{aligned}$$
+
+
+
+\newpage
+
+## Question 4 (24 pts)
+
+An engineer hopes to detect whether a new process has a success rate over 40%. In a sample of 50 trials of the new process, she obtains 25 successes. Using a signficance level of 0.05, test whether the new process has a success rate over 40%.
+
+a. State the null hypothesis, alternate hypothesis, type of test, and level of significance.
+$$H_0 ~~\text{ claims }~~ p=0.4 $$
+$$H_\text{A} ~~\text{ claims }~~ p>0.4 $$
+$$\text{right tail test of proportion} $$
+$$\alpha = 0.05 $$
+b. Check the necessary conditions for inference.
+$$\hat{p}n = 25 \ge 10$$
+$$(1-\hat{p})n = 25 \ge 10 $$
+$$\checkmark$$
+c. Compute the sample test statistic ($z$ or $t$), draw a sketch, and find the $p$-value.
+  $$z ~=~ \frac{\hat{p}-p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}} ~=~ \frac{0.5-0.4}{\sqrt{\frac{0.4(1-0.4)}{50}}}
+~=~ 1.44$$
+```{r,echo=F,fig.height=1,fig.width=4,fig.align='center'}
+par(mar=c(2,0,0,0))
+Z = seq(-3,3,0.01)
+plot(Z,dnorm(Z),type="l",ann=F,axes=F)
+abline(h = 0)
+mtext("z=1.44",1,0,at=1.44)
+polygon(c(1.44,Z[Z>=1.44],3),c(0,dnorm(Z[Z>=1.44]),0),col=rgb(1,0,0,0.7))
+```
+  $$p\text{-value} ~~=~~ P(Z>1.44) ~~=~~ P(Z<-1.44) ~~=~~ 0.0749$$
+
+d. State the conclusion about the null hypothesis (reject or not reject).
+$$ p\text{-value} > \alpha ~~~~~~\to ~~~~~~ \text{do not reject }H_0$$
+e. Interpret the conclusion. (What do we conclude about the success rate?)  
+
+The new process may just have a success rate of 40% (and the sample proportion of 50% was just due to random variation). The deviation from expectation could be due to chance.
+
+\newpage
+
+## Question 5 (24 pts)
+
+According to a study, average smartphone life expectancy now reaches 4.8 years. A randomly selected sample of 46 individuals reported that their smartphone stopped working after an average of 4.3 years. Assume that we know the population standard deviation of smartphone life expectancy is 1.5 years. Use a 0.05 significance level to test the claim that the average smartphone life expectancy is not 4.8 years.
+
+a. State the null hypothesis, alternate hypothesis, type of test, and level of significance.
+$$H_0 ~~\text{ claims }~~ \mu = 4.8$$
+$$H_\text{A} ~~\text{ claims }~~ p\ne 4.8$$
+$$\text{two tail test of mean, $\sigma$ known} $$
+$$\alpha = 0.05 $$
+b. Compute the sample test statistic ($z$ or $t$), draw a sketch, and find the $p$-value.
+$$z ~=~ \frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}} ~=~ \frac{4.3-4.8}{\frac{1.5}{\sqrt{46}}}
+~=~ -2.26$$
+```{r,echo=F,fig.height=1.5,fig.width=4,fig.align='center'}
+par(mar=c(2,0,0,0))
+Z = seq(-3.5,3.5,0.01)
+plot(Z,dnorm(Z),type="l",ann=F,axes=F)
+abline(h = 0)
+mtext("z=2.26",1,0,at=2.26)
+mtext("z=-2.26",1,0,at=-2.26)
+polygon(c(2.26,Z[Z>=2.26],3.5),c(0,dnorm(Z[Z>=2.26]),0),col=rgb(1,0,0,0.7))
+polygon(c(-3.5,Z[Z<=-2.26],-2.26),c(0,dnorm(Z[Z<=-2.26]),0),col=rgb(1,0,0,0.7))
+```
+  $$p\text{-value} ~~=~~ P(|Z|>2.26) ~~=~~ 2\cdot P(Z<-2.26) ~~=~~ 2\cdot 0.0119 ~~=~~ 0.0238$$
+c. State the conclusion about the null hypothesis.
+$$ p\text{-value} < \alpha ~~~~~~\to ~~~~~~ \text{reject }H_0$$
+d. Interpret the conclusion. (What do we conclude about smartphone life expectancy?) 
+
+$$\text{The average smartphone life is not 4.8 years.}$$
+
+
+\newpage
+
+## Extra Credit (5 pts)
+
+Prior research suggests that the average speed of cars on Longfellow Bridge is 33.0 mph. Julianne is skeptical, so she takes a sample of car speeds on Longfellow Bridge. 
+
+\begin{center}
+Speeds in miles per hour:\\
+\begin{tabular}{|c c c c c|} \hline
+46.6 & 23.9 & 43.2 & 38.2 & 48.9 \\
+32.5 & 44.5 & 32.0 & 34.5 & 45.9 \\ \hline
+\end{tabular}
+\end{center}
+
+Using a significance level of 0.05, test whether the average speed of cars on Longfellow Bridge is 33.0 mph.
+
+\hrulefill
+
+$$\bar{x} = 39.02 $$
+$$s = 8.106 $$
+$$\mu_0 = 33 $$
+$$n = 10$$
+$$\alpha = 0.05 $$
+$$H_0 ~~\text{claims}~~ \mu=33 $$
+$$H_\text{A} ~~\text{claims}~~ \mu\ne 33 $$
+$$t ~~=~~ \frac{\bar{x}-\mu}{\frac{s}{\sqrt{n}}} ~~=~~ \frac{39.02-33}{\frac{8.106}{10}} ~~=~~ 2.35 $$
+
+$$p\text{-value} = P(|T|>2.35)$$
+$$P(|T|>2.26) = 0.05 $$
+$$P(|T|>2.4) = 0.04 $$
+$$0.04 < p\text{-value} < 0.05$$
+$$p\text{-value} < \alpha $$
+$$\text{reject }H_0 $$
+
+The average speed of cars on Longfellow Bridge is not 33 mph.

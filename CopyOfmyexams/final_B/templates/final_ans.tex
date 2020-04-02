@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{color,verbatim,Sweave,url,xargs,amsmath,hyperref,booktabs,longtable}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+\usepackage{caption}
+\captionsetup[figure]{labelformat=empty}
+
+\usepackage{float}
+\floatplacement{figure}{H}
+
+
+%% new environments
+\newenvironment{question}{\item }{\newpage}
+\newenvironment{solution}{{\bf Solution:} }{\newpage}
+\newenvironment{answerlist}{\renewcommand{\labelenumi}{(\alph{enumi})}\begin{enumerate}}{\end{enumerate}}
+
+
+%% compatibility with pandoc
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%% fonts: Helvetica
+\renewcommand{\sfdefault}{phv}
+\IfFileExists{sfmath.sty}{
+  \RequirePackage[helvet]{sfmath}
+  \renewcommand{\rmdefault}{phv}
+}{}
+
+
+%% new commands
+\makeatletter
+\newcommand{\ID}[1]{\def\@ID{#1}}
+\newcommand{\Date}[1]{\def\@Date{#1}}
+\ID{00001}
+\Date{YYYY-MM-DD}
+
+%% \exinput{header}
+
+\newcommand{\myID}{\@ID}
+\newcommand{\myDate}{\@Date}
+\makeatother
+
+%% headings
+\lhead{\textsc{BHCC Mat-181}}
+\rhead{\textsc{Final version \myID}}
+
+\fancypagestyle{firstpage}{
+  \lhead{\large \textsc{Name:}}
+  \rhead{\textsc{Final version \myID}}
+}
+
+\begin{document}
+
+\thispagestyle{firstpage}
+
+\section*{\textsc{Mat-181 Final Take-Home Exam}}
+
+This exam is to be taken without discussion or correspondance with any human. Please show work!
+
+\vfill
+\Large 
+
+\begin{tabular}{|c|c|c|} \hline
+question & available points & earned points \\ \hline \hline
+1 & 10 & \\ \hline
+2 & 15 &  \\ \hline
+3 & 10 &  \\ \hline
+4 & 10 &  \\ \hline
+5 & 10 &  \\ \hline
+6 & 10 &  \\ \hline
+7 & 15 &  \\ \hline
+8 & 20 &  \\ \hline
+EC & 5 &  \\ \hline
+EC & 5 &  \\ \hline
+Total & 100 & \\ \hline
+\end{tabular}
+
+\normalsize
+
+\vfill
+
+\newpage
+
+\begin{enumerate}
+
+%% \exinput{exercises}
+
+\end{enumerate}
+
+
+
+\end{document}

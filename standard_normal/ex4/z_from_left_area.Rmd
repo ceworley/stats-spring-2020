@@ -1,0 +1,62 @@
+```{r data generation, echo = FALSE, results = "hide"}
+while(T)
+{
+  ell = round(runif(1,0.01,0.99),2)
+  z = qnorm(ell)
+  zlow = floor(z*100)/100
+  zhigh = ceiling(z*100)/100
+  if(round(z,4) != round(z,2)) {break}
+}
+```
+
+Question
+========
+Determine $z$ such that $P(Z<z)=`r ell`$. 
+
+Solution
+========
+Start with a sketch.
+
+```{r, echo=F, fig.height=4, fig.width=6}
+par(mar=c(7,0,0,0))
+zs = seq(-3,3,0.01)
+plot(zs,dnorm(zs),xlim=c(-3,3),type='l',ylab='density',xlab='Z',axes=F,ann=F)
+polygon(c(zs[zs<=z],z,-3),
+        c(dnorm(zs[zs<=z]),0,0),
+        col=rgb(0.7,0.7,0.7,0.7))
+text((-3+z)/2,max(dnorm((-3+z)/2)/3,0.02),ell)
+lines(c(-3,3),c(0,0))
+axis(1,at=c(-3,z,3),line = 0,labels=c("-3","?","3"))
+axis(1,at=seq(-3,3,1),line=2)
+mtext('Z',1,5)
+```
+\
+
+
+```{r, echo=F}
+z2 = seq(zlow-0.02,zhigh+0.02,0.01)
+```
+
+You should go to your $z$-table and find the $z$-score with the left area closest to `r ell`.
+
+| $z$ | $P(Z<z)$ |
+|:---:|:---:|
+| `r z2[1]` | `r format(round(pnorm(z2[1]),4),4)` |
+| `r z2[2]` | `r format(round(pnorm(z2[2]),4),4)` |
+| **`r z2[3]`** | **`r format(round(pnorm(z2[3]),4),4)`** |
+| **`r z2[4]`** | **`r format(round(pnorm(z2[4]),4),4)`** |
+| `r z2[5]` | `r format(round(pnorm(z2[5]),4),4)` |
+| `r z2[6]` | `r format(round(pnorm(z2[6]),4),4)` |
+
+It turns out the exact answer is `r z`, which could be found by using an inverse normal function. Like InvNorm(`r ell`) on a TI calculator, Norm.Inv(`r ell`) on a spreadsheet, or qnorm(`r ell`) in R.
+
+But, because we are using the $z$-table, I will accept either `r zlow` or `r zhigh`. (Or, really anything within 0.011 of `r z`.)
+
+
+
+Meta-information
+================
+extype: num
+exsolution: `r z`
+exname: Get z from left area
+extol: 0.011

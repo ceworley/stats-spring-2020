@@ -1,0 +1,224 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{color,verbatim,Sweave,url,xargs,amsmath,hyperref,booktabs,longtable}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\pagestyle{fancy}
+\fancyhf{}
+
+%% new commands
+\makeatletter
+\newcommand{\ID}[1]{\def\@ID{#1}}
+\newcommand{\Date}[1]{\def\@Date{#1}}
+\newcommand{\Titl}[1]{\def\@Titl{#1}}
+\ID{00001}
+\Date{YYYY-MM-DD}
+\Titl{Title}
+
+%% \exinput{header}
+
+\newcommand{\myID}{\@ID}
+\newcommand{\myDate}{\@Date}
+\newcommand{\myTitl}{\@Titl}
+\makeatother
+
+\lhead{\textsc{BHCC Mat-181}}
+\rhead{\textsc{\myTitl}}
+
+\usepackage{caption}
+\captionsetup[figure]{labelformat=empty}
+
+\usepackage{float}
+\floatplacement{figure}{H}
+
+
+%%% new environments
+%\newenvironment{question}{\item \textbf{Problem}\newline}{\newpage}
+%\newenvironment{solution}{\textbf{Solution}\newline}{\newpage}
+%\newenvironment{answerlist}{\renewcommand{\labelenumi}{(\alph{enumi})}\begin{enumerate}}{\end{enumerate}}
+
+
+%% compatibility with pandoc
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%% fonts: Helvetica
+\renewcommand{\sfdefault}{phv}
+\IfFileExists{sfmath.sty}{
+  \RequirePackage[helvet]{sfmath}
+  \renewcommand{\rmdefault}{phv}
+}{}
+
+\newcommand{\extext}[1]{\textbf{\large #1}}
+\newcommandx{\exmchoice}[9][2=-,3=-,4=-,5=-,6=-,7=-,8=-,9=-]{%
+                \mbox{(a) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#1}} \hspace*{2mm}}%
+  \if #2- \else \mbox{(b) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#2}} \hspace*{2mm}} \fi%
+  \if #3- \else \mbox{(c) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#3}} \hspace*{2mm}} \fi%
+  \if #4- \else \mbox{(d) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#4}} \hspace*{2mm}} \fi%
+  \if #5- \else \mbox{(e) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#5}} \hspace*{2mm}} \fi%
+  \if #6- \else \mbox{(f) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#6}} \hspace*{2mm}} \fi%
+  \if #7- \else \mbox{(g) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#7}} \hspace*{2mm}} \fi%
+  \if #8- \else \mbox{(h) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#8}} \hspace*{2mm}} \fi%
+  \if #9- \else \mbox{(i) \,\, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#9}} \hspace*{2mm}} \fi%
+}
+\newcommandx{\exclozechoice}[9][2=-,3=-,4=-,5=-,6=-,7=-,8=-,9=-]{\setcounter{enumiii}{1}%
+                \mbox{\roman{enumiii}. \, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#1}} \hspace*{2mm}\stepcounter{enumiii}}%
+  \if #2- \else \mbox{\roman{enumiii}. \, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#2}} \hspace*{2mm}\stepcounter{enumiii}} \fi%
+  \if #3- \else \mbox{\roman{enumiii}. \, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#3}} \hspace*{2mm}\stepcounter{enumiii}} \fi%
+  \if #4- \else \mbox{\roman{enumiii}. \, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#4}} \hspace*{2mm}\stepcounter{enumiii}} \fi%
+  \if #5- \else \mbox{\roman{enumiii}. \, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#5}} \hspace*{2mm}\stepcounter{enumiii}} \fi%
+  \if #6- \else \mbox{\roman{enumiii}. \, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#6}} \hspace*{2mm}\stepcounter{enumiii}} \fi%
+  \if #7- \else \mbox{\roman{enumiii}. \, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#7}} \hspace*{2mm}\stepcounter{enumiii}} \fi%
+  \if #8- \else \mbox{\roman{enumiii}. \, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#8}} \hspace*{2mm}\stepcounter{enumiii}} \fi%
+  \if #9- \else \mbox{\roman{enumiii}. \, \framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#9}} \hspace*{2mm}} \fi%
+}
+\newcommand{\exnum}[9]{%
+  \mbox{\framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#1}}}%
+  \mbox{\framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#2}}}%
+  \mbox{\framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#3}}}%
+  \mbox{\framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#4}}}%
+  \mbox{\framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#5}}}%
+  \mbox{\framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#6}}}%
+  \mbox{ \makebox[3mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-2mm} .}}%
+  \mbox{\framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#7}}}%
+  \mbox{\framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#8}}}%
+  \mbox{\framebox[8mm]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#9}}}%
+}
+\newcommand{\exstring}[1]{%
+  \mbox{\framebox[0.9\textwidth][l]{\rule[-1mm]{0mm}{5mm} \hspace*{-1.6mm} \extext{#1}} \hspace*{2mm}}%
+}
+
+%% new environments
+\newenvironment{question}{\item \textbf{Problem}\newline}{\newpage}
+\newenvironment{solution}{\comment}{\endcomment}
+\newenvironment{answerlist}{\renewcommand{\labelenumi}{(\alph{enumi})}\begin{enumerate}}{\end{enumerate}}
+
+%\setkeys{Gin}{width=0.3\textwidth}
+
+\begin{document}
+
+\subsection*{Instructions}
+
+This test is to be taken as an individual without outside assistance or notes. If you are suspected of cheating, you will fail this exam and your transgression will be reported.
+
+You can either use a scientific calculator or (with a smartphone) GeoGebra Scientific Calculator.
+
+To use GeoGebra, you must first put your smartphone on {\bf Airplane Mode}. Then, in GeoGebra, turn on {\bf Exam Mode}. You must leave exam mode on for the entire exam. You won't be able to use your smartphone for anything else. After you are done, you will show me how long exam mode has been running, and if that time is not how long you've been sitting, you will fail this exam.
+
+Read each question carefully and show your work. If the answer is wrong, partial credit is awarded for coherent work.
+
+\subsection*{Grade Table}
+
+(do not write in this table)
+
+\Large 
+
+\begin{tabular}{|c|c|c|} \hline
+question & available points & earned points \\ \hline \hline
+1 & 20 & \\ \hline
+2 & 20 &  \\ \hline
+3 & 10 &  \\ \hline
+4 & 10 &  \\ \hline
+5 & 10 &  \\ \hline
+6 & 10 &  \\ \hline
+7 & 20 & \\ \hline
+EC1 & 10 &  \\ \hline
+Total & 100 & \\ \hline
+\end{tabular}
+
+\normalsize
+
+\newpage
+
+\begin{enumerate}
+%% \exinput{exercises}
+\end{enumerate}
+
+
+
+\renewenvironment{question}{\comment}{\endcomment}
+\renewenvironment{solution}{\begin{minipage}{\linewidth} \item }{ \end{minipage} }
+
+\newpage
+
+\chead{\textsc{Solutions}}
+
+\small
+%\begin{multicols}{2}
+\begin{enumerate}
+
+%% \exinput{exercises}
+
+\end{enumerate}
+%\end{multicols}
+\normalsize
+
+
+\newpage
+\chead{FORMULAS}
+
+\subsection*{Normal Distributions}
+
+$$z = \frac{x-\mu}{\sigma}$$
+
+$$x = \mu + z\sigma$$
+
+\subsection*{Central Limit Theorem}
+\begin{itemize}
+\item {\bf If:}
+\begin{itemize}
+\item Random variable $W$ has mean $\mu_{\tiny w}$ and standard deviation $\sigma_{\tiny w}$. 
+\item Random variable $X$ represents the {\bf sum} of $n$ instances of $W$. 
+$$X = W_1+W_2+W_3+\cdots+W_n$$
+\item Random variable $Y$ represents the {\bf mean} of $n$ instances of $W$. 
+$$Y = \frac{W_1+W_2+W_3+\cdots+W_n}{n}$$
+\end{itemize}
+\item {\bf Then}:
+\begin{itemize}
+\item The following formulas are exactly true:
+\begin{align*}
+\mu_{\tiny x} &= n\mu_{\tiny w} &
+\mu_{\tiny y} &= \mu_{\tiny w} \\
+\sigma_{\tiny x} &= \sigma_{\tiny w}\sqrt{n} &
+\sigma_{\tiny y} &= \frac{\sigma_{\tiny w}}{\sqrt{n}} 
+\end{align*}
+\item $X$ and $Y$ are both approximately normal (if $n\ge 30$).
+\item $X$ and $Y$ are exactly normal if $W$ is normal.
+\end{itemize}
+\end{itemize}
+
+\subsection*{Special case of CLT: Bernoulli, Binomial, and Proportion Sampling}
+\begin{itemize}
+\item {\bf If:}
+\begin{itemize}
+\item Random variable $W$ is Bernoulli:
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+$w$ & $P(w)$ \\ \hline
+0 & $q$ \\
+1 & $p$ \\ \hline
+\end{tabular}
+\end{center} 
+\item Random variable $X$ represents the sum of $n$ instances of $W$. (Binomial)
+\item Random variable $\hat{p}$ represents the mean of $n$ instances of $W$. (Proportion sampling) 
+\end{itemize}
+\item {\bf Then}:
+\begin{itemize}
+\item The following formulas are exactly true:
+\begin{align*}
+\mu_{\tiny w} &= p &&&
+\mu_{\tiny x} &= np &&&
+\mu_{\tiny \hat{p}} &= p \\
+\sigma_{\tiny w} &= \sqrt{pq} &&&
+\sigma_{\tiny x} &= \sqrt{pq}\sqrt{n} &&&
+\sigma_{\tiny \hat{p}} &= \frac{\sqrt{pq}}{\sqrt{n}} 
+\end{align*}
+\item $X$ and $\hat{p}$ are both approximately normal (if $np\ge 10$ and $nq \ge 10$).
+\end{itemize}
+\end{itemize}
+
+
+
+
+\end{document}

@@ -1,0 +1,30 @@
+```{r data generation, echo = FALSE, results = "hide"}
+d1 = rbeta(500,4,4)
+d2 = rbeta(500,0.5,0.5)
+d3 = rbeta(500,1.4,3)
+d4 = rbeta(500,3,1.4)
+```
+
+Question
+========
+
+```{r}
+par(mar=c(0,0,0,0),mfrow=c(2,2))
+hist(d1,ann=F,axes=F)
+hist(d2,ann=F,axes=F)
+hist(d3,ann=F,axes=F)
+hist(d4,ann=F,axes=F)
+```
+
+
+Solution
+========
+
+hi
+
+Meta-information
+============
+extype: string
+exsolution: yo
+exname: hists
+extol: 0.01

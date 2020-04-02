@@ -1,0 +1,92 @@
+---
+header-includes:
+   - \usepackage{multicol}
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r data generation, echo = FALSE, results = "hide"}
+mu = round(2^runif(1,1,6),1)
+sig = round(runif(1,0.2,mu/3),1)
+```
+
+Question
+========
+
+A normal random variable $X$ has a mean $\mu=`r mu`$ and standard deviation $\sigma=`r sig`$. Please label the density curve with:
+
+a. The appropriate values of $x$.
+b. The areas of the sections.
+
+```{r normal,echo=F,fig.width=7,fig.height=5,fig.cap=""}
+library(latex2exp)
+zs = (-35):35/10
+par(mar=c(6,1,1,1))
+plot(0,0,type="n",ann=F,axes=F,xlim=c(-3.5,3.5),ylim=c(0,0.42))
+lines(zs,dnorm(zs))
+zz = (-3):3
+axis(at=zz,side=1)
+mtext(TeX("$z=$"),side=1,line=1,adj=0)
+for(z in -2:2){
+  lines(c(z,z),c(0,dnorm(z)))
+}
+axis(at=zz,side=1,line=3,labels = rep("___",length(zz)),cex.axis=2,tick = FALSE)
+mtext(TeX("$x=$"),side = 1,line=4,adj=0)
+arrows(-3,0.2,-2.5,dnorm(-2.5)/3)
+arrows(3,0.2,2.5,dnorm(2.5)/3)
+arrows(-2,0.3,-1.5,dnorm(-1.5)/2)
+arrows(2,0.3,1.5,dnorm(1.5)/2)
+arrows(-1,0.4,-0.5,dnorm(-0.5)/2)
+arrows(1,0.4,0.5,dnorm(0.5)/2)
+xxx = c(-3,-2,-1,1,2,3)
+yyy = c(0.21,0.31,0.41,0.41,0.31,0.21)
+for(i in 1:length(xxx)){
+  text(xxx[i],yyy[i],"___",cex=2)
+}
+```
+
+
+
+Solution
+========
+
+The filled in areas and $x$ values are shown below.
+
+```{r normal2,echo=F,fig.width=7,fig.height=5,fig.cap=""}
+zs = (-35):35/10
+par(mar=c(6,1,1,1))
+plot(0,0,type="n",ann=F,axes=F,xlim=c(-3.5,3.5),ylim=c(0,0.42))
+lines(zs,dnorm(zs))
+zz = (-3):3
+axis(at=zz,side=1)
+mtext(TeX("$z=$"),side=1,line=1,adj=0)
+for(z in -2:2){
+  lines(c(z,z),c(0,dnorm(z)))
+}
+axis(at=zz,side=1,line=3,labels = rep("___",length(zz)),cex.axis=2,tick = FALSE)
+axis(at=zz,side=1,line=3,labels = mu+zz*sig,cex.axis=1.5,tick=F)
+mtext(TeX("$x=$"),side = 1,line=4,adj=0)
+arrows(-3,0.2,-2.5,dnorm(-2.5)/3)
+arrows(3,0.2,2.5,dnorm(2.5)/3)
+arrows(-2,0.3,-1.5,dnorm(-1.5)/2)
+arrows(2,0.3,1.5,dnorm(1.5)/2)
+arrows(-1,0.4,-0.5,dnorm(-0.5)/2)
+arrows(1,0.4,0.5,dnorm(0.5)/2)
+xxx = c(-3,-2,-1,1,2,3)
+yyy = c(0.21,0.31,0.41,0.41,0.31,0.21)
+area = c("2.5%","13.5%","34%","34%","13.5%","2.5%")
+for(i in 1:length(xxx)){
+  text(xxx[i],yyy[i],"___",cex=2)
+  text(xxx[i],yyy[i],adj=c(0.5,0),area[i],cex=1.5)
+}
+```
+
+
+
+Meta-information
+============
+extype: string
+exsolution: yo
+exname: UZ
+extol: 0.01
