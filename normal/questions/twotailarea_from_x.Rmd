@@ -19,6 +19,7 @@ while(T){
   la = round(pnorm(z),4)
   ra = 1-la
   ca = 1-2*ra
+  ta = 2*ra
   if(sig != 0 & z == zr & z != 0){break}
 }
 ```
@@ -27,14 +28,14 @@ Question
 ========
 Random variable $`r rv`$ is normally distributed with mean $\mu = `r mu`$ and standard deviation $\sigma = `r sig`$.
 $$`r rv` = \text{N}(`r mu`,\,`r sig`) $$
-Evaluate $P\left(\big|`r rv`-`r mu`\big| < `r d`\right)$. In other words, what is the probability that $`r rv`$ is within $\pm`r x-mu`$ units from the mean?
+Evaluate $P\left(\big|`r rv`-`r mu`\big| > `r d`\right)$. In other words, what is the probability that $`r rv`$ is outside $\pm`r x-mu`$ units from the mean?
 
 
 Solution
 ========
-First, draw a sketch. We can label the $`r rv`$ axis by adding integer multiples of `r sig` to `r mu`. We know to shade the center because values near `r mu` satisfy the condition $\big|`r rv`-`r mu`\big| < `r x-mu`$. We draw the boundaries at $`r mu`-`r d`=`r x1`$ and $`r mu`+`r d`=`r x2`$ because those are the solutions to $\big|`r rv`-`r mu`\big| = `r d`$. We can also rephrase the probability.
+First, draw a sketch. We can label the $`r rv`$ axis by adding integer multiples of `r sig` to `r mu`. We know to shade the two tails because values far from `r mu` satisfy the condition $\big|`r rv`-`r mu`\big| > `r x-mu`$. We draw the boundaries at $`r mu`-`r d`=`r x1`$ and $`r mu`+`r d`=`r x2`$ because those are the solutions to $\big|`r rv`-`r mu`\big| = `r d`$. We can also rephrase the probability.
 
-$$P\left(\big|`r rv`-`r mu`\big| < `r d`\right) ~=~ P(`r x1`<`r rv`<`r x2`)$$
+$$P\left(\big|`r rv`-`r mu`\big| > `r d`\right) ~=~ P\big(`r rv`<`r x1` \text{ OR } `r rv`>`r x2`\big)$$
 
 ```{r, fig.width=6, fig.height=3}
 par(mar=c(7,3,0,0))
@@ -55,11 +56,11 @@ if(!(zr %in% seq(-3,3,1))){
   mtext(x,1,4.9,at=zr)
   mtext(round(mu-z*sig,2),1,4.9,at=-zr)
 }
-polygon(c(Z[Z>=-zr & Z<=zr],zr,-zr),c(dnorm(Z[Z>=-zr & Z<=zr]),0,0),col=rgb(1,0.5,0.5,0.5))
+polygon(c(Z[Z<=-z],-z,-3),c(dnorm(Z[Z<=-z]),0,0),col=rgb(1,0.5,0.5,0.5))
+polygon(c(Z[Z>=z],3,z),c(dnorm(Z[Z>=z]),0,0),col=rgb(1,0.5,0.5,0.5))
 mtext("density",2,line=1)
 ```
 \
-
 
 We calculate the $z$ values of the boundaries. Left boundary:
 $$\begin{aligned}
@@ -78,24 +79,24 @@ z_2 &= \frac{`r x2`-`r mu`}{`r sig`} \\\\
 
 We have rephrased our problem into a **standard normal** probability problem, because
 
-$$P\left(\big|`r rv`-`r mu`\big| < `r d`\right) ~=~ P(`r x1`<`r rv`<`r x2`) ~=~ P(`r -z`<Z<`r z`) ~=~ P\left(\big|Z\big|<`r z`\right)$$
+$$P\left(\big|`r rv`-`r mu`\big| > `r d`\right) ~=~ P\left(\big|Z\big|>`r z`\right)$$
 
-So, we just need to evaluate $P(|Z|<`r z`)$. I will also point out that $\frac{`r d`}{`r sig`} = `r z`$. In general, if $X$ is normally distributed, then:
-$$P\left(\big|X-\mu\big|<d\right) ~=~ P\left(\big|Z\big| < \frac{d}{\sigma}\right)$$
+So, we just need to evaluate $P(|Z|>`r z`)$. I will also point out that $\frac{`r d`}{`r sig`} = `r z`$. In general, if $X$ is normally distributed, then:
+$$P\left(\big|X-\mu\big|>d\right) ~=~ P\left(\big|Z\big| > \frac{d}{\sigma}\right)$$
 
 From here we have a formula that lets us use the $z$ table. (We practiced this part before.)
 $$\begin{aligned}
-P(|Z|<`r z`) &= 2 \times P(Z<`r z`)-1 \\
-&= 2 \times `r la`-1 \\
-&= `r ca`
+P(|Z|>`r z`) &= 2- 2 \times P(Z<`r z`) \\
+&= 2 - 2 \times `r la` \\
+&= `r ta`
 \end{aligned}$$
 
 
 Meta-information
 ================
 extype: num
-exsolution: `r ca`
-exname: Get centralarea from normal
+exsolution: `r ta`
+exname: Get twotailarea from normal
 extol: 0.0002
 
 
