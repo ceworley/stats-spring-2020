@@ -1,0 +1,19 @@
+library("exams")
+
+
+myexam <- c("compare_zs.Rmd",
+            "leftarea_from_x.Rmd",
+            "rightarea_from_x.Rmd",
+            "centralarea_from_x.Rmd",
+            "twotailarea_from_x.Rmd",
+            "betweenarea_from_x.Rmd",
+            "x_from_leftarea.Rmd",
+            "x_from_rightarea.Rmd",
+            "bounds_from_centralarea.Rmd",
+            "bounds_from_twotailarea.Rmd")
+
+exams2moodle(myexam, n = 30, name = "normal_test",
+             dir = "out",
+             edir = "questions2",
+             converter="pandoc-mathml")
+

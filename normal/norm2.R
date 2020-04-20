@@ -1,6 +1,6 @@
 library("exams")
 
-s = c('x_from_leftarea','x_from_rightarea','bounds_from_centralarea','bounds_from_twotailarea')
+s = c('bounds_from_centralarea','bounds_from_twotailarea')
 
 myexam <- c(paste(s,".Rmd",sep=""))
 

@@ -14,5 +14,5 @@ myexam <- c("compare_zs.Rmd",
 
 exams2html(myexam, n = 1, name = "normal examples",
              dir = "out",
-             edir = "questions")
+             edir = "questions2")
 

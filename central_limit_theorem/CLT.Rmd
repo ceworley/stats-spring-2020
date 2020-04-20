@@ -8,15 +8,128 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Statement of Central Limit Theorem
 
-
-* Let $W$ represent any spinner (any random variable) with mean $\mu$ and standard deviation $\sigma$.
-* Let $X$ represent the sum of $n$ spins of $W$.
+* Let $X$ represent any spinner (any random variable) with mean $\mu_{\tiny X}$ and standard deviation $\sigma_{\tiny X}$.
+* Let $\sum X$ represent the **sum** of $n$ spins of $X$.
 
 Then
 
-$$\frac{X-\mu}{\sigma\sqrt{n}} ~\approx~Z $$
+The random variable $\sum X$ and is approximately normal with mean $n\mu_{\tiny X}$ and standard deviation $\sigma_{\tiny X} \sqrt{n}$. 
+
+$$\mu_{\tiny \sum X} = n \mu_{\tiny X}$$
+$$\sigma_{\tiny \sum X} = \sigma_{\tiny X} \sqrt{n}$$
+
+### Corollary of central limit theorem
+
+* Let $X$ represent any spinner (any random variable) with mean $\mu_{\tiny X}$ and standard deviation $\sigma_{\tiny X}$.
+* Let $\bar X$ represent the **average** of $n$ spins of $X$. Notice $\bar{X} = \frac{\sum X}{n}$.
+
+Then
+
+The random variable $\bar X$ and is approximately normal with mean $\mu_{\tiny X}$ and standard deviation $\frac{\sigma_{\tiny X}}{\sqrt{n}}$. 
+
+$$\mu_{\tiny \bar X} =  \mu_{\tiny X}$$
+$$\sigma_{\tiny \bar X} = \frac{\sigma_{\tiny X}}{\sqrt{n}}$$
+
+## Example
+
+```{r}
+X = c(1,2,3,4)
+P = c(0.25,0.25,0.25,0.25)
+n = 100
+mu = sum(X*P)
+sig = sqrt(sum((X-mu)^2*P))
+mut = mu*n
+sigt = sig*sqrt(n)
+mua = mu
+siga = sig/sqrt(n)
+```
+
+Let's consider **summing** 100 rolls of a 4-sided die (tetrahedron). First, we let $X$ represent a **single** roll of the 4-sided die, giving the probability distribution below.
+
+| $x$ | $P(X=x)$ |
+|:---:|:---:|
+| 1 | 0.25 |
+| 2 | 0.25 |
+| 3 | 0.25 |
+| 4 | 0.25 |
+
+We can calculate $\mu_{\tiny X}$ by using $\mu_{\tiny X} = \sum{x\cdot P(x)}$.
+
+$$\begin{aligned}
+\mu_{\tiny X} &=  \sum{x\cdot P(x)} \\
+&= (1)(0.25)+(2)(0.25)+(3)(0.25)+(4)(0.25) \\
+&= `r mu`
+\end{aligned}$$
+
+We can calculate $\sigma_{\tiny X}$ by using $\sigma_{\tiny X} = \sqrt{\sum{(x-\mu_{\tiny X})^2\cdot P(x)}}$
+
+$$\begin{aligned}
+\sigma_{\tiny X} &=  \sqrt{\sum{(x-\mu_{\tiny X})^2\cdot P(x)}} \\
+&= \sqrt{(1-`r mu`)^2(0.25)+(2-`r mu`)^2(0.25)+(3-`r mu`)^2(0.25)+(4-`r mu`)^2(0.25)} \\
+&= `r sig`
+\end{aligned}$$
+
+
+So, now we return to the **sum** of 100 rolls. More precisely, we want to describe the distribution of infinite repetitions of summing 100 rolls. Or, we want to consider the sums, where each sum is the sum of 100 rolls. The central limit theorem states these sums are normally distributed with the following parameters.
+$$\mu_{\tiny \sum X} ~=~ (`r n`)(`r mu`) ~=~ `r mut` $$
+$$\sigma_{\tiny \sum X} ~=~ (`r sig`)(\sqrt{`r n`}) ~=~ `r sigt`$$
+
+Let's simulate summing 100 rolls, and let's repeat that simulation 10000 times.
+
+```{r, cache=T}
+set.seed(1234)
+tots = numeric()
+for(i in 1:10000){
+  tot = sum(sample(1:4,100,T))
+  tots = c(tots,tot)
+}
+```
+
+| repetition | $\sum X$ |
+|:---:|:---:|
+| 1 | `r tots[1]` |
+| 2 | `r tots[2]` |
+| 3 | `r tots[3]` |
+| 4 | `r tots[4]` |
+| $\vdots$ | $\vdots$ |
+| 9997 | `r tots[9997]` |
+| 9998 | `r tots[9998]` |
+| 9999 | `r tots[9999]` |
+|10000 | `r tots[10000]`|
+
+Of course, we don't want to read 10,000 lines of data. It is easier to visualize the data with a histogram. I've also included a normal density curve predicted by the central limit theorem. 
+
+```{r}
+hist(tots,breaks=seq(7.5,425.5,5),xlim=c(200,300),main="Histogram of 10000 repetitions of summing 100 rolls of 4-sided dice\nalong with density predicted by central limit theorem",
+     xlab="Sum of 100 rolls")
+xr = 200:300
+lines(xr,dnorm(xr,mut,sigt)*10000*5)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -78,8 +78,8 @@ arrows(0.3,0.42,0,dnorm(0)/2)
 As an intermediate step, let's find $z$ such that $P(|Z|<z)=`r ca`$. First, we need to evaluate $P(Z<z)$.
 
 $$\begin{aligned}
-P(Z<z) &= 2P(|Z|<z)-1 \\
-&= (2)(`r ca`)-1\\
+P(Z<z) &= \frac{1+P(|Z|<z)}{2} \\ \\
+&= \frac{1+`r ca`}{2}\\ \\
 &= `r la`
 \end{aligned}$$
 

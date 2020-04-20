@@ -78,8 +78,8 @@ text(0,0.45,TeX(sprintf("$P(|%s-%.3g|>d) = %.2f$",Xl,mu,ta)))
 As an intermediate step, let's find $z$ such that $P(|Z|>z)=`r ta`$. First, we need to evaluate $P(Z<z)$.
 
 $$\begin{aligned}
-P(Z<z) &= 2-2P(|Z|>z) \\
-&= 2-(2)(`r ta`)\\
+P(Z<z) &= \frac{2-P(|Z|>z)}{2} \\ \\
+&= \frac{2-`r ta`}{2} \\ \\
 &= `r la`
 \end{aligned}$$
 
