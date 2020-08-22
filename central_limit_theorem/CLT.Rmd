@@ -13,24 +13,29 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Statement of Central Limit Theorem
 
+If
+
 * Let $X$ represent any spinner (any random variable) with mean $\mu_{\tiny X}$ and standard deviation $\sigma_{\tiny X}$.
 * Let $\sum X$ represent the **sum** of $n$ spins of $X$.
 
 Then
 
-The random variable $\sum X$ and is approximately normal with mean $n\mu_{\tiny X}$ and standard deviation $\sigma_{\tiny X} \sqrt{n}$. 
+The random variable $\sum X$ is approximately normal with mean $n\mu_{\tiny X}$ and standard deviation $\sigma_{\tiny X} \sqrt{n}$. 
 
 $$\mu_{\tiny \sum X} = n \mu_{\tiny X}$$
 $$\sigma_{\tiny \sum X} = \sigma_{\tiny X} \sqrt{n}$$
 
+
 ### Corollary of central limit theorem
+
+If
 
 * Let $X$ represent any spinner (any random variable) with mean $\mu_{\tiny X}$ and standard deviation $\sigma_{\tiny X}$.
 * Let $\bar X$ represent the **average** of $n$ spins of $X$. Notice $\bar{X} = \frac{\sum X}{n}$.
 
 Then
 
-The random variable $\bar X$ and is approximately normal with mean $\mu_{\tiny X}$ and standard deviation $\frac{\sigma_{\tiny X}}{\sqrt{n}}$. 
+The random variable $\bar X$ is approximately normal with mean $\mu_{\tiny X}$ and standard deviation $\frac{\sigma_{\tiny X}}{\sqrt{n}}$. 
 
 $$\mu_{\tiny \bar X} =  \mu_{\tiny X}$$
 $$\sigma_{\tiny \bar X} = \frac{\sigma_{\tiny X}}{\sqrt{n}}$$

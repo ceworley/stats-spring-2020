@@ -1,0 +1,40 @@
+```{r,data,generation,echo=FALSE,results="hide"}
+n = 10 #must be bigger than 8, or change xcom to replacement sampling with T
+x = sample(0:9,n,TRUE)
+i = sample(1:n,1)
+xi = x[i]
+i = (1:n)[x==xi][1]
+
+thword = c("first","second","third","fourth","fifth","sixth","seventh","eighth","ninth","tenth")
+tbl = paste(lapply(1:10,function(i) paste("|",i,"|",x[i],"|",collapse="")),collapse="\n")
+```
+
+\setlength{\thinmuskip}{7mu}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\num}[1]{\#{[#1]}}
+\newcommand{\xc}{c}
+
+Question
+========
+
+A random procedure generated the following sample (sequence of measurements):
+$$\vec{x} = `r x`$$
+
+Determine the smallest index $i$ such that $x_i=`r xi`$. In other words, find the index of the first occurrence of measurement `r xi`.
+
+
+Solution
+========
+
+
+The `r thword[i]` measurement is the first occurrence of `r xi`. Thus, $i=`r i`$ is the smallest index such that $x_i=`r xi`$.
+
+
+| $i$ | $x_i$ |
+|:---:|:---:|
+`r tbl`
+
+
+
+
+

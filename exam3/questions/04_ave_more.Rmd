@@ -1,0 +1,56 @@
+```{r data generation, echo = FALSE, results = "hide"}
+knitr::opts_chunk$set(echo = FALSE)
+options(scipen=100)
+
+while(T){
+  mu = round(runif(1,1,10),2)
+  n = sample(6:12,1)^2
+  siga = round(runif(1,0.02,2),2)
+  la = runif(1,0.01,0.99)
+  mua = round(mu,2)
+  sig = round(siga*sqrt(n),2)
+  siga = sig/sqrt(n)
+  z = round(qnorm(la),2)
+  xa = mua+z*siga
+  z = (xa-mua)/siga
+  if(sig<mu & round(xa,2)==xa & round(z,2)==z & z!=0 & round(siga,2)==siga){
+    break
+  }
+}
+la = round(pnorm(z),4)
+ra = round(1-la,4)
+```
+
+Question
+========
+
+When a spinner is spun once, the probability distribution has a mean of `r sprintf('%.2f',mu)` and standard deviation of `r sprintf('%.2f',sig)`.
+
+That spinner will be spun `r n` times, and the **sample mean** of those rolls will be recorded. What is the probability the sample mean will be **more** than `r sprintf('%.2f',xa)`?
+
+
+Solution
+========
+
+When we will average `r n` spins, the probability distribution is approximately normal, even if each spin is not normally distributed. (See Central Limit Theorem: https://en.wikipedia.org/wiki/Central_limit_theorem .)
+
+$$\mu_{\bar{X}} ~=~ \mu_X  ~=~ `r mua` $$
+
+$$\sigma_{\bar{X}} ~=~ \frac{\sigma_{X}}{\sqrt{n}} ~=~ \frac{`r sig`}{\sqrt{`r n`}} ~=~ `r siga` $$
+
+We find a $z$ score.
+$$z ~=~ \frac{`r xa`-`r mua`}{`r siga`} ~=~ `r z`$$
+
+We find the probability.
+$$P\left(\bar{X} > `r xa` \right) ~=~ P(Z>`r z`) ~=~ `r la` $$
+
+In case you forgot,
+$$P(Z > z) ~=~ 1 - P(Z<z)$$
+
+
+Meta-information
+================
+extype: num
+exsolution: `r ra`
+exname: prob ave more
+extol: 0.004

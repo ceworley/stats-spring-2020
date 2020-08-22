@@ -1,0 +1,58 @@
+```{r data generation, echo = FALSE, results = "hide"}
+knitr::opts_chunk$set(echo = FALSE)
+while(T){
+  la = sort(runif(2,0.01,0.99))
+  z = round(qnorm(la),1)
+  mu = 10*sample(5:50,1)
+  sig = 10*sample(1:10,1)
+  x = round(mu+sig*z)
+  z = (x-mu)/sig
+  la = round(pnorm(z),4)
+  P1 = la[1]
+  P2 = round(1-la[2],4)
+  P3 = round(la[2]-la[1],4)
+  if(sig*3 < mu & abs(z[2]-z[1])>0.5){
+    break
+  }
+}
+```
+
+Question
+========
+Random variable $X$ is normally distributed with mean $\mu = `r mu`$ and standard deviation $\sigma = `r sig`$.
+$$X = \text{N}(`r mu`,\,`r sig`) $$
+
+Note: The answers are determined using the values from the $z$-table, where probabilities are rounded to the nearest 0.0001. However, the tolerance is large enough that you can use more exact methods.
+
+Answerlist
+--------
+* Evaluate $P(X<`r x[1]`)$.
+* Evaluate $P(X>`r x[2]`)$.
+* Evaluate $P(`r x[1]` < X < `r x[2]`)$.
+
+
+Solution
+========
+
+Find the $z$ scores.
+
+$$z_1 ~=~ \frac{`r x[1]`-`r mu`}{`r sig`} ~=~ `r z[1]`$$
+
+$$z_2 ~=~ \frac{`r x[2]`-`r mu`}{`r sig`} ~=~ `r z[2]`$$
+
+Answerlist
+--------
+* Use the $z$ table to find $P(Z<`r z[1]`) = `r P1`$.
+* Use the $z$ table, and rule of complements, to determine $P(Z>`r z[2]`)=`r P2`$.
+* Probability between two boundaries: $$P(`r z[1]`<Z<`r z[2]`) = P(Z<`r z[2]`) - P(Z<`r z[1]`) = `r P3`$$ Also, notice all three probabilities add to 1.
+
+
+
+
+Meta-information
+================
+extype: cloze
+exclozetype: num|num|num
+exsolution: `r P1`|`r P2`|`r P3`
+exname: normal probs
+extol: 0.004

@@ -1,0 +1,95 @@
+```{r data generation, echo = FALSE, results = "hide"}
+library(exams)
+
+cat= c("Whether a lab mouse dies within 20 days of treatment",
+       "Whether an automobile is moving faster than the speed limit",
+       "Whether a house is damaged by a tornado",
+       "Whether the sum of two 6-sided dice is larger than 7",
+       "Whether the average of three 12-sided dice is smaller than 5",
+       "Whether a light switch was on yesterday at noon",
+       "Whether an arrow misses the bullseye",
+       "Whether a basketball player makes both freethrows",
+       "Whether a cyclist has ridden more than 100 miles in a day",
+       "The color of a person's shoes",
+       "A person's favorite flavor of ice cream",
+       "The scientific name of an animal",
+       "Which country manufactored a toy",
+       "A person's preferred political party",
+       "The first ingredient on a food label's ingredient list",
+       "Which song was queued next by a shuffle algorithm",
+       "The suit of a playing card",
+       "The first letter on a license plate",
+       "The type of fabric used to sew a dress",
+       "Which medication is in a bottle",
+       "Which instrument a musician learned first",
+       "A person's gender")
+
+qua= c("The sum of two 6-sided dice",
+       "The average of three 12-sided dice",
+       "The time, in seconds, a turtle stays under water",
+       "How many arrows hit the bullseye after shooting 12 arrows",
+       "The average distance (in centimeters) of 10 arrows from the center of the target",
+       "The distance (in centimeters) of an arrow from the center of the target",
+       "The speed of a bicycle in kilometers per hour",
+       "The energy content of a meal in kilocalories",
+       "The distance (in kilometers) a human commutes to work",
+       "Years of education",
+       "Daily intake of whole grains (measured in grams per day)"
+       )
+
+nqua = sample(2:3,1)
+ncat = 5-nqua
+phrases_qua = sample(qua,nqua)
+phrases_cat = sample(cat,ncat)
+ans = c(rep("q",nqua),rep("c",ncat))
+phrases = c(phrases_qua,phrases_cat)
+mix = sample(1:5)
+sa1 = mchoice2string(c("c","q")==ans[mix[1]])
+sa2 = mchoice2string(c("c","q")==ans[mix[2]])
+sa3 = mchoice2string(c("c","q")==ans[mix[3]])
+sa4 = mchoice2string(c("c","q")==ans[mix[4]])
+sa5 = mchoice2string(c("c","q")==ans[mix[5]])
+```
+
+Question
+========
+
+Classify each of the following variables as **categorical** or **quantitative**.
+
+a. `r phrases[mix[1]]`
+b. `r phrases[mix[2]]`
+c. `r phrases[mix[3]]`
+d. `r phrases[mix[4]]`
+e. `r phrases[mix[5]]`
+
+Answerlist
+--------
+* Categorical variable describes "`r phrases[mix[1]]`"
+* Quantitative variable describes "`r phrases[mix[1]]`"
+* Categorical variable describes "`r phrases[mix[2]]`"
+* Quantitative variable describes "`r phrases[mix[2]]`"
+* Categorical variable describes "`r phrases[mix[3]]`"
+* Quantitative variable describes "`r phrases[mix[3]]`"
+* Categorical variable describes "`r phrases[mix[4]]`"
+* Quantitative variable describes "`r phrases[mix[4]]`"
+* Categorical variable describes "`r phrases[mix[5]]`"
+* Quantitative variable describes "`r phrases[mix[5]]`"
+
+
+Solution
+========
+
+Quantitative variables would be recorded as a number. Categorical variables would be recorded as a phrase.
+
+Of course this is an oversimplification. 
+
+For a more thorough understanding, you should consider some difficult cases. Area codes and telephone numbers are categorical because there is no sense in ranking, subtracting, or dividing them. Also, "color" is typically thought of as categorical, but computers use numbers (usually 3 numbers for each color) to reference colors (see RGB or HSV). 
+
+
+Meta-information
+============
+extype: cloze
+exclozetype: schoice|schoice|schoice|schoice|schoice
+exsolution: `r sa1`|`r sa2`|`r sa3`|`r sa4`|`r sa5`
+exname: cat qua
+extol: 0

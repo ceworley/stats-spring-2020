@@ -1,0 +1,41 @@
+---
+title: "Dice, probability"
+output: html_notebook
+---
+
+[Dice](https://en.wikipedia.org/wiki/Dice) are common [random-number generators](https://en.wikipedia.org/wiki/Random_number_generation). Most people are familiar with 6-sided cube with sides marked with pips (dots) numbering 1 through 6. Using R, we can simulate 10 rolls of a 6-sided die.
+
+```{r}
+x = sample(1:6,10,replace=TRUE)
+print(x)
+```
+
+
+Role-playing games often require dice with 4, 6, 8, 10, 12, and 20 sides (for why 4, 6, 8, 12, and 20 - see [platonic solids](https://en.wikipedia.org/wiki/Platonic_solid)). Other games will use dice labeled with pictures or nonsequential numbers. 
+
+A fair die is equally likely to land on each of its sides. So, after 600 rolls of a 6-sided die, we would expect each side to show approximately 100 times (but probably not exactly 100 times).
+
+
+
+```{r}
+num_repetitions = 10000
+num_rolls_per_repetition = 3
+num_sides = 6
+x = matrix(sample(1:num_sides,num_repetitions*num_rolls_per_repetition,TRUE),nrow=num_repetitions)
+sum(apply(x,1,mean) > 3.5)
+```
+
+```{r}
+num_repetitions = 10000
+num_rolls_per_repetition = 3
+num_sides = 6
+x = numeric()
+for(i in 1:num_repetitions){
+  x = c(x,mean(sample(1:num_sides,10,TRUE)))
+}
+hist(x)
+sd(x)
+```
+
+
+

@@ -1,0 +1,243 @@
+---
+title: "Archery"
+author: "Chad Worley"
+date: "8/17/2020"
+output:
+  html_notebook:
+    code_folding: hide
+---
+
+## Archery Scoring
+
+A bullseye is worth 10 points, and the concentric circles are worth 9, 8, 7,..., 2, 1; a miss awards 0 points.
+
+```{r bullseye,fig.width=8,fig.height=8}
+makebullseye = function(){
+  x = cos(2*seq(0,pi,length.out=1000)*pi)
+  y = sin(2*seq(0,pi,length.out=1000)*pi)
+  plot(x,y,type="l",lwd=3,xlim=c(-1.1,1.1),ylim=c(-1.1,1.1),ann=F,axes=F)
+  lines(x=c(-1,1,1,-1,-1)*1.1,y=c(1,1,-1,-1,1)*1.1,lwd=4)
+  colors = c("yellow","yellow","red","red","blue","blue","grey20","grey20","white","white")
+  colors2 = lapply(colors, col2rgb)
+  linecolors = c(rep("black",6),"white",rep("black",3))
+  textcolors = c(rep("black",6),rep("white",2),rep("black",2))
+  for(i in 10:1){
+    x2 = x*i/10
+    y2 = y*i/10
+    polygon(x2[1:(length(x2)-1)],y2[1:(length(x2)-1)],col=colors[i],border=F)
+    lines(x2,y2,col=linecolors[i])
+    text((-i+0.5)/10,0,11-i,col=textcolors[i],cex=1.5)
+  }
+  lines(x*0.5/10,y*0.5/10,col="grey50")
+  points(0,0,pch=20,cex=0.5)
+}
+par(mar=c(0,0,0,0))
+makebullseye()
+```
+
+# Modeling an archer
+
+An archer can be modeled saying her points follow a uniform distribution.
+
+```{r}
+archer1 = sample(0:10,9999,replace=TRUE)
+hist(archer1,breaks=0:11-0.5,freq=FALSE,xlab="points",main="An archer with pnts=uniform(0,10) , n=9999",col=rgb(0.8,0.3,0.3))
+```
+\
+
+```{r,fig.width=6,fig.height=6}
+par(mar=c(0,1,2,1))
+makebullseye()
+set.seed(123)
+r = runif(999,0,1.1)
+theta = runif(999,0,2*pi)
+points(r*cos(theta),r*sin(theta),pch=4)#21,cex=0.3,lwd=1,bg=rgb(1,1,1),col="black")
+mtext("Positions of n=999 shots from pnts=uniform(0,10) archer")
+```
+\
+
+```{r}
+archer1 = sample(6:10,9999,replace=TRUE)
+hist(archer1,breaks=0:11-0.5,freq=FALSE,xlab="points",main="Point Histogram pnts=uniform(6,10), n=9999",col=rgb(0.8,0.3,0.3))
+```
+\
+
+```{r,fig.width=6,fig.height=6}
+par(mar=c(0,1,2,1))
+makebullseye()
+set.seed(123)
+r = runif(99,0,0.5)
+theta = runif(99,0,2*pi)
+points(r*cos(theta),r*sin(theta),pch=4)#21,cex=0.3,lwd=1,bg=rgb(1,1,1),col="black")
+mtext("Positions of n=999 shots from uniform(6,10) archer")
+```
+
+## position vs points
+
+You may have noticed that the "10" score is harder to read than the other numbers in both positional graphs. 
+
+A standard target has a diameter of 60 cm. This means each concentric circle has a radius that is 3 cm longer than its smaller circle.
+
+```{r fig.width=6,fig.height=6}
+makebullseye = function(scale=30,axes=T){
+  x = cos(2*seq(0,pi,length.out=1000)*pi)*scale
+  y = sin(2*seq(0,pi,length.out=1000)*pi)*scale
+  plot(x,y,type="l",lwd=3,xlim=c(-scale,scale)*1.1,ylim=c(-scale,scale)*1.1,ann=F,axes=axes)
+  lines(x=c(-1,1,1,-1,-1)*scale*1.1,y=c(1,1,-1,-1,1)*scale*1.1,lwd=4)
+  colors = c("yellow","yellow","red","red","blue","blue","grey20","grey20","white","white")
+  colors2 = lapply(colors, col2rgb)
+  linecolors = c(rep("black",6),"white",rep("black",3))
+  textcolors = c(rep("black",6),rep("white",2),rep("black",2))
+  for(i in 10:1){
+    x2 = x*i/10
+    y2 = y*i/10
+    polygon(x2[1:(length(x2)-1)],y2[1:(length(x2)-1)],col=colors[i],border=F)
+    lines(x2,y2,col=linecolors[i])
+  }
+  lines(x*0.5/10,y*0.5/10,lty=3,col="grey50")
+  points(0,0,pch=20,cex=0.5)
+}
+par(mar=c(3,3,3,3))
+library(latex2exp)
+makebullseye()
+mtext("x, horizontal position (mm)",1,line=2)
+mtext("y, vertical position (mm)",2,line=2)
+mtext(TeX("$X=$unif(-30,30), $Y=$unif(-30,30), n=999"),3,line=1)
+xarrows = runif(9999,-30,30)
+yarrows = runif(9999,-30,30)
+points(xarrows,yarrows,pch=4)#21,cex=0.3,lwd=1,bg=rgb(1,1,1),col="black")
+```
+\
+```{r}
+rarrows = sqrt(xarrows^2+yarrows^2)
+ra2 = sapply(rarrows,function(x){min(x,30)})
+pnts = 10-floor(ra2/3)
+hist(pnts,breaks=0:11-0.5,freq=FALSE,xlab="points",main=TeX("$X=$unif(-30,30), $Y=$unif(-30,30), n=999"),col=rgb(0.8,0.3,0.3))
+```
+\
+
+```{r fig.width=6,fig.height=6}
+set.seed(123)
+n=9999
+par(mar=c(3,3,3,3))
+makebullseye()
+mtext("x, horizontal position (mm)",1,line=2)
+mtext("y, vertical position (mm)",2,line=2)
+mtext(TeX("$R=\\30\\sqrt{unif(0,1)}$; $\\theta = unif(0,2\\pi)$; $n=10$"),3,line=1)
+mtext(TeX("$X= R\\cdot\\cos{\\theta}$; $Y= R\\cdot\\sin{\\theta}$"),3,line=0)
+rarrowsB = sqrt(runif(n,0,1))*30
+theta = runif(n,0,2*pi)
+points(rarrowsB*cos(theta),rarrowsB*sin(theta),pch=4)
+```
+\
+
+```{r}
+hist(10-floor(rarrowsB/3),breaks=0:11-0.5,freq=FALSE,xlab="points",main=TeX("$R\\sim 30 \\sqrt{unif(0,1)}$; $\\theta\\sim unif(0,2\\pi)$"),col=rgb(0.8,0.3,0.3))
+```
+\
+
+
+The surface areas of the regions are different. 
+```{r}
+tabstr = '|Points of region | Formula |  Area ($\\text{cm}^2$) |Proportion of area|\n|:---:|:---:|:---:|:---:|\n'
+rs = 0:10*3
+for(i in 1:10){
+  tabstr = paste0(tabstr,"| ",11-i,"| $\\pi\\cdot",rs[i+1],"^2-\\pi\\cdot",rs[i],"^2$ | ",pi*(rs[i+1]^2-rs[i]^2),"|",pi*(rs[i+1]^2-rs[i]^2)/(pi*30^2),"|\n",collapse="")
+}
+```
+
+`r tabstr`
+
+
+$$(r+3)^2-r^2$$
+$$r^2+6r+9-r^2$$
+$$6r+9$$
+
+## Chad's scores
+
+```{r me}
+pnts = sample(c(7,7,5,9,9,10,7,7,8,7,10,8))
+chadpnts = c(10,10,9,8,8,8,7,6,5,4,10,9,8,8,8,7,6,6,6,4,9,9,8,8,7,7,5,5,4,1,9,9,9,8,8,8,7,6,5,5,9,8,8,7,7,6,6,5,5,4,8,8,8,7,7,7,6,6,5,3,9,9,9,8,8,7,7,6,6,2,10,10,9,9,7,7,5,4,4,1,10,9,8,8,6,6,6,6,6,4,9,9,8,7,7,6,6,5,2,2)
+chadhist = hist(chadpnts,breaks=0:11-0.5,main="A sample of Chad's points, n=100",xlab="points",col=rgb(0.9,0.4,0.4),labels=T)
+cnts = chadhist$counts
+brks = chadhist$breaks
+```
+The average of Chad's points is $\bar{a}=`r mean(pnts)`$ and the standard deviation is $s=`r sd(pnts)`$.
+
+
+```{r}
+tabstr2 = '|Points of region | Frequency | Area (cm^2) | Positional Density (arrows/cm^2) |\n|:---:|:---:|:---:|:---:|\n'
+rs = 0:10*3
+for(i in 1:10){
+  tabstr2 = paste0(tabstr2,"| ",11-i,"|",cnts[12-i],"|",pi*(rs[i+1]^2-rs[i]^2),"|",cnts[12-i]/(pi*(rs[i+1]^2-rs[i]^2)),"|\n",collapse="")
+}
+```
+`r tabstr2`
+
+
+```{r,fig.width=6,fig.height=6}
+shots = read.csv("shots.csv")
+set.seed(123)
+chadx = shots$x/10*0.99
+chady = shots$y/10*0.99
+chadr = sqrt(chadx^2+chady^2)
+chadt = atan(chady/chadx)*((chadx>0)-0.5)*2
+par(mar=c(3,3,3,3))
+makebullseye()
+mtext("x, horizontal position (cm)",1,line=2)
+mtext("y, vertical position (cm)",2,line=2)
+mtext("Chad's 100 shots, positional",3,line=1)
+points(chadx,chady,pch=4)
+pntsC = 10-floor(chadr/3)
+chadhist = hist(pntsC,breaks=0:10+0.5,col=rgb(0.9,0.3,0.3),labels=T)
+cnts = chadhist$counts
+```
+```{r}
+tabstr3 = '|Points of region | Frequency | Area (cm^2) | Positional Density (arrows/cm^2) |\n|:---:|:---:|:---:|:---:|\n'
+rs = 0:10*3
+for(i in 1:10){
+  tabstr3 = paste0(tabstr3,"| ",11-i,"|",cnts[11-i],"|",pi*(rs[i+1]^2-rs[i]^2),"|",cnts[11-i]/(pi*(rs[i+1]^2-rs[i]^2)),"|\n",collapse="")
+}
+```
+`r tabstr3`
+
+
+```{r}
+posden = numeric()
+for(i in 1:10){
+  posden = c(posden,cnts[11-i]/(pi*(rs[i+1]^2-rs[i]^2)))
+}
+barplot(posden)
+x = seq(0,3,0.01)
+plot(x,x^2*exp(-3*x))
+```
+
+
+
+
+```{r}
+hist(chadx,breaks=seq(-33,33,6))
+hist(chady,breaks=seq(-33,33,6))
+plot(abs(chadx),abs(chady))
+m1 = lm(abs(chady)~abs(chadx))
+cor.test(chadx,chady)
+cor.test(abs(chadx),abs(chady))
+```
+
+```{r}
+t.test(chadx)
+t.test(chady)
+m2 = lm(chady~chadx)
+m2
+qqnorm(chadx)
+```
+
+
+Amelia shoots:
+points = 9, 10, 9, 10.... xbar=9, sd=1
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+```{r data generation, echo = FALSE, results = "hide"}
+knitr::opts_chunk$set(echo = FALSE)
+options(scipen=100)
+
+la = round(runif(1,0.53,0.99),4)
+z = round(qnorm(la),2)
+ca = round(2*(la-0.5),4)
+ta = round(1-ca,4)
+
+```
+
+Question
+========
+
+Determine $z$ such that $P(|Z|>z) = `r ta`$.
+
+
+Solution
+========
+
+Find the corresponding percentile rank.
+$$\begin{aligned}
+P(Z<z) &= \frac{2-P(|Z|>z)}{2} \\\\
+&= \frac{2-`r ta`}{2} \\\\
+&= `r la` 
+\end{aligned}$$
+
+Determine $z$.
+
+$$P(Z<`r z`) = `r la`$$
+
+So,
+
+$$P(|Z|>`r z`) = `r ta` $$
+
+and $z=`r z`$
+
+
+
+
+Meta-information
+================
+extype: num
+exsolution: `r z`
+exname: z from ta
+extol: 0.012

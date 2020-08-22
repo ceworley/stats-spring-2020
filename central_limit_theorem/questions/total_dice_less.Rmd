@@ -29,8 +29,8 @@ A fair `r N`-sided die (with sides numbered 1 through `r N`) will be rolled `r n
 $$P\left(\sum X < `r xt`\right) ~=~ ? $$
 
 To help you along, I will calculate the mean and standard deviation of **single** rolls. The formulas for an $N$-sided die are can be derived from the formulas for [discrete uniform distribution](https://en.wikipedia.org/wiki/Discrete_uniform_distribution).
-$$\mu_{\tiny X} ~=~ \frac{N+1}{2} ~=~ \frac{`r N`+1}{2} ~=~ `r mu` $$
-$$\sigma_{\tiny X} ~=~ \sqrt{\frac{N^2-1}{12}} ~=~ \sqrt{\frac{`r N`^2-1}{12}} ~=~ `r sig`$$
+$$\mu_{ X} ~=~ \frac{N+1}{2} ~=~ \frac{`r N`+1}{2} ~=~ `r mu` $$
+$$\sigma_{ X} ~=~ \sqrt{\frac{N^2-1}{12}} ~=~ \sqrt{\frac{`r N`^2-1}{12}} ~=~ `r sig`$$
 
 Please use a normal approximation based on the central limit theorem. 
 
@@ -40,20 +40,20 @@ Solution
 
 We calculate the mean and standard deviation of the **random sum** using the formulas from the central limit theorem.
 $$\begin{aligned}
-\mu_{\tiny \sum X} &= n\mu_{\tiny X} \\
+\mu_{ \sum X} &= n\mu_{ X} \\
 &= (`r n`)(`r mu`) \\
 &= `r mut`
 \end{aligned}$$
 
 $$\begin{aligned}
-\sigma_{\tiny \sum X} &= \sigma_{\tiny X} \sqrt{n} \\
+\sigma_{ \sum X} &= \sigma_{ X} \sqrt{n} \\
 &= (`r sig`)\sqrt{`r n`} \\
 &= `r sigt`
 \end{aligned}$$
 
 The central limit theorem tells us that the random sum is approximately normal with the parameters calculated above.
 
-$$\sum X \sim \mathcal{N}(`r mut`,\,`r sigt`) $$
+$$\sum X \sim N(`r mut`,\,`r sigt`) $$
 
 In other words, we can approximate the summing of `r n` rolls of `r N`-sided dice with a single spin of the following spinner.
 
@@ -128,7 +128,7 @@ text(0,0,sprintf("A Normal Distribution\nwith\nmean = %.4g \n and \nstdev = %.4g
 
 Find the appropriate $z$ score.
 
-$$z ~=~ \frac{(\sum x)-\mu_{\tiny \sum X}}{\sigma_{\tiny \sum X}} ~=~ \frac{`r xt`-`r mut`}{`r sigt`} ~=~ `r z`$$
+$$z ~=~ \frac{(\sum x)-\mu_{ \sum X}}{\sigma_{ \sum X}} ~=~ \frac{`r xt`-`r mut`}{`r sigt`} ~=~ `r z`$$
 
 You can round this to either `r zlo` or `r zhi`. I will continue with the unrounded $z$ score. We now rephrase the question as a standard normal probability.
 
@@ -162,7 +162,7 @@ polygon(c(Z[Z<=z],z,-3),c(dnorm(Z[Z<=z]),0,0),col=rgb(1,0.5,0.5,0.5))
 text(-2.01,0.32,TeX(sprintf("$P(%s<%s) = %.4f$","\\sum X",xt,round(pnorm(z),4))))
 arrows(-1.6,0.3,(2*z-3)/3,max(dnorm((2*z-3)/3)/2,0.03),lwd=2)
 ```
-
+\
 
 
 Meta-information

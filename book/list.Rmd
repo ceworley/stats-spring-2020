@@ -1,0 +1,46 @@
+```{r,data,generation,echo=FALSE,results="hide"}
+n = 10 #must be bigger than 8, or change xcom to replacement sampling with T
+x = sample(0:9,n,TRUE)
+i = sample(1:10,1)
+xi = x[i]
+word = c("first","second","third","fourth","fifth","sixth","seventh","eighth","ninth","tenth")
+tbl = paste(lapply(1:10,function(i) paste("|",i,"|",x[i],"|",collapse="")),collapse="\n")
+```
+
+\setlength{\thinmuskip}{7mu}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\num}[1]{\#{[#1]}}
+\newcommand{\xc}{c}
+
+Question
+========
+
+A random procedure generated the following sample (sequence of measurements):
+$$\vec{x} = `r x`$$
+
+Determine $x_{`r i`}$. In other words, what is the `r word[i]` measurement?
+
+
+Solution
+========
+
+You could rewrite the sample with the indices. 
+
+| $i$ | $x_i$ |
+|:---:|:---:|
+`r tbl`
+
+
+We find the row corresponding to $i=`r i`$ to determine that $x_{`r i`}=`r xi`$
+
+
+
+Meta-information
+============
+extype: cloze
+exclozetype: num|num|num|num|num|num|num|num|schoice|schoice|schoice|schoice
+exsolution: `r zs[1]`|`r ps[1]`|`r zs[2]`|`r ps[2]`|`r zs[3]`|`r ps[3]`|`r zs[4]`|`r ps[4]`|`r scs1`|`r scs2`|`r scs3`|`r scs4`
+exname: compare zs
+extol: 0.011|0.004|0.011|0.004|0.011|0.004|0.011|0.004|0|0|0|0
+
+

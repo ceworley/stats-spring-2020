@@ -1,0 +1,57 @@
+```{r data generation, echo = FALSE, results = "hide"}
+knitr::opts_chunk$set(echo = FALSE)
+options(scipen=100)
+
+while(T){
+  mu = round(runif(1,1,10),2)
+  n = sample(5:12,1)^2
+  sig = round(runif(1,1,10),2)
+  la = runif(1,0.01,0.99)
+  mut = round(mu*n,2)
+  sigt = round(sig*sqrt(n),2)
+  z = round(qnorm(la),2)
+  xt = mut+z*sigt
+  z = (xt-mut)/sigt
+  
+  if(sig<mu & mut<1000 & xt<1000 & round(xt,2)==xt & round(z,2)==z & z!=0){
+    break
+  }
+}
+la = round(pnorm(z),4)
+ra = round(1-la,4)
+```
+
+Question
+========
+
+When a spinner is spun once, the probability distribution has a mean of `r sprintf('%.2f',mu)` and standard deviation of `r sprintf('%.2f',sig)`.
+
+That spinner will be spun `r n` times, and the **sum** of those rolls will be recorded. What is the probability the sum will be **more** than `r xt`?
+
+
+Solution
+========
+
+When we will sum `r n` spins, the probability distribution is approximately normal, even if each spin is not normally distributed. (See Central Limit Theorem: https://en.wikipedia.org/wiki/Central_limit_theorem .)
+
+$$\mu_{\sum X} ~=~ n\cdot \mu_X ~=~ (`r n`)(`r mu`) ~=~ `r mut` $$
+
+$$\sigma_{\sum X} ~=~ \sigma_{X} \cdot \sqrt{n} ~=~ (`r sig`)\cdot \sqrt{`r n`} ~=~ `r sigt` $$
+
+We find a $z$ score.
+$$z ~=~ \frac{`r xt`-`r mut`}{`r sigt`} ~=~ `r z`$$
+
+We find the probability.
+$$P\left(\sum X > `r xt` \right) ~=~ P(Z>`r z`) ~=~ `r ra` $$
+
+In case you forgot,
+$$P(Z > z) ~=~ 1 - P(Z<z)$$
+
+
+
+Meta-information
+================
+extype: num
+exsolution: `r ra`
+exname: prob tot more
+extol: 0.004

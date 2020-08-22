@@ -1,0 +1,80 @@
+```{r data generation, echo = FALSE, results = "hide"}
+knitr::opts_chunk$set(echo = FALSE)
+options(scipen=100)
+
+reduce = function(x){
+  i = 2
+  while(i<50){
+    j = i^2 
+    if(x==0){
+      break}
+    if(x%%j==0){
+      x = x/j
+      i = i-1}
+    if(x==0){
+      break}
+    i = i+1}
+  return(x)
+}
+
+
+while(T){
+  i = sample(1:99,1)
+  p = i/100
+  n = reduce(i*(100-i))
+  
+  while(n<40){
+    n = n*sample(2:5,1)^2
+  }
+  
+  if(n <= 100){
+    n = n*sample(1:3,1)^2
+  }
+  
+  mu = n*p
+  sig = sqrt(n*p*(1-p))
+  la = sort(runif(2,0.01,0.99))
+  z = round(qnorm(la),2)
+  x = floor(mu+z*sig)+0.5
+  z = (x-mu)/sig
+  d = x-mu
+  if(n*p>10 & n*(1-p)>10 & round(z[1],2)==z[1] & round(z[2],2)==z[2] & abs(z[2]-z[1])>0.3){
+    break
+  }
+}
+la = round(pnorm(z),4)
+ba = la[2]-la[1]
+```
+
+Question
+========
+
+When a spinner is spun once, the chance of success is `r p`.
+
+That spinner will be spun `r n` times. What is the probability the number of successes will be **between** `r sprintf('%.1f',x[1])` and `r sprintf('%.1f',x[2])`?
+
+
+Solution
+========
+
+Use the de Moivre-Laplace Theorem, which tells us this binomial distribution is approximately normal. Determine the parameters.
+$$\mu ~=~ np ~=~ (`r n`)(`r p`) ~=~ `r mu` $$
+$$\sigma ~=~ \sqrt{np(1-p)} ~=~ \sqrt{(`r n`)(`r p`)(`r 1-p`)} ~=~ `r sig` $$
+
+Find the $z$ scores.
+$$z_1 ~=~ \frac{`r x[1]`-`r mu`}{`r sig`} ~=~ `r z[1]`$$
+$$z_2 ~=~ \frac{`r x[2]`-`r mu`}{`r sig`} ~=~ `r z[2]`$$
+
+Determine the probability.
+$$P(`r z[1]`<Z<`r z[2]`) = `r ba` $$
+
+In case you forgot, as long as $z_1<z_2$,
+$$P(z_1 < Z < z_2) ~=~ P(Z<z_2) - P(Z<z_1) $$
+
+
+Meta-information
+================
+extype: num
+exsolution: `r ba`
+exname: prob binom between
+extol: 0.008

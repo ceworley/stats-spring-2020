@@ -1,0 +1,51 @@
+```{r data generation, echo = FALSE, results = "hide"}
+knitr::opts_chunk$set(echo = FALSE)
+options(scipen=100)
+while(T){
+  la = sort(runif(1,0.01,0.99))
+  z = round(qnorm(la),2)
+  mu = round(runif(1,1,10),2)
+  sig = round(runif(1,1,10),2)
+  x = round(mu+sig*z,2)
+  z = (x-mu)/sig
+  la = round(pnorm(z),4)
+  if(z!=0 & sig*3<mu & round(z,2)==z){
+    break
+  }
+}
+ra = round(1-la,4)
+```
+
+Question
+========
+
+Random variable $X$ is normally distributed with mean $`r sprintf("%.2f",mu)`$ and standard deviation $`r sprintf("%.2f",sig)`$.
+
+Determine $x$ such that $P(X>x)=`r ra`$.
+
+
+Solution
+========
+
+Determine the $z$ score that satisfies $P(Z>z)=`r ra`$.
+$$P(Z>`r z`) = `r ra` $$
+So, $z=`r z`$.
+
+Convert the $z$ score into an $x$ value.
+$$\begin{aligned}
+x &= \mu+z\sigma \\
+&= `r mu`+(`r z`)(`r sig`) \\
+&= `r x` 
+\end{aligned}$$
+
+So,
+$$P(X>`r x`) = `r ra` $$
+and $x=`r x`$
+
+
+Meta-information
+================
+extype: num
+exsolution: `r x`
+exname: x from ra
+extol: 0.02

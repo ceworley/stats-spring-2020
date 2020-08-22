@@ -1,0 +1,18 @@
+---
+title: "Practice Exam"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Q1 
+
+An archer wants to know whether to adjust her sight. Her sight adjusts vertically and horizontally.  After many years of shooting, she has decided the two variables ($X$ and $Y$) are independent. She adjusts her sight if either variable's sample mean is significantly far from 0, where she defines significance with a two-tail $t$ test with a significance level $\alpha = 0.05$.
+
+
+
+
+
+

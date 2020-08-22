@@ -1,0 +1,21 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+\setlength{\thinmuskip}{7mu}
+\newcommand{\P}[1]{\mathbb{P}[#1]}
+
+# Probability
+
+We will use $\mathbb{P}$ to denote probability of an event. Typically, we will also describe the event in square brackets. For example, we could write "the probability that a fair coin lands tail-side-up is 1/2" as an equation.
+$$\P{\text{first flip of fair coin lands tail-side-up}} ~=~ 1/2$$
+Of course, it would get annoying to have that many words in our equations, so we typically abbreviate.
+$$\P{T}=1/2 $$
+
+
+
+
+
+
+

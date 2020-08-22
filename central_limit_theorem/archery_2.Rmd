@@ -1,0 +1,52 @@
+---
+title: "Archery"
+author: "Chad Worley"
+date: "8/17/2020"
+output:
+  html_notebook:
+    code_folding: hide
+---
+
+$$R \sim \mathcal{N}(0,10)$$
+$$\Theta \sim \mathcal{U}(0,2\pi)$$
+$$X = R\cos(\Theta) $$
+
+$$Y = R\sin(\Theta) $$
+
+$$R = \frac{X}{|X|}\sqrt{X^2+Y^2} $$
+$$\Theta = \arctan{\frac{Y}{X}} $$
+
+
+$$\mathbb{E}[\cos(\Theta)] = \int_0^\pi \cos(\Theta) \cdot \frac{1}{\pi} = 0$$
+
+$$\mathbb{E}[\cos^2(\Theta)] = \int_0^{2\pi} \cos^2(\Theta) \cdot \frac{1}{2\pi}\cdot d\Theta = \frac{1}{2\pi}\left[\frac{1}{4}\sin(2\Theta)+\frac{1}{2}\Theta\right]_0^{2\pi}=\frac{1}{2}$$
+
+$$Var(\cos(\Theta)) = \mathbb{E}[\cos^2(\Theta)] - \mathbb{E}[\cos(\Theta)]^2 = \frac{1}{2} - 0^2 = \frac{1}{2} $$
+
+$$\sigma_{\cos(\Theta)} = \frac{\sqrt{2}}{2} $$
+
+
+```{r}
+R = rnorm(9999,0,10)
+Theta = runif(9999,0,pi)
+X=R*cos(Theta)
+Y=R*sin(Theta)
+mean(X)
+sd(X)
+sqrt(2)/2*10
+qqnorm(X)
+sqrt(mean(R^2)*mean(cos(Theta)^2))
+```
+
+
+
+$$Z = XY $$
+$$f_Z(z) = \int_{-\infty}^{\infty} f_X(x) \cdot f_Y(z/x) \cdot \frac{1}{|x|} dx$$ 
+
+$$Z = R\cdot \cos(\Theta) $$
+
+$$f_{\cos(\Theta)}(x_1) = \frac{1}{\pi\sqrt{1-x_1^2}} \text{ between -1 and 1}$$
+$$f_R(r) = \frac{1}{10\sqrt{2\pi}}e^{-r^2/200}$$
+
+$$f_Z(z) = \int_{-1}^{1} \frac{1}{\pi\sqrt{1-x^2}} \cdot \frac{1}{10\sqrt{2\pi}}e^{-z^2/200x^2} \cdot \frac{1}{|x|} dx$$ 
+

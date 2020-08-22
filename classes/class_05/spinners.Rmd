@@ -1,0 +1,107 @@
+---
+title: "Spinners"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Standard Uniform
+
+```{r uniform,fig.width=6,fig.height=6,fig.align='center'}
+X = seq(0,1,by=0.01)
+N = length(X)
+par(mar=c(0,0,0,0))
+plot(0,0,type="n",xlim=c(-1,1),ylim=c(-1,1),axes=F,ann=F)
+polygon(cos(seq(0,2*pi,length.out=1000)), sin(seq(0,2*pi,length.out=1000)))
+polygon(3/8/6*cos(seq(0,2*pi,length.out=1000)), 3/8/6*sin(seq(0,2*pi,length.out=1000)))
+polygon(6/8/6*cos(seq(0,2*pi,length.out=1000)), 6/8/6*sin(seq(0,2*pi,length.out=1000)))
+for(i in 1:N){
+  lines(c(6/8/6,1)*cos((i-1)/N*2*pi),c(6/8/6,1)*sin((i-1)/N*2*pi))
+  text(0.9*cos((i-0.5)/N*2*pi),0.9*sin((i-0.5)/N*2*pi),X[i],cex=0.7,srt=((i-0.5)/N*360+90)%%180-90)
+}
+```
+
+$$\mu = 0.5 $$
+$$\sigma \approx \frac{1}{\sqrt{12}} \approx `r round(1/sqrt(12),4)` $$
+\newpage
+
+
+## Standard Normal
+
+```{r standardnormal,fig.width=6,fig.height=6,fig.align='center'}
+X = seq(0.005,0.995,by=0.01)
+X = round(qnorm(X),2)
+N = length(X)
+par(mar=c(0,0,0,0))
+plot(0,0,type="n",xlim=c(-1,1),ylim=c(-1,1),axes=F,ann=F)
+polygon(cos(seq(0,2*pi,length.out=1000)), sin(seq(0,2*pi,length.out=1000)))
+polygon(3/8/6*cos(seq(0,2*pi,length.out=1000)), 3/8/6*sin(seq(0,2*pi,length.out=1000)))
+polygon(6/8/6*cos(seq(0,2*pi,length.out=1000)), 6/8/6*sin(seq(0,2*pi,length.out=1000)))
+for(i in 1:N){
+  lines(c(6/8/6,1)*cos((i-1)/N*2*pi),c(6/8/6,1)*sin((i-1)/N*2*pi))
+  text(0.9*cos((i-0.5)/N*2*pi),0.9*sin((i-0.5)/N*2*pi),X[i],cex=0.7,srt=((i-0.5)/N*360+90)%%180-90)
+}
+mu = mean(X)
+sig = signif(sd(X)*sqrt((N-1)/N),5)
+```
+$$\mu = 0 $$
+$$\sigma = 1 $$
+
+\newpage
+
+## Roulette (with single 0)
+
+```{r roulette,fig.width=6,fig.height=6,fig.align='center'}
+X = c(0, 32, 15, 19, 4, 21, 2, 25, 17, 34, 6, 27, 13, 36, 11, 30, 8, 23, 10, 5, 24, 16, 33, 1, 20, 14, 31, 9, 22, 18, 29, 7, 28, 12, 35, 3, 26)
+N = length(X)
+par(mar=c(0,0,0,0))
+plot(0,0,type="n",xlim=c(-1,1),ylim=c(-1,1),axes=F,ann=F)
+polygon(cos(seq(0,2*pi,length.out=1000)), sin(seq(0,2*pi,length.out=1000)))
+polygon(3/8/6*cos(seq(0,2*pi,length.out=1000)), 3/8/6*sin(seq(0,2*pi,length.out=1000)))
+polygon(6/8/6*cos(seq(0,2*pi,length.out=1000)), 6/8/6*sin(seq(0,2*pi,length.out=1000)))
+for(i in 1:N){
+  lines(c(6/8/6,1)*cos((i-1)/N*2*pi),c(6/8/6,1)*sin((i-1)/N*2*pi))
+  text(0.9*cos((i-0.5)/N*2*pi),0.9*sin((i-0.5)/N*2*pi),X[i],cex=2,srt=((i-0.5)/N*360+90)%%180-90)
+}
+mu = mean(X)
+sig = signif(sd(X)*sqrt((N-1)/N),5)
+```
+$$\mu = `r mu` $$
+$$\sigma = \frac{37^2-1}{12}  \approx `r sig` $$
+\newpage
+
+## 8 equally sized wedges
+
+```{r blank8,fig.width=6,fig.height=6,fig.align='center'}
+X = rep("",8)
+N = length(X)
+par(mar=c(0,0,0,0))
+plot(0,0,type="n",xlim=c(-1,1),ylim=c(-1,1),axes=F,ann=F)
+polygon(cos(seq(0,2*pi,length.out=1000)), sin(seq(0,2*pi,length.out=1000)))
+polygon(3/8/6*cos(seq(0,2*pi,length.out=1000)), 3/8/6*sin(seq(0,2*pi,length.out=1000)))
+polygon(6/8/6*cos(seq(0,2*pi,length.out=1000)), 6/8/6*sin(seq(0,2*pi,length.out=1000)))
+for(i in 1:N){
+  lines(c(6/8/6,1)*cos((i-1)/N*2*pi),c(6/8/6,1)*sin((i-1)/N*2*pi))
+  text(0.9*cos((i-0.5)/N*2*pi),0.9*sin((i-0.5)/N*2*pi),X[i],cex=0.7,srt=((i-0.5)/N*360+90)%%180-90)
+}
+```
+
+## 12 equally sized wedges
+
+```{r blank12,fig.width=6,fig.height=6,fig.align='center'}
+X = rep("",12)
+N = length(X)
+par(mar=c(0,0,0,0))
+plot(0,0,type="n",xlim=c(-1,1),ylim=c(-1,1),axes=F,ann=F)
+polygon(cos(seq(0,2*pi,length.out=1000)), sin(seq(0,2*pi,length.out=1000)))
+polygon(3/8/6*cos(seq(0,2*pi,length.out=1000)), 3/8/6*sin(seq(0,2*pi,length.out=1000)))
+polygon(6/8/6*cos(seq(0,2*pi,length.out=1000)), 6/8/6*sin(seq(0,2*pi,length.out=1000)))
+for(i in 1:N){
+  lines(c(6/8/6,1)*cos((i-1)/N*2*pi),c(6/8/6,1)*sin((i-1)/N*2*pi))
+  text(0.9*cos((i-0.5)/N*2*pi),0.9*sin((i-0.5)/N*2*pi),X[i],cex=0.7,srt=((i-0.5)/N*360+90)%%180-90)
+}
+```
+
+

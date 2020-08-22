@@ -1,0 +1,104 @@
+---
+title: 'de Moivre–Laplace Theorem: The Central Limit Theorem applied to Binomial and Proportion Sampling'
+author: "Chad Worley"
+date: "4/23/2020"
+output: 
+  html_document:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+options(scipen=100)
+```
+
+## Bernoulli Review
+
+Let's use $X$ to refer to a Bernoulli random variable. It has only two possible outcomes: 0 or 1. We often call 0 a "fail" and a 1 a "success". We allow for the probability of success to be any number between 0 and 1, and we use a lowercase $p$ to represent that probability. 
+
+$$\mu_X = p$$
+$$\sigma_X = \sqrt{p(1-p)} $$
+
+| Outcome | Probability |
+|:---:|:---:|
+| 0 | $1-p$ |
+| 1 | $p$ |
+
+$$P(X=0) ~=~ 1-p $$
+$$P(X=1) ~=~ p $$
+
+As an example, some basketball player may have an 80% chance of making a free throw. We could describe each free throw attempt as a Bernoulli random variable where $p=0.8$.
+
+| Outcome | Probability |
+|:---:|:---:|
+| 0 | $0.2$ |
+| 1 | $0.8$ |
+
+$$P(X=0) ~=~ 0.2 $$
+$$P(X=1) ~=~ 0.8 $$
+
+## Binomial Distribution
+
+When we sum $n$ instances of a Bernoulli random variable, the result is an integer between 0 and $n$ (inclusive, inclusive). We learned how to determine the probability that the sum equalled some value (but here a different notation is used).
+
+$$P\left(\sum X = a \right) ~=~ {{_n}\text{C}}_a \cdot p^a \cdot (1-p)^{n-a} $$
+
+$$\mu_{\sum X} = np $$
+$$\sigma_{\sum X} = \sqrt{np(1-p)} $$
+
+So, for example, if the basketball player with $p=0.8$ took 5 freethrows, we could calculate the following probabilities.
+
+| Total | Probability |
+|:---:|:---:|
+| 0 | `r dbinom(0,5,0.8)` |
+| 1 | `r dbinom(1,5,0.8)` |
+| 2 | `r dbinom(2,5,0.8)` |
+| 3 | `r dbinom(3,5,0.8)` |
+| 4 | `r dbinom(4,5,0.8)` |
+| 5 | `r dbinom(5,5,0.8)` |
+
+
+## Proportion Sampling
+
+When we average $n$ instances of a Bernoulli random variable, we call the result a **sample proportion**. We also use a special symbol call "p hat" to denote the sample proportion. It is a special case of a sample mean.
+
+$$\hat{p} = \text{sample proportion} $$
+
+$$\mu_{\hat{p}} = p$$
+$$\sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}}$$
+
+Back to the same example of 5 freethrows.
+
+So, for example, if the basketball player with $p=0.8$ took 5 freethrows, we could calculate the following probabilities.
+
+| Sample Proportion ($\hat{p}$) | Probability |
+|:---:|:---:|
+| 0 | `r dbinom(0,5,0.8)` |
+| 0.2 | `r dbinom(1,5,0.8)` |
+| 0.4 | `r dbinom(2,5,0.8)` |
+| 0.6 | `r dbinom(3,5,0.8)` |
+| 0.8 | `r dbinom(4,5,0.8)` |
+| 1 | `r dbinom(5,5,0.8)` |
+
+
+## The de Moivre–Laplace theorem
+
+As long as $n$ is "big" and $p$ is not too near 0 or 1, then the Binomial distribution and the Proportion Sampling distribution are both approximately normal.
+
+* If $np \ge 10$ and $n(1-p) \ge 10$, then
+$$\sum X ~\sim~ N\left(np,\,\sqrt{np(1-p)}\right) $$
+$$\hat{p} ~\sim~ N\left(p,\,\sqrt{\frac{p(1-p)}{n}}\right) $$
+
+
+
+## Discrete vs. Continuous
+
+A complication occurs because $\sum X$ is discrete while a normal distribution is continuous. To deal with this, we make a continuity correction. https://en.wikipedia.org/wiki/Continuity_correction
+
+In this class, I will phrase the questions so you won't need to do this yourself. But, be aware that instead of me asking for the probability the number of successes is between 9 and 15, I will ask for the probability the number of successes is between 8.5 and 15.5.
+
+
+
+
+
+

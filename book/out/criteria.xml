@@ -1,0 +1,1401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/criteria/criteria</text>
+</category>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R01 Q1 : criteria </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A random procedure generated the following sample (sequence of measurements):</p>
+<table style='width:30%;'>
+<thead>
+<tr>
+<th style="text-align:right;">
+i
+</th>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+67
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+68
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+61
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+61
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+60
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+69
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+65
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+64
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+64
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+66
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the measurements shown as a comma separated list:</p>
+<pre><code>67, 68, 61, 61, 60, 69, 65, 64, 64, 66</code></pre>
+<ol type = "a">
+<li> How many of the measurements are less than 64? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&lt;</mo><mn>64</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&lt;64]</annotation></semantics></math>. {1:NUMERICAL:=3:0} </li>
+<li> How many of the measurements are less than or equal to 61? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≤</mo><mn>61</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\le61]</annotation></semantics></math>. {1:NUMERICAL:=3:0} </li>
+<li> How many of the measurements are greater than 69? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&gt;</mo><mn>69</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&gt;69]</annotation></semantics></math>. {1:NUMERICAL:=0:0} </li>
+<li> How many of the measurements are greater than or equal to 60? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≥</mo><mn>60</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\ge60]</annotation></semantics></math>. {1:NUMERICAL:=10:0} </li>
+<li> If 6 of the measurements are less than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&lt;</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&lt;x_{\text{c}}] = 6</annotation></semantics></math>. {1:NUMERICAL:=66:0} </li>
+<li> If 5 of the measurements are less than or equal to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≤</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\le x_{\text{c}}] = 5</annotation></semantics></math>. {1:NUMERICAL:=64:0} </li>
+<li> If 1 of the measurements are greater than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&gt;</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&gt;x_{\text{c}}] = 1</annotation></semantics></math>. {1:NUMERICAL:=68:0} </li>
+<li> If 9 of the measurements are greater than or equal to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≥</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\ge x_{\text{c}}] = 9</annotation></semantics></math>. {1:NUMERICAL:=61:0} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, it helps to sort the data. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>60</mn><mo>,</mo><mn>61</mn><mo>,</mo><mn>61</mn><mo>,</mo><mn>64</mn><mo>,</mo><mn>64</mn><mo>,</mo><mn>65</mn><mo>,</mo><mn>66</mn><mo>,</mo><mn>67</mn><mo>,</mo><mn>68</mn><mo>,</mo><mn>69</mn></mrow><annotation encoding="application/x-tex">60, 61, 61, 64, 64, 65, 66, 67, 68, 69</annotation></semantics></math></p>
+<p>You could use R to sort the data:</p>
+<pre><code>sort(c(67,68,61,61,60,69,65,64,64,66))</code></pre>
+<pre><code>##  [1] 60 61 61 64 64 65 66 67 68 69</code></pre>
+<p>You could also use a spreadsheet. Paste the table into a spreadsheet. Then, highlight the column of measurements and use <code>Sort</code> function.</p>
+<ol type = "a">
+<li> There are 3 measurements less than 64. Those measurements are 61, 61, 60. </li>
+<li> There are 3 measurements less than or equal to 61. Those measurements are 61, 61, 60. </li>
+<li> There are 0 measurements greater than 69. Those measurements are . </li>
+<li> There are 10 measurements greater than or equal to 60. Those measurements are 67, 68, 61, 61, 60, 69, 65, 64, 64, 66. </li>
+<li> Measurement value 66 has 6 measurements less than it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>66</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=66</annotation></semantics></math>. </li>
+<li> Measurement value 64 has 5 measurements less than or equal to it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>64</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=64</annotation></semantics></math>. </li>
+<li> Measurement value 68 has 1 measurements greater than it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>68</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=68</annotation></semantics></math>. </li>
+<li> Measurement value 61 has 9 measurements greater than or equal to it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>61</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=61</annotation></semantics></math>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>8</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R02 Q1 : criteria </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A random procedure generated the following sample (sequence of measurements):</p>
+<table style='width:30%;'>
+<thead>
+<tr>
+<th style="text-align:right;">
+i
+</th>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+58
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+54
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+59
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+56
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+51
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+52
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+57
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+58
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+53
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the measurements shown as a comma separated list:</p>
+<pre><code>58, 54, 59, 56, 51, 52, 57, 55, 58, 53</code></pre>
+<ol type = "a">
+<li> How many of the measurements are less than 57? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&lt;</mo><mn>57</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&lt;57]</annotation></semantics></math>. {1:NUMERICAL:=6:0} </li>
+<li> How many of the measurements are less than or equal to 54? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≤</mo><mn>54</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\le54]</annotation></semantics></math>. {1:NUMERICAL:=4:0} </li>
+<li> How many of the measurements are greater than 52? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&gt;</mo><mn>52</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&gt;52]</annotation></semantics></math>. {1:NUMERICAL:=8:0} </li>
+<li> How many of the measurements are greater than or equal to 58? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≥</mo><mn>58</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\ge58]</annotation></semantics></math>. {1:NUMERICAL:=3:0} </li>
+<li> If 7 of the measurements are less than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&lt;</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&lt;x_{\text{c}}] = 7</annotation></semantics></math>. {1:NUMERICAL:=58:0} </li>
+<li> If 1 of the measurements are less than or equal to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≤</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\le x_{\text{c}}] = 1</annotation></semantics></math>. {1:NUMERICAL:=51:0} </li>
+<li> If 0 of the measurements are greater than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&gt;</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&gt;x_{\text{c}}] = 0</annotation></semantics></math>. {1:NUMERICAL:=59:0} </li>
+<li> If 5 of the measurements are greater than or equal to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≥</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\ge x_{\text{c}}] = 5</annotation></semantics></math>. {1:NUMERICAL:=56:0} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, it helps to sort the data. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>51</mn><mo>,</mo><mn>52</mn><mo>,</mo><mn>53</mn><mo>,</mo><mn>54</mn><mo>,</mo><mn>55</mn><mo>,</mo><mn>56</mn><mo>,</mo><mn>57</mn><mo>,</mo><mn>58</mn><mo>,</mo><mn>58</mn><mo>,</mo><mn>59</mn></mrow><annotation encoding="application/x-tex">51, 52, 53, 54, 55, 56, 57, 58, 58, 59</annotation></semantics></math></p>
+<p>You could use R to sort the data:</p>
+<pre><code>sort(c(58,54,59,56,51,52,57,55,58,53))</code></pre>
+<pre><code>##  [1] 51 52 53 54 55 56 57 58 58 59</code></pre>
+<p>You could also use a spreadsheet. Paste the table into a spreadsheet. Then, highlight the column of measurements and use <code>Sort</code> function.</p>
+<ol type = "a">
+<li> There are 6 measurements less than 57. Those measurements are 54, 56, 51, 52, 55, 53. </li>
+<li> There are 4 measurements less than or equal to 54. Those measurements are 54, 51, 52, 53. </li>
+<li> There are 8 measurements greater than 52. Those measurements are 58, 54, 59, 56, 57, 55, 58, 53. </li>
+<li> There are 3 measurements greater than or equal to 58. Those measurements are 58, 59, 58. </li>
+<li> Measurement value 58 has 7 measurements less than it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>58</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=58</annotation></semantics></math>. </li>
+<li> Measurement value 51 has 1 measurements less than or equal to it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>51</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=51</annotation></semantics></math>. </li>
+<li> Measurement value 59 has 0 measurements greater than it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>59</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=59</annotation></semantics></math>. </li>
+<li> Measurement value 56 has 5 measurements greater than or equal to it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>56</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=56</annotation></semantics></math>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>8</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R03 Q1 : criteria </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A random procedure generated the following sample (sequence of measurements):</p>
+<table style='width:30%;'>
+<thead>
+<tr>
+<th style="text-align:right;">
+i
+</th>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+26
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+24
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+26
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+27
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+27
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+28
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+28
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+24
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+23
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+28
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the measurements shown as a comma separated list:</p>
+<pre><code>26, 24, 26, 27, 27, 28, 28, 24, 23, 28</code></pre>
+<ol type = "a">
+<li> How many of the measurements are less than 27? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&lt;</mo><mn>27</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&lt;27]</annotation></semantics></math>. {1:NUMERICAL:=5:0} </li>
+<li> How many of the measurements are less than or equal to 26? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≤</mo><mn>26</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\le26]</annotation></semantics></math>. {1:NUMERICAL:=5:0} </li>
+<li> How many of the measurements are greater than 27? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&gt;</mo><mn>27</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&gt;27]</annotation></semantics></math>. {1:NUMERICAL:=3:0} </li>
+<li> How many of the measurements are greater than or equal to 24? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≥</mo><mn>24</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\ge24]</annotation></semantics></math>. {1:NUMERICAL:=9:0} </li>
+<li> If 0 of the measurements are less than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&lt;</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&lt;x_{\text{c}}] = 0</annotation></semantics></math>. {1:NUMERICAL:=23:0} </li>
+<li> If 5 of the measurements are less than or equal to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≤</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\le x_{\text{c}}] = 5</annotation></semantics></math>. {1:NUMERICAL:=26:0} </li>
+<li> If 0 of the measurements are greater than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&gt;</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&gt;x_{\text{c}}] = 0</annotation></semantics></math>. {1:NUMERICAL:=28:0} </li>
+<li> If 3 of the measurements are greater than or equal to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≥</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\ge x_{\text{c}}] = 3</annotation></semantics></math>. {1:NUMERICAL:=28:0} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, it helps to sort the data. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>23</mn><mo>,</mo><mn>24</mn><mo>,</mo><mn>24</mn><mo>,</mo><mn>26</mn><mo>,</mo><mn>26</mn><mo>,</mo><mn>27</mn><mo>,</mo><mn>27</mn><mo>,</mo><mn>28</mn><mo>,</mo><mn>28</mn><mo>,</mo><mn>28</mn></mrow><annotation encoding="application/x-tex">23, 24, 24, 26, 26, 27, 27, 28, 28, 28</annotation></semantics></math></p>
+<p>You could use R to sort the data:</p>
+<pre><code>sort(c(26,24,26,27,27,28,28,24,23,28))</code></pre>
+<pre><code>##  [1] 23 24 24 26 26 27 27 28 28 28</code></pre>
+<p>You could also use a spreadsheet. Paste the table into a spreadsheet. Then, highlight the column of measurements and use <code>Sort</code> function.</p>
+<ol type = "a">
+<li> There are 5 measurements less than 27. Those measurements are 26, 24, 26, 24, 23. </li>
+<li> There are 5 measurements less than or equal to 26. Those measurements are 26, 24, 26, 24, 23. </li>
+<li> There are 3 measurements greater than 27. Those measurements are 28, 28, 28. </li>
+<li> There are 9 measurements greater than or equal to 24. Those measurements are 26, 24, 26, 27, 27, 28, 28, 24, 28. </li>
+<li> Measurement value 23 has 0 measurements less than it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>23</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=23</annotation></semantics></math>. </li>
+<li> Measurement value 26 has 5 measurements less than or equal to it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>26</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=26</annotation></semantics></math>. </li>
+<li> Measurement value 28 has 0 measurements greater than it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>28</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=28</annotation></semantics></math>. </li>
+<li> Measurement value 28 has 3 measurements greater than or equal to it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>28</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=28</annotation></semantics></math>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>8</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R04 Q1 : criteria </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A random procedure generated the following sample (sequence of measurements):</p>
+<table style='width:30%;'>
+<thead>
+<tr>
+<th style="text-align:right;">
+i
+</th>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+74
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+77
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+72
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+78
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+73
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+74
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+73
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+78
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the measurements shown as a comma separated list:</p>
+<pre><code>74, 77, 70, 72, 78, 73, 74, 73, 78, 70</code></pre>
+<ol type = "a">
+<li> How many of the measurements are less than 77? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&lt;</mo><mn>77</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&lt;77]</annotation></semantics></math>. {1:NUMERICAL:=7:0} </li>
+<li> How many of the measurements are less than or equal to 74? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≤</mo><mn>74</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\le74]</annotation></semantics></math>. {1:NUMERICAL:=7:0} </li>
+<li> How many of the measurements are greater than 70? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&gt;</mo><mn>70</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&gt;70]</annotation></semantics></math>. {1:NUMERICAL:=8:0} </li>
+<li> How many of the measurements are greater than or equal to 73? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≥</mo><mn>73</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\ge73]</annotation></semantics></math>. {1:NUMERICAL:=7:0} </li>
+<li> If 3 of the measurements are less than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&lt;</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&lt;x_{\text{c}}] = 3</annotation></semantics></math>. {1:NUMERICAL:=73:0} </li>
+<li> If 2 of the measurements are less than or equal to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≤</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\le x_{\text{c}}] = 2</annotation></semantics></math>. {1:NUMERICAL:=70:0} </li>
+<li> If 3 of the measurements are greater than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&gt;</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&gt;x_{\text{c}}] = 3</annotation></semantics></math>. {1:NUMERICAL:=74:0} </li>
+<li> If 8 of the measurements are greater than or equal to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≥</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\ge x_{\text{c}}] = 8</annotation></semantics></math>. {1:NUMERICAL:=72:0} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, it helps to sort the data. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>70</mn><mo>,</mo><mn>70</mn><mo>,</mo><mn>72</mn><mo>,</mo><mn>73</mn><mo>,</mo><mn>73</mn><mo>,</mo><mn>74</mn><mo>,</mo><mn>74</mn><mo>,</mo><mn>77</mn><mo>,</mo><mn>78</mn><mo>,</mo><mn>78</mn></mrow><annotation encoding="application/x-tex">70, 70, 72, 73, 73, 74, 74, 77, 78, 78</annotation></semantics></math></p>
+<p>You could use R to sort the data:</p>
+<pre><code>sort(c(74,77,70,72,78,73,74,73,78,70))</code></pre>
+<pre><code>##  [1] 70 70 72 73 73 74 74 77 78 78</code></pre>
+<p>You could also use a spreadsheet. Paste the table into a spreadsheet. Then, highlight the column of measurements and use <code>Sort</code> function.</p>
+<ol type = "a">
+<li> There are 7 measurements less than 77. Those measurements are 74, 70, 72, 73, 74, 73, 70. </li>
+<li> There are 7 measurements less than or equal to 74. Those measurements are 74, 70, 72, 73, 74, 73, 70. </li>
+<li> There are 8 measurements greater than 70. Those measurements are 74, 77, 72, 78, 73, 74, 73, 78. </li>
+<li> There are 7 measurements greater than or equal to 73. Those measurements are 74, 77, 78, 73, 74, 73, 78. </li>
+<li> Measurement value 73 has 3 measurements less than it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>73</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=73</annotation></semantics></math>. </li>
+<li> Measurement value 70 has 2 measurements less than or equal to it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>70</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=70</annotation></semantics></math>. </li>
+<li> Measurement value 74 has 3 measurements greater than it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>74</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=74</annotation></semantics></math>. </li>
+<li> Measurement value 72 has 8 measurements greater than or equal to it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>72</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=72</annotation></semantics></math>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>8</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R05 Q1 : criteria </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A random procedure generated the following sample (sequence of measurements):</p>
+<table style='width:30%;'>
+<thead>
+<tr>
+<th style="text-align:right;">
+i
+</th>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+91
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+96
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+99
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+94
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+98
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+99
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+96
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+92
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+97
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+94
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the measurements shown as a comma separated list:</p>
+<pre><code>91, 96, 99, 94, 98, 99, 96, 92, 97, 94</code></pre>
+<ol type = "a">
+<li> How many of the measurements are less than 96? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&lt;</mo><mn>96</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&lt;96]</annotation></semantics></math>. {1:NUMERICAL:=4:0} </li>
+<li> How many of the measurements are less than or equal to 96? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≤</mo><mn>96</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\le96]</annotation></semantics></math>. {1:NUMERICAL:=6:0} </li>
+<li> How many of the measurements are greater than 97? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&gt;</mo><mn>97</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&gt;97]</annotation></semantics></math>. {1:NUMERICAL:=3:0} </li>
+<li> How many of the measurements are greater than or equal to 94? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≥</mo><mn>94</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\ge94]</annotation></semantics></math>. {1:NUMERICAL:=8:0} </li>
+<li> If 2 of the measurements are less than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&lt;</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&lt;x_{\text{c}}] = 2</annotation></semantics></math>. {1:NUMERICAL:=94:0} </li>
+<li> If 1 of the measurements are less than or equal to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≤</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\le x_{\text{c}}] = 1</annotation></semantics></math>. {1:NUMERICAL:=91:0} </li>
+<li> If 0 of the measurements are greater than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&gt;</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&gt;x_{\text{c}}] = 0</annotation></semantics></math>. {1:NUMERICAL:=99:0} </li>
+<li> If 2 of the measurements are greater than or equal to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≥</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\ge x_{\text{c}}] = 2</annotation></semantics></math>. {1:NUMERICAL:=99:0} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, it helps to sort the data. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>91</mn><mo>,</mo><mn>92</mn><mo>,</mo><mn>94</mn><mo>,</mo><mn>94</mn><mo>,</mo><mn>96</mn><mo>,</mo><mn>96</mn><mo>,</mo><mn>97</mn><mo>,</mo><mn>98</mn><mo>,</mo><mn>99</mn><mo>,</mo><mn>99</mn></mrow><annotation encoding="application/x-tex">91, 92, 94, 94, 96, 96, 97, 98, 99, 99</annotation></semantics></math></p>
+<p>You could use R to sort the data:</p>
+<pre><code>sort(c(91,96,99,94,98,99,96,92,97,94))</code></pre>
+<pre><code>##  [1] 91 92 94 94 96 96 97 98 99 99</code></pre>
+<p>You could also use a spreadsheet. Paste the table into a spreadsheet. Then, highlight the column of measurements and use <code>Sort</code> function.</p>
+<ol type = "a">
+<li> There are 4 measurements less than 96. Those measurements are 91, 94, 92, 94. </li>
+<li> There are 6 measurements less than or equal to 96. Those measurements are 91, 96, 94, 96, 92, 94. </li>
+<li> There are 3 measurements greater than 97. Those measurements are 99, 98, 99. </li>
+<li> There are 8 measurements greater than or equal to 94. Those measurements are 96, 99, 94, 98, 99, 96, 97, 94. </li>
+<li> Measurement value 94 has 2 measurements less than it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>94</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=94</annotation></semantics></math>. </li>
+<li> Measurement value 91 has 1 measurements less than or equal to it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>91</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=91</annotation></semantics></math>. </li>
+<li> Measurement value 99 has 0 measurements greater than it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>99</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=99</annotation></semantics></math>. </li>
+<li> Measurement value 99 has 2 measurements greater than or equal to it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>99</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=99</annotation></semantics></math>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>8</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R06 Q1 : criteria </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A random procedure generated the following sample (sequence of measurements):</p>
+<table style='width:30%;'>
+<thead>
+<tr>
+<th style="text-align:right;">
+i
+</th>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+65
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+65
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+67
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+67
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+60
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+61
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+67
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+65
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+61
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+66
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the measurements shown as a comma separated list:</p>
+<pre><code>65, 65, 67, 67, 60, 61, 67, 65, 61, 66</code></pre>
+<ol type = "a">
+<li> How many of the measurements are less than 60? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&lt;</mo><mn>60</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&lt;60]</annotation></semantics></math>. {1:NUMERICAL:=0:0} </li>
+<li> How many of the measurements are less than or equal to 66? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≤</mo><mn>66</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\le66]</annotation></semantics></math>. {1:NUMERICAL:=7:0} </li>
+<li> How many of the measurements are greater than 65? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&gt;</mo><mn>65</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&gt;65]</annotation></semantics></math>. {1:NUMERICAL:=4:0} </li>
+<li> How many of the measurements are greater than or equal to 65? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≥</mo><mn>65</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\ge65]</annotation></semantics></math>. {1:NUMERICAL:=7:0} </li>
+<li> If 1 of the measurements are less than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&lt;</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&lt;x_{\text{c}}] = 1</annotation></semantics></math>. {1:NUMERICAL:=61:0} </li>
+<li> If 10 of the measurements are less than or equal to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≤</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\le x_{\text{c}}] = 10</annotation></semantics></math>. {1:NUMERICAL:=67:0} </li>
+<li> If 0 of the measurements are greater than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&gt;</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&gt;x_{\text{c}}] = 0</annotation></semantics></math>. {1:NUMERICAL:=67:0} </li>
+<li> If 9 of the measurements are greater than or equal to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≥</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\ge x_{\text{c}}] = 9</annotation></semantics></math>. {1:NUMERICAL:=61:0} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, it helps to sort the data. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>60</mn><mo>,</mo><mn>61</mn><mo>,</mo><mn>61</mn><mo>,</mo><mn>65</mn><mo>,</mo><mn>65</mn><mo>,</mo><mn>65</mn><mo>,</mo><mn>66</mn><mo>,</mo><mn>67</mn><mo>,</mo><mn>67</mn><mo>,</mo><mn>67</mn></mrow><annotation encoding="application/x-tex">60, 61, 61, 65, 65, 65, 66, 67, 67, 67</annotation></semantics></math></p>
+<p>You could use R to sort the data:</p>
+<pre><code>sort(c(65,65,67,67,60,61,67,65,61,66))</code></pre>
+<pre><code>##  [1] 60 61 61 65 65 65 66 67 67 67</code></pre>
+<p>You could also use a spreadsheet. Paste the table into a spreadsheet. Then, highlight the column of measurements and use <code>Sort</code> function.</p>
+<ol type = "a">
+<li> There are 0 measurements less than 60. Those measurements are . </li>
+<li> There are 7 measurements less than or equal to 66. Those measurements are 65, 65, 60, 61, 65, 61, 66. </li>
+<li> There are 4 measurements greater than 65. Those measurements are 67, 67, 67, 66. </li>
+<li> There are 7 measurements greater than or equal to 65. Those measurements are 65, 65, 67, 67, 67, 65, 66. </li>
+<li> Measurement value 61 has 1 measurements less than it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>61</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=61</annotation></semantics></math>. </li>
+<li> Measurement value 67 has 10 measurements less than or equal to it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>67</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=67</annotation></semantics></math>. </li>
+<li> Measurement value 67 has 0 measurements greater than it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>67</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=67</annotation></semantics></math>. </li>
+<li> Measurement value 61 has 9 measurements greater than or equal to it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>61</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=61</annotation></semantics></math>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>8</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R07 Q1 : criteria </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A random procedure generated the following sample (sequence of measurements):</p>
+<table style='width:30%;'>
+<thead>
+<tr>
+<th style="text-align:right;">
+i
+</th>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+74
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+78
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+70
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+78
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+74
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+71
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+73
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+78
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+74
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the measurements shown as a comma separated list:</p>
+<pre><code>74, 70, 78, 70, 78, 74, 71, 73, 78, 74</code></pre>
+<ol type = "a">
+<li> How many of the measurements are less than 71? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&lt;</mo><mn>71</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&lt;71]</annotation></semantics></math>. {1:NUMERICAL:=2:0} </li>
+<li> How many of the measurements are less than or equal to 70? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≤</mo><mn>70</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\le70]</annotation></semantics></math>. {1:NUMERICAL:=2:0} </li>
+<li> How many of the measurements are greater than 74? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&gt;</mo><mn>74</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&gt;74]</annotation></semantics></math>. {1:NUMERICAL:=3:0} </li>
+<li> How many of the measurements are greater than or equal to 74? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≥</mo><mn>74</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\ge74]</annotation></semantics></math>. {1:NUMERICAL:=6:0} </li>
+<li> If 7 of the measurements are less than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&lt;</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&lt;x_{\text{c}}] = 7</annotation></semantics></math>. {1:NUMERICAL:=78:0} </li>
+<li> If 4 of the measurements are less than or equal to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≤</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\le x_{\text{c}}] = 4</annotation></semantics></math>. {1:NUMERICAL:=73:0} </li>
+<li> If 3 of the measurements are greater than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&gt;</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&gt;x_{\text{c}}] = 3</annotation></semantics></math>. {1:NUMERICAL:=74:0} </li>
+<li> If 10 of the measurements are greater than or equal to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≥</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\ge x_{\text{c}}] = 10</annotation></semantics></math>. {1:NUMERICAL:=70:0} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, it helps to sort the data. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>70</mn><mo>,</mo><mn>70</mn><mo>,</mo><mn>71</mn><mo>,</mo><mn>73</mn><mo>,</mo><mn>74</mn><mo>,</mo><mn>74</mn><mo>,</mo><mn>74</mn><mo>,</mo><mn>78</mn><mo>,</mo><mn>78</mn><mo>,</mo><mn>78</mn></mrow><annotation encoding="application/x-tex">70, 70, 71, 73, 74, 74, 74, 78, 78, 78</annotation></semantics></math></p>
+<p>You could use R to sort the data:</p>
+<pre><code>sort(c(74,70,78,70,78,74,71,73,78,74))</code></pre>
+<pre><code>##  [1] 70 70 71 73 74 74 74 78 78 78</code></pre>
+<p>You could also use a spreadsheet. Paste the table into a spreadsheet. Then, highlight the column of measurements and use <code>Sort</code> function.</p>
+<ol type = "a">
+<li> There are 2 measurements less than 71. Those measurements are 70, 70. </li>
+<li> There are 2 measurements less than or equal to 70. Those measurements are 70, 70. </li>
+<li> There are 3 measurements greater than 74. Those measurements are 78, 78, 78. </li>
+<li> There are 6 measurements greater than or equal to 74. Those measurements are 74, 78, 78, 74, 78, 74. </li>
+<li> Measurement value 78 has 7 measurements less than it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>78</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=78</annotation></semantics></math>. </li>
+<li> Measurement value 73 has 4 measurements less than or equal to it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>73</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=73</annotation></semantics></math>. </li>
+<li> Measurement value 74 has 3 measurements greater than it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>74</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=74</annotation></semantics></math>. </li>
+<li> Measurement value 70 has 10 measurements greater than or equal to it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>70</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=70</annotation></semantics></math>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>8</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R08 Q1 : criteria </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A random procedure generated the following sample (sequence of measurements):</p>
+<table style='width:30%;'>
+<thead>
+<tr>
+<th style="text-align:right;">
+i
+</th>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+60
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+60
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+63
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+63
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+67
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+68
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+61
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+62
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+67
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+60
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the measurements shown as a comma separated list:</p>
+<pre><code>60, 60, 63, 63, 67, 68, 61, 62, 67, 60</code></pre>
+<ol type = "a">
+<li> How many of the measurements are less than 67? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&lt;</mo><mn>67</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&lt;67]</annotation></semantics></math>. {1:NUMERICAL:=7:0} </li>
+<li> How many of the measurements are less than or equal to 68? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≤</mo><mn>68</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\le68]</annotation></semantics></math>. {1:NUMERICAL:=10:0} </li>
+<li> How many of the measurements are greater than 60? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&gt;</mo><mn>60</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&gt;60]</annotation></semantics></math>. {1:NUMERICAL:=7:0} </li>
+<li> How many of the measurements are greater than or equal to 60? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≥</mo><mn>60</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\ge60]</annotation></semantics></math>. {1:NUMERICAL:=10:0} </li>
+<li> If 4 of the measurements are less than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&lt;</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&lt;x_{\text{c}}] = 4</annotation></semantics></math>. {1:NUMERICAL:=62:0} </li>
+<li> If 4 of the measurements are less than or equal to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≤</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\le x_{\text{c}}] = 4</annotation></semantics></math>. {1:NUMERICAL:=61:0} </li>
+<li> If 7 of the measurements are greater than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&gt;</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&gt;x_{\text{c}}] = 7</annotation></semantics></math>. {1:NUMERICAL:=60:0} </li>
+<li> If 3 of the measurements are greater than or equal to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≥</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\ge x_{\text{c}}] = 3</annotation></semantics></math>. {1:NUMERICAL:=67:0} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, it helps to sort the data. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>60</mn><mo>,</mo><mn>60</mn><mo>,</mo><mn>60</mn><mo>,</mo><mn>61</mn><mo>,</mo><mn>62</mn><mo>,</mo><mn>63</mn><mo>,</mo><mn>63</mn><mo>,</mo><mn>67</mn><mo>,</mo><mn>67</mn><mo>,</mo><mn>68</mn></mrow><annotation encoding="application/x-tex">60, 60, 60, 61, 62, 63, 63, 67, 67, 68</annotation></semantics></math></p>
+<p>You could use R to sort the data:</p>
+<pre><code>sort(c(60,60,63,63,67,68,61,62,67,60))</code></pre>
+<pre><code>##  [1] 60 60 60 61 62 63 63 67 67 68</code></pre>
+<p>You could also use a spreadsheet. Paste the table into a spreadsheet. Then, highlight the column of measurements and use <code>Sort</code> function.</p>
+<ol type = "a">
+<li> There are 7 measurements less than 67. Those measurements are 60, 60, 63, 63, 61, 62, 60. </li>
+<li> There are 10 measurements less than or equal to 68. Those measurements are 60, 60, 63, 63, 67, 68, 61, 62, 67, 60. </li>
+<li> There are 7 measurements greater than 60. Those measurements are 63, 63, 67, 68, 61, 62, 67. </li>
+<li> There are 10 measurements greater than or equal to 60. Those measurements are 60, 60, 63, 63, 67, 68, 61, 62, 67, 60. </li>
+<li> Measurement value 62 has 4 measurements less than it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>62</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=62</annotation></semantics></math>. </li>
+<li> Measurement value 61 has 4 measurements less than or equal to it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>61</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=61</annotation></semantics></math>. </li>
+<li> Measurement value 60 has 7 measurements greater than it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>60</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=60</annotation></semantics></math>. </li>
+<li> Measurement value 67 has 3 measurements greater than or equal to it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>67</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=67</annotation></semantics></math>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>8</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R09 Q1 : criteria </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A random procedure generated the following sample (sequence of measurements):</p>
+<table style='width:30%;'>
+<thead>
+<tr>
+<th style="text-align:right;">
+i
+</th>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+18
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+17
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+18
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+16
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+14
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+17
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+15
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+11
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+15
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+18
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the measurements shown as a comma separated list:</p>
+<pre><code>18, 17, 18, 16, 14, 17, 15, 11, 15, 18</code></pre>
+<ol type = "a">
+<li> How many of the measurements are less than 18? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&lt;</mo><mn>18</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&lt;18]</annotation></semantics></math>. {1:NUMERICAL:=7:0} </li>
+<li> How many of the measurements are less than or equal to 17? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≤</mo><mn>17</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\le17]</annotation></semantics></math>. {1:NUMERICAL:=7:0} </li>
+<li> How many of the measurements are greater than 15? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&gt;</mo><mn>15</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&gt;15]</annotation></semantics></math>. {1:NUMERICAL:=6:0} </li>
+<li> How many of the measurements are greater than or equal to 16? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≥</mo><mn>16</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\ge16]</annotation></semantics></math>. {1:NUMERICAL:=6:0} </li>
+<li> If 0 of the measurements are less than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&lt;</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&lt;x_{\text{c}}] = 0</annotation></semantics></math>. {1:NUMERICAL:=11:0} </li>
+<li> If 10 of the measurements are less than or equal to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≤</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\le x_{\text{c}}] = 10</annotation></semantics></math>. {1:NUMERICAL:=18:0} </li>
+<li> If 8 of the measurements are greater than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&gt;</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&gt;x_{\text{c}}] = 8</annotation></semantics></math>. {1:NUMERICAL:=14:0} </li>
+<li> If 8 of the measurements are greater than or equal to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≥</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\ge x_{\text{c}}] = 8</annotation></semantics></math>. {1:NUMERICAL:=15:0} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, it helps to sort the data. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>11</mn><mo>,</mo><mn>14</mn><mo>,</mo><mn>15</mn><mo>,</mo><mn>15</mn><mo>,</mo><mn>16</mn><mo>,</mo><mn>17</mn><mo>,</mo><mn>17</mn><mo>,</mo><mn>18</mn><mo>,</mo><mn>18</mn><mo>,</mo><mn>18</mn></mrow><annotation encoding="application/x-tex">11, 14, 15, 15, 16, 17, 17, 18, 18, 18</annotation></semantics></math></p>
+<p>You could use R to sort the data:</p>
+<pre><code>sort(c(18,17,18,16,14,17,15,11,15,18))</code></pre>
+<pre><code>##  [1] 11 14 15 15 16 17 17 18 18 18</code></pre>
+<p>You could also use a spreadsheet. Paste the table into a spreadsheet. Then, highlight the column of measurements and use <code>Sort</code> function.</p>
+<ol type = "a">
+<li> There are 7 measurements less than 18. Those measurements are 17, 16, 14, 17, 15, 11, 15. </li>
+<li> There are 7 measurements less than or equal to 17. Those measurements are 17, 16, 14, 17, 15, 11, 15. </li>
+<li> There are 6 measurements greater than 15. Those measurements are 18, 17, 18, 16, 17, 18. </li>
+<li> There are 6 measurements greater than or equal to 16. Those measurements are 18, 17, 18, 16, 17, 18. </li>
+<li> Measurement value 11 has 0 measurements less than it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>11</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=11</annotation></semantics></math>. </li>
+<li> Measurement value 18 has 10 measurements less than or equal to it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>18</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=18</annotation></semantics></math>. </li>
+<li> Measurement value 14 has 8 measurements greater than it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>14</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=14</annotation></semantics></math>. </li>
+<li> Measurement value 15 has 8 measurements greater than or equal to it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>15</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=15</annotation></semantics></math>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>8</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R10 Q1 : criteria </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A random procedure generated the following sample (sequence of measurements):</p>
+<table style='width:30%;'>
+<thead>
+<tr>
+<th style="text-align:right;">
+i
+</th>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+52
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+50
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+58
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+55
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+52
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+53
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+59
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+54
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+51
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+59
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the measurements shown as a comma separated list:</p>
+<pre><code>52, 50, 58, 55, 52, 53, 59, 54, 51, 59</code></pre>
+<ol type = "a">
+<li> How many of the measurements are less than 59? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&lt;</mo><mn>59</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&lt;59]</annotation></semantics></math>. {1:NUMERICAL:=8:0} </li>
+<li> How many of the measurements are less than or equal to 58? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≤</mo><mn>58</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\le58]</annotation></semantics></math>. {1:NUMERICAL:=8:0} </li>
+<li> How many of the measurements are greater than 53? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&gt;</mo><mn>53</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&gt;53]</annotation></semantics></math>. {1:NUMERICAL:=5:0} </li>
+<li> How many of the measurements are greater than or equal to 50? In other words, determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≥</mo><mn>50</mn><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\ge50]</annotation></semantics></math>. {1:NUMERICAL:=10:0} </li>
+<li> If 5 of the measurements are less than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&lt;</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&lt;x_{\text{c}}] = 5</annotation></semantics></math>. {1:NUMERICAL:=54:0} </li>
+<li> If 7 of the measurements are less than or equal to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≤</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\le x_{\text{c}}] = 7</annotation></semantics></math>. {1:NUMERICAL:=55:0} </li>
+<li> If 8 of the measurements are greater than <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>&gt;</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}&gt;x_{\text{c}}] = 8</annotation></semantics></math>. {1:NUMERICAL:=51:0} </li>
+<li> If 2 of the measurements are greater than or equal to <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>, and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math>, then what is <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math>? In other words, determine a measurement <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><annotation encoding="application/x-tex">x_{\text{c}}</annotation></semantics></math> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><annotation encoding="application/x-tex">\mathbf{x}</annotation></semantics></math> such that <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>#</mi><mo stretchy="false" form="prefix">[</mo><mstyle mathvariant="bold"><mi>𝐱</mi></mstyle><mo>≥</mo><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\#[\mathbf{x}\ge x_{\text{c}}] = 2</annotation></semantics></math>. {1:NUMERICAL:=59:0} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, it helps to sort the data. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>50</mn><mo>,</mo><mn>51</mn><mo>,</mo><mn>52</mn><mo>,</mo><mn>52</mn><mo>,</mo><mn>53</mn><mo>,</mo><mn>54</mn><mo>,</mo><mn>55</mn><mo>,</mo><mn>58</mn><mo>,</mo><mn>59</mn><mo>,</mo><mn>59</mn></mrow><annotation encoding="application/x-tex">50, 51, 52, 52, 53, 54, 55, 58, 59, 59</annotation></semantics></math></p>
+<p>You could use R to sort the data:</p>
+<pre><code>sort(c(52,50,58,55,52,53,59,54,51,59))</code></pre>
+<pre><code>##  [1] 50 51 52 52 53 54 55 58 59 59</code></pre>
+<p>You could also use a spreadsheet. Paste the table into a spreadsheet. Then, highlight the column of measurements and use <code>Sort</code> function.</p>
+<ol type = "a">
+<li> There are 8 measurements less than 59. Those measurements are 52, 50, 58, 55, 52, 53, 54, 51. </li>
+<li> There are 8 measurements less than or equal to 58. Those measurements are 52, 50, 58, 55, 52, 53, 54, 51. </li>
+<li> There are 5 measurements greater than 53. Those measurements are 58, 55, 59, 54, 59. </li>
+<li> There are 10 measurements greater than or equal to 50. Those measurements are 52, 50, 58, 55, 52, 53, 59, 54, 51, 59. </li>
+<li> Measurement value 54 has 5 measurements less than it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>54</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=54</annotation></semantics></math>. </li>
+<li> Measurement value 55 has 7 measurements less than or equal to it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>55</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=55</annotation></semantics></math>. </li>
+<li> Measurement value 51 has 8 measurements greater than it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>51</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=51</annotation></semantics></math>. </li>
+<li> Measurement value 59 has 2 measurements greater than or equal to it, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mtext mathvariant="normal">c</mtext></msub><mo>=</mo><mn>59</mn></mrow><annotation encoding="application/x-tex">x_{\text{c}}=59</annotation></semantics></math>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>8</defaultgrade>
+</question>
+
+</quiz>

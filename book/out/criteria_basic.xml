@@ -1,0 +1,1401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/normal/criteria</text>
+</category>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R01 Q1 : criteria </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A random procedure generated the following sample (sequence of measurements):</p>
+<table style='width:30%;'>
+<thead>
+<tr>
+<th style="text-align:right;">
+i
+</th>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+25
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+25
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+24
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+27
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+22
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+25
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+28
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+26
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+28
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+25
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the measurements shown as a comma separated list:</p>
+<pre><code>25, 25, 24, 27, 22, 25, 28, 26, 28, 25</code></pre>
+<ol type = "a">
+<li> How many of the measurements are less than 25? In other words, determine <span class="math inline">$\num{\vec{x}&lt;25}$</span>. {1:NUMERICAL:=2:0} </li>
+<li> How many of the measurements are less than or equal to 22? In other words, determine <span class="math inline">$\num{\vec{x}\le22}$</span>. {1:NUMERICAL:=1:0} </li>
+<li> How many of the measurements are greater than 24? In other words, determine <span class="math inline">$\num{\vec{x}&gt;24}$</span>. {1:NUMERICAL:=8:0} </li>
+<li> How many of the measurements are greater than or equal to 26? In other words, determine <span class="math inline">$\num{\vec{x}\ge26}$</span>. {1:NUMERICAL:=4:0} </li>
+<li> If 2 of the measurements are less than <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}&lt;\xc} = 2$</span>. {1:NUMERICAL:=25:0} </li>
+<li> If 10 of the measurements are less than or equal to <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}\le\xc} = 10$</span>. {1:NUMERICAL:=28:0} </li>
+<li> If 4 of the measurements are greater than <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}&gt;\xc} = 4$</span>. {1:NUMERICAL:=25:0} </li>
+<li> If 3 of the measurements are greater than or equal to <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}\ge\xc} = 3$</span>. {1:NUMERICAL:=27:0} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, it helps to sort the data. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>22</mn><mo>,</mo><mn>24</mn><mo>,</mo><mn>25</mn><mo>,</mo><mn>25</mn><mo>,</mo><mn>25</mn><mo>,</mo><mn>25</mn><mo>,</mo><mn>26</mn><mo>,</mo><mn>27</mn><mo>,</mo><mn>28</mn><mo>,</mo><mn>28</mn></mrow><annotation encoding="application/x-tex">22, 24, 25, 25, 25, 25, 26, 27, 28, 28</annotation></semantics></math></p>
+<p>You could use R to sort the data:</p>
+<pre><code>sort(c(25,25,24,27,22,25,28,26,28,25))</code></pre>
+<pre><code>##  [1] 22 24 25 25 25 25 26 27 28 28</code></pre>
+<p>You could also use a spreadsheet. Paste the list into a spreadsheet. You may need to use <code>Text to Columns</code> function to separate data into cells. Then, highlight cells and use <code>Sort</code> function.</p>
+<ol type = "a">
+<li> There are 2 measurements less than 25. Those measurements are 24, 22. </li>
+<li> There are 1 measurements less than or equal to 22. Those measurements are 22. </li>
+<li> There are 8 measurements greater than 24. Those measurements are 25, 25, 27, 25, 28, 26, 28, 25. </li>
+<li> There are 4 measurements greater than or equal to 26. Those measurements are 27, 28, 26, 28. </li>
+<li> Measurement value 25 has 2 measurements less than it, so <span class="math inline">$\xc=25$</span>. </li>
+<li> The measurement 28 has 10 measurements less than or equal to it, so <span class="math inline">$\xc=28$</span>. </li>
+<li> The measurement 25 has 4 measurements greater than it, so <span class="math inline">$\xc=25$</span>. </li>
+<li> The measurement 27 has 3 measurements greater than or equal to it, so <span class="math inline">$\xc=27$</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>8</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R02 Q1 : criteria </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A random procedure generated the following sample (sequence of measurements):</p>
+<table style='width:30%;'>
+<thead>
+<tr>
+<th style="text-align:right;">
+i
+</th>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+17
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+19
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+16
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+11
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+16
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+19
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+13
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+14
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+11
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the measurements shown as a comma separated list:</p>
+<pre><code>12, 17, 19, 16, 11, 16, 19, 13, 14, 11</code></pre>
+<ol type = "a">
+<li> How many of the measurements are less than 17? In other words, determine <span class="math inline">$\num{\vec{x}&lt;17}$</span>. {1:NUMERICAL:=7:0} </li>
+<li> How many of the measurements are less than or equal to 11? In other words, determine <span class="math inline">$\num{\vec{x}\le11}$</span>. {1:NUMERICAL:=2:0} </li>
+<li> How many of the measurements are greater than 16? In other words, determine <span class="math inline">$\num{\vec{x}&gt;16}$</span>. {1:NUMERICAL:=3:0} </li>
+<li> How many of the measurements are greater than or equal to 11? In other words, determine <span class="math inline">$\num{\vec{x}\ge11}$</span>. {1:NUMERICAL:=10:0} </li>
+<li> If 3 of the measurements are less than <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}&lt;\xc} = 3$</span>. {1:NUMERICAL:=13:0} </li>
+<li> If 10 of the measurements are less than or equal to <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}\le\xc} = 10$</span>. {1:NUMERICAL:=19:0} </li>
+<li> If 7 of the measurements are greater than <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}&gt;\xc} = 7$</span>. {1:NUMERICAL:=12:0} </li>
+<li> If 2 of the measurements are greater than or equal to <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}\ge\xc} = 2$</span>. {1:NUMERICAL:=19:0} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, it helps to sort the data. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>11</mn><mo>,</mo><mn>11</mn><mo>,</mo><mn>12</mn><mo>,</mo><mn>13</mn><mo>,</mo><mn>14</mn><mo>,</mo><mn>16</mn><mo>,</mo><mn>16</mn><mo>,</mo><mn>17</mn><mo>,</mo><mn>19</mn><mo>,</mo><mn>19</mn></mrow><annotation encoding="application/x-tex">11, 11, 12, 13, 14, 16, 16, 17, 19, 19</annotation></semantics></math></p>
+<p>You could use R to sort the data:</p>
+<pre><code>sort(c(12,17,19,16,11,16,19,13,14,11))</code></pre>
+<pre><code>##  [1] 11 11 12 13 14 16 16 17 19 19</code></pre>
+<p>You could also use a spreadsheet. Paste the list into a spreadsheet. You may need to use <code>Text to Columns</code> function to separate data into cells. Then, highlight cells and use <code>Sort</code> function.</p>
+<ol type = "a">
+<li> There are 7 measurements less than 17. Those measurements are 12, 16, 11, 16, 13, 14, 11. </li>
+<li> There are 2 measurements less than or equal to 11. Those measurements are 11, 11. </li>
+<li> There are 3 measurements greater than 16. Those measurements are 17, 19, 19. </li>
+<li> There are 10 measurements greater than or equal to 11. Those measurements are 12, 17, 19, 16, 11, 16, 19, 13, 14, 11. </li>
+<li> Measurement value 13 has 3 measurements less than it, so <span class="math inline">$\xc=13$</span>. </li>
+<li> The measurement 19 has 10 measurements less than or equal to it, so <span class="math inline">$\xc=19$</span>. </li>
+<li> The measurement 12 has 7 measurements greater than it, so <span class="math inline">$\xc=12$</span>. </li>
+<li> The measurement 19 has 2 measurements greater than or equal to it, so <span class="math inline">$\xc=19$</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>8</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R03 Q1 : criteria </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A random procedure generated the following sample (sequence of measurements):</p>
+<table style='width:30%;'>
+<thead>
+<tr>
+<th style="text-align:right;">
+i
+</th>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+64
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+61
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+64
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+65
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+61
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+62
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+66
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+69
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+61
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+64
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the measurements shown as a comma separated list:</p>
+<pre><code>64, 61, 64, 65, 61, 62, 66, 69, 61, 64</code></pre>
+<ol type = "a">
+<li> How many of the measurements are less than 61? In other words, determine <span class="math inline">$\num{\vec{x}&lt;61}$</span>. {1:NUMERICAL:=0:0} </li>
+<li> How many of the measurements are less than or equal to 66? In other words, determine <span class="math inline">$\num{\vec{x}\le66}$</span>. {1:NUMERICAL:=9:0} </li>
+<li> How many of the measurements are greater than 69? In other words, determine <span class="math inline">$\num{\vec{x}&gt;69}$</span>. {1:NUMERICAL:=0:0} </li>
+<li> How many of the measurements are greater than or equal to 64? In other words, determine <span class="math inline">$\num{\vec{x}\ge64}$</span>. {1:NUMERICAL:=6:0} </li>
+<li> If 3 of the measurements are less than <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}&lt;\xc} = 3$</span>. {1:NUMERICAL:=62:0} </li>
+<li> If 7 of the measurements are less than or equal to <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}\le\xc} = 7$</span>. {1:NUMERICAL:=64:0} </li>
+<li> If 7 of the measurements are greater than <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}&gt;\xc} = 7$</span>. {1:NUMERICAL:=61:0} </li>
+<li> If 6 of the measurements are greater than or equal to <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}\ge\xc} = 6$</span>. {1:NUMERICAL:=64:0} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, it helps to sort the data. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>61</mn><mo>,</mo><mn>61</mn><mo>,</mo><mn>61</mn><mo>,</mo><mn>62</mn><mo>,</mo><mn>64</mn><mo>,</mo><mn>64</mn><mo>,</mo><mn>64</mn><mo>,</mo><mn>65</mn><mo>,</mo><mn>66</mn><mo>,</mo><mn>69</mn></mrow><annotation encoding="application/x-tex">61, 61, 61, 62, 64, 64, 64, 65, 66, 69</annotation></semantics></math></p>
+<p>You could use R to sort the data:</p>
+<pre><code>sort(c(64,61,64,65,61,62,66,69,61,64))</code></pre>
+<pre><code>##  [1] 61 61 61 62 64 64 64 65 66 69</code></pre>
+<p>You could also use a spreadsheet. Paste the list into a spreadsheet. You may need to use <code>Text to Columns</code> function to separate data into cells. Then, highlight cells and use <code>Sort</code> function.</p>
+<ol type = "a">
+<li> There are 0 measurements less than 61. Those measurements are . </li>
+<li> There are 9 measurements less than or equal to 66. Those measurements are 64, 61, 64, 65, 61, 62, 66, 61, 64. </li>
+<li> There are 0 measurements greater than 69. Those measurements are . </li>
+<li> There are 6 measurements greater than or equal to 64. Those measurements are 64, 64, 65, 66, 69, 64. </li>
+<li> Measurement value 62 has 3 measurements less than it, so <span class="math inline">$\xc=62$</span>. </li>
+<li> The measurement 64 has 7 measurements less than or equal to it, so <span class="math inline">$\xc=64$</span>. </li>
+<li> The measurement 61 has 7 measurements greater than it, so <span class="math inline">$\xc=61$</span>. </li>
+<li> The measurement 64 has 6 measurements greater than or equal to it, so <span class="math inline">$\xc=64$</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>8</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R04 Q1 : criteria </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A random procedure generated the following sample (sequence of measurements):</p>
+<table style='width:30%;'>
+<thead>
+<tr>
+<th style="text-align:right;">
+i
+</th>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+61
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+69
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+61
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+63
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+62
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+61
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+61
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+60
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+63
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+67
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the measurements shown as a comma separated list:</p>
+<pre><code>61, 69, 61, 63, 62, 61, 61, 60, 63, 67</code></pre>
+<ol type = "a">
+<li> How many of the measurements are less than 61? In other words, determine <span class="math inline">$\num{\vec{x}&lt;61}$</span>. {1:NUMERICAL:=1:0} </li>
+<li> How many of the measurements are less than or equal to 62? In other words, determine <span class="math inline">$\num{\vec{x}\le62}$</span>. {1:NUMERICAL:=6:0} </li>
+<li> How many of the measurements are greater than 67? In other words, determine <span class="math inline">$\num{\vec{x}&gt;67}$</span>. {1:NUMERICAL:=1:0} </li>
+<li> How many of the measurements are greater than or equal to 63? In other words, determine <span class="math inline">$\num{\vec{x}\ge63}$</span>. {1:NUMERICAL:=4:0} </li>
+<li> If 1 of the measurements are less than <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}&lt;\xc} = 1$</span>. {1:NUMERICAL:=61:0} </li>
+<li> If 5 of the measurements are less than or equal to <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}\le\xc} = 5$</span>. {1:NUMERICAL:=61:0} </li>
+<li> If 9 of the measurements are greater than <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}&gt;\xc} = 9$</span>. {1:NUMERICAL:=60:0} </li>
+<li> If 9 of the measurements are greater than or equal to <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}\ge\xc} = 9$</span>. {1:NUMERICAL:=61:0} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, it helps to sort the data. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>60</mn><mo>,</mo><mn>61</mn><mo>,</mo><mn>61</mn><mo>,</mo><mn>61</mn><mo>,</mo><mn>61</mn><mo>,</mo><mn>62</mn><mo>,</mo><mn>63</mn><mo>,</mo><mn>63</mn><mo>,</mo><mn>67</mn><mo>,</mo><mn>69</mn></mrow><annotation encoding="application/x-tex">60, 61, 61, 61, 61, 62, 63, 63, 67, 69</annotation></semantics></math></p>
+<p>You could use R to sort the data:</p>
+<pre><code>sort(c(61,69,61,63,62,61,61,60,63,67))</code></pre>
+<pre><code>##  [1] 60 61 61 61 61 62 63 63 67 69</code></pre>
+<p>You could also use a spreadsheet. Paste the list into a spreadsheet. You may need to use <code>Text to Columns</code> function to separate data into cells. Then, highlight cells and use <code>Sort</code> function.</p>
+<ol type = "a">
+<li> There are 1 measurements less than 61. Those measurements are 60. </li>
+<li> There are 6 measurements less than or equal to 62. Those measurements are 61, 61, 62, 61, 61, 60. </li>
+<li> There are 1 measurements greater than 67. Those measurements are 69. </li>
+<li> There are 4 measurements greater than or equal to 63. Those measurements are 69, 63, 63, 67. </li>
+<li> Measurement value 61 has 1 measurements less than it, so <span class="math inline">$\xc=61$</span>. </li>
+<li> The measurement 61 has 5 measurements less than or equal to it, so <span class="math inline">$\xc=61$</span>. </li>
+<li> The measurement 60 has 9 measurements greater than it, so <span class="math inline">$\xc=60$</span>. </li>
+<li> The measurement 61 has 9 measurements greater than or equal to it, so <span class="math inline">$\xc=61$</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>8</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R05 Q1 : criteria </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A random procedure generated the following sample (sequence of measurements):</p>
+<table style='width:30%;'>
+<thead>
+<tr>
+<th style="text-align:right;">
+i
+</th>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+41
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+47
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+47
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+49
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+49
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+41
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+47
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the measurements shown as a comma separated list:</p>
+<pre><code>41, 47, 47, 45, 49, 45, 49, 41, 47, 45</code></pre>
+<ol type = "a">
+<li> How many of the measurements are less than 45? In other words, determine <span class="math inline">$\num{\vec{x}&lt;45}$</span>. {1:NUMERICAL:=2:0} </li>
+<li> How many of the measurements are less than or equal to 41? In other words, determine <span class="math inline">$\num{\vec{x}\le41}$</span>. {1:NUMERICAL:=2:0} </li>
+<li> How many of the measurements are greater than 47? In other words, determine <span class="math inline">$\num{\vec{x}&gt;47}$</span>. {1:NUMERICAL:=2:0} </li>
+<li> How many of the measurements are greater than or equal to 47? In other words, determine <span class="math inline">$\num{\vec{x}\ge47}$</span>. {1:NUMERICAL:=5:0} </li>
+<li> If 8 of the measurements are less than <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}&lt;\xc} = 8$</span>. {1:NUMERICAL:=49:0} </li>
+<li> If 5 of the measurements are less than or equal to <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}\le\xc} = 5$</span>. {1:NUMERICAL:=45:0} </li>
+<li> If 8 of the measurements are greater than <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}&gt;\xc} = 8$</span>. {1:NUMERICAL:=41:0} </li>
+<li> If 5 of the measurements are greater than or equal to <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}\ge\xc} = 5$</span>. {1:NUMERICAL:=47:0} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, it helps to sort the data. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>41</mn><mo>,</mo><mn>41</mn><mo>,</mo><mn>45</mn><mo>,</mo><mn>45</mn><mo>,</mo><mn>45</mn><mo>,</mo><mn>47</mn><mo>,</mo><mn>47</mn><mo>,</mo><mn>47</mn><mo>,</mo><mn>49</mn><mo>,</mo><mn>49</mn></mrow><annotation encoding="application/x-tex">41, 41, 45, 45, 45, 47, 47, 47, 49, 49</annotation></semantics></math></p>
+<p>You could use R to sort the data:</p>
+<pre><code>sort(c(41,47,47,45,49,45,49,41,47,45))</code></pre>
+<pre><code>##  [1] 41 41 45 45 45 47 47 47 49 49</code></pre>
+<p>You could also use a spreadsheet. Paste the list into a spreadsheet. You may need to use <code>Text to Columns</code> function to separate data into cells. Then, highlight cells and use <code>Sort</code> function.</p>
+<ol type = "a">
+<li> There are 2 measurements less than 45. Those measurements are 41, 41. </li>
+<li> There are 2 measurements less than or equal to 41. Those measurements are 41, 41. </li>
+<li> There are 2 measurements greater than 47. Those measurements are 49, 49. </li>
+<li> There are 5 measurements greater than or equal to 47. Those measurements are 47, 47, 49, 49, 47. </li>
+<li> Measurement value 49 has 8 measurements less than it, so <span class="math inline">$\xc=49$</span>. </li>
+<li> The measurement 45 has 5 measurements less than or equal to it, so <span class="math inline">$\xc=45$</span>. </li>
+<li> The measurement 41 has 8 measurements greater than it, so <span class="math inline">$\xc=41$</span>. </li>
+<li> The measurement 47 has 5 measurements greater than or equal to it, so <span class="math inline">$\xc=47$</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>8</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R06 Q1 : criteria </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A random procedure generated the following sample (sequence of measurements):</p>
+<table style='width:30%;'>
+<thead>
+<tr>
+<th style="text-align:right;">
+i
+</th>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+83
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+83
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+80
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+89
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+84
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+89
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+80
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+87
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+86
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+83
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the measurements shown as a comma separated list:</p>
+<pre><code>83, 83, 80, 89, 84, 89, 80, 87, 86, 83</code></pre>
+<ol type = "a">
+<li> How many of the measurements are less than 87? In other words, determine <span class="math inline">$\num{\vec{x}&lt;87}$</span>. {1:NUMERICAL:=7:0} </li>
+<li> How many of the measurements are less than or equal to 83? In other words, determine <span class="math inline">$\num{\vec{x}\le83}$</span>. {1:NUMERICAL:=5:0} </li>
+<li> How many of the measurements are greater than 80? In other words, determine <span class="math inline">$\num{\vec{x}&gt;80}$</span>. {1:NUMERICAL:=8:0} </li>
+<li> How many of the measurements are greater than or equal to 83? In other words, determine <span class="math inline">$\num{\vec{x}\ge83}$</span>. {1:NUMERICAL:=8:0} </li>
+<li> If 5 of the measurements are less than <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}&lt;\xc} = 5$</span>. {1:NUMERICAL:=84:0} </li>
+<li> If 7 of the measurements are less than or equal to <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}\le\xc} = 7$</span>. {1:NUMERICAL:=86:0} </li>
+<li> If 0 of the measurements are greater than <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}&gt;\xc} = 0$</span>. {1:NUMERICAL:=89:0} </li>
+<li> If 10 of the measurements are greater than or equal to <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}\ge\xc} = 10$</span>. {1:NUMERICAL:=80:0} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, it helps to sort the data. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>80</mn><mo>,</mo><mn>80</mn><mo>,</mo><mn>83</mn><mo>,</mo><mn>83</mn><mo>,</mo><mn>83</mn><mo>,</mo><mn>84</mn><mo>,</mo><mn>86</mn><mo>,</mo><mn>87</mn><mo>,</mo><mn>89</mn><mo>,</mo><mn>89</mn></mrow><annotation encoding="application/x-tex">80, 80, 83, 83, 83, 84, 86, 87, 89, 89</annotation></semantics></math></p>
+<p>You could use R to sort the data:</p>
+<pre><code>sort(c(83,83,80,89,84,89,80,87,86,83))</code></pre>
+<pre><code>##  [1] 80 80 83 83 83 84 86 87 89 89</code></pre>
+<p>You could also use a spreadsheet. Paste the list into a spreadsheet. You may need to use <code>Text to Columns</code> function to separate data into cells. Then, highlight cells and use <code>Sort</code> function.</p>
+<ol type = "a">
+<li> There are 7 measurements less than 87. Those measurements are 83, 83, 80, 84, 80, 86, 83. </li>
+<li> There are 5 measurements less than or equal to 83. Those measurements are 83, 83, 80, 80, 83. </li>
+<li> There are 8 measurements greater than 80. Those measurements are 83, 83, 89, 84, 89, 87, 86, 83. </li>
+<li> There are 8 measurements greater than or equal to 83. Those measurements are 83, 83, 89, 84, 89, 87, 86, 83. </li>
+<li> Measurement value 84 has 5 measurements less than it, so <span class="math inline">$\xc=84$</span>. </li>
+<li> The measurement 86 has 7 measurements less than or equal to it, so <span class="math inline">$\xc=86$</span>. </li>
+<li> The measurement 89 has 0 measurements greater than it, so <span class="math inline">$\xc=89$</span>. </li>
+<li> The measurement 80 has 10 measurements greater than or equal to it, so <span class="math inline">$\xc=80$</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>8</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R07 Q1 : criteria </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A random procedure generated the following sample (sequence of measurements):</p>
+<table style='width:30%;'>
+<thead>
+<tr>
+<th style="text-align:right;">
+i
+</th>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+41
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+47
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+49
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+43
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+42
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+40
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+42
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+49
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+45
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+41
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the measurements shown as a comma separated list:</p>
+<pre><code>41, 47, 49, 43, 42, 40, 42, 49, 45, 41</code></pre>
+<ol type = "a">
+<li> How many of the measurements are less than 45? In other words, determine <span class="math inline">$\num{\vec{x}&lt;45}$</span>. {1:NUMERICAL:=6:0} </li>
+<li> How many of the measurements are less than or equal to 47? In other words, determine <span class="math inline">$\num{\vec{x}\le47}$</span>. {1:NUMERICAL:=8:0} </li>
+<li> How many of the measurements are greater than 41? In other words, determine <span class="math inline">$\num{\vec{x}&gt;41}$</span>. {1:NUMERICAL:=7:0} </li>
+<li> How many of the measurements are greater than or equal to 43? In other words, determine <span class="math inline">$\num{\vec{x}\ge43}$</span>. {1:NUMERICAL:=5:0} </li>
+<li> If 1 of the measurements are less than <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}&lt;\xc} = 1$</span>. {1:NUMERICAL:=41:0} </li>
+<li> If 5 of the measurements are less than or equal to <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}\le\xc} = 5$</span>. {1:NUMERICAL:=42:0} </li>
+<li> If 0 of the measurements are greater than <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}&gt;\xc} = 0$</span>. {1:NUMERICAL:=49:0} </li>
+<li> If 10 of the measurements are greater than or equal to <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}\ge\xc} = 10$</span>. {1:NUMERICAL:=40:0} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, it helps to sort the data. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>40</mn><mo>,</mo><mn>41</mn><mo>,</mo><mn>41</mn><mo>,</mo><mn>42</mn><mo>,</mo><mn>42</mn><mo>,</mo><mn>43</mn><mo>,</mo><mn>45</mn><mo>,</mo><mn>47</mn><mo>,</mo><mn>49</mn><mo>,</mo><mn>49</mn></mrow><annotation encoding="application/x-tex">40, 41, 41, 42, 42, 43, 45, 47, 49, 49</annotation></semantics></math></p>
+<p>You could use R to sort the data:</p>
+<pre><code>sort(c(41,47,49,43,42,40,42,49,45,41))</code></pre>
+<pre><code>##  [1] 40 41 41 42 42 43 45 47 49 49</code></pre>
+<p>You could also use a spreadsheet. Paste the list into a spreadsheet. You may need to use <code>Text to Columns</code> function to separate data into cells. Then, highlight cells and use <code>Sort</code> function.</p>
+<ol type = "a">
+<li> There are 6 measurements less than 45. Those measurements are 41, 43, 42, 40, 42, 41. </li>
+<li> There are 8 measurements less than or equal to 47. Those measurements are 41, 47, 43, 42, 40, 42, 45, 41. </li>
+<li> There are 7 measurements greater than 41. Those measurements are 47, 49, 43, 42, 42, 49, 45. </li>
+<li> There are 5 measurements greater than or equal to 43. Those measurements are 47, 49, 43, 49, 45. </li>
+<li> Measurement value 41 has 1 measurements less than it, so <span class="math inline">$\xc=41$</span>. </li>
+<li> The measurement 42 has 5 measurements less than or equal to it, so <span class="math inline">$\xc=42$</span>. </li>
+<li> The measurement 49 has 0 measurements greater than it, so <span class="math inline">$\xc=49$</span>. </li>
+<li> The measurement 40 has 10 measurements greater than or equal to it, so <span class="math inline">$\xc=40$</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>8</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R08 Q1 : criteria </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A random procedure generated the following sample (sequence of measurements):</p>
+<table style='width:30%;'>
+<thead>
+<tr>
+<th style="text-align:right;">
+i
+</th>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+35
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+34
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+35
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+38
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+30
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+38
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+32
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+30
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+32
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+34
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the measurements shown as a comma separated list:</p>
+<pre><code>35, 34, 35, 38, 30, 38, 32, 30, 32, 34</code></pre>
+<ol type = "a">
+<li> How many of the measurements are less than 30? In other words, determine <span class="math inline">$\num{\vec{x}&lt;30}$</span>. {1:NUMERICAL:=0:0} </li>
+<li> How many of the measurements are less than or equal to 34? In other words, determine <span class="math inline">$\num{\vec{x}\le34}$</span>. {1:NUMERICAL:=6:0} </li>
+<li> How many of the measurements are greater than 35? In other words, determine <span class="math inline">$\num{\vec{x}&gt;35}$</span>. {1:NUMERICAL:=2:0} </li>
+<li> How many of the measurements are greater than or equal to 34? In other words, determine <span class="math inline">$\num{\vec{x}\ge34}$</span>. {1:NUMERICAL:=6:0} </li>
+<li> If 2 of the measurements are less than <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}&lt;\xc} = 2$</span>. {1:NUMERICAL:=32:0} </li>
+<li> If 4 of the measurements are less than or equal to <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}\le\xc} = 4$</span>. {1:NUMERICAL:=32:0} </li>
+<li> If 0 of the measurements are greater than <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}&gt;\xc} = 0$</span>. {1:NUMERICAL:=38:0} </li>
+<li> If 4 of the measurements are greater than or equal to <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}\ge\xc} = 4$</span>. {1:NUMERICAL:=35:0} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, it helps to sort the data. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>30</mn><mo>,</mo><mn>30</mn><mo>,</mo><mn>32</mn><mo>,</mo><mn>32</mn><mo>,</mo><mn>34</mn><mo>,</mo><mn>34</mn><mo>,</mo><mn>35</mn><mo>,</mo><mn>35</mn><mo>,</mo><mn>38</mn><mo>,</mo><mn>38</mn></mrow><annotation encoding="application/x-tex">30, 30, 32, 32, 34, 34, 35, 35, 38, 38</annotation></semantics></math></p>
+<p>You could use R to sort the data:</p>
+<pre><code>sort(c(35,34,35,38,30,38,32,30,32,34))</code></pre>
+<pre><code>##  [1] 30 30 32 32 34 34 35 35 38 38</code></pre>
+<p>You could also use a spreadsheet. Paste the list into a spreadsheet. You may need to use <code>Text to Columns</code> function to separate data into cells. Then, highlight cells and use <code>Sort</code> function.</p>
+<ol type = "a">
+<li> There are 0 measurements less than 30. Those measurements are . </li>
+<li> There are 6 measurements less than or equal to 34. Those measurements are 34, 30, 32, 30, 32, 34. </li>
+<li> There are 2 measurements greater than 35. Those measurements are 38, 38. </li>
+<li> There are 6 measurements greater than or equal to 34. Those measurements are 35, 34, 35, 38, 38, 34. </li>
+<li> Measurement value 32 has 2 measurements less than it, so <span class="math inline">$\xc=32$</span>. </li>
+<li> The measurement 32 has 4 measurements less than or equal to it, so <span class="math inline">$\xc=32$</span>. </li>
+<li> The measurement 38 has 0 measurements greater than it, so <span class="math inline">$\xc=38$</span>. </li>
+<li> The measurement 35 has 4 measurements greater than or equal to it, so <span class="math inline">$\xc=35$</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>8</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R09 Q1 : criteria </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A random procedure generated the following sample (sequence of measurements):</p>
+<table style='width:30%;'>
+<thead>
+<tr>
+<th style="text-align:right;">
+i
+</th>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+80
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+85
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+87
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+85
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+83
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+84
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+87
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+85
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+81
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+82
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the measurements shown as a comma separated list:</p>
+<pre><code>80, 85, 87, 85, 83, 84, 87, 85, 81, 82</code></pre>
+<ol type = "a">
+<li> How many of the measurements are less than 85? In other words, determine <span class="math inline">$\num{\vec{x}&lt;85}$</span>. {1:NUMERICAL:=5:0} </li>
+<li> How many of the measurements are less than or equal to 83? In other words, determine <span class="math inline">$\num{\vec{x}\le83}$</span>. {1:NUMERICAL:=4:0} </li>
+<li> How many of the measurements are greater than 85? In other words, determine <span class="math inline">$\num{\vec{x}&gt;85}$</span>. {1:NUMERICAL:=2:0} </li>
+<li> How many of the measurements are greater than or equal to 85? In other words, determine <span class="math inline">$\num{\vec{x}\ge85}$</span>. {1:NUMERICAL:=5:0} </li>
+<li> If 8 of the measurements are less than <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}&lt;\xc} = 8$</span>. {1:NUMERICAL:=87:0} </li>
+<li> If 2 of the measurements are less than or equal to <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}\le\xc} = 2$</span>. {1:NUMERICAL:=81:0} </li>
+<li> If 9 of the measurements are greater than <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}&gt;\xc} = 9$</span>. {1:NUMERICAL:=80:0} </li>
+<li> If 2 of the measurements are greater than or equal to <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}\ge\xc} = 2$</span>. {1:NUMERICAL:=87:0} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, it helps to sort the data. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>80</mn><mo>,</mo><mn>81</mn><mo>,</mo><mn>82</mn><mo>,</mo><mn>83</mn><mo>,</mo><mn>84</mn><mo>,</mo><mn>85</mn><mo>,</mo><mn>85</mn><mo>,</mo><mn>85</mn><mo>,</mo><mn>87</mn><mo>,</mo><mn>87</mn></mrow><annotation encoding="application/x-tex">80, 81, 82, 83, 84, 85, 85, 85, 87, 87</annotation></semantics></math></p>
+<p>You could use R to sort the data:</p>
+<pre><code>sort(c(80,85,87,85,83,84,87,85,81,82))</code></pre>
+<pre><code>##  [1] 80 81 82 83 84 85 85 85 87 87</code></pre>
+<p>You could also use a spreadsheet. Paste the list into a spreadsheet. You may need to use <code>Text to Columns</code> function to separate data into cells. Then, highlight cells and use <code>Sort</code> function.</p>
+<ol type = "a">
+<li> There are 5 measurements less than 85. Those measurements are 80, 83, 84, 81, 82. </li>
+<li> There are 4 measurements less than or equal to 83. Those measurements are 80, 83, 81, 82. </li>
+<li> There are 2 measurements greater than 85. Those measurements are 87, 87. </li>
+<li> There are 5 measurements greater than or equal to 85. Those measurements are 85, 87, 85, 87, 85. </li>
+<li> Measurement value 87 has 8 measurements less than it, so <span class="math inline">$\xc=87$</span>. </li>
+<li> The measurement 81 has 2 measurements less than or equal to it, so <span class="math inline">$\xc=81$</span>. </li>
+<li> The measurement 80 has 9 measurements greater than it, so <span class="math inline">$\xc=80$</span>. </li>
+<li> The measurement 87 has 2 measurements greater than or equal to it, so <span class="math inline">$\xc=87$</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>8</defaultgrade>
+</question>
+
+
+<question type="cloze">
+<name>
+<text> R10 Q1 : criteria </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A random procedure generated the following sample (sequence of measurements):</p>
+<table style='width:30%;'>
+<thead>
+<tr>
+<th style="text-align:right;">
+i
+</th>
+<th style="text-align:right;">
+x
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+19
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+11
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+17
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+14
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+18
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+11
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+14
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+14
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:right;">
+11
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the measurements shown as a comma separated list:</p>
+<pre><code>12, 19, 11, 17, 14, 18, 11, 14, 14, 11</code></pre>
+<ol type = "a">
+<li> How many of the measurements are less than 19? In other words, determine <span class="math inline">$\num{\vec{x}&lt;19}$</span>. {1:NUMERICAL:=9:0} </li>
+<li> How many of the measurements are less than or equal to 18? In other words, determine <span class="math inline">$\num{\vec{x}\le18}$</span>. {1:NUMERICAL:=9:0} </li>
+<li> How many of the measurements are greater than 17? In other words, determine <span class="math inline">$\num{\vec{x}&gt;17}$</span>. {1:NUMERICAL:=2:0} </li>
+<li> How many of the measurements are greater than or equal to 14? In other words, determine <span class="math inline">$\num{\vec{x}\ge14}$</span>. {1:NUMERICAL:=6:0} </li>
+<li> If 4 of the measurements are less than <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}&lt;\xc} = 4$</span>. {1:NUMERICAL:=14:0} </li>
+<li> If 3 of the measurements are less than or equal to <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}\le\xc} = 3$</span>. {1:NUMERICAL:=11:0} </li>
+<li> If 7 of the measurements are greater than <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}&gt;\xc} = 7$</span>. {1:NUMERICAL:=11:0} </li>
+<li> If 10 of the measurements are greater than or equal to <span class="math inline">$\xc$</span>, and <span class="math inline">$\xc$</span> is a measurement from sample <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, then what is <span class="math inline">$\xc$</span>? In other words, determine a measurement <span class="math inline">$\xc$</span> from sequence <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">⃗</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> such that <span class="math inline">$\num{\vec{x}\ge\xc} = 10$</span>. {1:NUMERICAL:=11:0} </li>
+</ol>
+</p>]]></text>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>First, it helps to sort the data. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>11</mn><mo>,</mo><mn>11</mn><mo>,</mo><mn>11</mn><mo>,</mo><mn>12</mn><mo>,</mo><mn>14</mn><mo>,</mo><mn>14</mn><mo>,</mo><mn>14</mn><mo>,</mo><mn>17</mn><mo>,</mo><mn>18</mn><mo>,</mo><mn>19</mn></mrow><annotation encoding="application/x-tex">11, 11, 11, 12, 14, 14, 14, 17, 18, 19</annotation></semantics></math></p>
+<p>You could use R to sort the data:</p>
+<pre><code>sort(c(12,19,11,17,14,18,11,14,14,11))</code></pre>
+<pre><code>##  [1] 11 11 11 12 14 14 14 17 18 19</code></pre>
+<p>You could also use a spreadsheet. Paste the list into a spreadsheet. You may need to use <code>Text to Columns</code> function to separate data into cells. Then, highlight cells and use <code>Sort</code> function.</p>
+<ol type = "a">
+<li> There are 9 measurements less than 19. Those measurements are 12, 11, 17, 14, 18, 11, 14, 14, 11. </li>
+<li> There are 9 measurements less than or equal to 18. Those measurements are 12, 11, 17, 14, 18, 11, 14, 14, 11. </li>
+<li> There are 2 measurements greater than 17. Those measurements are 19, 18. </li>
+<li> There are 6 measurements greater than or equal to 14. Those measurements are 19, 17, 14, 18, 14, 14. </li>
+<li> Measurement value 14 has 4 measurements less than it, so <span class="math inline">$\xc=14$</span>. </li>
+<li> The measurement 11 has 3 measurements less than or equal to it, so <span class="math inline">$\xc=11$</span>. </li>
+<li> The measurement 11 has 7 measurements greater than it, so <span class="math inline">$\xc=11$</span>. </li>
+<li> The measurement 11 has 10 measurements greater than or equal to it, so <span class="math inline">$\xc=11$</span>. </li>
+</ol>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>8</defaultgrade>
+</question>
+
+</quiz>

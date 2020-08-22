@@ -1,0 +1,59 @@
+```{r data generation, echo = FALSE, results = "hide"}
+knitr::opts_chunk$set(echo = FALSE)
+options(scipen=100)
+
+while(T){
+  mu = round(runif(1,1,10),2)
+  n = sample(5:12,1)^2
+  sig = round(runif(1,1,10),2)
+  la = runif(1,0.53,0.99)
+  mut = round(mu*n,2)
+  sigt = round(sig*sqrt(n),2)
+  z = round(qnorm(la),2)
+  xt = mut+z*sigt
+  z = (xt-mut)/sigt
+  d = round(xt-mut,2)
+  if(sig<mu & mut<1000 & xt<1000 & round(xt,2)==xt & round(z,2)==z & z!=0){
+    break
+  }
+}
+la = round(pnorm(z),4)
+ra = round(1-la,4)
+ta = round(2*ra,4)
+ca = round(1-ta,4)
+tol = 0.004
+```
+
+Question
+========
+
+When a spinner is spun once, the probability distribution has a mean of `r sprintf('%.2f',mu)` and standard deviation of `r sprintf('%.2f',sig)`.
+
+That spinner will be spun `r n` times, and the **sum** of those rolls will be recorded. What is the probability the sum will be **within** `r d` units from the expected value?
+
+
+Solution
+========
+
+When we will sum `r n` spins, the probability distribution is approximately normal, even if each spin is not normally distributed. (See Central Limit Theorem: https://en.wikipedia.org/wiki/Central_limit_theorem .)
+
+$$\mu_{\sum X} ~=~ n\cdot \mu_X ~=~ (`r n`)(`r mu`) ~=~ `r mut` $$
+
+$$\sigma_{\sum X} ~=~ \sigma_{X} \cdot \sqrt{n} ~=~ (`r sig`)\cdot \sqrt{`r n`} ~=~ `r sigt` $$
+
+We find a $z$ score.
+$$z ~=~ \frac{`r d`}{`r sigt`} ~=~ `r z`$$
+
+We find the probability.
+$$P\left(\left|\sum X - `r mut` \right|< `r d` \right) ~=~ P\left(\big|Z\big|<`r z`\right) ~=~ `r ca` $$
+
+In case you forgot, as long as $z>0$,
+$$P(|Z| < z) ~=~ 2\cdot P(Z<z)-1$$
+
+
+Meta-information
+================
+extype: num
+exsolution: `r ca`
+exname: prob tot near
+extol: 0.008

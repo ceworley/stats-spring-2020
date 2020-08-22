@@ -1,0 +1,19 @@
+Question
+========
+
+Stare hard at the variable.
+$$\mathbf{x}$$
+What is its value?
+
+
+Solution
+========
+
+If you think hard enough, you will know it is 12.
+
+Meta-information
+================
+extype: num
+exsolution: 12
+exname: minimal_example
+extol: 0

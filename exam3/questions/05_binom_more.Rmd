@@ -1,0 +1,79 @@
+```{r data generation, echo = FALSE, results = "hide"}
+knitr::opts_chunk$set(echo = FALSE)
+options(scipen=100)
+
+reduce = function(x){
+  i = 2
+  while(i<50){
+    j = i^2 
+    if(x==0){
+      break}
+    if(x%%j==0){
+      x = x/j
+      i = i-1}
+    if(x==0){
+      break}
+    i = i+1}
+  return(x)
+}
+
+
+while(T){
+  i = sample(1:99,1)
+  p = i/100
+  n = reduce(i*(100-i))
+  
+  while(n<40){
+    n = n*sample(2:5,1)^2
+  }
+  
+  if(n <= 100){
+    n = n*sample(1:3,1)^2
+  }
+  
+  mu = n*p
+  sig = sqrt(n*p*(1-p))
+  la = runif(1,0.01,0.99)
+  z = round(qnorm(la),2)
+  x = floor(mu+z*sig)+0.5
+  z = (x-mu)/sig
+  if(n*p>10 & n*(1-p)>10 & round(z,2)==z & z!=0){
+    break
+  }
+}
+la = round(pnorm(z),4)
+ra = round(1-la,4)
+```
+
+Question
+========
+
+When a spinner is spun once, the chance of success is `r p`.
+
+That spinner will be spun `r n` times. What is the probability the number of successes will be **more** than `r sprintf('%.1f',x)`?
+
+
+Solution
+========
+
+Use the de Moivre-Laplace Theorem, which tells us this binomial distribution is approximately normal. Determine the parameters.
+$$\mu ~=~ np ~=~ (`r n`)(`r p`) ~=~ `r mu` $$
+$$\sigma ~=~ \sqrt{np(1-p)} ~=~ \sqrt{(`r n`)(`r p`)(`r 1-p`)} ~=~ `r sig` $$
+
+Find the $z$ score.
+$$z ~=~ \frac{`r x`-`r mu`}{`r sig`} ~=~ `r z`$$
+
+Determine the probability.
+$$P(Z>`r z`) = `r ra` $$
+
+In case you forgot,
+$$P(Z > z) ~=~ 1 - P(Z<z)$$
+
+
+
+Meta-information
+================
+extype: num
+exsolution: `r ra`
+exname: prob binom more
+extol: 0.004

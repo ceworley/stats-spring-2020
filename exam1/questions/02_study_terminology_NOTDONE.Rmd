@@ -1,0 +1,85 @@
+```{r data generation, echo = FALSE, results = "hide"}
+library(exams)
+
+# stem, individuals, variable, q/c, sample size, implied population
+
+q1 = list(1,"A traffic engineer investigated how quickly automobiles were driven down a road, so she measured the speed of 200 cars.",
+          "the cars that had their speeds measured",
+          "the speed of the cars",
+          "10",
+          200,
+          "all cars that drive down that road")
+
+q2 = list(2,"A website with 100,000 users asked 50 of its users whether they jog more than once a week.",
+          "the users who were asked about jogging",
+          "whether the users claim to jog more than once a week",
+          "01",
+          50,
+          "all users of the website")
+
+q3 = list(3,"A town with 5000 residents asked 120 residents how many miles they travel for groceries",
+          "the residents who were asked",
+          "miles travelled for groceries",
+          "10",
+          120,
+          "all residents of the town")
+
+q4 = list(4,"An archer wonders if her aim needs to be adjusted horizontally, so she records the horizontal position of 20 arrows (using centimeters, with the bullseye at 0, leftward negative, rightward positive).",
+          "the recorded arrows",
+          "the horizontal position of each arrow",
+          "10",
+          20,
+          "the infinite possible arrows shot without adjusting aim")
+
+questions = data.frame(qid = )
+
+
+sa1 = mchoice2string(c("c","q")==ans[mix[1]])
+sa2 = mchoice2string(c("c","q")==ans[mix[2]])
+sa3 = mchoice2string(c("c","q")==ans[mix[3]])
+sa4 = mchoice2string(c("c","q")==ans[mix[4]])
+sa5 = mchoice2string(c("c","q")==ans[mix[5]])
+```
+
+Question
+========
+
+Classify each of the following variables as **categorical** or **quantitative**.
+
+a. `r phrases[mix[1]]`
+b. `r phrases[mix[2]]`
+c. `r phrases[mix[3]]`
+d. `r phrases[mix[4]]`
+e. `r phrases[mix[5]]`
+
+Answerlist
+--------
+* Categorical variable describes "`r phrases[mix[1]]`"
+* Quantitative variable describes "`r phrases[mix[1]]`"
+* Categorical variable describes "`r phrases[mix[2]]`"
+* Quantitative variable describes "`r phrases[mix[2]]`"
+* Categorical variable describes "`r phrases[mix[3]]`"
+* Quantitative variable describes "`r phrases[mix[3]]`"
+* Categorical variable describes "`r phrases[mix[4]]`"
+* Quantitative variable describes "`r phrases[mix[4]]`"
+* Categorical variable describes "`r phrases[mix[5]]`"
+* Quantitative variable describes "`r phrases[mix[5]]`"
+
+
+Solution
+========
+
+Quantitative variables would be recorded as a number. Categorical variables would be recorded as a phrase.
+
+Of course this is an oversimplification. 
+
+For a more thorough understanding, you should consider some difficult cases. Area codes and telephone numbers are categorical because there is no sense in ranking, subtracting, or dividing them. Also, "color" is typically thought of as categorical, but computers use numbers (usually 3 numbers for each color) to reference colors (see RGB or HSV). 
+
+
+Meta-information
+============
+extype: cloze
+exclozetype: schoice|schoice|schoice|schoice|schoice
+exsolution: `r sa1`|`r sa2`|`r sa3`|`r sa4`|`r sa5`
+exname: cat qua
+extol: 0

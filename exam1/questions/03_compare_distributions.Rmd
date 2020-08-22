@@ -1,0 +1,33 @@
+```{r data generation, echo = FALSE, results = "hide"}
+library(exams)
+#We will use beta distributions to create two dotplots for students to analyze
+#types = bell, uniform, bimodal, skew-left, skew-right
+
+# shape1
+# shape2
+# same or different shape
+# center1 (median)
+# center2 (median)
+# approximately same center, 1 bigger, 2 bigger
+# 
+
+```
+
+Question
+========
+
+
+
+Solution
+========
+
+
+
+
+Meta-information
+============
+extype: cloze
+exclozetype: schoice|schoice|schoice|schoice|schoice
+exsolution: `r sa1`|`r sa2`|`r sa3`|`r sa4`|`r sa5`
+exname: cat qua
+extol: 0
