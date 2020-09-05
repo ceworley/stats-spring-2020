@@ -18,7 +18,7 @@ $$\text{lower boundary} = \hat{p} - \frac{2 \sqrt{\hat{p}(1-\hat{p})}}{\sqrt{n}}
 $$\text{upper boundary} = \hat{p} + \frac{2 \sqrt{\hat{p}(1-\hat{p})}}{\sqrt{n}}$$
 where $\hat{p}$ is the sample proportion and $n$ is the sample size. The 2 comes from the fact that 95% of normal measurements land within 2 standard deviations from the mean.
 
-The quantity that we subtract from or add to the sample proprotion is called **the margin of error**.
+The quantity that we subtract from or add to the sample proportion is called **the margin of error**.
 $$\text{margin of error} = \frac{2 \sqrt{\hat{p}(1-\hat{p})}}{\sqrt{n}}$$
 
 If we know $\hat{p}$ will be approximately `r phat`, and we want the margin of error to be approximately `r me`, then how large does the sample size need to be?

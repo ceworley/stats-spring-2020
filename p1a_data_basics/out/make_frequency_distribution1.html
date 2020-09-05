@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+<title>make_frequency_distribution</title>
+<style type="text/css">
+body{font-family: Arial, Helvetica, Sans;}
+</style>
+
+<meta charset="UTF-8">
+
+</head>
+
+<body>
+<h2>make_frequency_distribution</h2>
+
+<ol>
+<li>
+<hr><h3>Question</h3>
+<p>A random procedure generated many measurements: <a href="data:text/csv;base64,ImkiLCJ4IgoxLDY3LjU1MTQyOTAzOTE0NTEKMiw2OC4yOTgwOTU1NTE4MjQxCjMsNjcuMjQyMjE2OTg0MDYzOAo0LDY5Ljk5MDAwNzIzODM1MzMKNSw2OS45NTQxNjc4NTA5NTQ1CjYsNjkuOTU4MDM4OTUzNDUzNQo3LDY3LjIwNDQ4NjQ3Nzk4NDgKOCw2OS45NDI1MDMyMTk5MjA0CjksNjkuOTM5Nzg0NTc0MDIyCjEwLDY5Ljk1MzExMDYyNDY1MDUKMTEsNjkuOTYzOTQ5NDUyNjQyNgoxMiw2OC44MzY1ODEwMDQ4ODg4CjEzLDY5LjA1MzI4MTAwMTg0NDEKMTQsNjguMDYyODcyNjkwMzkzNAoxNSw2OC44NTI0NzI0Njg2NDM2CjE2LDY5Ljk5NjY2MTQ3NDEzNAoxNyw2OS4yNjc2OTU0MzkxNDMzCjE4LDY4LjE0OTEyNTMzNjU4NQoxOSw2OS45ODY2NTA1NTE3OTMyCjIwLDY5Ljk5MzE1NDMzOTU2NwoyMSw2OS45ODYzMTU0NjY3MDgKMjIsNjcuODg3NTU1NTkxODg5MQoyMyw2OS45MDczMjY4NTU5Nzk5CjI0LDY5LjE0NTQ2ODExNTU5NjEKMjUsNjkuODU1NDc4MzQ3MDM3NAoyNiw2OS45NTQ4NDQwNzcwMDE1CjI3LDY3LjE3MTc3ODUyNTg0MDEKMjgsNjkuOTk5NTY1ODA2MjMyOQoyOSw2Ny43MDc2NTg1MzMxMDczCjMwLDY4Ljc5MTEyMTM0NDMyMQozMSw2Ny44MTkyODQ0OTg0NTM3CjMyLDY5LjcwMTg2NzcxMTc0MTgKMzMsNjkuMDA0MDE5Njc2NjU4NAozNCw2OS45NTI0NzU2Njc1MTc3CjM1LDY5LjgwOTYwNzQ3OTU3MzgKMzYsNjkuNjA2NjQ5OTkwMzM3OQozNyw2Ni43ODA3NTE3NzMyODE2CjM4LDY4Ljc3ODk4NjI0OTE2MDEKMzksNjguOTU3MTQyMTUxNDc0Mwo0MCw2OS41OTU5NTc3NTA2MTMyCjQxLDY5LjYwMDU2NjYzODM4MDUKNDIsNjkuOTgyMzE5OTQ4OTA4CjQzLDY5LjYzNzE1OTI0Mjc3NDMKNDQsNjguOTYyMTkxNjM5OTY3NAo0NSw2OS45MzI5NzYwNzg1NzYzCjQ2LDY2LjUzMTc4OTE2NTk3NjMKNDcsNjkuNTEzNzQxODIyMDMxCjQ4LDY5LjYzNjM3MTU3NjAwOTYKNDksNjkuOTc2MDc2NTEyMTAzMQo1MCw2Ni41NzExODcwMzMyOTYxCjUxLDY5Ljk5OTY0NjYyMzg3OTEKNTIsNjguNzY3MTA1MDAwNzY3OQo1Myw2OS40NzUzNDY4MzAzMjA5CjU0LDY4LjA3MDM0MjU5ODY3OTgKNTUsNjkuOTY0MzA0MDE5NDQzNAo1Niw2OS45MTQzOTUyMTA5MDk4CjU3LDY5LjkyNDE4NDcwOTE0NQo1OCw2OS4zNTQyMjcxODQzNzEzCjU5LDY5LjA5NzA3NjYwMzQzNDMKNjAsNjkuMzQ0OTU2NzQxNzc0OQo2MSw2OS43OTc4MzM0MTE4ODU5CjYyLDY1LjQwMTg1ODM5NTQ5NjcKNjMsNjcuODQ1MzI0Nzc4MzA3NAo2NCw2OS4yNzIyNjExMTA2MzIyCjY1LDY5LjI2OTgwMTI3NzAzOTIKNjYsNjguODc4MzQ2ODkzMDE1Mwo2Nyw2OS44NTg4MTQzNDgyMTkKNjgsNjkuOTIzODgxMzU0ODI3Mwo2OSw2OS43Mzc5Nzg4Mjk3MTYzCjcwLDY5LjcxMDg3NDEwODM0OTIKNzEsNjguMTQ2OTYzOTY1OTQxMwo3Miw2OS45NTY2OTYwNTYyMDU2CjczLDY5Ljk2ODU4MTA4MTQ1ODQKNzQsNjcuODY0NTU0NjQ0NDg3NQo3NSw2Ny40NzE5ODQyMDg2MDQxCg==" download="make_freq_dist.csv">download data</a></p>
+<p>Please complete the <a href="https://en.wikipedia.org/wiki/Frequency_distribution" target="blank">frequency distribution</a> using breaks 65, 66, 67, 68, 69, 70:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Interval</th>
+<th align="center">Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">65 to 66</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">66 to 67</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">67 to 68</td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="center">68 to 69</td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="center">69 to 70</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<br/>
+<ol type="a">
+</ol>
+<br/>
+<hr><hr><hr><h3>Solution</h3>
+<p>You will want to use a computer to answer these questions.</p>
+<p>In a spreadsheet, open the data, add the breaks as a column; then, use the <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_FREQUENCY_function" target="blank"><code>FREQUENCY function</code></a>.</p>
+<p>In R, open the data and use the <a href="https://www.rdocumentation.org/packages/graphics/versions/3.6.2/topics/hist"><code>hist</code></a> function. You supply the breaks and read the counts:</p>
+<pre class="text"><code>mydata = read.csv(&quot;make_freq_dist.csv&quot;)
+x = mydata$x
+myhist = hist(x,breaks=c(65,66,67,68,69,70))</code></pre>
+<pre class="text"><code>myhist$counts</code></pre>
+<pre><code>## [1]  1  3 10 13 48</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="center">interval</th>
+<th align="center">frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">65 to 66</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">66 to 67</td>
+<td align="center">3</td>
+</tr>
+<tr class="odd">
+<td align="center">67 to 68</td>
+<td align="center">10</td>
+</tr>
+<tr class="even">
+<td align="center">68 to 69</td>
+<td align="center">13</td>
+</tr>
+<tr class="odd">
+<td align="center">69 to 70</td>
+<td align="center">48</td>
+</tr>
+</tbody>
+</table>
+<br/>
+<ol type="a">
+<li>
+
+</li>
+<li>
+
+</li>
+<li>
+
+</li>
+<li>
+
+</li>
+<li>
+
+</li>
+</ol>
+<br/>
+</li>
+</ol>
+
+</body>
+</html>

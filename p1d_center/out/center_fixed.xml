@@ -1,0 +1,1305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+
+
+<question type="category">
+<category>
+<text>$course$/center/get_mean</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R01 Q1 : get_mean </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A sample was gathered.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo>=</mo><mn>56.41</mn><mo>,</mo><mn>55.19</mn><mo>,</mo><mn>52.39</mn><mo>,</mo><mn>54.77</mn><mo>,</mo><mn>53.47</mn><mo>,</mo><mn>56.95</mn><mo>,</mo><mn>53.13</mn><mo>,</mo><mn>54.9</mn><mo>,</mo><mn>53.48</mn><mo>,</mo><mn>54.48</mn><mo>,</mo><mn>53.61</mn></mrow><annotation encoding="application/x-tex">\mathbf{x} = 56.41, 55.19, 52.39, 54.77, 53.47, 56.95, 53.13, 54.9, 53.48, 54.48, 53.61 </annotation></semantics></math></p>
+<p>You can download the data as a <a href="@@PLUGINFILE@@/get_mean.csv">CSV file</a>.</p>
+<p>Determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math>, the <a href="https://en.wikipedia.org/wiki/Mean">sample mean</a>. Your answer can be rounded to the nearest tenth.</p>
+</p>]]></text>
+<file name="get_mean.csv" encoding="base64">aSx4CjEsNTYuNDEKMiw1NS4xOQozLDUyLjM5CjQsNTQuNzcKNSw1My40Nwo2LDU2Ljk1CjcsNTMuMTMKOCw1NC45CjksNTMuNDgKMTAsNTQuNDgKMTEsNTMuNjEK</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>You need to sum the values (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><annotation encoding="application/x-tex">\sum \mathbf{x}</annotation></semantics></math>, see <a href="https://en.wikipedia.org/wiki/Summation">summation</a>) and divide by the sample size (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo>=</mo><mfrac><mrow><mo>∑</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><mi>n</mi></mfrac><mo>=</mo><mfrac><mn>598.78</mn><mn>11</mn></mfrac><mo>=</mo><mn>54.4345</mn></mrow><annotation encoding="application/x-tex">\bar{x} = \frac{\sum \mathbf{x}}{n} = \frac{598.78}{11} = 54.4345</annotation></semantics></math> You can round <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math> to the nearest tenth: 54.4.</p>
+<p>In a spreadsheet, you can use the <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_AVERAGE_function"><code>AVERAGE</code> function</a>. You can see a <a href="@@PLUGINFILE@@/mean_solution.csv">solution spreadsheet here</a>.</p>
+<p>In R, you can use the <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/mean"><code>MEAN</code> function</a>.</p>
+<pre class="text"><code># First, get the csv into the working directory... then...
+data = read.csv(&quot;get_mean.csv&quot;)
+x = data$x
+xbar = mean(x)
+round(xbar,1)</code></pre>
+<pre><code>## [1] 54.4</code></pre>
+</p>]]></text>
+<file name="mean_solution.csv" encoding="base64">ImkiLCJ4IgoiMSIsIjU2LjQxIgoiMiIsIjU1LjE5IgoiMyIsIjUyLjM5IgoiNCIsIjU0Ljc3IgoiNSIsIjUzLjQ3IgoiNiIsIjU2Ljk1IgoiNyIsIjUzLjEzIgoiOCIsIjU0LjkiCiI5IiwiNTMuNDgiCiIxMCIsIjU0LjQ4IgoiMTEiLCI1My42MSIKIiIsIiIKIiIsImF2ZXJhZ2UoeCkiCiIiLCI9YXZlcmFnZShCMjpCMTIpIgo=</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>54.4345455</text>
+<tolerance>0.1</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R02 Q1 : get_mean </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A sample was gathered.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo>=</mo><mn>60.07</mn><mo>,</mo><mn>64.64</mn><mo>,</mo><mn>60.97</mn><mo>,</mo><mn>64.82</mn><mo>,</mo><mn>60</mn><mo>,</mo><mn>60.23</mn><mo>,</mo><mn>64.99</mn></mrow><annotation encoding="application/x-tex">\mathbf{x} = 60.07, 64.64, 60.97, 64.82, 60, 60.23, 64.99 </annotation></semantics></math></p>
+<p>You can download the data as a <a href="@@PLUGINFILE@@/get_mean.csv">CSV file</a>.</p>
+<p>Determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math>, the <a href="https://en.wikipedia.org/wiki/Mean">sample mean</a>. Your answer can be rounded to the nearest tenth.</p>
+</p>]]></text>
+<file name="get_mean.csv" encoding="base64">aSx4CjEsNjAuMDcKMiw2NC42NAozLDYwLjk3CjQsNjQuODIKNSw2MAo2LDYwLjIzCjcsNjQuOTkK</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>You need to sum the values (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><annotation encoding="application/x-tex">\sum \mathbf{x}</annotation></semantics></math>, see <a href="https://en.wikipedia.org/wiki/Summation">summation</a>) and divide by the sample size (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo>=</mo><mfrac><mrow><mo>∑</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><mi>n</mi></mfrac><mo>=</mo><mfrac><mn>435.72</mn><mn>7</mn></mfrac><mo>=</mo><mn>62.2457</mn></mrow><annotation encoding="application/x-tex">\bar{x} = \frac{\sum \mathbf{x}}{n} = \frac{435.72}{7} = 62.2457</annotation></semantics></math> You can round <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math> to the nearest tenth: 62.2.</p>
+<p>In a spreadsheet, you can use the <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_AVERAGE_function"><code>AVERAGE</code> function</a>. You can see a <a href="@@PLUGINFILE@@/mean_solution.csv">solution spreadsheet here</a>.</p>
+<p>In R, you can use the <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/mean"><code>MEAN</code> function</a>.</p>
+<pre class="text"><code># First, get the csv into the working directory... then...
+data = read.csv(&quot;get_mean.csv&quot;)
+x = data$x
+xbar = mean(x)
+round(xbar,1)</code></pre>
+<pre><code>## [1] 62.2</code></pre>
+</p>]]></text>
+<file name="mean_solution.csv" encoding="base64">ImkiLCJ4IgoiMSIsIjYwLjA3IgoiMiIsIjY0LjY0IgoiMyIsIjYwLjk3IgoiNCIsIjY0LjgyIgoiNSIsIjYwIgoiNiIsIjYwLjIzIgoiNyIsIjY0Ljk5IgoiIiwiIgoiIiwiYXZlcmFnZSh4KSIKIiIsIj1hdmVyYWdlKEIyOkI4KSIK</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>62.2457143</text>
+<tolerance>0.1</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R03 Q1 : get_mean </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A sample was gathered.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo>=</mo><mn>38.71</mn><mo>,</mo><mn>38.34</mn><mo>,</mo><mn>32.91</mn><mo>,</mo><mn>44.93</mn><mo>,</mo><mn>48.53</mn><mo>,</mo><mn>45.71</mn><mo>,</mo><mn>39.61</mn><mo>,</mo><mn>42.72</mn></mrow><annotation encoding="application/x-tex">\mathbf{x} = 38.71, 38.34, 32.91, 44.93, 48.53, 45.71, 39.61, 42.72 </annotation></semantics></math></p>
+<p>You can download the data as a <a href="@@PLUGINFILE@@/get_mean.csv">CSV file</a>.</p>
+<p>Determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math>, the <a href="https://en.wikipedia.org/wiki/Mean">sample mean</a>. Your answer can be rounded to the nearest tenth.</p>
+</p>]]></text>
+<file name="get_mean.csv" encoding="base64">aSx4CjEsMzguNzEKMiwzOC4zNAozLDMyLjkxCjQsNDQuOTMKNSw0OC41Mwo2LDQ1LjcxCjcsMzkuNjEKOCw0Mi43Mgo=</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>You need to sum the values (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><annotation encoding="application/x-tex">\sum \mathbf{x}</annotation></semantics></math>, see <a href="https://en.wikipedia.org/wiki/Summation">summation</a>) and divide by the sample size (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo>=</mo><mfrac><mrow><mo>∑</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><mi>n</mi></mfrac><mo>=</mo><mfrac><mn>331.46</mn><mn>8</mn></mfrac><mo>=</mo><mn>41.4325</mn></mrow><annotation encoding="application/x-tex">\bar{x} = \frac{\sum \mathbf{x}}{n} = \frac{331.46}{8} = 41.4325</annotation></semantics></math> You can round <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math> to the nearest tenth: 41.4.</p>
+<p>In a spreadsheet, you can use the <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_AVERAGE_function"><code>AVERAGE</code> function</a>. You can see a <a href="@@PLUGINFILE@@/mean_solution.csv">solution spreadsheet here</a>.</p>
+<p>In R, you can use the <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/mean"><code>MEAN</code> function</a>.</p>
+<pre class="text"><code># First, get the csv into the working directory... then...
+data = read.csv(&quot;get_mean.csv&quot;)
+x = data$x
+xbar = mean(x)
+round(xbar,1)</code></pre>
+<pre><code>## [1] 41.4</code></pre>
+</p>]]></text>
+<file name="mean_solution.csv" encoding="base64">ImkiLCJ4IgoiMSIsIjM4LjcxIgoiMiIsIjM4LjM0IgoiMyIsIjMyLjkxIgoiNCIsIjQ0LjkzIgoiNSIsIjQ4LjUzIgoiNiIsIjQ1LjcxIgoiNyIsIjM5LjYxIgoiOCIsIjQyLjcyIgoiIiwiIgoiIiwiYXZlcmFnZSh4KSIKIiIsIj1hdmVyYWdlKEIyOkI5KSIK</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>41.4325</text>
+<tolerance>0.1</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R04 Q1 : get_mean </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A sample was gathered.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo>=</mo><mn>53.3</mn><mo>,</mo><mn>50.22</mn><mo>,</mo><mn>50</mn><mo>,</mo><mn>50.98</mn><mo>,</mo><mn>51.43</mn><mo>,</mo><mn>52.5</mn><mo>,</mo><mn>50.01</mn></mrow><annotation encoding="application/x-tex">\mathbf{x} = 53.3, 50.22, 50, 50.98, 51.43, 52.5, 50.01 </annotation></semantics></math></p>
+<p>You can download the data as a <a href="@@PLUGINFILE@@/get_mean.csv">CSV file</a>.</p>
+<p>Determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math>, the <a href="https://en.wikipedia.org/wiki/Mean">sample mean</a>. Your answer can be rounded to the nearest tenth.</p>
+</p>]]></text>
+<file name="get_mean.csv" encoding="base64">aSx4CjEsNTMuMwoyLDUwLjIyCjMsNTAKNCw1MC45OAo1LDUxLjQzCjYsNTIuNQo3LDUwLjAxCg==</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>You need to sum the values (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><annotation encoding="application/x-tex">\sum \mathbf{x}</annotation></semantics></math>, see <a href="https://en.wikipedia.org/wiki/Summation">summation</a>) and divide by the sample size (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo>=</mo><mfrac><mrow><mo>∑</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><mi>n</mi></mfrac><mo>=</mo><mfrac><mn>358.44</mn><mn>7</mn></mfrac><mo>=</mo><mn>51.2057</mn></mrow><annotation encoding="application/x-tex">\bar{x} = \frac{\sum \mathbf{x}}{n} = \frac{358.44}{7} = 51.2057</annotation></semantics></math> You can round <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math> to the nearest tenth: 51.2.</p>
+<p>In a spreadsheet, you can use the <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_AVERAGE_function"><code>AVERAGE</code> function</a>. You can see a <a href="@@PLUGINFILE@@/mean_solution.csv">solution spreadsheet here</a>.</p>
+<p>In R, you can use the <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/mean"><code>MEAN</code> function</a>.</p>
+<pre class="text"><code># First, get the csv into the working directory... then...
+data = read.csv(&quot;get_mean.csv&quot;)
+x = data$x
+xbar = mean(x)
+round(xbar,1)</code></pre>
+<pre><code>## [1] 51.2</code></pre>
+</p>]]></text>
+<file name="mean_solution.csv" encoding="base64">ImkiLCJ4IgoiMSIsIjUzLjMiCiIyIiwiNTAuMjIiCiIzIiwiNTAiCiI0IiwiNTAuOTgiCiI1IiwiNTEuNDMiCiI2IiwiNTIuNSIKIjciLCI1MC4wMSIKIiIsIiIKIiIsImF2ZXJhZ2UoeCkiCiIiLCI9YXZlcmFnZShCMjpCOCkiCg==</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>51.2057143</text>
+<tolerance>0.1</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R05 Q1 : get_mean </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A sample was gathered.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo>=</mo><mn>70.11</mn><mo>,</mo><mn>85</mn><mo>,</mo><mn>84.96</mn><mo>,</mo><mn>76.86</mn><mo>,</mo><mn>84.5</mn><mo>,</mo><mn>71.52</mn><mo>,</mo><mn>70.75</mn><mo>,</mo><mn>70</mn><mo>,</mo><mn>85</mn><mo>,</mo><mn>70</mn></mrow><annotation encoding="application/x-tex">\mathbf{x} = 70.11, 85, 84.96, 76.86, 84.5, 71.52, 70.75, 70, 85, 70 </annotation></semantics></math></p>
+<p>You can download the data as a <a href="@@PLUGINFILE@@/get_mean.csv">CSV file</a>.</p>
+<p>Determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math>, the <a href="https://en.wikipedia.org/wiki/Mean">sample mean</a>. Your answer can be rounded to the nearest tenth.</p>
+</p>]]></text>
+<file name="get_mean.csv" encoding="base64">aSx4CjEsNzAuMTEKMiw4NQozLDg0Ljk2CjQsNzYuODYKNSw4NC41CjYsNzEuNTIKNyw3MC43NQo4LDcwCjksODUKMTAsNzAK</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>You need to sum the values (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><annotation encoding="application/x-tex">\sum \mathbf{x}</annotation></semantics></math>, see <a href="https://en.wikipedia.org/wiki/Summation">summation</a>) and divide by the sample size (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo>=</mo><mfrac><mrow><mo>∑</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><mi>n</mi></mfrac><mo>=</mo><mfrac><mn>768.7</mn><mn>10</mn></mfrac><mo>=</mo><mn>76.87</mn></mrow><annotation encoding="application/x-tex">\bar{x} = \frac{\sum \mathbf{x}}{n} = \frac{768.7}{10} = 76.87</annotation></semantics></math> You can round <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math> to the nearest tenth: 76.9.</p>
+<p>In a spreadsheet, you can use the <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_AVERAGE_function"><code>AVERAGE</code> function</a>. You can see a <a href="@@PLUGINFILE@@/mean_solution.csv">solution spreadsheet here</a>.</p>
+<p>In R, you can use the <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/mean"><code>MEAN</code> function</a>.</p>
+<pre class="text"><code># First, get the csv into the working directory... then...
+data = read.csv(&quot;get_mean.csv&quot;)
+x = data$x
+xbar = mean(x)
+round(xbar,1)</code></pre>
+<pre><code>## [1] 76.9</code></pre>
+</p>]]></text>
+<file name="mean_solution.csv" encoding="base64">ImkiLCJ4IgoiMSIsIjcwLjExIgoiMiIsIjg1IgoiMyIsIjg0Ljk2IgoiNCIsIjc2Ljg2IgoiNSIsIjg0LjUiCiI2IiwiNzEuNTIiCiI3IiwiNzAuNzUiCiI4IiwiNzAiCiI5IiwiODUiCiIxMCIsIjcwIgoiIiwiIgoiIiwiYXZlcmFnZSh4KSIKIiIsIj1hdmVyYWdlKEIyOkIxMSkiCg==</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>76.87</text>
+<tolerance>0.1</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R06 Q1 : get_mean </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A sample was gathered.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo>=</mo><mn>45.04</mn><mo>,</mo><mn>46.83</mn><mo>,</mo><mn>46.73</mn><mo>,</mo><mn>49.02</mn><mo>,</mo><mn>46.91</mn><mo>,</mo><mn>49.18</mn><mo>,</mo><mn>47.29</mn><mo>,</mo><mn>49.61</mn><mo>,</mo><mn>45.39</mn></mrow><annotation encoding="application/x-tex">\mathbf{x} = 45.04, 46.83, 46.73, 49.02, 46.91, 49.18, 47.29, 49.61, 45.39 </annotation></semantics></math></p>
+<p>You can download the data as a <a href="@@PLUGINFILE@@/get_mean.csv">CSV file</a>.</p>
+<p>Determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math>, the <a href="https://en.wikipedia.org/wiki/Mean">sample mean</a>. Your answer can be rounded to the nearest tenth.</p>
+</p>]]></text>
+<file name="get_mean.csv" encoding="base64">aSx4CjEsNDUuMDQKMiw0Ni44MwozLDQ2LjczCjQsNDkuMDIKNSw0Ni45MQo2LDQ5LjE4CjcsNDcuMjkKOCw0OS42MQo5LDQ1LjM5Cg==</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>You need to sum the values (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><annotation encoding="application/x-tex">\sum \mathbf{x}</annotation></semantics></math>, see <a href="https://en.wikipedia.org/wiki/Summation">summation</a>) and divide by the sample size (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo>=</mo><mfrac><mrow><mo>∑</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><mi>n</mi></mfrac><mo>=</mo><mfrac><mn>426</mn><mn>9</mn></mfrac><mo>=</mo><mn>47.3333</mn></mrow><annotation encoding="application/x-tex">\bar{x} = \frac{\sum \mathbf{x}}{n} = \frac{426}{9} = 47.3333</annotation></semantics></math> You can round <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math> to the nearest tenth: 47.3.</p>
+<p>In a spreadsheet, you can use the <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_AVERAGE_function"><code>AVERAGE</code> function</a>. You can see a <a href="@@PLUGINFILE@@/mean_solution.csv">solution spreadsheet here</a>.</p>
+<p>In R, you can use the <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/mean"><code>MEAN</code> function</a>.</p>
+<pre class="text"><code># First, get the csv into the working directory... then...
+data = read.csv(&quot;get_mean.csv&quot;)
+x = data$x
+xbar = mean(x)
+round(xbar,1)</code></pre>
+<pre><code>## [1] 47.3</code></pre>
+</p>]]></text>
+<file name="mean_solution.csv" encoding="base64">ImkiLCJ4IgoiMSIsIjQ1LjA0IgoiMiIsIjQ2LjgzIgoiMyIsIjQ2LjczIgoiNCIsIjQ5LjAyIgoiNSIsIjQ2LjkxIgoiNiIsIjQ5LjE4IgoiNyIsIjQ3LjI5IgoiOCIsIjQ5LjYxIgoiOSIsIjQ1LjM5IgoiIiwiIgoiIiwiYXZlcmFnZSh4KSIKIiIsIj1hdmVyYWdlKEIyOkIxMCkiCg==</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>47.3333333</text>
+<tolerance>0.1</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R07 Q1 : get_mean </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A sample was gathered.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo>=</mo><mn>74.31</mn><mo>,</mo><mn>74.1</mn><mo>,</mo><mn>66.86</mn><mo>,</mo><mn>70.12</mn><mo>,</mo><mn>66.52</mn><mo>,</mo><mn>72.51</mn><mo>,</mo><mn>67.05</mn><mo>,</mo><mn>67.99</mn><mo>,</mo><mn>67.64</mn><mo>,</mo><mn>71.98</mn><mo>,</mo><mn>66.19</mn><mo>,</mo><mn>65.88</mn></mrow><annotation encoding="application/x-tex">\mathbf{x} = 74.31, 74.1, 66.86, 70.12, 66.52, 72.51, 67.05, 67.99, 67.64, 71.98, 66.19, 65.88 </annotation></semantics></math></p>
+<p>You can download the data as a <a href="@@PLUGINFILE@@/get_mean.csv">CSV file</a>.</p>
+<p>Determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math>, the <a href="https://en.wikipedia.org/wiki/Mean">sample mean</a>. Your answer can be rounded to the nearest tenth.</p>
+</p>]]></text>
+<file name="get_mean.csv" encoding="base64">aSx4CjEsNzQuMzEKMiw3NC4xCjMsNjYuODYKNCw3MC4xMgo1LDY2LjUyCjYsNzIuNTEKNyw2Ny4wNQo4LDY3Ljk5CjksNjcuNjQKMTAsNzEuOTgKMTEsNjYuMTkKMTIsNjUuODgK</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>You need to sum the values (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><annotation encoding="application/x-tex">\sum \mathbf{x}</annotation></semantics></math>, see <a href="https://en.wikipedia.org/wiki/Summation">summation</a>) and divide by the sample size (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo>=</mo><mfrac><mrow><mo>∑</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><mi>n</mi></mfrac><mo>=</mo><mfrac><mn>831.15</mn><mn>12</mn></mfrac><mo>=</mo><mn>69.2625</mn></mrow><annotation encoding="application/x-tex">\bar{x} = \frac{\sum \mathbf{x}}{n} = \frac{831.15}{12} = 69.2625</annotation></semantics></math> You can round <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math> to the nearest tenth: 69.3.</p>
+<p>In a spreadsheet, you can use the <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_AVERAGE_function"><code>AVERAGE</code> function</a>. You can see a <a href="@@PLUGINFILE@@/mean_solution.csv">solution spreadsheet here</a>.</p>
+<p>In R, you can use the <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/mean"><code>MEAN</code> function</a>.</p>
+<pre class="text"><code># First, get the csv into the working directory... then...
+data = read.csv(&quot;get_mean.csv&quot;)
+x = data$x
+xbar = mean(x)
+round(xbar,1)</code></pre>
+<pre><code>## [1] 69.3</code></pre>
+</p>]]></text>
+<file name="mean_solution.csv" encoding="base64">ImkiLCJ4IgoiMSIsIjc0LjMxIgoiMiIsIjc0LjEiCiIzIiwiNjYuODYiCiI0IiwiNzAuMTIiCiI1IiwiNjYuNTIiCiI2IiwiNzIuNTEiCiI3IiwiNjcuMDUiCiI4IiwiNjcuOTkiCiI5IiwiNjcuNjQiCiIxMCIsIjcxLjk4IgoiMTEiLCI2Ni4xOSIKIjEyIiwiNjUuODgiCiIiLCIiCiIiLCJhdmVyYWdlKHgpIgoiIiwiPWF2ZXJhZ2UoQjI6QjEzKSIK</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>69.2625</text>
+<tolerance>0.1</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R08 Q1 : get_mean </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A sample was gathered.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo>=</mo><mn>25.72</mn><mo>,</mo><mn>24.96</mn><mo>,</mo><mn>23.85</mn><mo>,</mo><mn>24.27</mn><mo>,</mo><mn>23.41</mn><mo>,</mo><mn>24.78</mn><mo>,</mo><mn>23.25</mn><mo>,</mo><mn>25.86</mn><mo>,</mo><mn>22.41</mn><mo>,</mo><mn>25.23</mn><mo>,</mo><mn>23.2</mn></mrow><annotation encoding="application/x-tex">\mathbf{x} = 25.72, 24.96, 23.85, 24.27, 23.41, 24.78, 23.25, 25.86, 22.41, 25.23, 23.2 </annotation></semantics></math></p>
+<p>You can download the data as a <a href="@@PLUGINFILE@@/get_mean.csv">CSV file</a>.</p>
+<p>Determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math>, the <a href="https://en.wikipedia.org/wiki/Mean">sample mean</a>. Your answer can be rounded to the nearest tenth.</p>
+</p>]]></text>
+<file name="get_mean.csv" encoding="base64">aSx4CjEsMjUuNzIKMiwyNC45NgozLDIzLjg1CjQsMjQuMjcKNSwyMy40MQo2LDI0Ljc4CjcsMjMuMjUKOCwyNS44Ngo5LDIyLjQxCjEwLDI1LjIzCjExLDIzLjIK</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>You need to sum the values (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><annotation encoding="application/x-tex">\sum \mathbf{x}</annotation></semantics></math>, see <a href="https://en.wikipedia.org/wiki/Summation">summation</a>) and divide by the sample size (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo>=</mo><mfrac><mrow><mo>∑</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><mi>n</mi></mfrac><mo>=</mo><mfrac><mn>266.94</mn><mn>11</mn></mfrac><mo>=</mo><mn>24.2673</mn></mrow><annotation encoding="application/x-tex">\bar{x} = \frac{\sum \mathbf{x}}{n} = \frac{266.94}{11} = 24.2673</annotation></semantics></math> You can round <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math> to the nearest tenth: 24.3.</p>
+<p>In a spreadsheet, you can use the <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_AVERAGE_function"><code>AVERAGE</code> function</a>. You can see a <a href="@@PLUGINFILE@@/mean_solution.csv">solution spreadsheet here</a>.</p>
+<p>In R, you can use the <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/mean"><code>MEAN</code> function</a>.</p>
+<pre class="text"><code># First, get the csv into the working directory... then...
+data = read.csv(&quot;get_mean.csv&quot;)
+x = data$x
+xbar = mean(x)
+round(xbar,1)</code></pre>
+<pre><code>## [1] 24.3</code></pre>
+</p>]]></text>
+<file name="mean_solution.csv" encoding="base64">ImkiLCJ4IgoiMSIsIjI1LjcyIgoiMiIsIjI0Ljk2IgoiMyIsIjIzLjg1IgoiNCIsIjI0LjI3IgoiNSIsIjIzLjQxIgoiNiIsIjI0Ljc4IgoiNyIsIjIzLjI1IgoiOCIsIjI1Ljg2IgoiOSIsIjIyLjQxIgoiMTAiLCIyNS4yMyIKIjExIiwiMjMuMiIKIiIsIiIKIiIsImF2ZXJhZ2UoeCkiCiIiLCI9YXZlcmFnZShCMjpCMTIpIgo=</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>24.2672727</text>
+<tolerance>0.1</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R09 Q1 : get_mean </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A sample was gathered.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo>=</mo><mn>60.81</mn><mo>,</mo><mn>68.73</mn><mo>,</mo><mn>64.88</mn><mo>,</mo><mn>59.52</mn><mo>,</mo><mn>56.49</mn><mo>,</mo><mn>58.99</mn><mo>,</mo><mn>61.48</mn><mo>,</mo><mn>58.09</mn><mo>,</mo><mn>63.69</mn></mrow><annotation encoding="application/x-tex">\mathbf{x} = 60.81, 68.73, 64.88, 59.52, 56.49, 58.99, 61.48, 58.09, 63.69 </annotation></semantics></math></p>
+<p>You can download the data as a <a href="@@PLUGINFILE@@/get_mean.csv">CSV file</a>.</p>
+<p>Determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math>, the <a href="https://en.wikipedia.org/wiki/Mean">sample mean</a>. Your answer can be rounded to the nearest tenth.</p>
+</p>]]></text>
+<file name="get_mean.csv" encoding="base64">aSx4CjEsNjAuODEKMiw2OC43MwozLDY0Ljg4CjQsNTkuNTIKNSw1Ni40OQo2LDU4Ljk5CjcsNjEuNDgKOCw1OC4wOQo5LDYzLjY5Cg==</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>You need to sum the values (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><annotation encoding="application/x-tex">\sum \mathbf{x}</annotation></semantics></math>, see <a href="https://en.wikipedia.org/wiki/Summation">summation</a>) and divide by the sample size (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo>=</mo><mfrac><mrow><mo>∑</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><mi>n</mi></mfrac><mo>=</mo><mfrac><mn>552.68</mn><mn>9</mn></mfrac><mo>=</mo><mn>61.4089</mn></mrow><annotation encoding="application/x-tex">\bar{x} = \frac{\sum \mathbf{x}}{n} = \frac{552.68}{9} = 61.4089</annotation></semantics></math> You can round <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math> to the nearest tenth: 61.4.</p>
+<p>In a spreadsheet, you can use the <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_AVERAGE_function"><code>AVERAGE</code> function</a>. You can see a <a href="@@PLUGINFILE@@/mean_solution.csv">solution spreadsheet here</a>.</p>
+<p>In R, you can use the <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/mean"><code>MEAN</code> function</a>.</p>
+<pre class="text"><code># First, get the csv into the working directory... then...
+data = read.csv(&quot;get_mean.csv&quot;)
+x = data$x
+xbar = mean(x)
+round(xbar,1)</code></pre>
+<pre><code>## [1] 61.4</code></pre>
+</p>]]></text>
+<file name="mean_solution.csv" encoding="base64">ImkiLCJ4IgoiMSIsIjYwLjgxIgoiMiIsIjY4LjczIgoiMyIsIjY0Ljg4IgoiNCIsIjU5LjUyIgoiNSIsIjU2LjQ5IgoiNiIsIjU4Ljk5IgoiNyIsIjYxLjQ4IgoiOCIsIjU4LjA5IgoiOSIsIjYzLjY5IgoiIiwiIgoiIiwiYXZlcmFnZSh4KSIKIiIsIj1hdmVyYWdlKEIyOkIxMCkiCg==</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>61.4088889</text>
+<tolerance>0.1</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R10 Q1 : get_mean </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A sample was gathered.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo>=</mo><mn>69.54</mn><mo>,</mo><mn>66.46</mn><mo>,</mo><mn>63.63</mn><mo>,</mo><mn>67.3</mn><mo>,</mo><mn>70.11</mn><mo>,</mo><mn>67.57</mn><mo>,</mo><mn>66.32</mn><mo>,</mo><mn>73.2</mn><mo>,</mo><mn>66.32</mn><mo>,</mo><mn>74.92</mn><mo>,</mo><mn>67.39</mn><mo>,</mo><mn>69.44</mn><mo>,</mo><mn>67.35</mn><mo>,</mo><mn>73.79</mn><mo>,</mo><mn>72.26</mn></mrow><annotation encoding="application/x-tex">\mathbf{x} = 69.54, 66.46, 63.63, 67.3, 70.11, 67.57, 66.32, 73.2, 66.32, 74.92, 67.39, 69.44, 67.35, 73.79, 72.26 </annotation></semantics></math></p>
+<p>You can download the data as a <a href="@@PLUGINFILE@@/get_mean.csv">CSV file</a>.</p>
+<p>Determine <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math>, the <a href="https://en.wikipedia.org/wiki/Mean">sample mean</a>. Your answer can be rounded to the nearest tenth.</p>
+</p>]]></text>
+<file name="get_mean.csv" encoding="base64">aSx4CjEsNjkuNTQKMiw2Ni40NgozLDYzLjYzCjQsNjcuMwo1LDcwLjExCjYsNjcuNTcKNyw2Ni4zMgo4LDczLjIKOSw2Ni4zMgoxMCw3NC45MgoxMSw2Ny4zOQoxMiw2OS40NAoxMyw2Ny4zNQoxNCw3My43OQoxNSw3Mi4yNgo=</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>You need to sum the values (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><annotation encoding="application/x-tex">\sum \mathbf{x}</annotation></semantics></math>, see <a href="https://en.wikipedia.org/wiki/Summation">summation</a>) and divide by the sample size (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>).</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>x</mi><mo accent="true">‾</mo></mover><mo>=</mo><mfrac><mrow><mo>∑</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle></mrow><mi>n</mi></mfrac><mo>=</mo><mfrac><mn>1035.6</mn><mn>15</mn></mfrac><mo>=</mo><mn>69.04</mn></mrow><annotation encoding="application/x-tex">\bar{x} = \frac{\sum \mathbf{x}}{n} = \frac{1035.6}{15} = 69.04</annotation></semantics></math> You can round <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>x</mi><mo accent="true">‾</mo></mover><annotation encoding="application/x-tex">\bar{x}</annotation></semantics></math> to the nearest tenth: 69.</p>
+<p>In a spreadsheet, you can use the <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_AVERAGE_function"><code>AVERAGE</code> function</a>. You can see a <a href="@@PLUGINFILE@@/mean_solution.csv">solution spreadsheet here</a>.</p>
+<p>In R, you can use the <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/mean"><code>MEAN</code> function</a>.</p>
+<pre class="text"><code># First, get the csv into the working directory... then...
+data = read.csv(&quot;get_mean.csv&quot;)
+x = data$x
+xbar = mean(x)
+round(xbar,1)</code></pre>
+<pre><code>## [1] 69</code></pre>
+</p>]]></text>
+<file name="mean_solution.csv" encoding="base64">ImkiLCJ4IgoiMSIsIjY5LjU0IgoiMiIsIjY2LjQ2IgoiMyIsIjYzLjYzIgoiNCIsIjY3LjMiCiI1IiwiNzAuMTEiCiI2IiwiNjcuNTciCiI3IiwiNjYuMzIiCiI4IiwiNzMuMiIKIjkiLCI2Ni4zMiIKIjEwIiwiNzQuOTIiCiIxMSIsIjY3LjM5IgoiMTIiLCI2OS40NCIKIjEzIiwiNjcuMzUiCiIxNCIsIjczLjc5IgoiMTUiLCI3Mi4yNiIKIiIsIiIKIiIsImF2ZXJhZ2UoeCkiCiIiLCI9YXZlcmFnZShCMjpCMTYpIgo=</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>69.04</text>
+<tolerance>0.1</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/center/get_median</text>
+</category>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R01 Q2 : get_median </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A sample was gathered.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo>=</mo><mn>55</mn><mo>,</mo><mn>48.66</mn><mo>,</mo><mn>46.38</mn><mo>,</mo><mn>52.23</mn><mo>,</mo><mn>54.95</mn><mo>,</mo><mn>52.36</mn><mo>,</mo><mn>46.51</mn><mo>,</mo><mn>54.08</mn><mo>,</mo><mn>52.71</mn><mo>,</mo><mn>53.63</mn><mo>,</mo><mn>55</mn><mo>,</mo><mn>44.86</mn><mo>,</mo><mn>51.37</mn></mrow><annotation encoding="application/x-tex">\mathbf{x} = 55, 48.66, 46.38, 52.23, 54.95, 52.36, 46.51, 54.08, 52.71, 53.63, 55, 44.86, 51.37 </annotation></semantics></math></p>
+<p>You can download the data as a <a href="@@PLUGINFILE@@/get_median.csv">CSV file</a>.</p>
+<p>Determine the sample <a href="https://en.wikipedia.org/wiki/Median">median</a>. Please enter an exact answer.</p>
+</p>]]></text>
+<file name="get_median.csv" encoding="base64">aSx4CjEsNTUKMiw0OC42NgozLDQ2LjM4CjQsNTIuMjMKNSw1NC45NQo2LDUyLjM2CjcsNDYuNTEKOCw1NC4wOAo5LDUyLjcxCjEwLDUzLjYzCjExLDU1CjEyLDQ0Ljg2CjEzLDUxLjM3Cg==</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>To determine the median by hand, you first sort the sample. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">sort</mtext><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>44.86</mn><mo>,</mo><mn>46.38</mn><mo>,</mo><mn>46.51</mn><mo>,</mo><mn>48.66</mn><mo>,</mo><mn>51.37</mn><mo>,</mo><mn>52.23</mn><mo>,</mo><mn>52.36</mn><mo>,</mo><mn>52.71</mn><mo>,</mo><mn>53.63</mn><mo>,</mo><mn>54.08</mn><mo>,</mo><mn>54.95</mn><mo>,</mo><mn>55</mn><mo>,</mo><mn>55</mn></mrow><annotation encoding="application/x-tex">\text{sort}(\mathbf{x})=44.86, 46.38, 46.51, 48.66, 51.37, 52.23, 52.36, 52.71, 53.63, 54.08, 54.95, 55, 55</annotation></semantics></math> If the sample size is odd, just find the number in the middle number (the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{n+1}{2}</annotation></semantics></math>th value). If the sample size is even, determine the mean of the middle two numbers (the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mi>n</mi><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{n}{2}</annotation></semantics></math>th and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>n</mi><mn>2</mn></mfrac><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\left(\frac{n}{2}+1\right)</annotation></semantics></math>th values).</p>
+<p>In a spreadsheet, you can use the <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_MEDIAN_function"><code>MEDIAN</code> function</a>. You can see a <a href="@@PLUGINFILE@@/median_solution.csv">solution spreadsheet here</a>.</p>
+<p>In R, you can use the <a href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/median"><code>MEDIAN</code> function</a>.</p>
+<pre class="text"><code># First, get the csv into the working directory... then...
+data = read.csv(&quot;get_median.csv&quot;)
+x = data$x
+median(x)</code></pre>
+<pre><code>## [1] 52.36</code></pre>
+</p>]]></text>
+<file name="median_solution.csv" encoding="base64">ImkiLCJ4IgoiMSIsIjU1IgoiMiIsIjQ4LjY2IgoiMyIsIjQ2LjM4IgoiNCIsIjUyLjIzIgoiNSIsIjU0Ljk1IgoiNiIsIjUyLjM2IgoiNyIsIjQ2LjUxIgoiOCIsIjU0LjA4IgoiOSIsIjUyLjcxIgoiMTAiLCI1My42MyIKIjExIiwiNTUiCiIxMiIsIjQ0Ljg2IgoiMTMiLCI1MS4zNyIKIiIsIiIKIiIsIm1lZGlhbih4KSIKIiIsIj1tZWRpYW4oQjI6QjE0KSIK</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>52.36</text>
+<tolerance>0</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R02 Q2 : get_median </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A sample was gathered.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo>=</mo><mn>76.38</mn><mo>,</mo><mn>76.04</mn><mo>,</mo><mn>73.18</mn><mo>,</mo><mn>70.61</mn><mo>,</mo><mn>70.07</mn><mo>,</mo><mn>70.85</mn><mo>,</mo><mn>70.83</mn><mo>,</mo><mn>70.17</mn><mo>,</mo><mn>72.14</mn><mo>,</mo><mn>72.81</mn><mo>,</mo><mn>83.39</mn><mo>,</mo><mn>72.74</mn><mo>,</mo><mn>79.6</mn><mo>,</mo><mn>76.13</mn></mrow><annotation encoding="application/x-tex">\mathbf{x} = 76.38, 76.04, 73.18, 70.61, 70.07, 70.85, 70.83, 70.17, 72.14, 72.81, 83.39, 72.74, 79.6, 76.13 </annotation></semantics></math></p>
+<p>You can download the data as a <a href="@@PLUGINFILE@@/get_median.csv">CSV file</a>.</p>
+<p>Determine the sample <a href="https://en.wikipedia.org/wiki/Median">median</a>. Please enter an exact answer.</p>
+</p>]]></text>
+<file name="get_median.csv" encoding="base64">aSx4CjEsNzYuMzgKMiw3Ni4wNAozLDczLjE4CjQsNzAuNjEKNSw3MC4wNwo2LDcwLjg1CjcsNzAuODMKOCw3MC4xNwo5LDcyLjE0CjEwLDcyLjgxCjExLDgzLjM5CjEyLDcyLjc0CjEzLDc5LjYKMTQsNzYuMTMK</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>To determine the median by hand, you first sort the sample. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">sort</mtext><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>70.07</mn><mo>,</mo><mn>70.17</mn><mo>,</mo><mn>70.61</mn><mo>,</mo><mn>70.83</mn><mo>,</mo><mn>70.85</mn><mo>,</mo><mn>72.14</mn><mo>,</mo><mn>72.74</mn><mo>,</mo><mn>72.81</mn><mo>,</mo><mn>73.18</mn><mo>,</mo><mn>76.04</mn><mo>,</mo><mn>76.13</mn><mo>,</mo><mn>76.38</mn><mo>,</mo><mn>79.6</mn><mo>,</mo><mn>83.39</mn></mrow><annotation encoding="application/x-tex">\text{sort}(\mathbf{x})=70.07, 70.17, 70.61, 70.83, 70.85, 72.14, 72.74, 72.81, 73.18, 76.04, 76.13, 76.38, 79.6, 83.39</annotation></semantics></math> If the sample size is odd, just find the number in the middle number (the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{n+1}{2}</annotation></semantics></math>th value). If the sample size is even, determine the mean of the middle two numbers (the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mi>n</mi><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{n}{2}</annotation></semantics></math>th and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>n</mi><mn>2</mn></mfrac><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\left(\frac{n}{2}+1\right)</annotation></semantics></math>th values).</p>
+<p>In a spreadsheet, you can use the <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_MEDIAN_function"><code>MEDIAN</code> function</a>. You can see a <a href="@@PLUGINFILE@@/median_solution.csv">solution spreadsheet here</a>.</p>
+<p>In R, you can use the <a href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/median"><code>MEDIAN</code> function</a>.</p>
+<pre class="text"><code># First, get the csv into the working directory... then...
+data = read.csv(&quot;get_median.csv&quot;)
+x = data$x
+median(x)</code></pre>
+<pre><code>## [1] 72.775</code></pre>
+</p>]]></text>
+<file name="median_solution.csv" encoding="base64">ImkiLCJ4IgoiMSIsIjc2LjM4IgoiMiIsIjc2LjA0IgoiMyIsIjczLjE4IgoiNCIsIjcwLjYxIgoiNSIsIjcwLjA3IgoiNiIsIjcwLjg1IgoiNyIsIjcwLjgzIgoiOCIsIjcwLjE3IgoiOSIsIjcyLjE0IgoiMTAiLCI3Mi44MSIKIjExIiwiODMuMzkiCiIxMiIsIjcyLjc0IgoiMTMiLCI3OS42IgoiMTQiLCI3Ni4xMyIKIiIsIiIKIiIsIm1lZGlhbih4KSIKIiIsIj1tZWRpYW4oQjI6QjE1KSIK</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>72.775</text>
+<tolerance>0</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R03 Q2 : get_median </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A sample was gathered.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo>=</mo><mn>59.95</mn><mo>,</mo><mn>52.77</mn><mo>,</mo><mn>48.8</mn><mo>,</mo><mn>49.97</mn><mo>,</mo><mn>45.53</mn><mo>,</mo><mn>54.6</mn><mo>,</mo><mn>52.8</mn><mo>,</mo><mn>53.47</mn><mo>,</mo><mn>52.09</mn></mrow><annotation encoding="application/x-tex">\mathbf{x} = 59.95, 52.77, 48.8, 49.97, 45.53, 54.6, 52.8, 53.47, 52.09 </annotation></semantics></math></p>
+<p>You can download the data as a <a href="@@PLUGINFILE@@/get_median.csv">CSV file</a>.</p>
+<p>Determine the sample <a href="https://en.wikipedia.org/wiki/Median">median</a>. Please enter an exact answer.</p>
+</p>]]></text>
+<file name="get_median.csv" encoding="base64">aSx4CjEsNTkuOTUKMiw1Mi43NwozLDQ4LjgKNCw0OS45Nwo1LDQ1LjUzCjYsNTQuNgo3LDUyLjgKOCw1My40Nwo5LDUyLjA5Cg==</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>To determine the median by hand, you first sort the sample. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">sort</mtext><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>45.53</mn><mo>,</mo><mn>48.8</mn><mo>,</mo><mn>49.97</mn><mo>,</mo><mn>52.09</mn><mo>,</mo><mn>52.77</mn><mo>,</mo><mn>52.8</mn><mo>,</mo><mn>53.47</mn><mo>,</mo><mn>54.6</mn><mo>,</mo><mn>59.95</mn></mrow><annotation encoding="application/x-tex">\text{sort}(\mathbf{x})=45.53, 48.8, 49.97, 52.09, 52.77, 52.8, 53.47, 54.6, 59.95</annotation></semantics></math> If the sample size is odd, just find the number in the middle number (the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{n+1}{2}</annotation></semantics></math>th value). If the sample size is even, determine the mean of the middle two numbers (the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mi>n</mi><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{n}{2}</annotation></semantics></math>th and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>n</mi><mn>2</mn></mfrac><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\left(\frac{n}{2}+1\right)</annotation></semantics></math>th values).</p>
+<p>In a spreadsheet, you can use the <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_MEDIAN_function"><code>MEDIAN</code> function</a>. You can see a <a href="@@PLUGINFILE@@/median_solution.csv">solution spreadsheet here</a>.</p>
+<p>In R, you can use the <a href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/median"><code>MEDIAN</code> function</a>.</p>
+<pre class="text"><code># First, get the csv into the working directory... then...
+data = read.csv(&quot;get_median.csv&quot;)
+x = data$x
+median(x)</code></pre>
+<pre><code>## [1] 52.77</code></pre>
+</p>]]></text>
+<file name="median_solution.csv" encoding="base64">ImkiLCJ4IgoiMSIsIjU5Ljk1IgoiMiIsIjUyLjc3IgoiMyIsIjQ4LjgiCiI0IiwiNDkuOTciCiI1IiwiNDUuNTMiCiI2IiwiNTQuNiIKIjciLCI1Mi44IgoiOCIsIjUzLjQ3IgoiOSIsIjUyLjA5IgoiIiwiIgoiIiwibWVkaWFuKHgpIgoiIiwiPW1lZGlhbihCMjpCMTApIgo=</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>52.77</text>
+<tolerance>0</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R04 Q2 : get_median </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A sample was gathered.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo>=</mo><mn>50.88</mn><mo>,</mo><mn>57.43</mn><mo>,</mo><mn>60.85</mn><mo>,</mo><mn>55.76</mn><mo>,</mo><mn>62.15</mn><mo>,</mo><mn>60.07</mn><mo>,</mo><mn>52.66</mn><mo>,</mo><mn>52.09</mn><mo>,</mo><mn>58.11</mn><mo>,</mo><mn>50.74</mn><mo>,</mo><mn>50.54</mn><mo>,</mo><mn>51.54</mn><mo>,</mo><mn>52.33</mn><mo>,</mo><mn>50.37</mn></mrow><annotation encoding="application/x-tex">\mathbf{x} = 50.88, 57.43, 60.85, 55.76, 62.15, 60.07, 52.66, 52.09, 58.11, 50.74, 50.54, 51.54, 52.33, 50.37 </annotation></semantics></math></p>
+<p>You can download the data as a <a href="@@PLUGINFILE@@/get_median.csv">CSV file</a>.</p>
+<p>Determine the sample <a href="https://en.wikipedia.org/wiki/Median">median</a>. Please enter an exact answer.</p>
+</p>]]></text>
+<file name="get_median.csv" encoding="base64">aSx4CjEsNTAuODgKMiw1Ny40MwozLDYwLjg1CjQsNTUuNzYKNSw2Mi4xNQo2LDYwLjA3CjcsNTIuNjYKOCw1Mi4wOQo5LDU4LjExCjEwLDUwLjc0CjExLDUwLjU0CjEyLDUxLjU0CjEzLDUyLjMzCjE0LDUwLjM3Cg==</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>To determine the median by hand, you first sort the sample. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">sort</mtext><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>50.37</mn><mo>,</mo><mn>50.54</mn><mo>,</mo><mn>50.74</mn><mo>,</mo><mn>50.88</mn><mo>,</mo><mn>51.54</mn><mo>,</mo><mn>52.09</mn><mo>,</mo><mn>52.33</mn><mo>,</mo><mn>52.66</mn><mo>,</mo><mn>55.76</mn><mo>,</mo><mn>57.43</mn><mo>,</mo><mn>58.11</mn><mo>,</mo><mn>60.07</mn><mo>,</mo><mn>60.85</mn><mo>,</mo><mn>62.15</mn></mrow><annotation encoding="application/x-tex">\text{sort}(\mathbf{x})=50.37, 50.54, 50.74, 50.88, 51.54, 52.09, 52.33, 52.66, 55.76, 57.43, 58.11, 60.07, 60.85, 62.15</annotation></semantics></math> If the sample size is odd, just find the number in the middle number (the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{n+1}{2}</annotation></semantics></math>th value). If the sample size is even, determine the mean of the middle two numbers (the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mi>n</mi><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{n}{2}</annotation></semantics></math>th and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>n</mi><mn>2</mn></mfrac><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\left(\frac{n}{2}+1\right)</annotation></semantics></math>th values).</p>
+<p>In a spreadsheet, you can use the <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_MEDIAN_function"><code>MEDIAN</code> function</a>. You can see a <a href="@@PLUGINFILE@@/median_solution.csv">solution spreadsheet here</a>.</p>
+<p>In R, you can use the <a href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/median"><code>MEDIAN</code> function</a>.</p>
+<pre class="text"><code># First, get the csv into the working directory... then...
+data = read.csv(&quot;get_median.csv&quot;)
+x = data$x
+median(x)</code></pre>
+<pre><code>## [1] 52.495</code></pre>
+</p>]]></text>
+<file name="median_solution.csv" encoding="base64">ImkiLCJ4IgoiMSIsIjUwLjg4IgoiMiIsIjU3LjQzIgoiMyIsIjYwLjg1IgoiNCIsIjU1Ljc2IgoiNSIsIjYyLjE1IgoiNiIsIjYwLjA3IgoiNyIsIjUyLjY2IgoiOCIsIjUyLjA5IgoiOSIsIjU4LjExIgoiMTAiLCI1MC43NCIKIjExIiwiNTAuNTQiCiIxMiIsIjUxLjU0IgoiMTMiLCI1Mi4zMyIKIjE0IiwiNTAuMzciCiIiLCIiCiIiLCJtZWRpYW4oeCkiCiIiLCI9bWVkaWFuKEIyOkIxNSkiCg==</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>52.495</text>
+<tolerance>0</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R05 Q2 : get_median </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A sample was gathered.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo>=</mo><mn>54.39</mn><mo>,</mo><mn>54.85</mn><mo>,</mo><mn>53.55</mn><mo>,</mo><mn>52.88</mn><mo>,</mo><mn>44.09</mn><mo>,</mo><mn>47.11</mn><mo>,</mo><mn>54.66</mn><mo>,</mo><mn>54.97</mn><mo>,</mo><mn>50.11</mn><mo>,</mo><mn>53.81</mn><mo>,</mo><mn>47.35</mn><mo>,</mo><mn>54.74</mn><mo>,</mo><mn>54.45</mn></mrow><annotation encoding="application/x-tex">\mathbf{x} = 54.39, 54.85, 53.55, 52.88, 44.09, 47.11, 54.66, 54.97, 50.11, 53.81, 47.35, 54.74, 54.45 </annotation></semantics></math></p>
+<p>You can download the data as a <a href="@@PLUGINFILE@@/get_median.csv">CSV file</a>.</p>
+<p>Determine the sample <a href="https://en.wikipedia.org/wiki/Median">median</a>. Please enter an exact answer.</p>
+</p>]]></text>
+<file name="get_median.csv" encoding="base64">aSx4CjEsNTQuMzkKMiw1NC44NQozLDUzLjU1CjQsNTIuODgKNSw0NC4wOQo2LDQ3LjExCjcsNTQuNjYKOCw1NC45Nwo5LDUwLjExCjEwLDUzLjgxCjExLDQ3LjM1CjEyLDU0Ljc0CjEzLDU0LjQ1Cg==</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>To determine the median by hand, you first sort the sample. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">sort</mtext><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>44.09</mn><mo>,</mo><mn>47.11</mn><mo>,</mo><mn>47.35</mn><mo>,</mo><mn>50.11</mn><mo>,</mo><mn>52.88</mn><mo>,</mo><mn>53.55</mn><mo>,</mo><mn>53.81</mn><mo>,</mo><mn>54.39</mn><mo>,</mo><mn>54.45</mn><mo>,</mo><mn>54.66</mn><mo>,</mo><mn>54.74</mn><mo>,</mo><mn>54.85</mn><mo>,</mo><mn>54.97</mn></mrow><annotation encoding="application/x-tex">\text{sort}(\mathbf{x})=44.09, 47.11, 47.35, 50.11, 52.88, 53.55, 53.81, 54.39, 54.45, 54.66, 54.74, 54.85, 54.97</annotation></semantics></math> If the sample size is odd, just find the number in the middle number (the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{n+1}{2}</annotation></semantics></math>th value). If the sample size is even, determine the mean of the middle two numbers (the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mi>n</mi><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{n}{2}</annotation></semantics></math>th and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>n</mi><mn>2</mn></mfrac><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\left(\frac{n}{2}+1\right)</annotation></semantics></math>th values).</p>
+<p>In a spreadsheet, you can use the <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_MEDIAN_function"><code>MEDIAN</code> function</a>. You can see a <a href="@@PLUGINFILE@@/median_solution.csv">solution spreadsheet here</a>.</p>
+<p>In R, you can use the <a href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/median"><code>MEDIAN</code> function</a>.</p>
+<pre class="text"><code># First, get the csv into the working directory... then...
+data = read.csv(&quot;get_median.csv&quot;)
+x = data$x
+median(x)</code></pre>
+<pre><code>## [1] 53.81</code></pre>
+</p>]]></text>
+<file name="median_solution.csv" encoding="base64">ImkiLCJ4IgoiMSIsIjU0LjM5IgoiMiIsIjU0Ljg1IgoiMyIsIjUzLjU1IgoiNCIsIjUyLjg4IgoiNSIsIjQ0LjA5IgoiNiIsIjQ3LjExIgoiNyIsIjU0LjY2IgoiOCIsIjU0Ljk3IgoiOSIsIjUwLjExIgoiMTAiLCI1My44MSIKIjExIiwiNDcuMzUiCiIxMiIsIjU0Ljc0IgoiMTMiLCI1NC40NSIKIiIsIiIKIiIsIm1lZGlhbih4KSIKIiIsIj1tZWRpYW4oQjI6QjE0KSIK</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>53.81</text>
+<tolerance>0</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R06 Q2 : get_median </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A sample was gathered.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo>=</mo><mn>70.68</mn><mo>,</mo><mn>77.47</mn><mo>,</mo><mn>69.04</mn><mo>,</mo><mn>66.43</mn><mo>,</mo><mn>75.45</mn><mo>,</mo><mn>77.41</mn><mo>,</mo><mn>68.25</mn><mo>,</mo><mn>67.83</mn><mo>,</mo><mn>78.51</mn><mo>,</mo><mn>77.21</mn><mo>,</mo><mn>79.26</mn></mrow><annotation encoding="application/x-tex">\mathbf{x} = 70.68, 77.47, 69.04, 66.43, 75.45, 77.41, 68.25, 67.83, 78.51, 77.21, 79.26 </annotation></semantics></math></p>
+<p>You can download the data as a <a href="@@PLUGINFILE@@/get_median.csv">CSV file</a>.</p>
+<p>Determine the sample <a href="https://en.wikipedia.org/wiki/Median">median</a>. Please enter an exact answer.</p>
+</p>]]></text>
+<file name="get_median.csv" encoding="base64">aSx4CjEsNzAuNjgKMiw3Ny40NwozLDY5LjA0CjQsNjYuNDMKNSw3NS40NQo2LDc3LjQxCjcsNjguMjUKOCw2Ny44Mwo5LDc4LjUxCjEwLDc3LjIxCjExLDc5LjI2Cg==</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>To determine the median by hand, you first sort the sample. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">sort</mtext><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>66.43</mn><mo>,</mo><mn>67.83</mn><mo>,</mo><mn>68.25</mn><mo>,</mo><mn>69.04</mn><mo>,</mo><mn>70.68</mn><mo>,</mo><mn>75.45</mn><mo>,</mo><mn>77.21</mn><mo>,</mo><mn>77.41</mn><mo>,</mo><mn>77.47</mn><mo>,</mo><mn>78.51</mn><mo>,</mo><mn>79.26</mn></mrow><annotation encoding="application/x-tex">\text{sort}(\mathbf{x})=66.43, 67.83, 68.25, 69.04, 70.68, 75.45, 77.21, 77.41, 77.47, 78.51, 79.26</annotation></semantics></math> If the sample size is odd, just find the number in the middle number (the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{n+1}{2}</annotation></semantics></math>th value). If the sample size is even, determine the mean of the middle two numbers (the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mi>n</mi><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{n}{2}</annotation></semantics></math>th and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>n</mi><mn>2</mn></mfrac><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\left(\frac{n}{2}+1\right)</annotation></semantics></math>th values).</p>
+<p>In a spreadsheet, you can use the <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_MEDIAN_function"><code>MEDIAN</code> function</a>. You can see a <a href="@@PLUGINFILE@@/median_solution.csv">solution spreadsheet here</a>.</p>
+<p>In R, you can use the <a href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/median"><code>MEDIAN</code> function</a>.</p>
+<pre class="text"><code># First, get the csv into the working directory... then...
+data = read.csv(&quot;get_median.csv&quot;)
+x = data$x
+median(x)</code></pre>
+<pre><code>## [1] 75.45</code></pre>
+</p>]]></text>
+<file name="median_solution.csv" encoding="base64">ImkiLCJ4IgoiMSIsIjcwLjY4IgoiMiIsIjc3LjQ3IgoiMyIsIjY5LjA0IgoiNCIsIjY2LjQzIgoiNSIsIjc1LjQ1IgoiNiIsIjc3LjQxIgoiNyIsIjY4LjI1IgoiOCIsIjY3LjgzIgoiOSIsIjc4LjUxIgoiMTAiLCI3Ny4yMSIKIjExIiwiNzkuMjYiCiIiLCIiCiIiLCJtZWRpYW4oeCkiCiIiLCI9bWVkaWFuKEIyOkIxMikiCg==</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>75.45</text>
+<tolerance>0</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R07 Q2 : get_median </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A sample was gathered.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo>=</mo><mn>30.25</mn><mo>,</mo><mn>32.08</mn><mo>,</mo><mn>31.66</mn><mo>,</mo><mn>32.52</mn><mo>,</mo><mn>34.15</mn><mo>,</mo><mn>34.97</mn><mo>,</mo><mn>32.76</mn></mrow><annotation encoding="application/x-tex">\mathbf{x} = 30.25, 32.08, 31.66, 32.52, 34.15, 34.97, 32.76 </annotation></semantics></math></p>
+<p>You can download the data as a <a href="@@PLUGINFILE@@/get_median.csv">CSV file</a>.</p>
+<p>Determine the sample <a href="https://en.wikipedia.org/wiki/Median">median</a>. Please enter an exact answer.</p>
+</p>]]></text>
+<file name="get_median.csv" encoding="base64">aSx4CjEsMzAuMjUKMiwzMi4wOAozLDMxLjY2CjQsMzIuNTIKNSwzNC4xNQo2LDM0Ljk3CjcsMzIuNzYK</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>To determine the median by hand, you first sort the sample. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">sort</mtext><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>30.25</mn><mo>,</mo><mn>31.66</mn><mo>,</mo><mn>32.08</mn><mo>,</mo><mn>32.52</mn><mo>,</mo><mn>32.76</mn><mo>,</mo><mn>34.15</mn><mo>,</mo><mn>34.97</mn></mrow><annotation encoding="application/x-tex">\text{sort}(\mathbf{x})=30.25, 31.66, 32.08, 32.52, 32.76, 34.15, 34.97</annotation></semantics></math> If the sample size is odd, just find the number in the middle number (the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{n+1}{2}</annotation></semantics></math>th value). If the sample size is even, determine the mean of the middle two numbers (the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mi>n</mi><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{n}{2}</annotation></semantics></math>th and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>n</mi><mn>2</mn></mfrac><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\left(\frac{n}{2}+1\right)</annotation></semantics></math>th values).</p>
+<p>In a spreadsheet, you can use the <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_MEDIAN_function"><code>MEDIAN</code> function</a>. You can see a <a href="@@PLUGINFILE@@/median_solution.csv">solution spreadsheet here</a>.</p>
+<p>In R, you can use the <a href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/median"><code>MEDIAN</code> function</a>.</p>
+<pre class="text"><code># First, get the csv into the working directory... then...
+data = read.csv(&quot;get_median.csv&quot;)
+x = data$x
+median(x)</code></pre>
+<pre><code>## [1] 32.52</code></pre>
+</p>]]></text>
+<file name="median_solution.csv" encoding="base64">ImkiLCJ4IgoiMSIsIjMwLjI1IgoiMiIsIjMyLjA4IgoiMyIsIjMxLjY2IgoiNCIsIjMyLjUyIgoiNSIsIjM0LjE1IgoiNiIsIjM0Ljk3IgoiNyIsIjMyLjc2IgoiIiwiIgoiIiwibWVkaWFuKHgpIgoiIiwiPW1lZGlhbihCMjpCOCkiCg==</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>32.52</text>
+<tolerance>0</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R08 Q2 : get_median </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A sample was gathered.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo>=</mo><mn>68.37</mn><mo>,</mo><mn>56.05</mn><mo>,</mo><mn>55.12</mn><mo>,</mo><mn>55.12</mn><mo>,</mo><mn>56.56</mn><mo>,</mo><mn>68.13</mn><mo>,</mo><mn>68.05</mn></mrow><annotation encoding="application/x-tex">\mathbf{x} = 68.37, 56.05, 55.12, 55.12, 56.56, 68.13, 68.05 </annotation></semantics></math></p>
+<p>You can download the data as a <a href="@@PLUGINFILE@@/get_median.csv">CSV file</a>.</p>
+<p>Determine the sample <a href="https://en.wikipedia.org/wiki/Median">median</a>. Please enter an exact answer.</p>
+</p>]]></text>
+<file name="get_median.csv" encoding="base64">aSx4CjEsNjguMzcKMiw1Ni4wNQozLDU1LjEyCjQsNTUuMTIKNSw1Ni41Ngo2LDY4LjEzCjcsNjguMDUK</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>To determine the median by hand, you first sort the sample. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">sort</mtext><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>55.12</mn><mo>,</mo><mn>55.12</mn><mo>,</mo><mn>56.05</mn><mo>,</mo><mn>56.56</mn><mo>,</mo><mn>68.05</mn><mo>,</mo><mn>68.13</mn><mo>,</mo><mn>68.37</mn></mrow><annotation encoding="application/x-tex">\text{sort}(\mathbf{x})=55.12, 55.12, 56.05, 56.56, 68.05, 68.13, 68.37</annotation></semantics></math> If the sample size is odd, just find the number in the middle number (the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{n+1}{2}</annotation></semantics></math>th value). If the sample size is even, determine the mean of the middle two numbers (the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mi>n</mi><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{n}{2}</annotation></semantics></math>th and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>n</mi><mn>2</mn></mfrac><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\left(\frac{n}{2}+1\right)</annotation></semantics></math>th values).</p>
+<p>In a spreadsheet, you can use the <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_MEDIAN_function"><code>MEDIAN</code> function</a>. You can see a <a href="@@PLUGINFILE@@/median_solution.csv">solution spreadsheet here</a>.</p>
+<p>In R, you can use the <a href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/median"><code>MEDIAN</code> function</a>.</p>
+<pre class="text"><code># First, get the csv into the working directory... then...
+data = read.csv(&quot;get_median.csv&quot;)
+x = data$x
+median(x)</code></pre>
+<pre><code>## [1] 56.56</code></pre>
+</p>]]></text>
+<file name="median_solution.csv" encoding="base64">ImkiLCJ4IgoiMSIsIjY4LjM3IgoiMiIsIjU2LjA1IgoiMyIsIjU1LjEyIgoiNCIsIjU1LjEyIgoiNSIsIjU2LjU2IgoiNiIsIjY4LjEzIgoiNyIsIjY4LjA1IgoiIiwiIgoiIiwibWVkaWFuKHgpIgoiIiwiPW1lZGlhbihCMjpCOCkiCg==</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>56.56</text>
+<tolerance>0</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R09 Q2 : get_median </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A sample was gathered.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo>=</mo><mn>67.6</mn><mo>,</mo><mn>66.03</mn><mo>,</mo><mn>67.01</mn><mo>,</mo><mn>66.9</mn><mo>,</mo><mn>68.24</mn><mo>,</mo><mn>68.33</mn><mo>,</mo><mn>67.88</mn><mo>,</mo><mn>68.18</mn><mo>,</mo><mn>67.67</mn></mrow><annotation encoding="application/x-tex">\mathbf{x} = 67.6, 66.03, 67.01, 66.9, 68.24, 68.33, 67.88, 68.18, 67.67 </annotation></semantics></math></p>
+<p>You can download the data as a <a href="@@PLUGINFILE@@/get_median.csv">CSV file</a>.</p>
+<p>Determine the sample <a href="https://en.wikipedia.org/wiki/Median">median</a>. Please enter an exact answer.</p>
+</p>]]></text>
+<file name="get_median.csv" encoding="base64">aSx4CjEsNjcuNgoyLDY2LjAzCjMsNjcuMDEKNCw2Ni45CjUsNjguMjQKNiw2OC4zMwo3LDY3Ljg4CjgsNjguMTgKOSw2Ny42Nwo=</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>To determine the median by hand, you first sort the sample. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">sort</mtext><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>66.03</mn><mo>,</mo><mn>66.9</mn><mo>,</mo><mn>67.01</mn><mo>,</mo><mn>67.6</mn><mo>,</mo><mn>67.67</mn><mo>,</mo><mn>67.88</mn><mo>,</mo><mn>68.18</mn><mo>,</mo><mn>68.24</mn><mo>,</mo><mn>68.33</mn></mrow><annotation encoding="application/x-tex">\text{sort}(\mathbf{x})=66.03, 66.9, 67.01, 67.6, 67.67, 67.88, 68.18, 68.24, 68.33</annotation></semantics></math> If the sample size is odd, just find the number in the middle number (the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{n+1}{2}</annotation></semantics></math>th value). If the sample size is even, determine the mean of the middle two numbers (the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mi>n</mi><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{n}{2}</annotation></semantics></math>th and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>n</mi><mn>2</mn></mfrac><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\left(\frac{n}{2}+1\right)</annotation></semantics></math>th values).</p>
+<p>In a spreadsheet, you can use the <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_MEDIAN_function"><code>MEDIAN</code> function</a>. You can see a <a href="@@PLUGINFILE@@/median_solution.csv">solution spreadsheet here</a>.</p>
+<p>In R, you can use the <a href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/median"><code>MEDIAN</code> function</a>.</p>
+<pre class="text"><code># First, get the csv into the working directory... then...
+data = read.csv(&quot;get_median.csv&quot;)
+x = data$x
+median(x)</code></pre>
+<pre><code>## [1] 67.67</code></pre>
+</p>]]></text>
+<file name="median_solution.csv" encoding="base64">ImkiLCJ4IgoiMSIsIjY3LjYiCiIyIiwiNjYuMDMiCiIzIiwiNjcuMDEiCiI0IiwiNjYuOSIKIjUiLCI2OC4yNCIKIjYiLCI2OC4zMyIKIjciLCI2Ny44OCIKIjgiLCI2OC4xOCIKIjkiLCI2Ny42NyIKIiIsIiIKIiIsIm1lZGlhbih4KSIKIiIsIj1tZWRpYW4oQjI6QjEwKSIK</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>67.67</text>
+<tolerance>0</tolerance>
+</answer>
+</question>
+
+
+<question type="numerical">
+<name>
+<text> R10 Q2 : get_median </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>A sample was gathered.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo>=</mo><mn>69.97</mn><mo>,</mo><mn>72.44</mn><mo>,</mo><mn>70.19</mn><mo>,</mo><mn>60.22</mn><mo>,</mo><mn>65.67</mn><mo>,</mo><mn>63.31</mn><mo>,</mo><mn>60.69</mn><mo>,</mo><mn>62.48</mn><mo>,</mo><mn>60.56</mn><mo>,</mo><mn>61.24</mn><mo>,</mo><mn>60.12</mn><mo>,</mo><mn>61.26</mn></mrow><annotation encoding="application/x-tex">\mathbf{x} = 69.97, 72.44, 70.19, 60.22, 65.67, 63.31, 60.69, 62.48, 60.56, 61.24, 60.12, 61.26 </annotation></semantics></math></p>
+<p>You can download the data as a <a href="@@PLUGINFILE@@/get_median.csv">CSV file</a>.</p>
+<p>Determine the sample <a href="https://en.wikipedia.org/wiki/Median">median</a>. Please enter an exact answer.</p>
+</p>]]></text>
+<file name="get_median.csv" encoding="base64">aSx4CjEsNjkuOTcKMiw3Mi40NAozLDcwLjE5CjQsNjAuMjIKNSw2NS42Nwo2LDYzLjMxCjcsNjAuNjkKOCw2Mi40OAo5LDYwLjU2CjEwLDYxLjI0CjExLDYwLjEyCjEyLDYxLjI2Cg==</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>To determine the median by hand, you first sort the sample. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">sort</mtext><mo stretchy="false" form="prefix">(</mo><mstyle mathvariant="bold"><mi>x</mi></mstyle><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>60.12</mn><mo>,</mo><mn>60.22</mn><mo>,</mo><mn>60.56</mn><mo>,</mo><mn>60.69</mn><mo>,</mo><mn>61.24</mn><mo>,</mo><mn>61.26</mn><mo>,</mo><mn>62.48</mn><mo>,</mo><mn>63.31</mn><mo>,</mo><mn>65.67</mn><mo>,</mo><mn>69.97</mn><mo>,</mo><mn>70.19</mn><mo>,</mo><mn>72.44</mn></mrow><annotation encoding="application/x-tex">\text{sort}(\mathbf{x})=60.12, 60.22, 60.56, 60.69, 61.24, 61.26, 62.48, 63.31, 65.67, 69.97, 70.19, 72.44</annotation></semantics></math> If the sample size is odd, just find the number in the middle number (the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{n+1}{2}</annotation></semantics></math>th value). If the sample size is even, determine the mean of the middle two numbers (the <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mi>n</mi><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{n}{2}</annotation></semantics></math>th and <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>n</mi><mn>2</mn></mfrac><mo>+</mo><mn>1</mn><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\left(\frac{n}{2}+1\right)</annotation></semantics></math>th values).</p>
+<p>In a spreadsheet, you can use the <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_MEDIAN_function"><code>MEDIAN</code> function</a>. You can see a <a href="@@PLUGINFILE@@/median_solution.csv">solution spreadsheet here</a>.</p>
+<p>In R, you can use the <a href="https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/median"><code>MEDIAN</code> function</a>.</p>
+<pre class="text"><code># First, get the csv into the working directory... then...
+data = read.csv(&quot;get_median.csv&quot;)
+x = data$x
+median(x)</code></pre>
+<pre><code>## [1] 61.87</code></pre>
+</p>]]></text>
+<file name="median_solution.csv" encoding="base64">ImkiLCJ4IgoiMSIsIjY5Ljk3IgoiMiIsIjcyLjQ0IgoiMyIsIjcwLjE5IgoiNCIsIjYwLjIyIgoiNSIsIjY1LjY3IgoiNiIsIjYzLjMxIgoiNyIsIjYwLjY5IgoiOCIsIjYyLjQ4IgoiOSIsIjYwLjU2IgoiMTAiLCI2MS4yNCIKIjExIiwiNjAuMTIiCiIxMiIsIjYxLjI2IgoiIiwiIgoiIiwibWVkaWFuKHgpIgoiIiwiPW1lZGlhbihCMjpCMTMpIgo=</file>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<answer fraction="100" format="moodle_auto_format">
+<text>61.87</text>
+<tolerance>0</tolerance>
+</answer>
+</question>
+
+
+<question type="category">
+<category>
+<text>$course$/center/compare_mean_median</text>
+</category>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R01 Q3 : compare_mean_median </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Depending on the type of distribution, we can make a strong claim regarding the mean and median.</p>
+<ul>
+<li>Symmetric (bell, uniform, bimodal)
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>≈</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} \approx \text{median}</annotation></semantics></math></li>
+</ul></li>
+<li>Skew-right
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math></li>
+</ul></li>
+<li>Skew-left
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math></li>
+</ul></li>
+</ul>
+<p>A sample was gathered and visualized with a histogram.</p>
+<p><img src="@@PLUGINFILE@@/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1" /><br />
+</p>
+<p>What claim can you make regarding the mean and median?</p>
+</p>]]></text>
+<file name="unnamed-chunk-1-1.png" encoding="base64">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</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>The distribution is skew-left, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math>.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>≈</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} \approx \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R02 Q3 : compare_mean_median </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Depending on the type of distribution, we can make a strong claim regarding the mean and median.</p>
+<ul>
+<li>Symmetric (bell, uniform, bimodal)
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>≈</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} \approx \text{median}</annotation></semantics></math></li>
+</ul></li>
+<li>Skew-right
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math></li>
+</ul></li>
+<li>Skew-left
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math></li>
+</ul></li>
+</ul>
+<p>A sample was gathered and visualized with a histogram.</p>
+<p><img src="@@PLUGINFILE@@/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1" /><br />
+</p>
+<p>What claim can you make regarding the mean and median?</p>
+</p>]]></text>
+<file name="unnamed-chunk-1-1.png" encoding="base64">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</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>The distribution is skew-right, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math>.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>≈</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} \approx \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R03 Q3 : compare_mean_median </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Depending on the type of distribution, we can make a strong claim regarding the mean and median.</p>
+<ul>
+<li>Symmetric (bell, uniform, bimodal)
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>≈</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} \approx \text{median}</annotation></semantics></math></li>
+</ul></li>
+<li>Skew-right
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math></li>
+</ul></li>
+<li>Skew-left
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math></li>
+</ul></li>
+</ul>
+<p>A sample was gathered and visualized with a histogram.</p>
+<p><img src="@@PLUGINFILE@@/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1" /><br />
+</p>
+<p>What claim can you make regarding the mean and median?</p>
+</p>]]></text>
+<file name="unnamed-chunk-1-1.png" encoding="base64">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</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>The distribution is skew-left, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math>.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>≈</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} \approx \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R04 Q3 : compare_mean_median </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Depending on the type of distribution, we can make a strong claim regarding the mean and median.</p>
+<ul>
+<li>Symmetric (bell, uniform, bimodal)
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>≈</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} \approx \text{median}</annotation></semantics></math></li>
+</ul></li>
+<li>Skew-right
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math></li>
+</ul></li>
+<li>Skew-left
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math></li>
+</ul></li>
+</ul>
+<p>A sample was gathered and visualized with a histogram.</p>
+<p><img src="@@PLUGINFILE@@/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1" /><br />
+</p>
+<p>What claim can you make regarding the mean and median?</p>
+</p>]]></text>
+<file name="unnamed-chunk-1-1.png" encoding="base64">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</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>The distribution is skew-right, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math>.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>≈</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} \approx \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R05 Q3 : compare_mean_median </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Depending on the type of distribution, we can make a strong claim regarding the mean and median.</p>
+<ul>
+<li>Symmetric (bell, uniform, bimodal)
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>≈</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} \approx \text{median}</annotation></semantics></math></li>
+</ul></li>
+<li>Skew-right
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math></li>
+</ul></li>
+<li>Skew-left
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math></li>
+</ul></li>
+</ul>
+<p>A sample was gathered and visualized with a histogram.</p>
+<p><img src="@@PLUGINFILE@@/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1" /><br />
+</p>
+<p>What claim can you make regarding the mean and median?</p>
+</p>]]></text>
+<file name="unnamed-chunk-1-1.png" encoding="base64">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</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>The distribution is skew-left, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math>.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>≈</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} \approx \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R06 Q3 : compare_mean_median </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Depending on the type of distribution, we can make a strong claim regarding the mean and median.</p>
+<ul>
+<li>Symmetric (bell, uniform, bimodal)
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>≈</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} \approx \text{median}</annotation></semantics></math></li>
+</ul></li>
+<li>Skew-right
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math></li>
+</ul></li>
+<li>Skew-left
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math></li>
+</ul></li>
+</ul>
+<p>A sample was gathered and visualized with a histogram.</p>
+<p><img src="@@PLUGINFILE@@/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1" /><br />
+</p>
+<p>What claim can you make regarding the mean and median?</p>
+</p>]]></text>
+<file name="unnamed-chunk-1-1.png" encoding="base64">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</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>The distribution is skew-right, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math>.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>≈</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} \approx \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R07 Q3 : compare_mean_median </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Depending on the type of distribution, we can make a strong claim regarding the mean and median.</p>
+<ul>
+<li>Symmetric (bell, uniform, bimodal)
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>≈</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} \approx \text{median}</annotation></semantics></math></li>
+</ul></li>
+<li>Skew-right
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math></li>
+</ul></li>
+<li>Skew-left
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math></li>
+</ul></li>
+</ul>
+<p>A sample was gathered and visualized with a histogram.</p>
+<p><img src="@@PLUGINFILE@@/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1" /><br />
+</p>
+<p>What claim can you make regarding the mean and median?</p>
+</p>]]></text>
+<file name="unnamed-chunk-1-1.png" encoding="base64">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</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>The distribution is skew-right, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math>.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>≈</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} \approx \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R08 Q3 : compare_mean_median </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Depending on the type of distribution, we can make a strong claim regarding the mean and median.</p>
+<ul>
+<li>Symmetric (bell, uniform, bimodal)
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>≈</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} \approx \text{median}</annotation></semantics></math></li>
+</ul></li>
+<li>Skew-right
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math></li>
+</ul></li>
+<li>Skew-left
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math></li>
+</ul></li>
+</ul>
+<p>A sample was gathered and visualized with a histogram.</p>
+<p><img src="@@PLUGINFILE@@/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1" /><br />
+</p>
+<p>What claim can you make regarding the mean and median?</p>
+</p>]]></text>
+<file name="unnamed-chunk-1-1.png" encoding="base64">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</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>The distribution is symmetric, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>≈</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} \approx \text{median}</annotation></semantics></math>.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>≈</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} \approx \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R09 Q3 : compare_mean_median </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Depending on the type of distribution, we can make a strong claim regarding the mean and median.</p>
+<ul>
+<li>Symmetric (bell, uniform, bimodal)
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>≈</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} \approx \text{median}</annotation></semantics></math></li>
+</ul></li>
+<li>Skew-right
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math></li>
+</ul></li>
+<li>Skew-left
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math></li>
+</ul></li>
+</ul>
+<p>A sample was gathered and visualized with a histogram.</p>
+<p><img src="@@PLUGINFILE@@/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1" /><br />
+</p>
+<p>What claim can you make regarding the mean and median?</p>
+</p>]]></text>
+<file name="unnamed-chunk-1-1.png" encoding="base64">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</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>The distribution is skew-right, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math>.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>≈</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} \approx \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+</question>
+
+
+<question type="multichoice">
+<name>
+<text> R10 Q3 : compare_mean_median </text>
+</name>
+<questiontext format="html">
+<text><![CDATA[<p>
+<p>Depending on the type of distribution, we can make a strong claim regarding the mean and median.</p>
+<ul>
+<li>Symmetric (bell, uniform, bimodal)
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>≈</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} \approx \text{median}</annotation></semantics></math></li>
+</ul></li>
+<li>Skew-right
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math></li>
+</ul></li>
+<li>Skew-left
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math></li>
+</ul></li>
+</ul>
+<p>A sample was gathered and visualized with a histogram.</p>
+<p><img src="@@PLUGINFILE@@/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1" /><br />
+</p>
+<p>What claim can you make regarding the mean and median?</p>
+</p>]]></text>
+<file name="unnamed-chunk-1-1.png" encoding="base64">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</file>
+</questiontext>
+<generalfeedback format="html">
+<text><![CDATA[<p>
+<p>The distribution is skew-left, so <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math>.</p>
+</p>]]></text>
+</generalfeedback>
+<penalty>0</penalty>
+<defaultgrade>1</defaultgrade>
+<shuffleanswers>false</shuffleanswers>
+<single>true</single>
+<answernumbering>abc</answernumbering>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>≈</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} \approx \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+<answer fraction="-50" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&gt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &gt; \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+<answer fraction="100" format="html">
+<text><![CDATA[<p>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">mean</mtext><mo>&lt;</mo><mtext mathvariant="normal">median</mtext></mrow><annotation encoding="application/x-tex">\text{mean} &lt; \text{median}</annotation></semantics></math>
+</p>]]></text>
+</answer>
+</question>
+
+</quiz>

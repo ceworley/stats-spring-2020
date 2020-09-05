@@ -1,0 +1,66 @@
+```{r,data,generation,echo=FALSE,results="hide"}
+type = sample(1:5,1) #uniform, bell, bimodal, skewright, skewleft
+n = sample(7:15,1)
+beta1 = c(1,5,0.2,0.5,2)[type]
+beta2 = c(1,5,0.2,2,0.5)[type]
+bottom = sample(seq(20,70,5),1)
+width = sample(seq(5,30,5),1)
+i = 1:n
+x = round(rbeta(n,beta1,beta2)*width+bottom,2)
+```
+
+
+Question
+========
+
+A sample was gathered. 
+
+$$\mathbf{x} = `r x` $$
+
+
+```{r echo=F}
+write.csv(data.frame(i,x),file="get_mean.csv", quote = FALSE, row.names = FALSE)
+```
+
+You can download the data as a [CSV file](get_mean.csv).
+
+
+Determine $\bar{x}$, the [sample mean](https://en.wikipedia.org/wiki/Mean){target="blank"}. Your answer can be rounded to the nearest tenth.
+
+
+
+Solution
+========
+
+You need to sum the values ($\sum \mathbf{x}$, see [summation](https://en.wikipedia.org/wiki/Summation){target="blank"}) and divide by the sample size ($n$).
+
+$$\bar{x} = \frac{\sum \mathbf{x}}{n} = \frac{`r sum(x)`}{`r length(x)`} = `r round(mean(x),4)`$$
+You can round $\bar{x}$ to the nearest tenth: `r round(mean(x),1)`.
+
+```{r echo=F}
+sol = data.frame(i,x)
+sol = rbind(sol,c("",""),c("","average(x)"),c("",paste0("=average(B2:B",n+1,")",collapse="")))
+write.csv(sol,"mean_solution.csv",row.names=F)
+```
+
+In a spreadsheet, you can use the [`AVERAGE` function](https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_AVERAGE_function){target="blank"}. You can see a [solution spreadsheet here](mean_solution.csv).
+
+In R, you can use the [`MEAN` function](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/mean){target="blank"}.
+
+```{r}
+# First, get the csv into the working directory... then...
+data = read.csv("get_mean.csv")
+x = data$x
+xbar = mean(x)
+round(xbar,1)
+```
+
+
+
+Meta-information
+================
+extype: num
+exsolution: `r mean(x)`
+exname: get_mean
+extol: 0.1
+exextra[numwidth]: 999.999
