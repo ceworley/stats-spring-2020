@@ -2,31 +2,30 @@ library("exams")
 
 set.seed(12345)
 
-s = c('list_counting_basic',
-      'list_counting_between',
-      'list_counting_large',
-      'make_frequency_distribution',
-      'read_frequency_distribution',
-      'read_histogram',
-      'read_histogram_discrete',
-      'read_circle_freq')
-      
-s = c('list_counting_large')
+s = c("read_frequency_distribution_prop",
+	"list_proportion_basic",
+	"read_histogram_discrete",
+	"list_proportion_between",
+	"read_histogram",
+	"list_proportion_large",
+	"make_relfreq_dens",
+	"read_circle_prop")
+
 
 myexam <- c(paste(s,".Rmd",sep=""))
 
-exams2moodle(myexam, n = 50,name="data_basics",
+exams2moodle(myexam, n = 10,name="proportion",
              stitle=s,
              dir = "out",
              converter="pandoc-mathml"
              )
 
-tx  <- readLines("out/data_basics.xml")
+tx  <- readLines("out/proportion.xml")
 tx2  <- gsub(pattern = "𝐱", replace = "x", x = tx)
 tx2  <- gsub(pattern = "𝙰𝙽𝙳", replace = "AND", x = tx2)
 tx2  <- gsub(pattern = "𝙾𝚁", replace = "OR", x = tx2)
 tx2  <- gsub(pattern = "𝙽𝙾𝚃", replace = "NOT", x = tx2)
-writeLines(tx2, con="out/data_basics_fixed.xml")
+writeLines(tx2, con="out/proportion_fixed.xml")
 
 
 for(ss in s){
