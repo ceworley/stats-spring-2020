@@ -177,7 +177,7 @@ cat(c(p1,p2,p3,b4,b5,r6))
 Answerlist
 --------
 * The answer is `r p1` because $\text{prop}[\mathbf{x}<`r b1`]=`r p1`$. The following visualizations show this. 
-The density curve can be used by counting percent boxes. Each box adds 0.01 to the proportion. You may need to count half boxes, or find partial boxes that add to whole boxes.
+The density curve can be used by counting percent boxes. Each box adds 0.01 to the proportion. You may need to count half boxes, or find partial boxes that add to whole boxes. <br>
 ```{r echo=F, fig.width=6, fig.height=4.5}
 x = seq(bottom,bottom+width,length.out=1000)
 x3 = seq(bottom,b1,length.out=1000)
@@ -189,8 +189,8 @@ abline(h=yl,lty=2)
 abline(v=xl,lty=2)
 abline(h=0)
 ```
-\
-On the spinner, you can determine the size of a region by using the outside tickmarks.
+\ <br>
+On the spinner, you can determine the size of a region by using the outside tickmarks. <br>
 ```{r echo=F,fig.width=5,fig.height=5}
 par(mar=c(0,0,0,0))
 theta = seq(0,2*pi,length.out=1000)
@@ -231,8 +231,8 @@ lines(c(1.15,1.2)*sin(p1*2*pi),c(1.15,1.2)*cos(p1*2*pi),col=rgb(0,0,0.3),lwd=2)
 pt = p1/2
 text(1.16*sin(2*pi*pt),1.16*cos(2*pi*pt),p1,cex=0.8,srt=(90-pt*360)%%180-90,col=rgb(0,0,0.3))
 ```
-\
-You need to read coordinates to use the cumulative curve.
+\ <br>
+You need to read coordinates to use the cumulative curve. <br>
 ```{r echo=F,fig.width=5,fig.height=10}
 x = seq(bottom-2,bottom+width+2,length.out=1000)
 p = pmf((x-bottom)/width)
@@ -256,9 +256,9 @@ lines(c(rep(bottom,3),rep(b1,3)),c(1.01,1.03,1.02,1.02,1.01,1.03),col=rgb(0,0.3,
 points(b1,p1,pch=20)
 text(b1,p1,sprintf(" (%d, %.2f) ",b1,p1),adj=1*(p1>0.5))
 ```
-\
+\ <br>
 * The answer is `r p2` because $\text{prop}[\mathbf{x}>`r b2`]=`r p2`$. The following visualizations show this. 
-The density curve can be used by counting percent boxes. Each box adds 0.01 to the proportion. You may need to count half boxes, or find partial boxes that add to whole boxes.
+The density curve can be used by counting percent boxes. Each box adds 0.01 to the proportion. You may need to count half boxes, or find partial boxes that add to whole boxes. <br>
 ```{r echo=F, fig.width=6, fig.height=4.5}
 x = seq(bottom,bottom+width,length.out=1000)
 x3 = seq(b2,bottom+width,length.out=1000)
@@ -270,7 +270,7 @@ abline(h=yl,lty=2)
 abline(v=xl,lty=2)
 abline(h=0)
 ```
-\
+\ <br>
 On the spinner, you can determine the size of a region by using the outside tickmarks. $$1-`r 1-p2`=`r p2`$$
 ```{r echo=F,fig.width=5,fig.height=5}
 par(mar=c(0,0,0,0))
@@ -312,7 +312,7 @@ lines(c(1.15,1.2)*sin((1-p2)*2*pi),c(1.15,1.2)*cos((1-p2)*2*pi),col=rgb(0,0,0.3)
 pt = (1+(1-p2))/2
 text(1.16*sin(2*pi*pt),1.16*cos(2*pi*pt),p2,cex=0.8,srt=(90-pt*360)%%180-90,col=rgb(0,0,0.3))
 ```
-\
+\ <br>
 You need to read coordinates to use the cumulative curve. $$1-`r 1-p2`=`r p2`$$
 ```{r echo=F,fig.width=5,fig.height=10}
 x = seq(bottom-2,top+2,length.out=1000)
@@ -337,9 +337,9 @@ lines(c(rep(b2,3),rep(top,3)),c(1.01,1.03,1.02,1.02,1.01,1.03),col=rgb(0,0.3,0),
 points(b2,1-p2,pch=20)
 text(b2,1-p2,sprintf(" (%d, %.2f) ",b2,1-p2),adj=1*(1-p2>0.5))
 ```
-\
+\ <br>
 * The answer is `r p3` because $\text{prop}[|\mathbf{x}-`r cen3`|<`r r3`]=`r p3`$. It helps to point out this interval has a center of `r cen3` and a radius of `r r3`, and thus a lower bound of `r cen3-r3` and an upper bound of `r cen3+r3`. The following visualizations show this. 
-The density curve can be used by counting percent boxes. Each box adds 0.01 to the proportion. You may need to count half boxes, or find partial boxes that add to whole boxes.
+The density curve can be used by counting percent boxes. Each box adds 0.01 to the proportion. You may need to count half boxes, or find partial boxes that add to whole boxes. <br>
 ```{r echo=F, fig.width=6, fig.height=4.5}
 x = seq(bottom,bottom+width,length.out=1000)
 x3 = seq(lb3,ub3,length.out=1000)
@@ -351,7 +351,7 @@ abline(h=yl,lty=2)
 abline(v=xl,lty=2)
 abline(h=0)
 ```
-\
+\ <br>
 On the spinner, you can determine the size of a region by using the outside tickmarks. The lower bound is at $x=`r lb3`$, which corresponds to a cumulative proportion of `r plb3`. The upper bound is at $x=`r ub3`$, which corresponds to a cumulative proportion of `r pub3`.  $$`r pub3`-`r plb3`=`r p3`$$
 ```{r echo=F,fig.width=5,fig.height=5}
 par(mar=c(0,0,0,0))
@@ -394,7 +394,7 @@ text(1.16*sin(2*pi*pt),1.16*cos(2*pi*pt),p3,cex=0.8,srt=(90-pt*360)%%180-90,col=
 # lines(0.6*sin(2*pi*ppp),0.6*cos(2*pi*ppp),lwd=2,col=rgb(0.3,0,0))
 points(0.98*sin(2*pi*pcen3),0.98*cos(2*pi*pcen3),pch=20)
 ```
-\
+\ <br>
 You need to read coordinates to use the cumulative curve. The lower bound is at $x=`r lb3`$, which corresponds to a cumulative proportion of `r plb3`. The upper bound is at $x=`r ub3`$, which corresponds to a cumulative proportion of `r pub3`.  $$`r pub3`-`r plb3`=`r p3`$$
 ```{r echo=F,fig.width=5,fig.height=10}
 x = seq(bottom-2,top+2,length.out=1000)
@@ -421,9 +421,9 @@ text(lb3,plb3,sprintf(" (%d, %.2f) ",lb3,plb3),adj=1*(plb3>0.5))
 points(ub3,pub3,pch=20)
 text(ub3,pub3,sprintf(" (%d, %.2f) ",ub3,pub3),adj=1*(pub3>0.5))
 ```
-\
+\ <br>
 * The answer is `r b4` because $\text{prop}[\mathbf{x}<`r b4`]=`r p4`$. The following visualizations show this. 
-The density curve can be used by counting percent boxes. Each box adds 0.01 to the proportion. You may need to count half boxes, or find partial boxes that add to whole boxes.
+The density curve can be used by counting percent boxes. Each box adds 0.01 to the proportion. You may need to count half boxes, or find partial boxes that add to whole boxes. <br>
 ```{r echo=F, fig.width=6, fig.height=4.5}
 x = seq(bottom,bottom+width,length.out=1000)
 x3 = seq(bottom,b4,length.out=1000)
@@ -435,8 +435,8 @@ abline(h=yl,lty=2)
 abline(v=xl,lty=2)
 abline(h=0)
 ```
-\
-On the spinner, you can determine the size of a region by using the outside tickmarks.
+\ <br>
+On the spinner, you can determine the size of a region by using the outside tickmarks. <br>
 ```{r echo=F,fig.width=5,fig.height=5}
 par(mar=c(0,0,0,0))
 theta = seq(0,2*pi,length.out=1000)
@@ -477,8 +477,8 @@ lines(c(1.15,1.2)*sin(p4*2*pi),c(1.15,1.2)*cos(p4*2*pi),col=rgb(0,0,0.3),lwd=2)
 pt = p4/2
 text(1.16*sin(2*pi*pt),1.16*cos(2*pi*pt),p4,cex=0.8,srt=(90-pt*360)%%180-90,col=rgb(0,0,0.3))
 ```
-\
-You need to read coordinates to use the cumulative curve.
+\ <br>
+You need to read coordinates to use the cumulative curve. <br>
 ```{r echo=F,fig.width=5,fig.height=10}
 x = seq(bottom-2,bottom+width+2,length.out=1000)
 p = pmf((x-bottom)/width)
@@ -502,9 +502,9 @@ lines(c(rep(bottom,3),rep(b4,3)),c(1.01,1.03,1.02,1.02,1.01,1.03),col=rgb(0,0.3,
 points(b4,p4,pch=20)
 text(b4,p4,sprintf(" (%d, %.2f) ",b4,p4),adj=1*(p1>0.5))
 ```
-\
+\ <br>
 * The answer is `r b5` because $\text{prop}[\mathbf{x}>`r b5`]=`r p5`$. The following visualizations show this. 
-The density curve can be used by counting percent boxes. Each box adds 0.01 to the proportion. You may need to count half boxes, or find partial boxes that add to whole boxes.
+The density curve can be used by counting percent boxes. Each box adds 0.01 to the proportion. You may need to count half boxes, or find partial boxes that add to whole boxes. <br>
 ```{r echo=F, fig.width=6, fig.height=4.5}
 x = seq(bottom,bottom+width,length.out=1000)
 x3 = seq(b5,bottom+width,length.out=1000)
@@ -516,7 +516,7 @@ abline(h=yl,lty=2)
 abline(v=xl,lty=2)
 abline(h=0)
 ```
-\
+\ <br>
 On the spinner, you can determine the size of a region by using the outside tickmarks. $$1-`r 1-p5`=`r p5`$$
 ```{r echo=F,fig.width=5,fig.height=5}
 par(mar=c(0,0,0,0))
@@ -558,8 +558,8 @@ lines(c(1.15,1.2)*sin((1-p5)*2*pi),c(1.15,1.2)*cos((1-p5)*2*pi),col=rgb(0,0,0.3)
 pt = (1+(1-p5))/2
 text(1.16*sin(2*pi*pt),1.16*cos(2*pi*pt),p5,cex=0.8,srt=(90-pt*360)%%180-90,col=rgb(0,0,0.3))
 ```
-\
-You need to read coordinates to use the cumulative curve. $$1-`r 1-p2`=`r p2`$$
+\ <br>
+You need to read coordinates to use the cumulative curve. $$1-`r 1-p5`=`r p5`$$
 ```{r echo=F,fig.width=5,fig.height=10}
 x = seq(bottom-2,top+2,length.out=1000)
 p = pmf((x-bottom)/width)
@@ -583,9 +583,9 @@ lines(c(rep(b5,3),rep(top,3)),c(1.01,1.03,1.02,1.02,1.01,1.03),col=rgb(0,0.3,0),
 points(b5,1-p5,pch=20)
 text(b5,1-p5,sprintf(" (%d, %.2f) ",b5,1-p5),adj=1*(1-p5>0.5))
 ```
-\
+\ <br>
 * The answer is `r r6` because $\text{prop}[|\mathbf{x}-`r cen6`|<`r r6`]=`r p6`$. You will need to guess and check to arrive at this answer. The following shows how to check after making the correct guess. This interval has a center of `r cen6` and a radius of `r r6`, and thus a lower bound of `r cen6-r6` and an upper bound of `r cen6+r6`. 
-The density curve can be used by counting percent boxes. Each box adds 0.01 to the proportion. You may need to count half boxes, or find partial boxes that add to whole boxes.
+The density curve can be used by counting percent boxes. Each box adds 0.01 to the proportion. You may need to count half boxes, or find partial boxes that add to whole boxes. <br>
 ```{r echo=F, fig.width=6, fig.height=4.5}
 x = seq(bottom,bottom+width,length.out=1000)
 x3 = seq(lb6,ub6,length.out=1000)
@@ -597,7 +597,7 @@ abline(h=yl,lty=2)
 abline(v=xl,lty=2)
 abline(h=0)
 ```
-\
+\ <br>
 On the spinner, you can determine the size of a region by using the outside tickmarks. The lower bound is at $x=`r lb6`$, which corresponds to a cumulative proportion of `r plb6`. The upper bound is at $x=`r ub6`$, which corresponds to a cumulative proportion of `r pub6`.  $$`r pub6`-`r plb6`=`r p6`$$
 ```{r echo=F,fig.width=5,fig.height=5}
 par(mar=c(0,0,0,0))
@@ -640,7 +640,7 @@ text(1.16*sin(2*pi*pt),1.16*cos(2*pi*pt),p6,cex=0.8,srt=(90-pt*360)%%180-90,col=
 # lines(0.6*sin(2*pi*ppp),0.6*cos(2*pi*ppp),lwd=2,col=rgb(0.3,0,0))
 points(0.98*sin(2*pi*pcen6),0.98*cos(2*pi*pcen6),pch=20)
 ```
-\
+\ <br>
 You need to read coordinates to use the cumulative curve. The lower bound is at $x=`r lb6`$, which corresponds to a cumulative proportion of `r plb6`. The upper bound is at $x=`r ub6`$, which corresponds to a cumulative proportion of `r pub6`.  $$`r pub6`-`r plb6`=`r p6`$$
 ```{r echo=F,fig.width=5,fig.height=10}
 x = seq(bottom-2,top+2,length.out=1000)

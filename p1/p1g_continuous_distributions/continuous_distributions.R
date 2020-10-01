@@ -11,7 +11,7 @@ s = gsub(".Rmd","",list.files(pattern=".Rmd"))
 
 myexam <- c(paste(s,".Rmd",sep=""))
 
-exams2moodle(myexam, n = 50,name=name3,
+exams2moodle(myexam, n = 30,name=name3,
              stitle=s,
              dir = "out",
              converter="pandoc-mathml"
