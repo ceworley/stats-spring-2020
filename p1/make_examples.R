@@ -8,7 +8,11 @@ folders = list.dirs(recursive = F)
 name3 = "examples"
 # s = gsub(".Rmd","",list.files(pattern=".Rmd",recursive = T))
 
-s = c("p1e_spread/check_interval_of_typical_measurements")
+# s = c("p1e_spread/check_interval_of_typical_measurements")
+s = c("p1g_continuous_distributions/estimate_area.Rmd",
+      "p1g_continuous_distributions/normal_basic.Rmd",
+      "p1g_continuous_distributions/standard_score.Rmd")
+s = gsub(".Rmd","",s)
 
 myexam <- c(paste(s,".Rmd",sep=""))
 

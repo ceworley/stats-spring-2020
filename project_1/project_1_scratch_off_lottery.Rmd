@@ -152,9 +152,7 @@ max(xbars)
 
 ### Conclusion
 
-We have seen that a lottery's structure of very-high-profit/very-low-probability messes with our typical rules-of-thumb. In the first simulated month, we found the sample statistics did not seem to match the population parameters very closely (even with a typical $z$-score). In the extra credit, we saw the skewed population also messed with the estimated standard error, and produced a skewed [sampling distribution](https://en.wikipedia.org/wiki/Sampling_distribution){target="blank"}, even with a sample size of 3,650.
-
-However, we still saw that our simulations had averages that approached the population average when the repetitions were large enough, as the [Law of Large Numbers](https://en.wikipedia.org/wiki/Law_of_large_numbers){target="blank"} promises.
+We have seen that a lottery's structure of very-high-profit/very-low-probability messes with our typical rules-of-thumb. In the first simulated month, we found the sample statistics did not seem to match the population parameters very closely (even with a typical $z$-score). In the extra credit, we saw the skewed population also messed with the estimated standard error, and produced a skewed [sampling distribution](https://en.wikipedia.org/wiki/Sampling_distribution){target="blank"}, even with a sample size of 3,650. However, we still saw that our simulations had averages that approached the population average when the repetitions were large enough, as the [Law of Large Numbers](https://en.wikipedia.org/wiki/Law_of_large_numbers){target="blank"} promises.
 
 
 
